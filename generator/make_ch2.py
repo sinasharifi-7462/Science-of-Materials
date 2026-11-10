@@ -1,0 +1,1804 @@
+# ==============================================================================
+# GENERATOR FOR CHAPTER 2: ATOMIC STRUCTURE & INTERATOMIC BONDING (50 PROBLEMS)
+# Course: Science of Materials | University of Tehran | Prof. Sadeghi
+# Prepared by TA Sina Sharifi
+# ==============================================================================
+
+import json
+
+P = []
+
+def add(num, title, cat, slug, diff, stmt, sol):
+    P.append({
+        "number": num,
+        "title": title,
+        "category": cat,
+        "category_slug": slug,
+        "difficulty": diff,
+        "statement": stmt.strip(),
+        "solution": sol.strip()
+    })
+
+# --- P1 to P6 from build_ch2_data.py are imported or copied ---
+import sys, os
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from build_ch2_data import P as initial_P
+P.extend(initial_P[:6])
+
+# --- P7 to P20: Advanced Ionic, Madelung, and Radius Ratio ---
+add(7, "Born-Mayer Exponential Repulsion Potential",
+    "Ionic Bonding", "ionic", "Intermediate",
+    r"""<p>While the Born-Mie potential models electron core repulsion with an inverse power law ($B/r^n$), quantum mechanical overlap of electron wavefunctions is more accurately described by the <strong>Born-Mayer exponential potential</strong>:</p>
+    $$E_N(r) = -\frac{A}{r} + B \exp\left(-\frac{r}{\rho}\right)$$
+    <p>where $\rho$ is the range parameter (typically $\rho \approx 0.030 \text{ nm}$ for most alkali halide crystals) and $B$ is a repulsive constant.</p>
+    <ol type="a">
+      <li>Apply the equilibrium condition $F_N(r_0) = 0$ to derive an algebraic relationship for the constant $B$ in terms of $A, r_0,$ and $\rho$.</li>
+      <li>Derive the algebraic expression for the net bonding energy $E_0 = -E_N(r_0)$ in terms of $A, r_0,$ and $\rho$.</li>
+      <li>For Potassium Chloride (KCl), $r_0 = 0.315 \text{ nm}$, $\rho = 0.032 \text{ nm}$, and $A = 2.31 \times 10^{-28} \text{ J}\cdot\text{m}$. Calculate $B$ (in Joules) and the net bonding energy $E_0$ (in eV).</li>
+    </ol>""",
+    r"""<div class="solution-step">
+      <div class="solution-step-title">Part (a): Equilibrium Condition and Constant $B$</div>
+      <p>At equilibrium separation $r_0$, the net interatomic force is zero:</p>
+      $$\left. \frac{dE_N}{dr} \right|_{r_0} = \frac{A}{r_0^2} - \frac{B}{\rho} \exp\left(-\frac{r_0}{\rho}\right) = 0$$
+      $$\frac{B}{\rho} \exp\left(-\frac{r_0}{\rho}\right) = \frac{A}{r_0^2} \implies B = \frac{A \rho}{r_0^2} \exp\left(\frac{r_0}{\rho}\right)$$
+    </div>
+    <div class="solution-step">
+      <div class="solution-step-title">Part (b): Net Bonding Energy $E_0$</div>
+      <p>Substitute $B \exp(-r_0/\rho) = \frac{A \rho}{r_0^2}$ into $E_N(r_0)$:</p>
+      $$E_N(r_0) = -\frac{A}{r_0} + \frac{A \rho}{r_0^2} = -\frac{A}{r_0} \left( 1 - \frac{\rho}{r_0} \right)$$
+      <p>The bonding energy $E_0 = -E_N(r_0)$ is:</p>
+      $$E_0 = \frac{A}{r_0} \left( 1 - \frac{\rho}{r_0} \right)$$
+    </div>
+    <div class="solution-step">
+      <div class="solution-step-title">Part (c): Numerical Evaluation for KCl</div>
+      <p>Given: $r_0 = 3.15 \times 10^{-10} \text{ m}$, $\rho = 3.20 \times 10^{-11} \text{ m}$, $A = 2.31 \times 10^{-28} \text{ J}\cdot\text{m}$:</p>
+      <ul>
+        <li>Ratio: $\frac{r_0}{\rho} = \frac{0.315}{0.032} = 9.84375$.</li>
+        <li>Exponent: $\exp(9.84375) \approx 18,840.4$.</li>
+        <li>Constant $B$:
+        $$B = \frac{(2.31 \times 10^{-28} \text{ J}\cdot\text{m}) (3.20 \times 10^{-11} \text{ m})}{(3.15 \times 10^{-10} \text{ m})^2} \times 18,840.4 = \frac{7.392 \times 10^{-39}}{9.9225 \times 10^{-20}} \times 18,840.4 = \mathbf{1.404 \times 10^{-15} \text{ J}}$$</li>
+        <li>Bonding Energy $E_0$:
+        $$E_0 = \frac{2.31 \times 10^{-28} \text{ J}\cdot\text{m}}{3.15 \times 10^{-10} \text{ m}} \left( 1 - \frac{0.032}{0.315} \right) = (7.333 \times 10^{-19} \text{ J}) \times (1 - 0.1016) = \mathbf{6.588 \times 10^{-19} \text{ J}}$$
+        In electron-volts:
+        $$E_0 = \frac{6.588 \times 10^{-19} \text{ J}}{1.602 \times 10^{-19} \text{ J/eV}} = \mathbf{4.11 \text{ eV}}$$</li>
+      </ul>
+    </div>
+    <div class="final-answer-box">
+      <strong>Final Results:</strong><br>
+      $B = \mathbf{1.40 \times 10^{-15} \text{ J}}$<br>
+      $E_0 = \mathbf{6.59 \times 10^{-19} \text{ J}} = \mathbf{4.11 \text{ eV}}$<br>
+      The term $(1 - \rho/r_0)$ shows that exponential core repulsion reduces net electrostatic binding energy by approximately $\rho/r_0 \approx 10\%$.
+    </div>""")
+
+add(8, "Lattice Energy of 3D Ionic Crystals: The Madelung Constant and Born-Landé Equation",
+    "Ionic Bonding", "ionic", "Intermediate",
+    r"""<p>In a 3D ionic crystal lattice, each ion interacts not only with its nearest neighbors but with all surrounding ions in the entire periodic lattice.</p>
+    <ol type="a">
+      <li>Define the <strong>Madelung Constant ($M$)</strong>. Explain why $M > 1$ and why its value depends strictly on crystal lattice geometry rather than ion chemistry.</li>
+      <li>Write the complete <strong>Born-Landé equation</strong> for the molar lattice energy ($U_{latt}$) of an ionic crystal containing $N_A$ ion pairs with Born exponent $n$.</li>
+      <li>For Sodium Chloride (NaCl: Rock-salt structure, FCC anion lattice, $M = 1.748$, $n = 8.0$, interionic spacing $r_0 = 0.282 \text{ nm}$), calculate the molar lattice energy $U_{latt}$ in $\text{kJ/mol}$. Use $N_A = 6.022 \times 10^{23} \text{ mol}^{-1}$ and $e = 1.602 \times 10^{-19} \text{ C}$.</li>
+    </ol>""",
+    r"""<div class="solution-step">
+      <div class="solution-step-title">Part (a): The Madelung Constant Explained</div>
+      <p>In a 3D NaCl crystal, a central $\text{Na}^+$ ion is surrounded by 6 nearest $\text{Cl}^-$ neighbors at distance $r_0$, 12 next-nearest $\text{Na}^+$ ions at distance $\sqrt{2}r_0$, 8 $\text{Cl}^-$ ions at $\sqrt{3}r_0$, 6 $\text{Na}^+$ ions at $2r_0$, etc. Summing all pairwise Coulombic interactions:</p>
+      $$E_{\text{Coulomb}} = -\frac{e^2}{4\pi\varepsilon_0 r_0} \left[ \frac{6}{1} - \frac{12}{\sqrt{2}} + \frac{8}{\sqrt{3}} - \frac{6}{2} + \dots \right] = -M \frac{e^2}{4\pi\varepsilon_0 r_0}$$
+      <p>The <strong>Madelung Constant ($M$)</strong> is the geometric alternating series summation: $M = \sum_j \frac{\pm Z_j}{(r_j/r_0)}$. It depends purely on the spatial crystallographic coordinates of the lattice sites ($M_{\text{NaCl}} = 1.7476$, $M_{\text{CsCl}} = 1.7627$, $M_{\text{ZnS}} = 1.6381$).</p>
+    </div>
+    <div class="solution-step">
+      <div class="solution-step-title">Part (b): The Born-Landé Equation</div>
+      <p>Multiplying by Avogadro's number $N_A$ and incorporating the Born repulsion factor $(1 - 1/n)$ gives the molar lattice energy $U_{latt}$:</p>
+      $$U_{latt} = -\frac{N_A \cdot M \cdot |Z_1 Z_2| e^2}{4 \pi \varepsilon_0 r_0} \left( 1 - \frac{1}{n} \right)$$
+    </div>
+    <div class="solution-step">
+      <div class="solution-step-title">Part (c): Numerical Calculation for NaCl</div>
+      <p>Given: $N_A = 6.022 \times 10^{23} \text{ mol}^{-1}$, $M = 1.748$, $Z_1 = +1, Z_2 = -1$, $e = 1.602 \times 10^{-19} \text{ C}$, $r_0 = 2.82 \times 10^{-10} \text{ m}$, $n = 8.0$:</p>
+      $$A_0 = \frac{e^2}{4\pi\varepsilon_0} = 2.3065 \times 10^{-28} \text{ J}\cdot\text{m}$$
+      $$\frac{N_A \cdot M \cdot A_0}{r_0} = \frac{(6.022 \times 10^{23}) (1.748) (2.3065 \times 10^{-28} \text{ J}\cdot\text{m})}{2.82 \times 10^{-10} \text{ m}} = \frac{2.4279 \times 10^{-4}}{2.82 \times 10^{-10}} = 860,957 \text{ J/mol} = 861.0 \text{ kJ/mol}$$
+      <p>Applying the repulsive correction $(1 - 1/n) = 1 - 1/8 = 7/8 = 0.875$:</p>
+      $$U_{latt} = -861.0 \text{ kJ/mol} \times 0.875 = \mathbf{-753.4 \text{ kJ/mol}}$$
+    </div>
+    <div class="final-answer-box">
+      <strong>Molar Lattice Energy:</strong> $$U_{latt} = \mathbf{-753.4 \text{ kJ/mol}}$$
+      This represents the immense energy released when 1 mole of gaseous $\text{Na}^+$ and $\text{Cl}^-$ ions condense into a solid crystalline rock-salt lattice.
+    </div>""")
+
+add(9, "Pauling's Radius Ratio Rule and Ceramic Coordination Geometries",
+    "Ceramic Bonding", "radius_ratio", "Fundamental",
+    r"""<p>In ionic ceramics, stable crystal structures are governed by <strong>Pauling's First Rule (Radius Ratio Criterion)</strong>: cations are surrounded by a coordination polyhedron of anions such that the cation is in direct physical contact with all surrounding anions.</p>
+    <ol type="a">
+      <li>State the geometric stability criterion: why does an ionic structure become unstable if the radius ratio $r_c / r_a$ drops below a critical threshold?</li>
+      <li>Derive geometrically the minimum critical radius ratio $(r_c / r_a)_{\min}$ for:
+        <ul>
+          <li><strong>Octahedral Coordination ($\text{CN} = 6$)</strong></li>
+          <li><strong>Cubic Coordination ($\text{CN} = 8$)</strong></li>
+        </ul>
+      </li>
+      <li>Construct a summary table listing the four primary coordination numbers ($\text{CN} = 3, 4, 6, 8$), their geometric polyhedra, and their stable $r_c / r_a$ ranges.</li>
+    </ol>""",
+    r"""<div class="solution-step">
+      <div class="solution-step-title">Part (a): Physical Basis of the Radius Ratio Criterion</div>
+      <p>In an ionic crystal, like-charged anions repel each other while being attracted to the centrally situated oppositely charged cation. Stability requires that the central cation touches all surrounding anions. If the cation is too small ($r_c/r_a < (r_c/r_a)_{\text{crit}}$), the anions touch each other while the cation "rattles" loosely in the interstitial void. Anion-anion electrostatic repulsion then forces the structure to collapse into a lower coordination number with fewer repulsive nearest neighbors.</p>
+    </div>
+    <div class="solution-step">
+      <div class="solution-step-title">Part (b): Geometric Derivations of Critical Ratios</div>
+      <ul>
+        <li><strong>Octahedral Coordination ($\text{CN} = 6$):</strong> Consider 4 coplanar anions of radius $r_a$ forming a square around a central cation of radius $r_c$. The side of the square is $2 r_a$, and the diagonal is $2(r_c + r_a)$. By the Pythagorean theorem:
+        $$(2 r_c + 2 r_a)^2 = (2 r_a)^2 + (2 r_a)^2 = 8 r_a^2$$
+        $$2(r_c + r_a) = 2 \sqrt{2} r_a \implies r_c + r_a = \sqrt{2} r_a \implies \frac{r_c}{r_a} = \sqrt{2} - 1 = 1.414 - 1 = \mathbf{0.414}$$</li>
+        <li><strong>Cubic Coordination ($\text{CN} = 8$):</strong> Eight anions sit at the corners of a cube of edge length $a = 2 r_a$. The central cation touches all eight along the body diagonal of length $a \sqrt{3} = 2(r_c + r_a)$:
+        $$2(r_c + r_a) = (2 r_a) \sqrt{3} \implies r_c + r_a = \sqrt{3} r_a \implies \frac{r_c}{r_a} = \sqrt{3} - 1 = 1.732 - 1 = \mathbf{0.732}$$</li>
+      </ul>
+    </div>
+    <div class="solution-step">
+      <div class="solution-step-title">Part (c): Coordination Summary Table</div>
+      <table class="formula-table">
+        <tr><th>Coordination Number (CN)</th><th>Coordination Polyhedron</th><th>Radius Ratio Range ($r_c / r_a$)</th><th>Canonical Example</th></tr>
+        <tr><td><strong>3</strong></td><td>Equilateral Triangle (Planar)</td><td>0.155 – 0.225</td><td>$\text{B}_2\text{O}_3$ ($\text{B}^{3+}$)</td></tr>
+        <tr><td><strong>4</strong></td><td>Regular Tetrahedron</td><td>0.225 – 0.414</td><td>$\text{ZnS}$ (Zinc Blende), $\text{SiO}_4^{4-}$</td></tr>
+        <tr><td><strong>6</strong></td><td>Regular Octahedron</td><td>0.414 – 0.732</td><td>$\text{NaCl}$ (Rock Salt), $\text{MgO}$</td></tr>
+        <tr><td><strong>8</strong></td><td>Cube</td><td>0.732 – 1.000</td><td>$\text{CsCl}$</td></tr>
+      </table>
+    </div>
+    <div class="final-answer-box">
+      <strong>Critical Thresholds:</strong><br>
+      Linear ($\text{CN}=2$): $< 0.155$ &bull; Triangular ($\text{CN}=3$): $0.155–0.225$ &bull; Tetrahedral ($\text{CN}=4$): $0.225–0.414$<br>
+      Octahedral ($\text{CN}=6$): $\mathbf{0.414–0.732}$ &bull; Cubic ($\text{CN}=8$): $\mathbf{0.732–1.000}$ &bull; Close-packed ($\text{CN}=12$): $1.000$
+    </div>""")
+
+add(10, "Predicting Crystal Structure and Coordination: MgO, CsCl, and ZnS",
+    "Ceramic Bonding", "radius_ratio", "Fundamental",
+    r"""<p>Use Pauling's radius ratio rule to predict the coordination number and crystal structure archetype for three ceramic compounds:</p>
+    <table class="formula-table">
+      <tr><th>Compound</th><th>Cation & Radius ($r_c$, nm)</th><th>Anion & Radius ($r_a$, nm)</th></tr>
+      <tr><td>1. Magnesium Oxide ($\text{MgO}$)</td><td>$\text{Mg}^{2+} = 0.072 \text{ nm}$</td><td>$\text{O}^{2-} = 0.140 \text{ nm}$</td></tr>
+      <tr><td>2. Cesium Chloride ($\text{CsCl}$)</td><td>$\text{Cs}^+ = 0.170 \text{ nm}$</td><td>$\text{Cl}^- = 0.181 \text{ nm}$</td></tr>
+      <tr><td>3. Zinc Sulfide ($\text{ZnS}$)</td><td>$\text{Zn}^{2+} = 0.074 \text{ nm}$</td><td>$\text{S}^{2-} = 0.184 \text{ nm}$</td></tr>
+    </table>
+    <ol type="a">
+      <li>Calculate the radius ratio $r_c / r_a$ for each compound.</li>
+      <li>Predict the coordination number of the cation and the anion for each compound.</li>
+      <li>Identify the corresponding crystal structure archetype (Rock-salt, Cesium chloride, or Zinc blende).</li>
+    </ol>""",
+    r"""<div class="solution-step">
+      <div class="solution-step-title">Part (a): Radius Ratio Calculations</div>
+      <ul>
+        <li><strong>Magnesium Oxide ($\text{MgO}$):</strong>
+        $$\frac{r_{\text{Mg}^{2+}}}{r_{\text{O}^{2-}}} = \frac{0.072 \text{ nm}}{0.140 \text{ nm}} = \mathbf{0.514}$$</li>
+        <li><strong>Cesium Chloride ($\text{CsCl}$):</strong>
+        $$\frac{r_{\text{Cs}^+}}{r_{\text{Cl}^-}} = \frac{0.170 \text{ nm}}{0.181 \text{ nm}} = \mathbf{0.939}$$</li>
+        <li><strong>Zinc Sulfide ($\text{ZnS}$):</strong>
+        $$\frac{r_{\text{Zn}^{2+}}}{r_{\text{S}^{2-}}} = \frac{0.074 \text{ nm}}{0.184 \text{ nm}} = \mathbf{0.402}$$</li>
+      </ul>
+    </div>
+    <div class="solution-step">
+      <div class="solution-step-title">Part (b) & (c): Coordination and Crystal Archetype Predictions</div>
+      <ul>
+        <li><strong>$\text{MgO}$ ($r_c/r_a = 0.514$):</strong> Falls squarely in the range $0.414 \le 0.514 < 0.732$.
+          <ul>
+            <li>Predicted Coordination: <strong>Octahedral ($\text{CN} = 6$)</strong> for both $\text{Mg}^{2+}$ and $\text{O}^{2-}$ (1:1 stoichiometry).</li>
+            <li>Crystal Structure: <strong>Rock-Salt ($\text{NaCl}$) Archetype</strong> (FCC oxygen lattice with magnesium filling all octahedral interstitial sites).</li>
+          </ul>
+        </li>
+        <li><strong>$\text{CsCl}$ ($r_c/r_a = 0.939$):</strong> Falls in the range $0.732 \le 0.939 < 1.000$.
+          <ul>
+            <li>Predicted Coordination: <strong>Cubic ($\text{CN} = 8$)</strong> for both $\text{Cs}^+$ and $\text{Cl}^-$.</li>
+            <li>Crystal Structure: <strong>Cesium Chloride Archetype</strong> (Simple cubic chloride framework with cesium occupying the body-center site).</li>
+          </ul>
+        </li>
+        <li><strong>$\text{ZnS}$ ($r_c/r_a = 0.402$):</strong> Falls in the range $0.225 \le 0.402 < 0.414$.
+          <ul>
+            <li>Predicted Coordination: <strong>Tetrahedral ($\text{CN} = 4$)</strong> for both $\text{Zn}^{2+}$ and $\text{S}^{2-}$.</li>
+            <li>Crystal Structure: <strong>Zinc Blende (Sphalerite) Archetype</strong> (FCC sulfur lattice with zinc occupying half of the internal tetrahedral sites).</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="final-answer-box">
+      <strong>Predictions:</strong><br>
+      $\text{MgO}$: $r_c/r_a = \mathbf{0.514} \implies \mathbf{\text{CN} = 6}$ &bull; <strong>Rock-Salt Structure</strong><br>
+      $\text{CsCl}$: $r_c/r_a = \mathbf{0.939} \implies \mathbf{\text{CN} = 8}$ &bull; <strong>Cesium Chloride Structure</strong><br>
+      $\text{ZnS}$: $r_c/r_a = \mathbf{0.402} \implies \mathbf{\text{CN} = 4}$ &bull; <strong>Zinc Blende Structure</strong>
+    </div>""")
+
+add(11, "Pauling's Formula for Percentage Ionic Character (%IC)",
+    "Chemical Bonding", "bonding_type", "Fundamental",
+    r"""<p>Chemical bonds between dissimilar elements are rarely purely ionic or purely covalent, but exist along a continuous spectrum.</p>
+    <ol type="a">
+      <li>State <strong>Pauling's empirical formula</strong> for calculating the percentage ionic character ($\%IC$) of an interatomic bond between elements $A$ and $B$ with electronegativities $\chi_A$ and $\chi_B$.</li>
+      <li>At what electronegativity difference ($\Delta\chi = |\chi_A - \chi_B|$) is a chemical bond considered to possess exactly <strong>50% ionic character</strong> and 50% covalent character?</li>
+      <li>Calculate the percentage ionic character for Sodium Chloride (NaCl) using $\chi_{\text{Na}} = 0.9$ and $\chi_{\text{Cl}} = 3.0$. Classify its bonding.</li>
+    </ol>""",
+    r"""<div class="solution-step">
+      <div class="solution-step-title">Part (a): Pauling's Percentage Ionic Character Formula</div>
+      $$\%IC = \left[ 1 - \exp\left( -0.25 (\chi_A - \chi_B)^2 \right) \right] \times 100\%$$
+      <p>where $\chi_A$ and $\chi_B$ are the Pauling electronegativity values of the bonded elements.</p>
+    </div>
+    <div class="solution-step">
+      <div class="solution-step-title">Part (b): Electronegativity Difference for 50% Ionic Character</div>
+      <p>Setting $\%IC = 50\%$:</p>
+      $$1 - \exp\left( -0.25 (\Delta\chi)^2 \right) = 0.50 \implies \exp\left( -0.25 (\Delta\chi)^2 \right) = 0.50$$
+      $$-0.25 (\Delta\chi)^2 = \ln(0.50) = -0.69315 \implies (\Delta\chi)^2 = \frac{0.69315}{0.25} = 2.7726$$
+      $$\Delta\chi = \sqrt{2.7726} \approx \mathbf{1.665 \approx 1.7}$$
+      <p>When $\Delta\chi > 1.7$, the bond is predominantly ionic; when $\Delta\chi < 1.7$, the bond is predominantly covalent.</p>
+    </div>
+    <div class="solution-step">
+      <div class="solution-step-title">Part (c): Calculation for NaCl</div>
+      <p>$\chi_{\text{Cl}} = 3.0$, $\chi_{\text{Na}} = 0.9 \implies \Delta\chi = 3.0 - 0.9 = 2.1$.</p>
+      $$\%IC = \left[ 1 - \exp\left( -0.25 (2.1)^2 \right) \right] \times 100\% = \left[ 1 - \exp(-0.25 \times 4.41) \right] \times 100\%$$
+      $$\%IC = [1 - \exp(-1.1025)] \times 100\% = [1 - 0.3320] \times 100\% = \mathbf{66.8\%}$$
+      <p>Because $\%IC = 66.8\% > 50\%$, NaCl is classified as a predominantly <strong>ionic compound</strong> with 33.2% covalent character.</p>
+    </div>
+    <div class="final-answer-box">
+      <strong>Results:</strong><br>
+      Pauling Formula: $\%IC = [1 - \exp(-0.25 \Delta\chi^2)] \times 100\%$<br>
+      50% Threshold: $\Delta\chi = \mathbf{1.67 \approx 1.7}$<br>
+      NaCl: $\%IC = \mathbf{66.8\%}$ (Predominantly Ionic)
+    </div>""")
+
+add(12, "Percentage Ionic Character Spectrum: TiO2, SiC, and GaAs",
+    "Chemical Bonding", "bonding_type", "Intermediate",
+    r"""<p>Evaluate the degree of ionicity versus covalency for three prominent engineering solids using Pauling's formula:</p>
+    <table class="formula-table">
+      <tr><th>Material</th><th>Element A ($\chi_A$)</th><th>Element B ($\chi_B$)</th><th>Application</th></tr>
+      <tr><td>1. Titanium Dioxide ($\text{TiO}_2$)</td><td>$\text{Ti}$ ($\chi = 1.5$)</td><td>$\text{O}$ ($\chi = 3.5$)</td><td>Dielectric, TBCs</td></tr>
+      <tr><td>2. Silicon Carbide ($\text{SiC}$)</td><td>$\text{Si}$ ($\chi = 1.8$)</td><td>$\text{C}$ ($\chi = 2.5$)</td><td>Structural ceramic, power electronic</td></tr>
+      <tr><td>3. Gallium Arsenide ($\text{GaAs}$)</td><td>$\text{Ga}$ ($\chi = 1.6$)</td><td>$\text{As}$ ($\chi = 2.0$)</td><td>Optoelectronic semiconductor</td></tr>
+    </table>
+    <ol type="a">
+      <li>Calculate the electronegativity difference $\Delta\chi$ and percentage ionic character ($\%IC$) for each material.</li>
+      <li>Calculate the percentage covalent character ($\%CC = 100\% - \%IC$) for each material.</li>
+      <li>Rank the materials in order of increasing covalency and explain how this correlates with their crystal structure and band gap.</li>
+    </ol>""",
+    r"""<div class="solution-step">
+      <div class="solution-step-title">Part (a) & (b): %IC and %CC Calculations</div>
+      <ul>
+        <li><strong>Titanium Dioxide ($\text{TiO}_2$):</strong>
+        $$\Delta\chi = |3.5 - 1.5| = 2.0$$
+        $$\%IC = [1 - \exp(-0.25 \times 2.0^2)] \times 100\% = [1 - \exp(-1.00)] \times 100\% = [1 - 0.3679] \times 100\% = \mathbf{63.2\%}$$
+        $$\%CC = 100\% - 63.2\% = \mathbf{36.8\%}$$</li>
+        <li><strong>Silicon Carbide ($\text{SiC}$):</strong>
+        $$\Delta\chi = |2.5 - 1.8| = 0.7$$
+        $$\%IC = [1 - \exp(-0.25 \times 0.7^2)] \times 100\% = [1 - \exp(-0.1225)] \times 100\% = [1 - 0.8847] \times 100\% = \mathbf{11.5\%}$$
+        $$\%CC = 100\% - 11.5\% = \mathbf{88.5\%}$$</li>
+        <li><strong>Gallium Arsenide ($\text{GaAs}$):</strong>
+        $$\Delta\chi = |2.0 - 1.6| = 0.4$$
+        $$\%IC = [1 - \exp(-0.25 \times 0.4^2)] \times 100\% = [1 - \exp(-0.0400)] \times 100\% = [1 - 0.9608] \times 100\% = \mathbf{3.9\%}$$
+        $$\%CC = 100\% - 3.9\% = \mathbf{96.1\%}$$</li>
+      </ul>
+    </div>
+    <div class="solution-step">
+      <div class="solution-step-title">Part (c): Covalency Ranking and Physical Correlations</div>
+      <p><strong>Covalency Ranking:</strong> $\text{TiO}_2 \text{ (36.8% CC)} \ll \text{SiC (88.5% CC)} < \text{GaAs (96.1% CC)}$.</p>
+      <ul>
+        <li><strong>$\text{TiO}_2$ (Predominantly Ionic, 63.2% IC):</strong> Adopts the rutile/anatase crystal structure with high dielectric constant ($\kappa_r \approx 80–100$) and wide band gap ($E_g \approx 3.2 \text{ eV}$).</li>
+        <li><strong>$\text{SiC}$ (Strongly Covalent, 88.5% CC):</strong> Adopts tetrahedral diamond-like polytypes (3C, 4H, 6H) with extreme hardness (Mohs 9.5), high thermal conductivity ($k \approx 400 \text{ W/m}\cdot\text{K}$), and high band gap ($E_g \approx 3.0 \text{ eV}$).</li>
+        <li><strong>$\text{GaAs}$ (Almost Purely Covalent, 96.1% CC):</strong> Adopts the zinc blende structure ($sp^3$ hybridized tetrahedral bonding) with a direct band gap ($E_g = 1.42 \text{ eV}$) and high electron mobility ($8500 \text{ cm}^2/\text{V}\cdot\text{s}$).</li>
+      </ul>
+    </div>
+    <div class="final-answer-box">
+      <strong>Summary:</strong><br>
+      $\text{TiO}_2$: $\mathbf{63.2\% \text{ Ionic}} / \mathbf{36.8\% \text{ Covalent}}$ (Ionic Oxide)<br>
+      $\text{SiC}$: $\mathbf{11.5\% \text{ Ionic}} / \mathbf{88.5\% \text{ Covalent}}$ (Covalent Network Ceramic)<br>
+      $\text{GaAs}$: $\mathbf{3.9\% \text{ Ionic}} / \mathbf{96.1\% \text{ Covalent}}$ (Covalent III-V Semiconductor)
+    </div>""")
+
+# Save checkpoint
+with open("generator/ch2_temp.py", "w", encoding="utf-8") as f:
+    f.write(f"COUNT = {len(P)}\n")
+print(f"Added up to P12 in Ch 2. Current count: {len(P)}")
+
+# --- P13 to P30: Covalent, Metallic, and Secondary Bonding ---
+add(13, "Orbital Hybridization: sp3 Tetrahedral Bonding in Carbon and Silicon",
+    "Covalent Bonding", "hybridization", "Fundamental",
+    r"""<p>Carbon has a ground-state valence electron configuration of $2s^2 2p^2$, yet in diamond, methane, and silicon it forms four identical, mutually symmetric covalent bonds.</p>
+    <ol type="a">
+      <li>Explain the promotion and hybridization mechanism that transforms $2s^2 2p_x^1 2p_y^1 2p_z^0$ into four equivalent <strong>$sp^3$ hybrid orbitals</strong>.</li>
+      <li>State the 3D geometric shape, spatial orientation, and inter-orbital bond angle of $sp^3$ hybrid orbitals.</li>
+      <li>Explain why diamond and silicon are extremely rigid and resist plastic deformation at room temperature, referencing the directional nature and high bond energy ($348 \text{ kJ/mol}$) of $sp^3$ $\sigma$-bonds.</li>
+    </ol>""",
+    r"""<div class="solution-step">
+      <div class="solution-step-title">Part (a): Electron Promotion and $sp^3$ Hybridization</div>
+      <p>1. <em>Promotion:</em> One electron from the filled spherical $2s$ orbital is promoted into the empty $2p_z$ orbital, yielding an excited state $2s^1 2p_x^1 2p_y^1 2p_z^1$. While promotion requires $\approx 400 \text{ kJ/mol}$, this energy penalty is vastly compensated by forming four covalent bonds instead of two.<br>
+      2. <em>Hybridization:</em> The wavefunctions of the one $2s$ orbital and three $2p$ orbitals mix linearly (linear combination of atomic orbitals, LCAO) to produce four equivalent hybrid wavefunctions ($\psi_1, \psi_2, \psi_3, \psi_4$):</p>
+      $$\psi_i = \frac{1}{2} \left( \psi_{2s} \pm \psi_{2p_x} \pm \psi_{2p_y} \pm \psi_{2p_z} \right)$$
+    </div>
+    <div class="solution-step">
+      <div class="solution-step-title">Part (b): Geometry and Bond Angle</div>
+      <p>The four lobes of the $sp^3$ orbitals orient themselves in 3D space to maximize spatial separation and minimize mutual electrostatic electron repulsion, pointing toward the four vertices of a <strong>regular tetrahedron</strong>. The ideal tetrahedral bond angle is:</p>
+      $$\theta = \arccos\left(-\frac{1}{3}\right) \approx \mathbf{109.47^\circ \approx 109.5^\circ}$$
+    </div>
+    <div class="solution-step">
+      <div class="solution-step-title">Part (c): Rigidity and Resistance to Dislocation Glide</div>
+      <p>In diamond and silicon, adjacent atoms share electron pairs along narrow, highly directional axis-aligned $\sigma$-bonds. Unlike metallic bonding where electrons form a delocalized sea, covalent electron density is concentrated strictly between bonded atomic nuclei. Dislocation glide requires shearing atomic planes past one another. In an $sp^3$ covalent lattice, shearing requires breaking these directional bonds and forcing atomic orbitals into unfavorable non-bonded configurations, creating an enormous Peierls-Nabarro lattice friction stress ($\tau_{PN} \approx G/10$). Consequently, diamond and silicon cannot undergo dislocation glide at room temperature; when overloaded, they fail by catastrophic cleavage along $\{111\}$ planes.</p>
+    </div>
+    <div class="final-answer-box">
+      <strong>Core Conclusion:</strong> $sp^3$ hybridization produces four equivalent tetrahedral orbitals with $109.5^\circ$ bond angles. High bond strength and strict directionality prevent dislocation motion, making diamond the hardest natural material.
+    </div>""")
+
+add(14, "sp2 Hybridization and Delocalized pi-Bonds: Graphite vs. Graphene",
+    "Covalent Bonding", "hybridization", "Fundamental",
+    r"""<p>Graphite and graphene utilize <strong>$sp^2$ trigonal planar hybridization</strong>, yielding vastly different properties from diamond.</p>
+    <ol type="a">
+      <li>Describe the formation of $sp^2$ hybrid orbitals from $s$, $p_x$, and $p_y$ orbitals. What is the orientation and bond angle between the three in-plane $\sigma$-bonds?</li>
+      <li>What happens to the remaining unhybridized $2p_z$ orbital? Explain how the overlap of $2p_z$ orbitals forms delocalized $\pi$ and $\pi^*$ electronic conduction bands.</li>
+      <li>Explain why graphene has in-plane electrical conductivity and tensile strength higher than copper and steel, while graphite acts as an exceptional solid lubricant between planes.</li>
+    </ol>""",
+    r"""<div class="solution-step">
+      <div class="solution-step-title">Part (a): $sp^2$ Hybridization Geometry</div>
+      <p>Mixing one $2s$ orbital with two $2p$ orbitals ($2p_x, 2p_y$) creates three equivalent <strong>$sp^2$ hybrid orbitals</strong> lying in the $xy$-plane. They point toward the vertices of an equilateral triangle with a coplanar bond angle of exactly <strong>$120^\circ$</strong>. Head-to-head overlap with adjacent carbon $sp^2$ orbitals forms extremely strong, short ($0.142 \text{ nm}$) covalent $\sigma$-bonds that construct a 2D hexagonal honeycomb lattice.</p>
+    </div>
+    <div class="solution-step">
+      <div class="solution-step-title">Part (b): Unhybridized $2p_z$ Orbitals and $\pi$-Bands</div>
+      <p>The remaining unhybridized $2p_z$ orbital oriented perpendicular to the honeycomb plane contains one electron. Lateral side-by-side overlap between adjacent $2p_z$ orbitals creates a continuous, delocalized <strong>$\pi$-bonding molecular orbital network</strong> above and below the carbon plane. These overlapping $\pi$ wavefunctions form a valence $\pi$-band and conduction $\pi^*$-band that touch at the Dirac points (zero effective mass fermions), providing ballistic in-plane electron transport.</p>
+    </div>
+    <div class="solution-step">
+      <div class="solution-step-title">Part (c): In-Plane Strength vs. Interplanar Lubrication</div>
+      <ul>
+        <li><strong>In-Plane Properties (Graphene Sheet):</strong> The $sp^2$ $\sigma$-bond is even shorter and stronger ($525 \text{ kJ/mol}$) than the $sp^3$ bond in diamond ($348 \text{ kJ/mol}$). Consequently, graphene exhibits an in-plane Young's modulus of $1.0 \text{ TPa}$ and an intrinsic tensile strength of $130 \text{ GPa}$, with room-temperature electron mobilities exceeding $200,000 \text{ cm}^2/\text{V}\cdot\text{s}$.</li>
+        <li><strong>Interplanar Properties (Graphite Crystal):</strong> Graphene sheets are stacked along the $c$-axis with an interlayer spacing of $0.335 \text{ nm}$, held together solely by weak secondary <strong>van der Waals forces</strong> ($\sim 5–10 \text{ kJ/mol}$). An infinitesimal shear stress easily causes atomic planes to slide past one another, making graphite an exceptional high-temperature solid lubricant and pencil lead.</li>
+      </ul>
+    </div>
+    <div class="final-answer-box">
+      <strong>Synthesis:</strong> $sp^2$ hybridization creates a rigid 2D planar honeycomb lattice ($120^\circ$ bond angle) with delocalized $\pi$-electrons providing ballistic electrical conductivity. Weak van der Waals forces between sheets allow low-friction interplanar shear.
+    </div>""")
+
+add(15, "Bond Multiplicity: C-C Single, C=C Double, and C#C Triple Bonds",
+    "Covalent Bonding", "covalent", "Fundamental",
+    r"""<p>The strength and length of covalent bonds between identical atoms depend directly upon the number of shared electron pairs (bond order).</p>
+    <table class="formula-table">
+      <tr><th>Hydrocarbon Molecule</th><th>Bond Order & Type</th><th>Bond Length ($r_0$, nm)</th><th>Dissociation Energy ($E_b$, kJ/mol)</th></tr>
+      <tr><td>Ethane ($\text{H}_3\text{C}-\text{CH}_3$)</td><td>Single bond ($1\sigma$)</td><td>0.154 nm</td><td>348 kJ/mol</td></tr>
+      <tr><td>Ethylene ($\text{H}_2\text{C}=\text{CH}_2$)</td><td>Double bond ($1\sigma + 1\pi$)</td><td>0.134 nm</td><td>614 kJ/mol</td></tr>
+      <tr><td>Acetylene ($\text{HC}\equiv\text{CH}$)</td><td>Triple bond ($1\sigma + 2\pi$)</td><td>0.120 nm</td><td>839 kJ/mol</td></tr>
+    </table>
+    <ol type="a">
+      <li>Explain using electrostatic potential energy principles why bond length decreases as bond order increases.</li>
+      <li>Compare the energy of a single $\sigma$-bond ($348 \text{ kJ/mol}$) with the incremental energy of the first $\pi$-bond in ethylene and the second $\pi$-bond in acetylene. Why is a $\pi$-bond weaker than a $\sigma$-bond?</li>
+      <li>Explain why polymers containing conjugated double bonds ($-\text{C}=\text{C}-\text{C}=\text{C}-$, such as polyacetylene) can become electrically conductive upon doping.</li>
+    </ol>""",
+    r"""<div class="solution-step">
+      <div class="solution-step-title">Part (a): Why Higher Bond Order Shortens Bond Length</div>
+      <p>As bond order increases from 1 to 2 to 3, the number of shared valence electrons localized between the two carbon nuclei increases from 2 to 4 to 6. This higher concentrated negative charge density exerts stronger Coulombic attraction on both positively charged carbon nuclei, pulling them closer together against internuclear repulsion until a new equilibrium distance is established: $0.154 \text{ nm} \to 0.134 \text{ nm} \to 0.120 \text{ nm}$.</p>
+    </div>
+    <div class="solution-step">
+      <div class="solution-step-title">Part (b): Incremental $\pi$-Bond Energies vs. $\sigma$-Bonds</div>
+      <ul>
+        <li>Single $\sigma$-bond energy: $E_\sigma = \mathbf{348 \text{ kJ/mol}}$.</li>
+        <li>Double bond total energy: $614 \text{ kJ/mol}$. Incremental energy of the 1st $\pi$-bond:
+        $$\Delta E_{\pi,1} = 614 - 348 = \mathbf{266 \text{ kJ/mol}}$$</li>
+        <li>Triple bond total energy: $839 \text{ kJ/mol}$. Incremental energy of the 2nd $\pi$-bond:
+        $$\Delta E_{\pi,2} = 839 - 614 = \mathbf{225 \text{ kJ/mol}}$$</li>
+      </ul>
+      <p><strong>Why $\pi$-bonds are weaker:</strong> $\sigma$-bonds involve direct head-to-head orbital overlap concentrated directly along the internuclear axis, maximizing electron-nucleus attraction. $\pi$-bonds involve parallel side-by-side overlap above and below the axis, where electron density is further from the nuclei, resulting in weaker binding energy (266 kJ/mol vs 348 kJ/mol).</p>
+    </div>
+    <div class="solution-step">
+      <div class="solution-step-title">Part (c): Conductive Polymers via Conjugated Systems</div>
+      <p>In conjugated polymers like polyacetylene ($[-\text{CH}=\text{CH}-]_n$), alternating single and double bonds allow the unhybridized $2p_z$ orbitals of every carbon atom along the backbone to overlap continuously, forming a delocalized $\pi$-electron conduit. Doping with iodine (electron acceptor) or sodium (donor) injects mobile charge carriers (solitons/polarons) into the delocalized $\pi$-system, transforming the polymer into a synthetic metallic conductor ($\sigma > 10^5 \text{ S/m}$, 2000 Nobel Prize in Chemistry).</p>
+    </div>
+    <div class="final-answer-box">
+      <strong>Core Takeaways:</strong> Increasing bond order pulls nuclei closer ($0.154 \to 0.134 \to 0.120 \text{ nm}$) and elevates bonding energy. $\sigma$-bonds ($348 \text{ kJ/mol}$) are stronger than $\pi$-bonds ($266 \text{ kJ/mol}$) due to direct axial overlap. Conjugated $\pi$-orbitals enable conductive polymers.
+    </div>""")
+
+add(16, "Directional vs. Non-Directional Bonding: Ductility of Metals vs. Brittleness of Ceramics",
+    "Chemical Bonding", "ductility", "Fundamental",
+    r"""<p>The mechanical deformability of solid materials under shear stress is directly governed by whether their primary interatomic bonds are <strong>directional</strong> or <strong>non-directional</strong>.</p>
+    <ol type="a">
+      <li>Classify Ionic, Covalent, and Metallic bonds as either directional or non-directional, explaining the physical origin of directionality in terms of electron orbital geometry.</li>
+      <li>Explain the microscopic mechanism of plastic deformation (slip of close-packed atomic planes) in metals, and explain why the non-directional nature of metallic bonding allows dislocations to move easily without bond cleavage.</li>
+      <li>Explain why attempting to shear an ionic crystal (e.g., NaCl or MgO) across a cleavage plane forces like-charged ions into contact, causing instantaneous catastrophic fracture.</li>
+    </ol>""",
+    r"""<div class="solution-step">
+      <div class="solution-step-title">Part (a): Directional vs. Non-Directional Classification</div>
+      <ul>
+        <li><strong>Covalent Bonds (Directional):</strong> Formed by the specific spatial overlap of oriented electron orbitals ($p, d, sp, sp^2, sp^3$). High electron density exists only along specific axes, imposing strict equilibrium bond angles (e.g., $109.5^\circ$ in diamond, $104.5^\circ$ in water). Bending a bond away from its preferred angle incurs a steep energy penalty.</li>
+        <li><strong>Ionic Bonds (Non-Directional):</strong> Coulombic electrostatic fields around spherical ions emanate radially with spherical symmetry in all 3D directions ($E \propto 1/r$). Ions pack simply to maximize the coordination number of oppositely charged nearest neighbors.</li>
+        <li><strong>Metallic Bonds (Non-Directional):</strong> Positively charged ion cores are immersed in a continuous, delocalized "sea" of shared valence electrons that shields ion-ion repulsion uniformly in all directions.</li>
+      </ul>
+    </div>
+    <div class="solution-step">
+      <div class="solution-step-title">Part (b): Dislocation Glide in Metals</div>
+      <p>When shear stress moves a dislocation through a metal lattice, atomic bonds break and immediately reform with adjacent neighboring ion cores across the slip plane. Because the metallic electron sea is completely fluid and non-directional, the local bonding energy remains virtually unchanged during shear displacement. Dislocations glide at low critical resolved shear stresses ($\tau_{CRSS} \approx 10^{-4} G$), enabling immense macroscopic plastic deformation, formability, and ductility.</p>
+    </div>
+    <div class="solution-step">
+      <div class="solution-step-title">Part (c): Shearing Catastrophe in Ionic Ceramics</div>
+      <p>In an ionic lattice like NaCl or MgO, positive cations and negative anions alternate in an alternating checkerboard pattern along close-packed $\{100\}$ or $\{110\}$ planes. Applying a shear stress displaces one atomic plane by half an atomic spacing ($a/2$). This brings like-charged ions directly adjacent to each other ($\text{Na}^+$ over $\text{Na}^+$, $\text{Cl}^-$ over $\text{Cl}^-$). The resulting massive Coulombic electrostatic repulsion instantly tears the crystal planes apart, causing catastrophic brittle cleavage along crystallographic planes with zero plastic deformation.</p>
+    </div>
+    <div class="final-answer-box">
+      <strong>Synthesis:</strong> Non-directional metallic bonding allows atom planes to slide without disrupting the electron sea (high ductility). Directional covalent bonds resist angular bending, while ionic lattices experience catastrophic Coulombic repulsion when like charges align during shear (brittleness).
+    </div>""")
+
+add(17, "The Free Electron Gas Model of Metals (Drude-Sommerfeld Model)",
+    "Metallic Bonding", "metallic", "Intermediate",
+    r"""<p>The free electron gas model treats metallic bonding as an array of positively charged ion cores immersed in a gas of delocalized valence electrons governed by Fermi-Dirac quantum statistics.</p>
+    <ol type="a">
+      <li>Calculate the valence free electron density $n_e$ (electrons/$\text{m}^3$) in pure Copper. Given: density $\rho = 8.96 \text{ g/cm}^3$, atomic weight $A_{\text{Cu}} = 63.55 \text{ g/mol}$, and valence of 1 electron/atom.</li>
+      <li>State the <strong>Fermi Energy ($E_F$)</strong> equation for a 3D degenerate electron gas: $E_F = \frac{\hbar^2}{2 m_e} (3 \pi^2 n_e)^{2/3}$. Calculate $E_F$ for copper in both Joules and electron-volts ($\text{eV}$).</li>
+      <li>Calculate the <strong>Fermi velocity ($v_F$)</strong> of conduction electrons in copper ($E_F = \frac{1}{2} m_e v_F^2$). Contrast this quantum velocity with the classical Maxwell-Boltzmann thermal velocity.</li>
+    </ol>""",
+    r"""<div class="solution-step">
+      <div class="solution-step-title">Part (a): Free Electron Density $n_e$ in Copper</div>
+      <p>Number of atoms per unit volume:</p>
+      $$n_e = \frac{\rho \cdot N_A}{A_{\text{Cu}}} \times (\text{valence})$$
+      <p>Given $\rho = 8.96 \times 10^6 \text{ g/m}^3$, $A = 63.55 \text{ g/mol}$, $N_A = 6.022 \times 10^{23} \text{ atoms/mol}$, valence = 1:</p>
+      $$n_e = \frac{(8.96 \times 10^6 \text{ g/m}^3) (6.022 \times 10^{23} \text{ atoms/mol})}{63.55 \text{ g/mol}} \times 1 = \frac{5.3957 \times 10^{30}}{63.55} = \mathbf{8.49 \times 10^{28} \text{ electrons/m}^3}$$
+    </div>
+    <div class="solution-step">
+      <div class="solution-step-title">Part (b): Fermi Energy ($E_F$) Calculation</div>
+      <p>Using $\hbar = 1.055 \times 10^{-34} \text{ J}\cdot\text{s}$, $m_e = 9.109 \times 10^{-31} \text{ kg}$:</p>
+      $$3 \pi^2 n_e = 3 \pi^2 (8.49 \times 10^{28}) = 2.514 \times 10^{30} \text{ m}^{-3}$$
+      $$(3 \pi^2 n_e)^{2/3} = (2.514 \times 10^{30})^{2/3} \approx 1.849 \times 10^{20} \text{ m}^{-2}$$
+      $$\frac{\hbar^2}{2 m_e} = \frac{(1.055 \times 10^{-34})^2}{2 (9.109 \times 10^{-31})} = \frac{1.113 \times 10^{-68}}{1.8218 \times 10^{-30}} = 6.109 \times 10^{-39} \text{ J}\cdot\text{m}^2$$
+      $$E_F = (6.109 \times 10^{-39} \text{ J}\cdot\text{m}^2) \times (1.849 \times 10^{20} \text{ m}^{-2}) = \mathbf{1.130 \times 10^{-18} \text{ J}}$$
+      <p>Converting to electron-volts:</p>
+      $$E_F = \frac{1.130 \times 10^{-18} \text{ J}}{1.602 \times 10^{-19} \text{ J/eV}} = \mathbf{7.05 \text{ eV}}$$
+    </div>
+    <div class="solution-step">
+      <div class="solution-step-title">Part (c): Fermi Velocity ($v_F$) Calculation</div>
+      $$v_F = \sqrt{\frac{2 E_F}{m_e}} = \sqrt{\frac{2 (1.130 \times 10^{-18} \text{ J})}{9.109 \times 10^{-31} \text{ kg}}} = \sqrt{2.481 \times 10^{12}} = \mathbf{1.57 \times 10^6 \text{ m/s}}$$
+      <p><strong>Physical Comparison:</strong> Conduction electrons at the Fermi surface move at an immense quantum speed of $1,570 \text{ km/s}$ (~0.5% the speed of light) even at absolute zero ($0 \text{ K}$), far exceeding classical thermal velocity ($\sim 10^5 \text{ m/s}$). This high Fermi velocity enables rapid heat and charge transport.</p>
+    </div>
+    <div class="final-answer-box">
+      <strong>Final Results:</strong><br>
+      Electron Density: $n_e = \mathbf{8.49 \times 10^{28} \text{ m}^{-3}}$<br>
+      Fermi Energy: $E_F = \mathbf{1.13 \times 10^{-18} \text{ J}} = \mathbf{7.05 \text{ eV}}$<br>
+      Fermi Velocity: $v_F = \mathbf{1.57 \times 10^6 \text{ m/s}}$ (~0.5% the speed of light)
+    </div>""")
+
+add(18, "Electrical and Thermal Conductivity of Metals: The Wiedemann-Franz Law",
+    "Metallic Bonding", "wiedemann_franz", "Intermediate",
+    r"""<p>Metals are exceptional conductors of both electricity and heat because free conduction electrons transport both electric charge and thermal kinetic energy.</p>
+    <ol type="a">
+      <li>State the <strong>Drude formula</strong> for electrical conductivity ($\sigma = \frac{n_e e^2 \tau}{m_e}$) and define the electron relaxation time $\tau$ and mean free path $l_e = v_F \tau$.</li>
+      <li>State the <strong>Wiedemann-Franz Law</strong> relating thermal conductivity $\kappa$ and electrical conductivity $\sigma$. Define the <strong>Lorenz number ($L$)</strong> and write its theoretical Sommerfeld expression: $L = \frac{\pi^2 k_B^2}{3 e^2}$. Calculate the numerical value of $L$ in $\text{W}\cdot\Omega/\text{K}^2$.</li>
+      <li>At $T = 300 \text{ K}$, pure aluminum has an electrical conductivity of $\sigma = 3.65 \times 10^7 \, \Omega^{-1}\text{m}^{-1}$. Use the Wiedemann-Franz law to calculate its electronic thermal conductivity $\kappa_e$ in $\text{W/m}\cdot\text{K}$. Compare with the experimentally measured value ($\kappa = 237 \text{ W/m}\cdot\text{K}$) and explain any minor discrepancy.</li>
+    </ol>""",
+    r"""<div class="solution-step">
+      <div class="solution-step-title">Part (a): Drude Model of Electrical Conduction</div>
+      <p>Under an applied electric field $\mathcal{E}$, conduction electrons experience acceleration $a = e\mathcal{E}/m_e$, gaining drift velocity until scattered by lattice phonons or impurities with average collision time (relaxation time) $\tau$. The resulting current density is $J = n_e e v_d = \sigma \mathcal{E}$, yielding:</p>
+      $$\sigma = \frac{n_e e^2 \tau}{m_e}$$
+      <p>The electron mean free path between collisions is $l_e = v_F \tau$ (typically 10–50 nm at room temperature in pure metals).</p>
+    </div>
+    <div class="solution-step">
+      <div class="solution-step-title">Part (b): The Wiedemann-Franz Law & Lorenz Number</div>
+      <p>The ratio of electronic thermal conductivity $\kappa_e$ to electrical conductivity $\sigma$ is proportional to absolute temperature:</p>
+      $$\frac{\kappa_e}{\sigma} = L \cdot T \implies \frac{\kappa_e}{\sigma T} = L$$
+      <p>where the theoretical Sommerfeld Lorenz number is:</p>
+      $$L = \frac{\pi^2 k_B^2}{3 e^2} = \frac{\pi^2 (1.3806 \times 10^{-23} \text{ J/K})^2}{3 (1.6022 \times 10^{-19} \text{ C})^2} = \frac{\pi^2 (1.906 \times 10^{-46})}{3 (2.567 \times 10^{-38})} = \mathbf{2.443 \times 10^{-8} \text{ W}\cdot\Omega/\text{K}^2}$$
+    </div>
+    <div class="solution-step">
+      <div class="solution-step-title">Part (c): Thermal Conductivity Calculation for Aluminum</div>
+      <p>Given $\sigma = 3.65 \times 10^7 \, \Omega^{-1}\text{m}^{-1}$, $T = 300 \text{ K}$, $L = 2.443 \times 10^{-8} \text{ W}\cdot\Omega/\text{K}^2$:</p>
+      $$\kappa_e = L \cdot \sigma \cdot T = (2.443 \times 10^{-8} \text{ W}\cdot\Omega/\text{K}^2) \times (3.65 \times 10^7 \, \Omega^{-1}\text{m}^{-1}) \times (300 \text{ K})$$
+      $$\kappa_e = 0.8917 \times 300 = \mathbf{267.5 \text{ W/m}\cdot\text{K}}$$
+      <p><strong>Comparison & Physical Explanation:</strong> The experimental value for aluminum is $\approx 237 \text{ W/m}\cdot\text{K}$. The experimental value is slightly lower because at room temperature ($300 \text{ K}$), electron-phonon scattering is slightly inelastic, causing the empirical Lorenz number of aluminum ($L_{\text{exp}} \approx 2.15 \times 10^{-8}$) to be ~10% below the ideal elastic Sommerfeld limit. Additionally, total thermal conductivity includes a small lattice phonon contribution ($\kappa = \kappa_e + \kappa_L$), which is typically $< 5\%$ in pure metals.</p>
+    </div>
+    <div class="final-answer-box">
+      <strong>Calculated Results:</strong><br>
+      Lorenz Number: $L = \mathbf{2.44 \times 10^{-8} \text{ W}\cdot\Omega/\text{K}^2}$<br>
+      Predicted Electronic Thermal Conductivity: $\kappa_e = \mathbf{267.5 \text{ W/m}\cdot\text{K}}$ (Experiment: 237 W/m&bull;K)
+    </div>""")
+
+add(19, "Optical Reflectivity and Plasma Frequency of the Metallic Electron Sea",
+    "Metallic Bonding", "optics", "Intermediate",
+    r"""<p>The distinctive mirror-like metallic luster and total optical opacity of metals originate from the collective quantum oscillations of the conduction electron gas.</p>
+    <ol type="a">
+      <li>Define the <strong>plasma frequency ($\omega_p$)</strong> of a free electron gas: $\omega_p = \sqrt{\frac{n_e e^2}{\varepsilon_0 m_e}}$. Explain what occurs when light of frequency $\omega$ strikes a metal for $\omega < \omega_p$ vs. $\omega > \omega_p$.</li>
+      <li>Calculate the plasma frequency $\omega_p$ (in rad/s) and corresponding cutoff wavelength $\lambda_p = 2\pi c / \omega_p$ (in nm) for Aluminum ($n_e = 1.81 \times 10^{29} \text{ m}^{-3}$). Use $\varepsilon_0 = 8.854 \times 10^{-12} \text{ F/m}$ and $m_e = 9.109 \times 10^{-31} \text{ kg}$.</li>
+      <li>In which spectral region does $\lambda_p$ fall? Explain why aluminum mirrors reflect visible light ($\lambda = 400–700 \text{ nm}$) with > 90% efficiency, but become transparent in the extreme vacuum ultraviolet.</li>
+    </ol>""",
+    r"""<div class="solution-step">
+      <div class="solution-step-title">Part (a): Plasma Frequency and Dielectric Response</div>
+      <p>The Drude frequency-dependent dielectric permittivity of a free electron gas is:</p>
+      $$\varepsilon(\omega) = 1 - \frac{\omega_p^2}{\omega^2}$$
+      <ul>
+        <li><strong>Low Frequencies ($\omega < \omega_p$):</strong> The dielectric constant is negative ($\varepsilon < 0$). The complex refractive index is purely imaginary ($n + i k \approx i k$). Conduction electrons oscillate in-phase with the electric field, establishing an equal and opposite screening field within the skin depth ($\sim 10 \text{ nm}$) that reflects the incident wave with virtually 100% efficiency. The metal is completely opaque and reflective.</li>
+        <li><strong>High Frequencies ($\omega > \omega_p$):</strong> The dielectric constant is positive ($\varepsilon > 0$). Electrons cannot respond fast enough to the rapid electromagnetic oscillations. The metal becomes transparent, behaving as an ordinary dielectric window.</li>
+      </ul>
+    </div>
+    <div class="solution-step">
+      <div class="solution-step-title">Part (b): Plasma Frequency Calculation for Aluminum</div>
+      <p>Given $n_e = 1.81 \times 10^{29} \text{ m}^{-3}$ (Al has valence 3):</p>
+      $$\omega_p^2 = \frac{n_e e^2}{\varepsilon_0 m_e} = \frac{(1.81 \times 10^{29} \text{ m}^{-3}) (1.602 \times 10^{-19} \text{ C})^2}{(8.854 \times 10^{-12} \text{ F/m}) (9.109 \times 10^{-31} \text{ kg})}$$
+      $$\omega_p^2 = \frac{(1.81 \times 10^{29}) (2.5664 \times 10^{-38})}{8.065 \times 10^{-41}} = \frac{4.645 \times 10^{-9}}{8.065 \times 10^{-41}} = 5.760 \times 10^{31} \text{ s}^{-2}$$
+      $$\omega_p = \sqrt{5.760 \times 10^{31}} = \mathbf{2.40 \times 10^{16} \text{ rad/s}}$$
+      <p>The plasma cutoff wavelength is:</p>
+      $$\lambda_p = \frac{2 \pi c}{\omega_p} = \frac{2 \pi (3.00 \times 10^8 \text{ m/s})}{2.40 \times 10^{16} \text{ rad/s}} = \frac{1.885 \times 10^9}{2.40 \times 10^{16}} = 7.85 \times 10^{-8} \text{ m} = \mathbf{78.5 \text{ nm}}$$
+    </div>
+    <div class="solution-step">
+      <div class="solution-step-title">Part (c): Spectral Analysis and Optical Reflection</div>
+      <p>The cutoff wavelength $\lambda_p = 78.5 \text{ nm}$ lies deep in the <strong>vacuum ultraviolet (VUV)</strong> spectrum. All visible light wavelengths ($\lambda = 400–700 \text{ nm}$) correspond to frequencies $\omega = 2\pi c / \lambda \ll \omega_p$. Because visible light is far below the plasma frequency, conduction electrons easily respond to the wave and reflect it with $> 92\%$ specular efficiency. At wavelengths shorter than 78 nm (soft X-rays / VUV), $\omega > \omega_p$, so aluminum becomes transparent.</p>
+    </div>
+    <div class="final-answer-box">
+      <strong>Results:</strong><br>
+      $\omega_p = \mathbf{2.40 \times 10^{16} \text{ rad/s}}$<br>
+      $\lambda_p = \mathbf{78.5 \text{ nm}}$ (Deep Vacuum Ultraviolet)<br>
+      Because $\lambda_{\text{visible}} (400–700 \text{ nm}) \gg \lambda_p$, aluminum reflects all visible light with high efficiency, imparting its silver mirror luster.
+    </div>""")
+
+add(20, "Mixed Bonding: Intermetallics and the van Arkel-Ketelaar Triangle",
+    "Chemical Bonding", "bonding_triangle", "Intermediate",
+    r"""<p>Real materials exhibit mixed bonding characteristics that can be mapped on the <strong>van Arkel-Ketelaar Triangle</strong>, whose three vertices represent pure Metallic, pure Covalent, and pure Ionic bonding.</p>
+    <ol type="a">
+      <li>Describe the two axes of the van Arkel-Ketelaar triangle: the <strong>electronegativity difference ($\Delta\chi = |\chi_A - \chi_B|$)</strong> and the <strong>average electronegativity ($\bar{\chi} = \frac{\chi_A + \chi_B}{2}$)</strong>.</li>
+      <li>Locate the positions of: Pure Silicon (Si), Cesium Fluoride (CsF), Pure Copper (Cu), and Titanium Aluminide ($\text{TiAl}$) on the triangle.</li>
+      <li>Explain the unique mechanical and thermal properties of ordered <strong>intermetallic compounds</strong> (such as $\text{Ni}_3\text{Al}$ and $\text{TiAl}$) that arise from their mixed metallic-covalent bonding character (anomalous yield strength increase with temperature).</li>
+    </ol>""",
+    r"""<div class="solution-step">
+      <div class="solution-step-title">Part (a): Axes of the van Arkel-Ketelaar Triangle</div>
+      <ul>
+        <li><strong>Vertical Axis ($\Delta\chi = |\chi_A - \chi_B|$):</strong> Measures the degree of electron charge transfer and asymmetric polarization. High $\Delta\chi$ drives the material toward the <strong>Ionic vertex</strong> at the top.</li>
+        <li><strong>Horizontal Axis ($\bar{\chi} = (\chi_A + \chi_B)/2$):</strong> Measures the average ability of the constituent atoms to attract valence electrons:
+          <ul>
+            <li>High average electronegativity ($\bar{\chi} \gg 2.0$) with low $\Delta\chi$ localizes electrons between atoms, driving the material toward the <strong>Covalent vertex</strong> (bottom right).</li>
+            <li>Low average electronegativity ($\bar{\chi} \ll 2.0$) with low $\Delta\chi$ allows valence electrons to delocalize into a shared sea, driving the material toward the <strong>Metallic vertex</strong> (bottom left).</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="solution-step">
+      <div class="solution-step-title">Part (b): Mapping Materials on the Triangle</div>
+      <ul>
+        <li><strong>Pure Copper (Cu):</strong> $\chi = 1.9 \implies \Delta\chi = 0, \bar{\chi} = 1.9$. Located at the <strong>Metallic vertex</strong> (delocalized sea, highly ductile).</li>
+        <li><strong>Pure Silicon (Si):</strong> $\chi = 1.8 \implies \Delta\chi = 0, \bar{\chi} = 1.8$ (or Carbon: $\chi = 2.5, \bar{\chi} = 2.5$). Located near the <strong>Covalent vertex</strong> ($sp^3$ network).</li>
+        <li><strong>Cesium Fluoride (CsF):</strong> $\chi_{\text{Cs}} = 0.7, \chi_{\text{F}} = 4.0 \implies \Delta\chi = 3.3, \bar{\chi} = 2.35$. Located near the <strong>Ionic vertex</strong> at the apex (highest ionic character known).</li>
+        <li><strong>Titanium Aluminide ($\text{TiAl}$):</strong> $\chi_{\text{Ti}} = 1.5, \chi_{\text{Al}} = 1.6 \implies \Delta\chi = 0.1, \bar{\chi} = 1.55$. Located between the metallic and covalent vertices (mixed metallic-covalent bonding).</li>
+      </ul>
+    </div>
+    <div class="solution-step">
+      <div class="solution-step-title">Part (c): Intermetallics and Anomalous Yielding</div>
+      <p>Intermetallic compounds like $\text{Ni}_3\text{Al}$ (ordered $\text{L}1_2$ structure) and $\text{TiAl}$ (ordered $\text{L}1_0$ structure) possess long-range crystallographic ordering with directional covalent-like hybrid bonding superimposed on a metallic electron matrix. This imparts two distinct engineering characteristics:</p>
+      <ul>
+        <li>They retain high stiffness and creep strength up to 800–1000 &deg;C.</li>
+        <li><strong>Anomalous Yield Stress Peak:</strong> In conventional metals, yield strength drops monotonically with temperature due to thermal activation. In $\text{Ni}_3\text{Al}$, yield strength <em>increases with temperature</em> up to ~650 &deg;C! This occurs because thermally activated cross-slip of screw superdislocations from $\{111\}$ octahedral planes onto $\{010\}$ cube planes forms sessile, locked configurations (Kear-Wilsdorf locks) that strongly impede further plastic deformation.</li>
+      </ul>
+    </div>
+    <div class="final-answer-box">
+      <strong>Synthesis:</strong> The van Arkel-Ketelaar triangle categorizes materials using $\Delta\chi$ (ionicity) and $\bar{\chi}$ (metallicity vs covalency). Intermetallics ($\text{Ni}_3\text{Al}$) combine metallic conductivity with directional covalent bonds, creating an anomalous increase in yield strength at high temperatures.
+    </div>""")
+
+# Save checkpoint
+print(f"Added up to P20 in Ch 2. Current count: {len(P)}")
+
+# --- P21 to P35: Secondary Bonding, Potential Well Physics & Correlates ---
+add(21, "London Dispersion Forces: Fluctuating Induced Dipoles in Noble Gases",
+    "Secondary Bonding", "van_der_waals", "Fundamental",
+    r"""<p>Even completely non-polar, spherically symmetric inert gas atoms (He, Ne, Ar, Kr, Xe) condense into liquids and crystalline solids at sufficiently low temperatures.</p>
+    <ol type="a">
+      <li>Explain the quantum mechanical origin of <strong>London dispersion forces (fluctuating induced dipole-dipole interactions)</strong>.</li>
+      <li>Why does the interaction energy between two non-polar neutral atoms decay with distance as $E_{\text{disp}}(r) = -\frac{C}{r^6}$?</li>
+      <li>Examine the boiling points of the noble gases: Helium ($4.2 \text{ K}$), Neon ($27 \text{ K}$), Argon ($87 \text{ K}$), Krypton ($120 \text{ K}$), and Xenon ($165 \text{ K}$). Explain the physical correlation between atomic polarizability ($\alpha_p$), total electron count ($Z$), and dispersion bonding strength.</li>
+    </ol>""",
+    r"""<div class="solution-step">
+      <div class="solution-step-title">Part (a): Quantum Origin of London Dispersion Forces</div>
+      <p>Although an isolated noble gas atom has a time-averaged spherically symmetric electron cloud, instantaneous quantum fluctuations of the orbiting electrons create a temporary, transient dipole moment $\mathbf{p}_1(t) = q \cdot \mathbf{d}(t)$ at any specific picosecond instant. The electric field emanating from this instantaneous dipole ($\mathcal{E} \propto p_1 / r^3$) polarizes the electron cloud of an adjacent neutral atom, inducing a synchronized dipole moment $\mathbf{p}_2 = \alpha_p \mathcal{E} \propto \alpha_p p_1 / r^3$. The electrostatic attraction between these correlated dipoles produces an attractive London dispersion force.</p>
+    </div>
+    <div class="solution-step">
+      <div class="solution-step-title">Part (b): Derivation of the $1/r^6$ Distance Dependence</div>
+      <p>The electrostatic interaction energy between two collinear dipole moments $p_1$ and $p_2$ separated by distance $r$ is:</p>
+      $$E(r) = -\frac{2 p_1 p_2}{4 \pi \varepsilon_0 r^3}$$
+      <p>Because the induced dipole $p_2$ is proportional to the electric field of the first dipole ($p_2 \propto 1/r^3$):</p>
+      $$E_{\text{disp}}(r) \propto -\frac{p_1 (p_1 / r^3)}{r^3} = -\frac{C}{r^6}$$
+      <p>where $C = \frac{3}{4} h \nu_0 \alpha_p^2$ is the London dispersion coefficient. The force is $F(r) = -dE/dr \propto -1/r^7$, making dispersion forces short-range.</p>
+    </div>
+    <div class="solution-step">
+      <div class="solution-step-title">Part (c): Noble Gas Boiling Point Trend</div>
+      <p>As atomic number $Z$ increases from Helium ($Z = 2$) to Xenon ($Z = 54$), the total electron count increases and electrons occupy larger principal shells ($n = 1 \to 5$) further from the nucleus. The outer valence electrons are shielded by dense inner core shells, making the electron cloud much more loosely held and easily deformed by external fields (<strong>higher atomic polarizability $\alpha_p$</strong>). Because dispersion energy scales with the square of polarizability ($C \propto \alpha_p^2$), dispersion bonding energy increases by over an order of magnitude from He to Xe, raising the boiling point from $4.2 \text{ K}$ to $165 \text{ K}$.</p>
+    </div>
+    <div class="final-answer-box">
+      <strong>Core Conclusion:</strong> Instantaneous electron fluctuations induce synchronized dipoles yielding attractive energies scaling as $E \propto -1/r^6$. Larger electron clouds (higher $Z$) possess higher polarizability ($\alpha_p$), increasing dispersion forces and raising condensation temperatures.
+    </div>""")
+
+add(22, "Permanent Dipole Interactions (Keesom Forces) in Polar Solids",
+    "Secondary Bonding", "van_der_waals", "Fundamental",
+    r"""<p>Molecules with asymmetric covalent charge distributions possess permanent electrical dipole moments that interact via <strong>Keesom orientation forces</strong>.</p>
+    <ol type="a">
+      <li>Define the <strong>electric dipole moment ($\mu$ or $p$)</strong> of a polar molecule. What is the unit <strong>Debye (D)</strong> in Coulomb-meters ($\text{C}\cdot\text{m}$)?</li>
+      <li>Contrast the interaction energy between two fixed, stationary aligned dipoles ($E \propto 1/r^3$) with the thermal orientation average in a fluid/gas where thermal agitation disrupts alignment ($E \propto 1/r^6$).</li>
+      <li>Compare the physical properties of non-polar Polyethylene ($[-\text{CH}_2-\text{CH}_2-]_n$, $p = 0 \text{ D}$) with polar Polyvinyl Chloride (PVC: $[-\text{CH}_2-\text{CH(Cl)}-]_n$, $p \approx 1.5 \text{ D}$). Explain how dipole-dipole interactions raise the glass transition temperature ($T_g$) and mechanical stiffness of PVC.</li>
+    </ol>""",
+    r"""<div class="solution-step">
+      <div class="solution-step-title">Part (a): Dipole Moment Definition and Debye Unit</div>
+      <p>When two equal and opposite charges $+q$ and $-q$ are separated by distance $d$, the electric dipole moment is a vector pointing from negative to positive charge:</p>
+      $$\mathbf{p} = q \cdot \mathbf{d}$$
+      <p>The standard molecular unit is the <strong>Debye (D)</strong>, defined as $10^{-18} \text{ statC}\cdot\text{cm}$:</p>
+      $$1 \text{ D} = \frac{10^{-21} \text{ C}\cdot\text{m}}{2.9979 \times 10^8} = \mathbf{3.336 \times 10^{-30} \text{ C}\cdot\text{m}}$$
+    </div>
+    <div class="solution-step">
+      <div class="solution-step-title">Part (b): Fixed vs. Thermally Averaged Dipole Interactions</div>
+      <ul>
+        <li><strong>Fixed Aligned Dipoles (Crystalline Solids):</strong> When dipoles are locked into static collinear orientation within a crystal lattice, the interaction energy is:
+        $$E_{\text{fixed}}(r) = -\frac{2 p_1 p_2}{4 \pi \varepsilon_0 r^3} \propto \frac{1}{r^3}$$</li>
+        <li><strong>Thermally Averaged Dipoles (Fluids / Amorphous Polymers):</strong> In liquids or flexible polymer melts, thermal kinetic energy ($k_B T$) continuously rotates and randomizes dipole vectors. Applying Boltzmann statistical averaging ($\langle E \rangle = \int E e^{-E/kT} d\Omega / \int e^{-E/kT} d\Omega$) reveals that parallel attractive orientations are slightly more populated than antiparallel repulsive orientations:
+        $$E_{\text{Keesom}}(r) = -\frac{2 p_1^2 p_2^2}{3 (4\pi\varepsilon_0)^2 k_B T \cdot r^6} \propto \frac{1}{r^6}$$
+        The interaction energy falls off as $1/r^6$ and is inversely proportional to absolute temperature.</li>
+      </ul>
+    </div>
+    <div class="solution-step">
+      <div class="solution-step-title">Part (c): Polyethylene vs. Polyvinyl Chloride (PVC)</div>
+      <ul>
+        <li><strong>Polyethylene (Non-polar):</strong> Symmetrical hydrocarbon structure with zero net dipole moment. Interchain bonding consists solely of weak London dispersion forces, yielding high chain mobility and an ultra-low glass transition temperature: $T_g \approx -120^\circ\text{C}$. At room temperature, PE is flexible and ductile.</li>
+        <li><strong>Polyvinyl Chloride (PVC):</strong> High electronegativity of chlorine ($\chi_{\text{Cl}} = 3.0$ vs $\chi_{\text{C}} = 2.5$) creates a strong polar $\text{C}^{\delta+}-\text{Cl}^{\delta-}$ bond dipole ($p \approx 1.5 \text{ D}$). Strong interchain Keesom attractions act as electrostatic physical crosslinks that lock adjacent chains in place, raising the glass transition temperature to <strong>$T_g \approx +85^\circ\text{C}$</strong>. At room temperature ($20^\circ\text{C}$), unplasticized PVC (uPVC) is in a rigid, glassy state used for structural plumbing pipes.</li>
+      </ul>
+    </div>
+    <div class="final-answer-box">
+      <strong>Synthesis:</strong> Fixed dipoles interact as $1/r^3$; thermally averaged dipoles interact as $1/r^6 k_B T$. In PVC, polar $\text{C}-\text{Cl}$ dipoles generate strong interchain attractions that raise $T_g$ from $-120^\circ\text{C}$ (PE) to $+85^\circ\text{C}$ (rigid glassy uPVC).
+    </div>""")
+
+add(23, "Hydrogen Bonding: Structural Criteria and Hydride Boiling Point Anomalies",
+    "Secondary Bonding", "hydrogen_bonding", "Fundamental",
+    r"""<p>Hydrogen bonding is a unique, exceptionally strong secondary bond that plays a defining role in the chemistry of water, synthetic polyamides, and biological polymers.</p>
+    <ol type="a">
+      <li>State the two strict chemical criteria required for a molecule to form a <strong>Hydrogen Bond</strong> ($\text{D}-\text{H}\cdots\text{A}$). What are the three primary electronegative elements that participate as donors ($\text{D}$) and acceptors ($\text{A}$)?</li>
+      <li>Compare the typical bond energy of a hydrogen bond ($10–40 \text{ kJ/mol}$) with ordinary van der Waals bonds ($1–5 \text{ kJ/mol}$) and covalent bonds ($200–500 \text{ kJ/mol}$).</li>
+      <li>Plotting the boiling points of Group 16 hydrides ($\text{H}_2\text{O}, \text{H}_2\text{S}, \text{H}_2\text{Se}, \text{H}_2\text{Te}$) shows that boiling point increases from $\text{H}_2\text{S}$ ($-60^\circ\text{C}$) to $\text{H}_2\text{Te}$ ($-2^\circ\text{C}$), but $\text{H}_2\text{O}$ has an anomalous boiling point of $+100^\circ\text{C}$. Explain this behavior.</li>
+    </ol>""",
+    r"""<div class="solution-step">
+      <div class="solution-step-title">Part (a): Chemical Criteria for Hydrogen Bonding</div>
+      <p>A hydrogen bond ($\text{D}-\text{H}\cdots\text{A}$) forms when:</p>
+      <ol>
+        <li>A Hydrogen atom is covalently bonded to a small, highly electronegative donor atom $\text{D}$ (specifically <strong>Fluorine, Oxygen, or Nitrogen: F, O, N</strong>). Because of the extreme electronegativity difference, the shared electron pair is pulled strongly away from the single proton nucleus of hydrogen, leaving an unshielded, highly concentrated positive pole ($\text{H}^{\delta+}$).</li>
+        <li>An adjacent acceptor atom $\text{A}$ (also <strong>F, O, or N</strong>) possesses a compact, non-bonding <strong>lone electron pair</strong>. The small size of the bare proton allows it to approach exceptionally close to the lone pair, generating a powerful localized electrostatic and partially covalent interaction.</li>
+      </ol>
+    </div>
+    <div class="solution-step">
+      <div class="solution-step-title">Part (b): Bond Energy Hierarchy</div>
+      <table class="formula-table">
+        <tr><th>Bond Category</th><th>Typical Energy (kJ/mol)</th><th>Typical Energy (eV/bond)</th><th>Nature</th></tr>
+        <tr><td><strong>van der Waals (London/Keesom)</strong></td><td>0.5 – 5 kJ/mol</td><td>0.005 – 0.05 eV</td><td>Intermolecular fluctuating / rotating dipoles</td></tr>
+        <tr><td><strong>Hydrogen Bonding</strong></td><td><strong>10 – 40 kJ/mol</strong></td><td><strong>0.1 – 0.4 eV</strong></td><td>Specialized strong electrostatic & partial charge transfer</td></tr>
+        <tr><td><strong>Covalent Bonding ($\text{C}-\text{C}$)</strong></td><td>200 – 500 kJ/mol</td><td>2.0 – 5.0 eV</td><td>Primary shared electron pairs</td></tr>
+        <tr><td><strong>Ionic Bonding (NaCl lattice)</strong></td><td>600 – 1000 kJ/mol</td><td>6.0 – 10.0 eV</td><td>Primary Coulombic ionic lattice</td></tr>
+      </table>
+      <p>Hydrogen bonds are roughly <strong>10 times stronger than van der Waals forces</strong>, but about <strong>10 times weaker than primary covalent/ionic bonds</strong>.</p>
+    </div>
+    <div class="solution-step">
+      <div class="solution-step-title">Part (c): The Hydride Boiling Point Anomaly</div>
+      <p>For $\text{H}_2\text{S}, \text{H}_2\text{Se}, \text{H}_2\text{Te}$, sulfur, selenium, and tellurium are not electronegative enough and have larger, diffuse electron clouds that cannot form strong hydrogen bonds. In this series, boiling point rises monotonically from $-60^\circ\text{C}$ to $-2^\circ\text{C}$ due solely to increasing molecular weight and higher London dispersion forces. If water followed this baseline trend, its predicted boiling point would be approximately <strong>$-90^\circ\text{C}$</strong>! Water's actual boiling point of <strong>$+100^\circ\text{C}$</strong> represents an extraordinary $+190^\circ\text{C}$ elevation, caused by its 3D tetrahedral network where each $\text{H}_2\text{O}$ molecule forms up to four strong hydrogen bonds ($22 \text{ kJ/mol}$ each), requiring immense thermal energy to break into vapor.</p>
+    </div>
+    <div class="final-answer-box">
+      <strong>Core Conclusion:</strong> Hydrogen bonds form exclusively between H and F, O, or N with energies of 10–40 kJ/mol (10$\times$ stronger than van der Waals). Water's 3D four-fold hydrogen bonding elevates its boiling point from an expected $-90^\circ\text{C}$ to $+100^\circ\text{C}$.
+    </div>""")
+
+add(24, "Anomalous Physical Properties of Water Driven by Hydrogen Bonding",
+    "Secondary Bonding", "water_anomalies", "Intermediate",
+    r"""<p>Hydrogen bonding gives liquid and solid water physical and thermodynamic properties that differ from almost all other liquids on Earth.</p>
+    <ol type="a">
+      <li>Explain the open crystalline structure of <strong>hexagonal ice ($I_h$)</strong> and why water <strong>expands by 9% upon freezing</strong>, whereas ordinary liquids contract upon solidification.</li>
+      <li>Explain why water exhibits a <strong>maximum density at $3.98^\circ\text{C}$</strong> ($1.0000 \text{ g/cm}^3$) rather than at its freezing point ($0^\circ\text{C}$).</li>
+      <li>Discuss the ecological and engineering consequences of ice floating: why do freshwater lakes freeze from the top down, and why do uninsulated water pipes burst in freezing weather?</li>
+    </ol>""",
+    r"""<div class="solution-step">
+      <div class="solution-step-title">Part (a): Open Hexagonal Ice Structure and 9% Expansion</div>
+      <p>In solid ice ($I_h$), each water molecule acts as a donor for two hydrogen bonds and an acceptor for two hydrogen bonds. To satisfy the directional tetrahedral bond angle ($\approx 109.5^\circ$), the molecules arrange into an open, cavernous hexagonal ring lattice. This open cage-like crystalline framework contains large hexagonal channels (void space), yielding a low density of $\rho_{\text{ice}} = 0.917 \text{ g/cm}^3$. In contrast, when ice melts at $0^\circ\text{C}$, thermal kinetic energy breaks ~15% of the rigid hydrogen bonds, allowing collapsed water molecules to tumble into the open voids. Liquid water at $0^\circ\text{C}$ has a density of $0.9998 \text{ g/cm}^3$. Solidification causes an anomalous <strong>9.0% volumetric expansion</strong> ($\Delta V / V = +9.0\%$).</p>
+    </div>
+    <div class="solution-step">
+      <div class="solution-step-title">Part (b): Density Maximum at $3.98^\circ\text{C}$</div>
+      <p>Between $0^\circ\text{C}$ and $4^\circ\text{C}$, two competing physical mechanisms operate simultaneously:</p>
+      <ol>
+        <li><em>Structural Collapse:</em> Continuing thermal disruption of remaining ice-like hydrogen-bonded clusters collapses open void space, <strong>increasing density</strong> ($d\rho/dT > 0$).</li>
+        <li><em>Normal Thermal Expansion:</em> Increasing anharmonic vibrational amplitude of the molecules drives them further apart, <strong>decreasing density</strong> ($d\rho/dT < 0$).</li>
+      </ol>
+      <p>Below $3.98^\circ\text{C}$, structural collapse dominates, so density increases upon heating. Above $3.98^\circ\text{C}$, normal thermal expansion dominates, so density decreases upon heating. The inflection yields a distinct density maximum at <strong>$3.98^\circ\text{C}$</strong>.</p>
+    </div>
+    <div class="solution-step">
+      <div class="solution-step-title">Part (c): Ecological & Engineering Consequences</div>
+      <ul>
+        <li><strong>Ecological Survival of Aquatic Life:</strong> In autumn, cooling surface water sinks until the entire lake reaches $4^\circ\text{C}$. Further cooling makes surface water lighter ($0–3^\circ\text{C}$), so cold water floats. Ice forms strictly at the surface, acting as an insulating blanket ($k \approx 2.2 \text{ W/m}\cdot\text{K}$) that prevents the deeper $4^\circ\text{C}$ water from freezing, allowing aquatic life to survive winter at the bottom.</li>
+        <li><strong>Pipe Burst Mechanics:</strong> When water freezes inside a rigid copper or steel pipe, the 9% volumetric expansion is constrained by the metal walls. If ice plugs form at two locations, water trapped between them generates immense hydrostatic pressures exceeding <strong>$200 \text{ MPa}$ (over 2000 atmospheres!)</strong>, exceeding the tensile yield and hoop burst strength of copper ($150–250 \text{ MPa}$), causing violent pipe rupture.</li>
+      </ul>
+    </div>
+    <div class="final-answer-box">
+      <strong>Synthesis:</strong> Directional tetrahedral hydrogen bonding forces ice into an open hexagonal cage ($\rho = 0.917 \text{ g/cm}^3$), expanding by 9% upon freezing. Competing structural collapse and thermal expansion produce a maximum density at $3.98^\circ\text{C}$, enabling surface lake freezing while generating 200+ MPa burst pressures in frozen pipes.
+    </div>""")
+
+add(25, "Polymer Secondary Bonding: Polyethylene vs. Nylon vs. Kevlar",
+    "Secondary Bonding", "polymers", "Intermediate",
+    r"""<p>The macroscopic strength, melting point, and modulus of linear polymers are governed by the strength of secondary bonds acting between adjacent macromolecular chains.</p>
+    <table class="formula-table">
+      <tr><th>Polymer</th><th>Repeat Unit Structure</th><th>Interchain Bonding</th><th>Melting Point ($T_m$)</th><th>Tensile Modulus ($E$)</th></tr>
+      <tr><td>1. Low-Density Polyethylene (LDPE)</td><td>$[-\text{CH}_2-\text{CH}_2-]_n$ (branched)</td><td>London Dispersion</td><td>110 &deg;C</td><td>0.2 GPa</td></tr>
+      <tr><td>2. High-Density Polyethylene (HDPE)</td><td>$[-\text{CH}_2-\text{CH}_2-]_n$ (linear)</td><td>London Dispersion</td><td>135 &deg;C</td><td>1.1 GPa</td></tr>
+      <tr><td>3. Polyamide 6,6 (Nylon 6,6)</td><td>$[-\text{NH}(\text{CH}_2)_6\text{NH}-\text{CO}(\text{CH}_2)_4\text{CO}-]_n$</td><td>Hydrogen Bonding</td><td>265 &deg;C</td><td>3.0 GPa</td></tr>
+      <tr><td>4. Kevlar (Poly-p-phenylene terephthalamide)</td><td>$[-\text{NH}-\text{C}_6\text{H}_4-\text{NH}-\text{CO}-\text{C}_6\text{H}_4-\text{CO}-]_n$</td><td>Aromatic H-Bonding</td><td>> 500 &deg;C (degrades)</td><td>130 GPa (drawn)</td></tr>
+    </table>
+    <ol type="a">
+      <li>Explain why HDPE has a higher melting point, higher density, and 5-fold higher modulus than LDPE, despite having identical chemical formulas.</li>
+      <li>Identify the specific functional groups that form interchain hydrogen bonds in Nylon 6,6. Explain why its melting point ($265^\circ\text{C}$) is over 130 &deg;C higher than HDPE ($135^\circ\text{C}$).</li>
+      <li>Explain how Kevlar combines rigid aromatic benzene rings with dense interchain hydrogen bonding to achieve tensile modulus ($130 \text{ GPa}$) and strength ($3.6 \text{ GPa}$) exceeding structural steel.</li>
+    </ol>""",
+    r"""<div class="solution-step">
+      <div class="solution-step-title">Part (a): LDPE vs. HDPE Architecture and Crystallinity</div>
+      <ul>
+        <li><strong>LDPE:</strong> Synthesized via high-pressure free-radical polymerization, creating extensive short- and long-chain branching. Branches prevent chains from packing closely together, lowering crystallinity to 40–55% and density to $0.91–0.93 \text{ g/cm}^3$. The larger interchain distance weakens London dispersion forces ($E \propto 1/r^6$), yielding lower modulus ($0.2 \text{ GPa}$) and melting point ($110^\circ\text{C}$).</li>
+        <li><strong>HDPE:</strong> Synthesized using Ziegler-Natta coordination catalysts, producing unbranched, linear polyethylene chains. Linear chains pack tightly into crystalline lamellae (crystallinity 70–85%, density $0.95–0.97 \text{ g/cm}^3$). The smaller interchain spacing maximizes dispersion interactions, raising modulus to $1.1 \text{ GPa}$ and melting point to $135^\circ\text{C}$.</li>
+      </ul>
+    </div>
+    <div class="solution-step">
+      <div class="solution-step-title">Part (b): Interchain Hydrogen Bonding in Nylon 6,6</div>
+      <p>Nylon 6,6 contains polar amide groups ($-\text{NH}-\text{CO}-$). The carbonyl oxygen ($\text{C}=\text{O}^{\delta-}$) acts as a strong hydrogen bond acceptor, and the amide hydrogen ($\text{N}-\text{H}^{\delta+}$) acts as a strong donor. In the crystalline $\alpha$-phase, adjacent planar zigzag chains align so that <strong>100% of the amide groups participate in regular interchain hydrogen bonds</strong> ($\text{C}=\text{O}\cdots\text{H}-\text{N}$, $E_b \approx 20 \text{ kJ/mol}$). These strong bonds hold adjacent chains in a cohesive sheet, requiring high thermal energy to dissociate into a liquid melt, elevating the melting point to <strong>$265^\circ\text{C}$</strong>.</p>
+    </div>
+    <div class="solution-step">
+      <div class="solution-step-title">Part (c): Kevlar's Liquid-Crystalline Super-Structure</div>
+      <p>Kevlar is an aramid polymer combining two molecular architectural elements:</p>
+      <ol>
+        <li><strong>Rigid Aromatic Backbone:</strong> Paraphenylene rings ($-\text{C}_6\text{H}_4-$) restrict chain rotation, locking the polymer into an extended, rigid rod-like conformation. During spinning from concentrated sulfuric acid, the rigid rods align into a nematic liquid crystalline solution.</li>
+        <li><strong>Radial Hydrogen-Bonded Sheets:</strong> Strong hydrogen bonds link the aligned aromatic chains into 2D crystalline sheets, while $\pi-\pi$ electron stacking locks adjacent sheets together. When drawn into fibers, virtually all covalent $\text{C}-\text{C}$ and $\text{C}-\text{N}$ backbone bonds align strictly parallel to the fiber axis, achieving a tensile modulus of <strong>$130 \text{ GPa}$</strong> and specific tensile strength 5 times higher than structural steel, making it ideal for bulletproof armor and aerospace composites.</li>
+      </ol>
+    </div>
+    <div class="final-answer-box">
+      <strong>Synthesis:</strong> Linear chains in HDPE enable tight packing ($E = 1.1 \text{ GPa}$). Regular interchain hydrogen bonds in Nylon 6,6 raise $T_m$ to $265^\circ\text{C}$. In Kevlar, rigid aromatic rings aligned with dense hydrogen bonding produce ultra-high fiber stiffness ($130 \text{ GPa}$) and bulletproof strength.
+    </div>""")
+
+add(26, "Dry Adhesion Mechanics: Gecko Setae Exploiting van der Waals Forces",
+    "Secondary Bonding", "van_der_waals", "Intermediate",
+    r"""<p>Geckos can run vertically up smooth glass windows and hang from ceilings using completely dry, glueless adhesion mediated by reversible secondary bonding.</p>
+    <ol type="a">
+      <li>Identify the hierarchical anatomical structures on a gecko's toe pads: <strong>Lamellae $\to$ Setae $\to$ Spatulae</strong>. State the characteristic dimensions of the spatula tips.</li>
+      <li>Which type of interatomic bonding provides the adhesive sticking force? Explain why the adhesion is completely independent of surface chemistry (works equally well on hydrophobic and hydrophilic surfaces), but depends on surface contact area.</li>
+      <li>A single gecko seta produces an adhesive pull-off force of $F_{\text{seta}} \approx 40\,\mu\text{N}$. If a gecko possesses approximately $6.5 \times 10^6$ setae across its four feet, calculate the total theoretical adhesive force $F_{\text{total}}$ in Newtons. Compare this with the weight of a 100-gram gecko ($W = m g$, with $g = 9.81 \text{ m/s}^2$) and calculate its factor of safety.</li>
+    </ol>""",
+    r"""<div class="solution-step">
+      <div class="solution-step-title">Part (a): Hierarchical Micro/Nanostructure of Gecko Toe Pads</div>
+      <ul>
+        <li><strong>Lamellae:</strong> Macroscopic overlapping flexible ridges visible on the toe underside (1–2 mm).</li>
+        <li><strong>Setae:</strong> Microscopic flexible keratin hair-like stalks ($l \approx 100\,\mu\text{m}$, diameter $d \approx 5\,\mu\text{m}$, density $\sim 14,000 \text{ setae/mm}^2$).</li>
+        <li><strong>Spatulae:</strong> Each seta branches at its tip into 100 to 1,000 triangular, ultra-thin flattened pads called <strong>spatulae</strong> ($200 \text{ nm}$ wide, $20 \text{ nm}$ thick).</li>
+      </ul>
+    </div>
+    <div class="solution-step">
+      <div class="solution-step-title">Part (b): van der Waals Adhesion Mechanism</div>
+      <p>The adhesion is mediated entirely by <strong>London dispersion (van der Waals) forces</strong>:</p>
+      <ul>
+        <li>Because van der Waals forces decay rapidly as $1/r^6$, effective attraction requires atomic proximity within $\approx 0.3–0.5 \text{ nm}$. Macroscopic solid surfaces appear rough at the nanoscale; ordinary materials make contact only at the tips of microscopic asperities ($< 1\%$ true contact area).</li>
+        <li>The extreme compliance of millions of nanoscale spatulae allows them to conform to surface irregularities, establishing atomic contact across enormous true surface areas.</li>
+        <li>Because London dispersion forces operate between <em>all</em> atoms regardless of polarity, gecko adhesion works equally well on non-polar hydrophobic surfaces (PTFE/Teflon) and polar hydrophilic glass ($\text{SiO}_2$).</li>
+      </ul>
+    </div>
+    <div class="solution-step">
+      <div class="solution-step-title">Part (c): Total Adhesive Force and Factor of Safety</div>
+      <p>Given: $N_{\text{setae}} = 6.5 \times 10^6$, $F_{\text{seta}} = 40\,\mu\text{N} = 4.0 \times 10^{-5} \text{ N}$:</p>
+      $$F_{\text{total}} = N_{\text{setae}} \cdot F_{\text{seta}} = (6.5 \times 10^6) \times (4.0 \times 10^{-5} \text{ N}) = \mathbf{260 \text{ N}}$$
+      <p>Weight of a 100-gram ($0.100 \text{ kg}$) gecko:</p>
+      $$W = m \cdot g = (0.100 \text{ kg}) \times (9.81 \text{ m/s}^2) = \mathbf{0.981 \text{ N}}$$
+      <p>Factor of Safety ($FS$):</p>
+      $$FS = \frac{F_{\text{total}}}{W} = \frac{260 \text{ N}}{0.981 \text{ N}} \approx \mathbf{265}$$
+      <p>The gecko's adhesive force can support over <strong>265 times its body weight</strong> (enough to hang a 26 kg child from the ceiling!). Geckos detach instantly by peeling their toes backward, changing the angle of spatula pull to peel off one row at a time.</p>
+    </div>
+    <div class="final-answer-box">
+      <strong>Results:</strong><br>
+      Total Adhesive Force: $F_{\text{total}} = \mathbf{260 \text{ N}}$<br>
+      Gecko Weight: $W = \mathbf{0.98 \text{ N}}$ &bull; Factor of Safety: $\mathbf{FS \approx 265}$<br>
+      Adhesion is purely mechanical/physical via conformal van der Waals contact of 200 nm spatulae.
+    </div>""")
+
+add(27, "Potential Well Curvature: Mathematical Derivation of Young's Modulus",
+    "Potential Well Physics", "modulus_derivation", "Advanced",
+    r"""<p>The macroscopic linear elastic modulus (Young's modulus, $E$) of a solid is fundamentally governed by the curvature of the interatomic potential energy well at the equilibrium atomic spacing.</p>
+    <ol type="a">
+      <li>Consider a 1D chain of bonded atoms separated by distance $r$. Express the applied tensile force $F$ in terms of interatomic separation $r$ and net potential energy $E_N(r)$.</li>
+      <li>Expand the potential energy $E_N(r)$ in a Taylor series about the equilibrium separation $r_0$ up to the quadratic term. Define the interatomic spring constant $k_0 = \left. \frac{d^2E_N}{dr^2} \right|_{r_0}$.</li>
+      <li>Derive the relationship linking macroscopic Young's modulus $E$ to interatomic spring constant $k_0$ and equilibrium spacing $r_0$, showing that:
+      $$E \approx \frac{k_0}{r_0} = \left. \frac{1}{r_0} \frac{d^2E_N}{dr^2} \right|_{r_0}$$
+      Explain the physical significance of this relationship for engineering materials.</li>
+    </ol>""",
+    r"""<div class="solution-step">
+      <div class="solution-step-title">Part (a): Interatomic Force & Potential Energy</div>
+      <p>The net interatomic force $F_N(r)$ between two bonded atoms is the negative spatial derivative of the potential energy:</p>
+      $$F_N(r) = -\frac{dE_N}{dr}$$
+      <p>At equilibrium $r = r_0$, $F_N(r_0) = 0$. An externally applied tensile force $F_{ext}$ pulls the atoms slightly apart by displacement $\Delta r = r - r_0$, balanced by internal restoring force $F_{int} = -F_N(r)$.</p>
+    </div>
+    <div class="solution-step">
+      <div class="solution-step-title">Part (b): Taylor Series Expansion & Spring Constant $k_0$</div>
+      <p>Expanding $E_N(r)$ in a Taylor series about $r_0$:</p>
+      $$E_N(r) = E_N(r_0) + \left. \frac{dE_N}{dr} \right|_{r_0} (r - r_0) + \left. \frac{1}{2} \frac{d^2E_N}{dr^2} \right|_{r_0} (r - r_0)^2 + \dots$$
+      <p>Because $r_0$ is a minimum, the first derivative is zero ($\left. \frac{dE_N}{dr} \right|_{r_0} = 0$). Defining atomic displacement as $x = r - r_0$ and bonding energy as $-E_0 = E_N(r_0)$:</p>
+      $$E_N(x) \approx -E_0 + \frac{1}{2} k_0 x^2 \quad \text{where} \quad k_0 = \left. \frac{d^2E_N}{dr^2} \right|_{r_0}$$
+      <p>The restoring force is linear with displacement (Hooke's Law at the atomic scale):</p>
+      $$F = \frac{dE_N}{dx} = k_0 x = k_0 (r - r_0)$$
+    </div>
+    <div class="solution-step">
+      <div class="solution-step-title">Part (c): Derivation of Macroscopic Young's Modulus $E$</div>
+      <p>Consider a simple cubic atomic array with interatomic spacing $r_0$ in all directions:</p>
+      <ul>
+        <li>Each atom occupies an effective cross-sectional area of $A_0 = r_0^2$.</li>
+        <li>Macroscopic tensile stress is force divided by atomic area: $\sigma = \frac{F}{A_0} = \frac{F}{r_0^2}$.</li>
+        <li>Macroscopic engineering strain is relative atomic elongation: $\varepsilon = \frac{\Delta r}{r_0} = \frac{x}{r_0} \implies x = \varepsilon r_0$.</li>
+      </ul>
+      <p>Substituting $F = k_0 x = k_0 (\varepsilon r_0)$ into the stress equation:</p>
+      $$\sigma = \frac{k_0 (\varepsilon r_0)}{r_0^2} = \left( \frac{k_0}{r_0} \right) \varepsilon$$
+      <p>Comparing directly with Hooke's Law ($\sigma = E \varepsilon$):</p>
+      $$E = \frac{k_0}{r_0} = \left. \frac{1}{r_0} \frac{d^2E_N}{dr^2} \right|_{r_0}$$
+      <p><strong>Physical Significance:</strong> Macroscopic stiffness (Young's modulus $E$) is a direct measure of the <em>curvature of the interatomic potential energy well</em>. A deep, steeply curved potential well produces an ultra-high elastic modulus (e.g., Diamond $E = 1050 \text{ GPa}$, Tungsten $E = 410 \text{ GPa}$), whereas a shallow, gently curved well yields a low modulus (e.g., Lead $E = 16 \text{ GPa}$, Polymers $E \approx 1 \text{ GPa}$).</p>
+    </div>
+    <div class="final-answer-box">
+      <strong>Fundamental Derivation:</strong> $$E = \frac{k_0}{r_0} = \left. \frac{1}{r_0} \frac{d^2E_N}{dr^2} \right|_{r_0}$$
+      Young's modulus is directly proportional to the second derivative (curvature) of the potential energy well at equilibrium separation $r_0$.
+    </div>""")
+
+add(28, "Numerical Calculation of Young's Modulus from Born-Mie Potential",
+    "Potential Well Physics", "modulus_calculation", "Intermediate",
+    r"""<p>An ionic crystal has a net potential energy function described by the Born-Mie equation:</p>
+    $$E_N(r) = -\frac{A}{r} + \frac{B}{r^n}$$
+    <p>where $A = 4.00 \times 10^{-28} \text{ J}\cdot\text{m}$, the Born repulsive exponent is $n = 9$, and the equilibrium interatomic spacing is $r_0 = 0.280 \text{ nm}$ ($2.80 \times 10^{-10} \text{ m}$).</p>
+    <ol type="a">
+      <li>Differentiate $E_N(r)$ twice with respect to $r$ to obtain the algebraic expression for the second derivative $\left. \frac{d^2E_N}{dr^2} \right|_{r_0}$ in terms of $A, r_0,$ and $n$.</li>
+      <li>Calculate the interatomic spring constant $k_0 = \left. \frac{d^2E_N}{dr^2} \right|_{r_0}$ in $\text{N/m}$.</li>
+      <li>Calculate the predicted macroscopic Young's modulus $E = k_0 / r_0$ in Giga-Pascals ($\text{GPa}$).</li>
+    </ol>""",
+    r"""<div class="solution-step">
+      <div class="solution-step-title">Part (a): Derivation of the Second Derivative</div>
+      <p>First derivative (negative force):</p>
+      $$\frac{dE_N}{dr} = \frac{A}{r^2} - \frac{n B}{r^{n+1}}$$
+      <p>At equilibrium $r_0$, $\left. \frac{dE_N}{dr} \right|_{r_0} = 0 \implies n B = A r_0^{n-1}$.</p>
+      <p>Second derivative:</p>
+      $$\frac{d^2E_N}{dr^2} = -\frac{2 A}{r^3} + \frac{n(n + 1) B}{r^{n+2}}$$
+      <p>Substitute $n B = A r_0^{n-1}$ at $r = r_0$:</p>
+      $$\left. \frac{d^2E_N}{dr^2} \right|_{r_0} = -\frac{2 A}{r_0^3} + \frac{(n + 1)(A r_0^{n-1})}{r_0^{n+2}} = -\frac{2 A}{r_0^3} + \frac{(n + 1) A}{r_0^3} = \frac{(n - 1) A}{r_0^3}$$
+    </div>
+    <div class="solution-step">
+      <div class="solution-step-title">Part (b): Calculation of Interatomic Spring Constant $k_0$</div>
+      <p>Given $n = 9$, $A = 4.00 \times 10^{-28} \text{ J}\cdot\text{m}$, $r_0 = 2.80 \times 10^{-10} \text{ m}$:</p>
+      $$r_0^3 = (2.80 \times 10^{-10} \text{ m})^3 = 2.1952 \times 10^{-29} \text{ m}^3$$
+      $$k_0 = \left. \frac{d^2E_N}{dr^2} \right|_{r_0} = \frac{(9 - 1) (4.00 \times 10^{-28} \text{ J}\cdot\text{m})}{2.1952 \times 10^{-29} \text{ m}^3} = \frac{8 \times (4.00 \times 10^{-28})}{2.1952 \times 10^{-29}} = \frac{3.20 \times 10^{-27}}{2.1952 \times 10^{-29}} = \mathbf{145.77 \text{ N/m}}$$
+    </div>
+    <div class="solution-step">
+      <div class="solution-step-title">Part (c): Calculation of Young's Modulus $E$</div>
+      $$E = \frac{k_0}{r_0} = \frac{145.77 \text{ N/m}}{2.80 \times 10^{-10} \text{ m}} = 5.206 \times 10^{11} \text{ N/m}^2 = \mathbf{520.6 \text{ GPa}}$$
+      <p>This value is characteristic of high-stiffness ionic ceramics such as dense sintered $\text{MgO}$ or $\text{Al}_2\text{O}_3$ ($E \approx 300–500 \text{ GPa}$).</p>
+    </div>
+    <div class="final-answer-box">
+      <strong>Final Results:</strong><br>
+      Algebraic Formula: $k_0 = \frac{(n - 1) A}{r_0^3}$<br>
+      Spring Constant: $k_0 = \mathbf{145.8 \text{ N/m}}$<br>
+      Young's Modulus: $E = \mathbf{520.6 \text{ GPa}}$
+    </div>""")
+
+add(29, "Force-Separation Curve and the Maximum Theoretical Cohesive Force",
+    "Potential Well Physics", "cohesive_force", "Intermediate",
+    r"""<p>The net interatomic force $F_N(r)$ varies as atoms are pulled apart from equilibrium separation $r_0$.</p>
+    <ol type="a">
+      <li>For the Born-Mie potential $E_N(r) = -\frac{A}{r} + \frac{B}{r^n}$, write the net force function $F_N(r) = -\frac{dE_N}{dr}$.</li>
+      <li>Explain what occurs when the separation distance increases beyond the <strong>inflection point ($r_{\text{infl}}$)</strong> of the potential energy curve ($d^2E_N/dr^2 = 0$). Prove that $r_{\text{infl}} = r_0 \left( \frac{n + 1}{2} \right)^{\frac{1}{n - 1}}$.</li>
+      <li>Calculate $r_{\text{infl}}$ for $n = 9$ and $r_0 = 0.28 \text{ nm}$. What physical phenomenon occurs if an external tensile load exceeds the force at $r_{\text{infl}}$?</li>
+    </ol>""",
+    r"""<div class="solution-step">
+      <div class="solution-step-title">Part (a): Net Interatomic Force Function</div>
+      $$F_N(r) = -\frac{dE_N}{dr} = -\frac{A}{r^2} + \frac{n B}{r^{n+1}}$$
+      <p>Substituting $n B = A r_0^{n-1}$ from the equilibrium condition:</p>
+      $$F_N(r) = -\frac{A}{r^2} \left[ 1 - \left( \frac{r_0}{r} \right)^{n - 1} \right]$$
+    </div>
+    <div class="solution-step">
+      <div class="solution-step-title">Part (b): Inflection Point Derivation</div>
+      <p>The inflection point of the potential energy curve corresponds to the <strong>maximum tensile restoring force</strong> ($dF_N/dr = 0 \implies d^2E_N/dr^2 = 0$):</p>
+      $$\frac{d^2E_N}{dr^2} = -\frac{2 A}{r^3} + \frac{n(n + 1) B}{r^{n+2}} = 0$$
+      $$\frac{2 A}{r_{\text{infl}}^3} = \frac{(n + 1)(A r_0^{n-1})}{r_{\text{infl}}^{n+2}} \implies r_{\text{infl}}^{n-1} = \left( \frac{n + 1}{2} \right) r_0^{n-1}$$
+      $$r_{\text{infl}} = r_0 \left( \frac{n + 1}{2} \right)^{\frac{1}{n - 1}}$$
+    </div>
+    <div class="solution-step">
+      <div class="solution-step-title">Part (c): Numerical Calculation ($n=9, r_0 = 0.28 \text{ nm}$)</div>
+      $$r_{\text{infl}} = 0.28 \text{ nm} \times \left( \frac{9 + 1}{2} \right)^{\frac{1}{9 - 1}} = 0.28 \text{ nm} \times (5)^{\frac{1}{8}}$$
+      $$(5)^{1/8} = (5)^{0.125} \approx 1.2228$$
+      $$r_{\text{infl}} = 0.28 \text{ nm} \times 1.2228 = \mathbf{0.3424 \text{ nm}}$$
+      <p><strong>Physical Consequence:</strong> At $r_{\text{infl}} = 0.342 \text{ nm}$ (a strain of $\approx 22\%$), the interatomic attractive restoring force reaches its peak value $F_{\max}$. If an applied external tensile force exceeds $F_{\max}$, the tangent stiffness $dF/dr$ becomes negative (mechanical instability). The chemical bond snaps irreversibly, causing instantaneous atomic decohesion and fracture.</p>
+    </div>
+    <div class="final-answer-box">
+      <strong>Results:</strong><br>
+      Inflection formula: $r_{\text{infl}} = r_0 \left( \frac{n + 1}{2} \right)^{\frac{1}{n - 1}}$<br>
+      For $n = 9, r_0 = 0.28 \text{ nm}$: $r_{\text{infl}} = \mathbf{0.342 \text{ nm}}$ (22% atomic elongation). Exceeding this distance triggers spontaneous bond rupture.
+    </div>""")
+
+add(30, "Theoretical Cohesive Strength vs. Actual Yield Strength of Crystals",
+    "Potential Well Physics", "cohesive_strength", "Fundamental",
+    r"""<p>The theoretical cohesive tensile strength ($\sigma_{\text{theor}}$) of a perfect defect-free crystal lattice is orders of magnitude higher than the observed yield strength of real engineering metals.</p>
+    <ol type="a">
+      <li>Using a sinusoidal approximation for the restoring stress ($F(\Delta x) = \sigma_{\text{theor}} \sin\left(\frac{2\pi \Delta x}{\lambda_0}\right)$ where $\lambda_0 \approx 2 r_0$), derive the classic Frenkel-Orowan relation showing that theoretical cohesive strength scales as:
+      $$\sigma_{\text{theor}} \approx \frac{E}{\pi} \approx \frac{E}{10}$$</li>
+      <li>For Iron ($E = 210 \text{ GPa}$), calculate $\sigma_{\text{theor}}$ in Giga-Pascals ($\text{GPa}$).</li>
+      <li>Compare $\sigma_{\text{theor}}$ with the actual room-temperature yield strength of pure annealed iron ($\sigma_y \approx 150 \text{ MPa}$). Why is the actual strength more than 100 times lower than theoretical? Identify the defect that resolves this historic paradox.</li>
+    </ol>""",
+    r"""<div class="solution-step">
+      <div class="solution-step-title">Part (a): Frenkel-Orowan Derivation</div>
+      <p>Consider two adjacent atomic planes with interplanar spacing $r_0$. As planes are pulled apart by displacement $x = \Delta r$, the restoring stress is periodic and modeled as a sine wave:</p>
+      $$\sigma(x) = \sigma_{\text{theor}} \sin\left( \frac{2 \pi x}{\lambda_0} \right)$$
+      <p>For small elastic displacements ($x \ll \lambda_0$), $\sin\theta \approx \theta$:</p>
+      $$\sigma(x) \approx \sigma_{\text{theor}} \left( \frac{2 \pi x}{\lambda_0} \right)$$
+      <p>By Hooke's Law: $\sigma = E \varepsilon = E \left( \frac{x}{r_0} \right)$. Equating the two expressions:</p>
+      $$\sigma_{\text{theor}} \left( \frac{2 \pi x}{\lambda_0} \right) = E \left( \frac{x}{r_0} \right) \implies \sigma_{\text{theor}} = \frac{E}{2\pi} \left( \frac{\lambda_0}{r_0} \right)$$
+      <p>Taking $\lambda_0 \approx 2 r_0$ (the range of interatomic forces is approximately one atomic spacing):</p>
+      $$\sigma_{\text{theor}} \approx \frac{E}{\pi} \approx \frac{E}{10}$$
+    </div>
+    <div class="solution-step">
+      <div class="solution-step-title">Part (b): Theoretical Strength for Iron ($E = 210 \text{ GPa}$)</div>
+      $$\sigma_{\text{theor}} = \frac{210 \text{ GPa}}{\pi} \approx \mathbf{66.8 \text{ GPa}} \quad \left( \text{or } \frac{E}{10} \approx \mathbf{21.0 \text{ GPa}} \right)$$
+    </div>
+    <div class="solution-step">
+      <div class="solution-step-title">Part (c): Resolution of the Theoretical vs. Actual Paradox</div>
+      <p>The actual yield strength of pure annealed iron is only $\sigma_y \approx 150 \text{ MPa} = 0.15 \text{ GPa}$, which is <strong>over 140 to 450 times lower</strong> than theoretical cohesive strength!</p>
+      <ul>
+        <li><strong>Resolution:</strong> The theoretical strength calculation assumes that all billions of atomic bonds across the slip plane are broken simultaneously in unison.</li>
+        <li>In real crystals, plastic deformation proceeds via the motion of <strong>dislocations</strong> (line defects introduced in 1934 by Orowan, Polanyi, and Taylor). A dislocation moves by breaking only <em>one row of atomic bonds at a time</em>, like moving a heavy carpet by pushing a small ripple across it. Consequently, yielding requires only a small shear stress ($\tau \approx G/1000$).</li>
+        <li>Only when a material is fabricated completely free of dislocations (such as single-crystal silicon micro-cantilevers or submicron iron "whiskers") does its measured strength approach the theoretical limit $\sigma_{\text{theor}} \approx 10–20 \text{ GPa}$.</li>
+      </ul>
+    </div>
+    <div class="final-answer-box">
+      <strong>Core Conclusion:</strong> Theoretical strength is $\sigma_{\text{theor}} \approx E/\pi \approx \mathbf{21–67 \text{ GPa}}$ for iron. Real metals yield at $\approx 0.15 \text{ GPa}$ because dislocations allow atomic planes to slide by breaking bonds one row at a time.
+    </div>""")
+
+# Save checkpoint
+print(f"Added up to P30 in Ch 2. Current count: {len(P)}")
+
+# --- P31 to P50: Advanced Potential Well Physics, Thermochemistry, and Synthesis ---
+add(31, "Anharmonicity of the Potential Energy Well and Thermal Expansion",
+    "Potential Well Physics", "thermal_expansion", "Intermediate",
+    r"""<p>The linear coefficient of thermal expansion ($\alpha_L$) originates directly from the asymmetric, anharmonic shape of the net interatomic potential energy curve $E_N(r)$.</p>
+    <ol type="a">
+      <li>Show that if the interatomic potential well were a purely symmetric parabola (harmonic oscillator: $E_N(x) = -E_0 + \frac{1}{2} k_0 x^2$ where $x = r - r_0$), the coefficient of thermal expansion would be exactly zero ($\alpha_L = 0$).</li>
+      <li>Introduce a cubic anharmonic perturbation term: $E_N(x) \approx -E_0 + c x^2 - g x^3$ (where $g > 0$ represents asymmetry). Use Boltzmann thermal averaging to prove that the mean atomic displacement $\langle x \rangle$ increases linearly with absolute temperature $T$:
+      $$\langle x \rangle \approx \frac{3 g k_B T}{4 c^2}$$</li>
+      <li>Express the linear thermal expansion coefficient $\alpha_L = \frac{1}{r_0} \frac{d\langle x \rangle}{dT}$ in terms of the anharmonic coefficient $g$ and harmonic curvature $c$. Explain why materials with high bonding energy have low $\alpha_L$.</li>
+    </ol>""",
+    r"""<div class="solution-step">
+      <div class="solution-step-title">Part (a): Harmonic Potential and Zero Thermal Expansion</div>
+      <p>For a purely harmonic (parabolic) potential $E(x) = \frac{1}{2} k_0 x^2$ symmetric about $x = 0$:</p>
+      $$\langle x \rangle = \frac{\int_{-\infty}^\infty x \exp\left(-\frac{k_0 x^2}{2 k_B T}\right) dx}{\int_{-\infty}^\infty \exp\left(-\frac{k_0 x^2}{2 k_B T}\right) dx}$$
+      <p>The integrand in the numerator is an odd function of $x$ multiplied by an even Gaussian function. Therefore, the integral evaluates identically to <strong>zero ($\langle x \rangle = 0$) at all temperatures</strong>. While thermal energy increases the amplitude of vibration, atoms oscillate symmetrically about $x = 0$, meaning the time-averaged interatomic spacing $\bar{r} = r_0 + \langle x \rangle = r_0$ remains strictly constant: $\alpha_L = \frac{1}{r_0}\frac{d\langle x \rangle}{dT} = \mathbf{0}$.</p>
+    </div>
+    <div class="solution-step">
+      <div class="solution-step-title">Part (b): Anharmonic Potential and Boltzmann Averaging</div>
+      <p>Real interatomic potential wells are asymmetric (anharmonic) due to steep core-electron repulsion at $r < r_0$ and gradual Coulombic decay at $r > r_0$. Including a cubic term ($E(x) = c x^2 - g x^3$):</p>
+      $$\langle x \rangle = \frac{\int_{-\infty}^\infty x \exp\left(-\frac{c x^2 - g x^3}{k_B T}\right) dx}{\int_{-\infty}^\infty \exp\left(-\frac{c x^2 - g x^3}{k_B T}\right) dx}$$
+      <p>Assuming thermal displacements are small ($g x^3 \ll k_B T$), expand $\exp(g x^3 / k_B T) \approx 1 + \frac{g x^3}{k_B T}$:</p>
+      $$\text{Numerator} \approx \int_{-\infty}^\infty x \left( 1 + \frac{g x^3}{k_B T} \right) \exp\left(-\frac{c x^2}{k_B T}\right) dx = \frac{g}{k_B T} \int_{-\infty}^\infty x^4 \exp\left(-\frac{c x^2}{k_B T}\right) dx$$
+      <p>Using standard Gaussian definite integrals ($\int_{-\infty}^\infty x^4 e^{-\beta x^2} dx = \frac{3\sqrt{\pi}}{4 \beta^{5/2}}$ and $\int_{-\infty}^\infty e^{-\beta x^2} dx = \sqrt{\frac{\pi}{\beta}}$ where $\beta = c / k_B T$):</p>
+      $$\langle x \rangle = \frac{g}{k_B T} \frac{\frac{3\sqrt{\pi}}{4 (c/k_BT)^{5/2}}}{\sqrt{\pi / (c/k_BT)}} = \frac{g}{k_B T} \frac{3}{4} \left( \frac{k_B T}{c} \right)^2 = \mathbf{\frac{3 g k_B T}{4 c^2}}$$
+    </div>
+    <div class="solution-step">
+      <div class="solution-step-title">Part (c): Expression for $\alpha_L$ & Physical Interpretation</div>
+      <p>The linear thermal expansion coefficient is:</p>
+      $$\alpha_L = \frac{1}{r_0} \frac{d\langle x \rangle}{dT} = \frac{3 g k_B}{4 c^2 r_0}$$
+      <p><strong>Physical Interpretation:</strong> Thermal expansion is directly proportional to the <strong>asymmetry factor ($g$)</strong> and inversely proportional to the <strong>square of bond stiffness ($c^2$)</strong>. Materials with deep potential wells (high bonding energy $E_0$, high melting point $T_m$) have very high curvature $c$ and relatively small asymmetry $g$, resulting in an ultra-low coefficient of thermal expansion (e.g., Diamond $\alpha_L \approx 1 \times 10^{-6} \text{ K}^{-1}$, Tungsten $\alpha_L \approx 4.5 \times 10^{-6} \text{ K}^{-1}$). In contrast, weak bonds produce shallow wells with low $c$, yielding large thermal expansion (e.g., Polymers $\alpha_L \approx 100–200 \times 10^{-6} \text{ K}^{-1}$).</p>
+    </div>
+    <div class="final-answer-box">
+      <strong>Core Conclusion:</strong> A symmetric harmonic well yields $\alpha_L = 0$. Anharmonic asymmetry ($g x^3$) shifts mean atomic spacing outward linearly with temperature ($\langle x \rangle \propto T$), giving $\alpha_L = \frac{3 g k_B}{4 c^2 r_0} \propto \frac{1}{E_0^2}$.
+    </div>""")
+
+add(32, "Correlations Between Bonding Energy, Melting Point, and Thermal Expansion",
+    "Potential Well Physics", "correlations", "Fundamental",
+    r"""<p>The interatomic bonding energy $E_0$ controls multiple macroscopic engineering properties simultaneously.</p>
+    <table class="formula-table">
+      <tr><th>Material</th><th>Bonding Type</th><th>Bond Energy $E_0$ (kJ/mol)</th><th>Melting Point $T_m$ (&deg;C)</th><th>Expansion Coeff $\alpha_L$ ($10^{-6} \text{ K}^{-1}$)</th><th>Young's Modulus $E$ (GPa)</th></tr>
+      <tr><td>Tungsten (W)</td><td>Metallic (covalent $d$-overlap)</td><td>849 kJ/mol</td><td>3422 &deg;C</td><td>4.5</td><td>410 GPa</td></tr>
+      <tr><td>Iron (Fe)</td><td>Metallic</td><td>406 kJ/mol</td><td>1538 &deg;C</td><td>11.8</td><td>210 GPa</td></tr>
+      <tr><td>Aluminum (Al)</td><td>Metallic</td><td>326 kJ/mol</td><td>660 &deg;C</td><td>23.1</td><td>70 GPa</td></tr>
+      <tr><td>Lead (Pb)</td><td>Metallic</td><td>195 kJ/mol</td><td>327 &deg;C</td><td>28.9</td><td>16 GPa</td></tr>
+      <tr><td>Argon (Ar, solid)</td><td>van der Waals</td><td>7.7 kJ/mol</td><td>-189 &deg;C (84 K)</td><td>~200</td><td>~2 GPa</td></tr>
+    </table>
+    <ol type="a">
+      <li>Analyze the direct correlation between bond energy $E_0$ and melting point $T_m$. Why does melting point scale directly with $E_0$?</li>
+      <li>Analyze the inverse correlation between bond energy $E_0$ and thermal expansion coefficient $\alpha_L$. Plot qualitative potential energy wells for Tungsten and Lead to illustrate this.</li>
+      <li>State the empirical rule of thumb linking melting point and thermal expansion: $\alpha_L \cdot T_m \approx \text{constant}$. Test this approximation for Tungsten, Iron, and Aluminum using Kelvin temperatures.</li>
+    </ol>""",
+    r"""<div class="solution-step">
+      <div class="solution-step-title">Part (a): Bond Energy vs. Melting Point Correlation</div>
+      <p>Melting is a thermodynamic order-to-disorder phase transition that occurs when thermal kinetic vibrational energy ($k_B T$) becomes sufficient to overcome the cohesive binding energy $E_0$ holding atoms in periodic lattice sites. According to the Lindemann melting criterion, melting initiates when the root-mean-square thermal vibrational amplitude reaches $\approx 10–12\%$ of the nearest-neighbor interatomic spacing. Therefore, <strong>melting temperature is directly proportional to interatomic bond energy</strong>:</p>
+      $$T_m \propto E_0$$
+      <p>Tungsten has an immense bond energy ($849 \text{ kJ/mol} \approx 8.8 \text{ eV/atom}$), requiring $T_m = 3422^\circ\text{C} = 3695 \text{ K}$ to melt, whereas Argon has a bond energy of only $7.7 \text{ kJ/mol}$, melting at just $84 \text{ K}$.</p>
+    </div>
+    <div class="solution-step">
+      <div class="solution-step-title">Part (b): Inverse Correlation with Thermal Expansion $\alpha_L$</div>
+      <p>As derived in Problem 31, $\alpha_L \propto \frac{1}{c^2} \propto \frac{1}{E_0^2}$.</p>
+      <ul>
+        <li><strong>Tungsten (Deep, Steep Well):</strong> Very large $E_0$, deep well, narrow asymmetric curvature. Vibrational amplitude increases only marginally with temperature, yielding ultra-low expansion: $\alpha_L = 4.5 \times 10^{-6} \text{ K}^{-1}$.</li>
+        <li><strong>Lead (Shallow, Broad Well):</strong> Small $E_0$, shallow well, wide asymmetry. Thermal agitation drives the mean interatomic distance outward rapidly, yielding high expansion: $\alpha_L = 28.9 \times 10^{-6} \text{ K}^{-1}$.</li>
+      </ul>
+    </div>
+    <div class="solution-step">
+      <div class="solution-step-title">Part (c): The Empirical Invariant: $\alpha_L \cdot T_m \approx \text{const}$</div>
+      <p>In solid-state physics, for cubic metallic elements, the product of linear thermal expansion coefficient and absolute melting temperature (Kelvin) is approximately invariant ($\approx 0.015–0.025$):</p>
+      <ul>
+        <li><strong>Tungsten:</strong> $T_m = 3422 + 273 = 3695 \text{ K}$.
+        $$\alpha_L \cdot T_m = (4.5 \times 10^{-6} \text{ K}^{-1}) \times (3695 \text{ K}) = \mathbf{0.0166}$$</li>
+        <li><strong>Iron:</strong> $T_m = 1538 + 273 = 1811 \text{ K}$.
+        $$\alpha_L \cdot T_m = (11.8 \times 10^{-6} \text{ K}^{-1}) \times (1811 \text{ K}) = \mathbf{0.0214}$$</li>
+        <li><strong>Aluminum:</strong> $T_m = 660 + 273 = 933 \text{ K}$.
+        $$\alpha_L \cdot T_m = (23.1 \times 10^{-6} \text{ K}^{-1}) \times (933 \text{ K}) = \mathbf{0.0216}$$</li>
+      </ul>
+      <p>All values fall in the narrow range $0.017–0.022$, confirming that thermal expansion is fundamentally inversely proportional to absolute melting point.</p>
+    </div>
+    <div class="final-answer-box">
+      <strong>Synthesis:</strong><br>
+      High $E_0 \implies$ High $T_m \implies$ High $E \implies$ Low $\alpha_L$.<br>
+      Empirical invariant: $\alpha_L \cdot T_m \approx \mathbf{0.020 \pm 0.003}$ for engineering metals.
+    </div>""")
+
+add(33, "Periodic Trends in Transition Metal Melting Points: Half-Filled d-Bands",
+    "Metallic Bonding", "periodic", "Intermediate",
+    r"""<p>The melting points of transition metals across the $3d$, $4d$, and $5d$ periods exhibit a distinctive parabolic peak centered at Group 6 (Chromium, Molybdenum, and Tungsten).</p>
+    <table class="formula-table">
+      <tr><th>Period 4 Element</th><th>Valence Configuration</th><th>Melting Point ($T_m$)</th><th>Period 6 Element</th><th>Valence Configuration</th><th>Melting Point ($T_m$)</th></tr>
+      <tr><td>Potassium (K)</td><td>$4s^1$</td><td>63 &deg;C</td><td>Cesium (Cs)</td><td>$6s^1$</td><td>28 &deg;C</td></tr>
+      <tr><td>Calcium (Ca)</td><td>$4s^2$</td><td>842 &deg;C</td><td>Barium (Ba)</td><td>$6s^2$</td><td>727 &deg;C</td></tr>
+      <tr><td>Titanium (Ti)</td><td>$3d^2 4s^2$</td><td>1668 &deg;C</td><td>Hafnium (Hf)</td><td>$5d^2 6s^2$</td><td>2233 &deg;C</td></tr>
+      <tr><td><strong>Chromium (Cr)</strong></td><td>$3d^5 4s^1$</td><td><strong>1907 &deg;C</strong></td><td><strong>Tungsten (W)</strong></td><td>$5d^4 6s^2$</td><td><strong>3422 &deg;C</strong></td></tr>
+      <tr><td>Iron (Fe)</td><td>$3d^6 4s^2$</td><td>1538 &deg;C</td><td>Osmium (Os)</td><td>$5d^6 6s^2$</td><td>3033 &deg;C</td></tr>
+      <tr><td>Copper (Cu)</td><td>$3d^{10} 4s^1$</td><td>1084 &deg;C</td><td>Gold (Au)</td><td>$5d^{10} 6s^1$</td><td>1064 &deg;C</td></tr>
+      <tr><td>Zinc (Zn)</td><td>$3d^{10} 4s^2$</td><td>419 &deg;C</td><td>Mercury (Hg)</td><td>$5d^{10} 6s^2$</td><td>-39 &deg;C (Liquid)</td></tr>
+    </table>
+    <ol type="a">
+      <li>Explain using <strong>molecular orbital / tight-binding band theory</strong> why bonding energy and melting point reach a sharp maximum at Group 6 ($d^5 s^1$) and plummet toward the end of each period (Cu, Zn, Hg).</li>
+      <li>Contrast the nature of the valence electrons in Group 1 alkali metals ($s$-electrons only) with the dual $s-d$ bonding in transition metals.</li>
+      <li>Why does Tungsten ($T_m = 3422^\circ\text{C}$) melt substantially higher than Chromium ($T_m = 1907^\circ\text{C}$), even though both reside in Group 6?</li>
+    </ol>""",
+    r"""<div class="solution-step">
+      <div class="solution-step-title">Part (a): $d$-Band Filling and Melting Point Maximum</div>
+      <p>In transition metals, interatomic bonding is mediated by overlapping broad $s$-bands and narrow, highly dense $d$-bands:</p>
+      <ul>
+        <li>When atomic orbitals overlap in a solid crystal, the five $d$-orbitals split into a continuum of <strong>bonding molecular orbitals</strong> (lower half of the $d$-band) and <strong>antibonding molecular orbitals</strong> (upper half of the $d$-band), capable of holding 10 electrons total.</li>
+        <li>Moving from Group 3 to Group 6, additional valence electrons sequentially fill only the <em>bonding</em> states without populating any antibonding states. At Group 6 (Cr, Mo, W), the total valence count is 6 electrons ($d^5 s^1$), which <strong>completely fills the bonding half of the $d$-band</strong> while leaving the antibonding half completely vacant. This maximizes net cohesive bonding energy ($E_0 = 849 \text{ kJ/mol}$ for W), creating the world-record melting point peak ($3422^\circ\text{C}$).</li>
+        <li>Past Group 6 (Fe, Co, Ni, Cu, Zn), additional electrons enter <em>antibonding</em> states. Antibonding electron density cancels out bonding cohesive energy, causing melting point to drop rapidly from Iron ($1538^\circ\text{C}$) to Copper ($1084^\circ\text{C}$) and Zinc ($419^\circ\text{C}$). At Mercury ($5d^{10} 6s^2$), all antibonding states are completely full, reducing bonding to weak dispersion interactions and rendering it a liquid at room temperature ($-39^\circ\text{C}$).</li>
+      </ul>
+    </div>
+    <div class="solution-step">
+      <div class="solution-step-title">Part (b): Alkali Metals vs. Transition Metals</div>
+      <ul>
+        <li><strong>Alkali Metals (K, Cs):</strong> Possess only one loosely bound $s$-electron. The ion cores are large and diffuse, yielding low electron density, low cohesive energy ($90 \text{ kJ/mol}$), and very low melting points ($T_m = 63^\circ\text{C}$ for K, $28^\circ\text{C}$ for Cs). They are so soft they can be cut with a butter knife.</li>
+        <li><strong>Transition Metals (W, Mo):</strong> Feature 6 valence electrons participating in hybrid $d$-electron directional covalent-like bonding superimposed upon a dense metallic electron sea, yielding extreme hardness and refractory melting capability.</li>
+      </ul>
+    </div>
+    <div class="solution-step">
+      <div class="solution-step-title">Part (c): Why Tungsten ($5d$) Out-Melts Chromium ($3d$)</div>
+      <p>Moving down Group 6 from Cr ($3d$) to Mo ($4d$) to W ($5d$):</p>
+      <ol>
+        <li><strong>Radial Orbital Extension:</strong> The principal quantum number increases ($n = 5$ for W vs $n = 3$ for Cr). The $5d$ orbitals extend significantly further radially outward from the atomic core than the compact, tightly held $3d$ orbitals.</li>
+        <li><strong>Spatial Overlap:</strong> The greater radial extent permits much stronger, deeper spatial overlap between $5d$ wavefunctions of adjacent atoms in the BCC crystal lattice.</li>
+        <li><strong>Relativistic Contraction:</strong> In heavy elements ($Z = 74$ for W), inner $s$-electrons move at relativistic speeds, contracting core orbitals and allowing the $5d$ electrons to form extremely strong, directional covalent-metallic bonds. Consequently, $T_m$ rises from $1907^\circ\text{C}$ (Cr) to $2623^\circ\text{C}$ (Mo) to <strong>$3422^\circ\text{C}$ (W)</strong>.</li>
+      </ol>
+    </div>
+    <div class="final-answer-box">
+      <strong>Core Conclusion:</strong> Group 6 elements (Cr, Mo, W) have exactly half-filled $d$-subshells, which completely fills all bonding states while leaving antibonding states empty, maximizing cohesive energy. Tungsten melts at $3422^\circ\text{C}$ due to superior spatial overlap of its radially extended $5d$ orbitals.
+    </div>""")
+
+add(34, "The Born-Haber Thermochemical Cycle for Sodium Chloride (NaCl)",
+    "Thermochemistry & Lattice Energy", "born_haber", "Intermediate",
+    r"""<p>The crystal lattice energy of an ionic solid cannot be measured directly in an isolated calorimeter, but is determined experimentally using Hess's Law via a closed <strong>Born-Haber Cycle</strong>.</p>
+    <p>Consider the synthesis of solid crystalline Sodium Chloride from its standard elemental states:</p>
+    $$\text{Na}(s) + \frac{1}{2} \text{Cl}_2(g) \to \text{NaCl}(s) \quad (\Delta H_f^\circ = -411.2 \text{ kJ/mol})$$
+    <p>Thermochemical data:</p>
+    <ul>
+      <li>Standard Enthalpy of Sublimation of Sodium: $\Delta H_{\text{sub}} = +107.3 \text{ kJ/mol}$</li>
+      <li>First Ionization Energy of Sodium: $I_1 = +495.8 \text{ kJ/mol}$</li>
+      <li>Standard Bond Dissociation Enthalpy of $\text{Cl}_2$: $\Delta H_{\text{diss}} = +242.0 \text{ kJ/mol}$ (i.e., $\frac{1}{2} \Delta H_{\text{diss}} = +121.0 \text{ kJ/mol}$)</li>
+      <li>First Electron Affinity of Chlorine: $EA_1 = -348.8 \text{ kJ/mol}$</li>
+    </ul>
+    <ol type="a">
+      <li>Construct the closed thermodynamic enthalpy cycle equation relating $\Delta H_f^\circ$ to the individual step enthalpies, defining the molar lattice energy $U_{\text{latt}}$ as the enthalpy change for: $\text{Na}^+(g) + \text{Cl}^-(g) \to \text{NaCl}(s)$.</li>
+      <li>Calculate the experimental molar lattice energy $U_{\text{latt}}$ of NaCl in $\text{kJ/mol}$.</li>
+      <li>Compare this experimental value with the theoretical Born-Landé calculation ($U_{\text{calc}} \approx -753 \text{ kJ/mol}$ from Problem 8). Calculate the percentage difference and identify the physical source of the minor discrepancy.</li>
+    </ol>""",
+    r"""<div class="solution-step">
+      <div class="solution-step-title">Part (a): Born-Haber Thermodynamic Cycle Formulation</div>
+      <p>By Hess's Law, the enthalpy of formation $\Delta H_f^\circ$ equals the sum of enthalpies around the alternative gaseous ion formation pathway:</p>
+      $$\Delta H_f^\circ = \Delta H_{\text{sub}} + I_1 + \frac{1}{2} \Delta H_{\text{diss}} + EA_1 + U_{\text{latt}}$$
+      <p>Solving for the molar lattice energy $U_{\text{latt}}$:</p>
+      $$U_{\text{latt}} = \Delta H_f^\circ - \left[ \Delta H_{\text{sub}} + I_1 + \frac{1}{2} \Delta H_{\text{diss}} + EA_1 \right]$$
+    </div>
+    <div class="solution-step">
+      <div class="solution-step-title">Part (b): Numerical Calculation of $U_{\text{latt}}$</div>
+      <p>Substitute the given thermochemical values:</p>
+      $$\Delta H_{\text{gaseous ions}} = (+107.3) + (+495.8) + (+121.0) + (-348.8) \text{ kJ/mol}$$
+      $$\Delta H_{\text{gaseous ions}} = 724.1 - 348.8 = \mathbf{+375.3 \text{ kJ/mol}}$$
+      <p>Now calculate $U_{\text{latt}}$:</p>
+      $$U_{\text{latt}} = -411.2 \text{ kJ/mol} - (+375.3 \text{ kJ/mol}) = \mathbf{-786.5 \text{ kJ/mol}}$$
+      <p>(Or expressed as positive lattice dissociation energy: $+786.5 \text{ kJ/mol}$).</p>
+    </div>
+    <div class="solution-step">
+      <div class="solution-step-title">Part (c): Comparison with Theoretical Born-Landé Calculation</div>
+      <p>The theoretical electrostatic value calculated from Problem 8 was $U_{\text{calc}} = -753.4 \text{ kJ/mol}$.</p>
+      $$\% \text{ Difference} = \frac{|-786.5 - (-753.4)|}{786.5} \times 100\% = \frac{33.1}{786.5} \times 100\% = \mathbf{4.21\%}$$
+      <p><strong>Physical Source of Discrepancy:</strong> The theoretical Born-Landé model assumes 100% purely spherical point charges. In reality, NaCl possesses ~4% covalent character and London dispersion interactions ($-\frac{C}{r^6}$) between adjacent chloride electron shells, as well as a small zero-point vibrational quantum energy ($\frac{9}{8} N_A h \nu_{\max}$). Including van der Waals attraction and partial covalency accounts for the additional 33 kJ/mol of binding energy.</p>
+    </div>
+    <div class="final-answer-box">
+      <strong>Experimental Lattice Energy (Born-Haber):</strong> $$U_{\text{latt}} = \mathbf{-786.5 \text{ kJ/mol}}$$
+      Matches the theoretical Born-Landé model within 4.2%, with the discrepancy arising from van der Waals forces and partial covalency.
+    </div>""")
+
+add(35, "Lattice Energy Comparison: Monovalent NaCl vs. Divalent MgO",
+    "Thermochemistry & Lattice Energy", "born_lande", "Fundamental",
+    r"""<p>The electrostatic lattice energy of an ionic crystal scales directly with the product of ion valences $|Z_1 Z_2|$ and inversely with interionic spacing $r_0$.</p>
+    <table class="formula-table">
+      <tr><th>Ionic Solid</th><th>Crystal Structure</th><th>Valence Product ($|Z_1 Z_2|$)</th><th>Interionic Separation ($r_0$, nm)</th><th>Experimental Melting Point ($T_m$)</th></tr>
+      <tr><td>Sodium Chloride (NaCl)</td><td>Rock-salt (FCC)</td><td>$|(+1)(-1)| = 1$</td><td>$r_0 = 0.282 \text{ nm}$</td><td>801 &deg;C</td></tr>
+      <tr><td>Magnesium Oxide (MgO)</td><td>Rock-salt (FCC)</td><td>$|(+2)(-2)| = 4$</td><td>$r_0 = 0.210 \text{ nm}$</td><td>2852 &deg;C</td></tr>
+    </table>
+    <ol type="a">
+      <li>Using the Born-Landé equation, formulate the theoretical ratio of molar lattice energies $\frac{U_{\text{latt}}(\text{MgO})}{U_{\text{latt}}(\text{NaCl})}$, assuming both crystals have identical Madelung constants ($M = 1.748$) and similar Born exponents ($n \approx 7–8$).</li>
+      <li>Calculate the theoretical lattice energy of Magnesium Oxide given $U_{\text{latt}}(\text{NaCl}) = -786 \text{ kJ/mol}$.</li>
+      <li>Explain how this difference in lattice energy accounts for the dramatic surge in melting point from 801 &deg;C for NaCl to 2852 &deg;C for MgO, and explain why MgO is utilized as a refractory brick lining in steelmaking basic oxygen furnaces.</li>
+    </ol>""",
+    r"""<div class="solution-step">
+      <div class="solution-step-title">Part (a): Theoretical Ratio Formulation</div>
+      <p>From the Born-Landé equation:</p>
+      $$U_{\text{latt}} \propto \frac{|Z_1 Z_2|}{r_0}$$
+      <p>Taking the ratio:</p>
+      $$\frac{U_{\text{latt}}(\text{MgO})}{U_{\text{latt}}(\text{NaCl})} \approx \frac{|Z_1 Z_2|_{\text{MgO}}}{|Z_1 Z_2|_{\text{NaCl}}} \times \frac{r_{0,\text{NaCl}}}{r_{0,\text{MgO}}}$$
+      <p>Substituting $|Z_1 Z_2|_{\text{MgO}} = 4$, $|Z_1 Z_2|_{\text{NaCl}} = 1$, $r_{0,\text{NaCl}} = 0.282 \text{ nm}$, and $r_{0,\text{MgO}} = 0.210 \text{ nm}$:</p>
+      $$\frac{U_{\text{latt}}(\text{MgO})}{U_{\text{latt}}(\text{NaCl})} \approx \left( \frac{4}{1} \right) \times \left( \frac{0.282}{0.210} \right) = 4 \times 1.3429 = \mathbf{5.37}$$
+    </div>
+    <div class="solution-step">
+      <div class="solution-step-title">Part (b): Calculation of Lattice Energy for MgO</div>
+      $$U_{\text{latt}}(\text{MgO}) \approx 5.37 \times (-786.5 \text{ kJ/mol}) = \mathbf{-4,223 \text{ kJ/mol}}$$
+      <p>(The rigorously measured experimental value is $\approx -3,795 \text{ to } -3,900 \text{ kJ/mol}$, in excellent agreement given slight variations in repulsive exponents and covalency).</p>
+    </div>
+    <div class="solution-step">
+      <div class="solution-step-title">Part (c): Melting Point and Refractory Applications</div>
+      <p>Because the valence charge product is quadrupled ($|Z_1 Z_2| = 4$) and smaller divalent ions pack more closely ($r_0 = 0.210 \text{ nm}$), the Coulombic cohesive energy binding the MgO lattice is roughly <strong>5 times larger than NaCl</strong>. Thermal kinetic energy ($k_B T$) required to dissociate the lattice is correspondingly higher, elevating the melting point from $801^\circ\text{C}$ to an extraordinary <strong>$2852^\circ\text{C}$</strong>.</p>
+      <p><strong>Industrial Significance:</strong> In basic oxygen steelmaking furnaces, molten steel operates at 1600–1650 &deg;C in contact with corrosive, basic calcium-silicate slag. NaCl would melt and vaporize instantly, but MgO remains completely solid, mechanically rigid, and chemically inert against basic slags at 1700 &deg;C, making it the premier refractory lining material.</p>
+    </div>
+    <div class="final-answer-box">
+      <strong>Final Results:</strong><br>
+      Ratio: $\frac{U(\text{MgO})}{U(\text{NaCl})} \approx \mathbf{5.37}$<br>
+      Predicted $U_{\text{latt}}(\text{MgO}) = \mathbf{-4,223 \text{ kJ/mol}}$ (Experiment: $-3,850 \text{ kJ/mol}$)<br>
+      Quadrupled charge product ($Z_1 Z_2 = 4$) increases cohesive energy 5-fold, elevating melting point to $2852^\circ\text{C}$.
+    </div>""")
+
+# Save checkpoint
+print(f"Added up to P35 in Ch 2. Current count: {len(P)}")
+
+# --- P36 to P50: Advanced Crystallochemical Rules, Potentials, and Synthesis ---
+add(36, "Pauling's Electrostatic Valence Rule: Silicate Crystal Chemistry",
+    "Ceramic Bonding", "pauling_rules", "Intermediate",
+    r"""<p>Pauling's Second Rule (the <strong>Electrostatic Valence Principle</strong>) governs local charge neutrality and connectivity in complex ionic and ceramic crystals.</p>
+    <ol type="a">
+      <li>Define the <strong>electrostatic bond strength ($s$)</strong> of an ionic bond: $s = Z / \text{CN}$, where $Z$ is the cation valence and $\text{CN}$ is its coordination number.</li>
+      <li>State Pauling's Second Rule: for a stable crystal, the sum of electrostatic bond strengths reaching an anion from all adjacent coordinated cations must equal the magnitude of the anion's valence charge: $\sum_i s_i = |Z_{\text{anion}}|$.</li>
+      <li>Apply this rule to the fundamental silicate building block: the <strong>orthosilicate tetrahedron ($\text{SiO}_4^{4-}$)</strong> where $\text{Si}^{4+}$ is coordinated by four $\text{O}^{2-}$ anions ($\text{CN} = 4$).
+        <ul>
+          <li>Calculate the bond strength $s$ of each $\text{Si}-\text{O}$ bond.</li>
+          <li>Prove that an oxygen ion shared between two silicon tetrahedra satisfies local electroneutrality, explaining why bridging oxygens form 3D network silicates (quartz, $\text{SiO}_2$), while non-bridging oxygens require network-modifying cations ($\text{Na}^+, \text{Ca}^{2+}$).</li>
+        </ul>
+      </li>
+    </ol>""",
+    r"""<div class="solution-step">
+      <div class="solution-step-title">Part (a): Electrostatic Bond Strength ($s$) Defined</div>
+      <p>The electrostatic bond strength $s$ represents the fraction of a cation's formal positive valence charge shared with each of its coordinating anions:</p>
+      $$s = \frac{Z}{\text{CN}}$$
+      <p>where $Z$ is the cation valence and $\text{CN}$ is its coordination number.</p>
+    </div>
+    <div class="solution-step">
+      <div class="solution-step-title">Part (b): Pauling's Second Rule (Local Charge Neutrality)</div>
+      <p>In a stable ionic crystal structure, the electric charge of each anion (valence $Z_a$) tends to compensate the strength of the electrostatic bonds reaching it from surrounding coordinated cations:</p>
+      $$\sum_i s_i = \sum_i \frac{Z_i}{\text{CN}_i} = |Z_a|$$
+      <p>This ensures microscopic electroneutrality on the scale of individual coordination polyhedra, preventing massive localized space-charge buildup.</p>
+    </div>
+    <div class="solution-step">
+      <div class="solution-step-title">Part (c): Application to Silicate Tetrahedra ($\text{SiO}_4^{4-}$)</div>
+      <ul>
+        <li><strong>$\text{Si}-\text{O}$ Bond Strength:</strong> Silicon has valence $Z = +4$ and tetrahedral coordination $\text{CN} = 4$:
+        $$s = \frac{+4}{4} = \mathbf{1.0 \text{ valence units}}$$</li>
+        <li><strong>Oxygen Charge Saturation:</strong> Each oxygen anion has valence $Z_a = -2$. To satisfy Pauling's second rule ($\sum s_i = 2.0$), each oxygen must receive exactly two $\text{Si}-\text{O}$ bonds:
+        $$\sum s_i = 1.0 + 1.0 = 2.0 = |Z_{\text{O}^{2-}}|$$</li>
+      </ul>
+      <p><strong>Physical Consequence:</strong> In pure silica ($\text{SiO}_2$, quartz/glass), <strong>every corner oxygen is shared between exactly two adjacent silicon tetrahedra</strong> (bridging oxygens), constructing a continuous, fully charge-neutral 3D covalent-ionic network. When network-modifying oxides ($\text{Na}_2\text{O}$ or $\text{CaO}$) are added to molten silica, the extra $\text{O}^{2-}$ ions break bridging $\text{Si}-\text{O}-\text{Si}$ bonds into non-bridging oxygens ($\equiv\text{Si}-\text{O}^-$), which are charge-balanced by adjacent $\text{Na}^+$ or $\text{Ca}^{2+}$ cations ($s = 1/6 \text{ or } 2/8$), disrupting the 3D network and lowering the glass melting point.</p>
+    </div>
+    <div class="final-answer-box">
+      <strong>Synthesis:</strong> Each $\text{Si}-\text{O}$ bond has strength $s = +4/4 = 1.0$. Because oxygen requires a total charge of $-2.0$, exactly two tetrahedra must share each corner oxygen ($\sum s = 2.0$), forming the basis of all silicate minerals and glasses.
+    </div>""")
+
+add(37, "Pauling's Third and Fourth Rules: Polyhedron Edge and Face Sharing",
+    "Ceramic Bonding", "pauling_rules", "Intermediate",
+    r"""<p>Pauling's Third and Fourth Rules dictate how coordination polyhedra (tetrahedra, octahedra) link together to form stable ceramic crystal lattices.</p>
+    <ol type="a">
+      <li>State <strong>Pauling's Third Rule</strong> regarding the relative stability of corner-sharing, edge-sharing, and face-sharing coordination polyhedra.</li>
+      <li>Explain the electrostatic physics governing this rule: how does the cation-cation separation distance ($d_{c-c}$) vary between corner, edge, and face sharing?</li>
+      <li>State <strong>Pauling's Fourth Rule</strong> regarding cations with high valence ($Z \ge +4$) and low coordination number ($\text{CN} \le 4$). Illustrate why silica ($\text{SiO}_2$) tetrahedra strictly share corners and never share edges or faces.</li>
+    </ol>""",
+    r"""<div class="solution-step">
+      <div class="solution-step-title">Part (a): Pauling's Third Rule (Polyhedron Sharing)</div>
+      <p><strong>Pauling's Third Rule:</strong> The presence of shared edges, and especially shared faces, in a coordinated structure decreases its thermodynamic stability. Highly stable crystal structures preferentially link polyhedra via <strong>shared corners (vertices) only</strong>.</p>
+    </div>
+    <div class="solution-step">
+      <div class="solution-step-title">Part (b): Electrostatic Physics and Cation-Cation Separation</div>
+      <p>In ionic ceramics, highly charged positive cations reside at the centers of adjacent coordination polyhedra. Anions screen the mutual Coulombic repulsion between adjacent cations. The distance between adjacent cations ($d_{c-c}$) depends strongly on how the polyhedra are joined:</p>
+      <ul>
+        <li><strong>Corner-Sharing:</strong> The two polyhedra share a single pivot anion. Cations are separated by maximum distance: $d_{c-c} \approx 2 r_0$ (where $r_0$ is the cation-anion bond length). Cation-cation electrostatic repulsion is minimized.</li>
+        <li><strong>Edge-Sharing:</strong> Two polyhedra share two common anions. The cation-cation separation drops to $d_{c-c} \approx r_0 \sqrt{2} \approx 1.414 r_0$ (for regular octahedra). This brings the positive cations 29% closer, significantly elevating repulsive Coulombic energy ($F \propto 1/d^2$).</li>
+        <li><strong>Face-Sharing:</strong> Two polyhedra share three or four common anions. The cations are forced into extreme proximity: $d_{c-c} \approx 2 r_0 \sqrt{2/3} \approx 1.15 r_0$ (for tetrahedra, $d_{c-c} \approx 0.67 r_0$). Cation-cation repulsion becomes overwhelming, destabilizing the lattice.</li>
+      </ul>
+    </div>
+    <div class="solution-step">
+      <div class="solution-step-title">Part (c): Pauling's Fourth Rule & Silica Tetrahedra</div>
+      <p><strong>Pauling's Fourth Rule:</strong> In a crystal containing different cations, those of high valence ($Z \ge 4$) and small coordination number ($\text{CN} \le 4$) tend not to share polyhedron elements with each other.</p>
+      <p>In silica ($\text{SiO}_2$), the silicon cation has a high formal valence ($Z = +4$) and small coordination ($\text{CN} = 4$). If two $\text{SiO}_4^{4-}$ tetrahedra shared an edge, the two $\text{Si}^{4+}$ cations would be separated by only $d_{c-c} = 2(0.160 \text{ nm})\sin(109.5^\circ/2) \approx 0.18 \text{ nm}$. The immense repulsive force between two $+4$ charges at $0.18 \text{ nm}$ would shatter the structure. Consequently, silica tetrahedra <strong>strictly share corners</strong>, maintaining a large $\text{Si}-\text{Si}$ separation of $\approx 0.31 \text{ nm}$.</p>
+    </div>
+    <div class="final-answer-box">
+      <strong>Core Conclusion:</strong> Corner-sharing maximizes cation-cation distance ($d_{c-c} \approx 2 r_0$), minimizing repulsive energy. Edge- and face-sharing force like-charged cations into close proximity; high-valence cations like $\text{Si}^{4+}$ strictly avoid edge/face sharing.
+    </div>""")
+
+add(38, "Energetics of Divalent Oxides: Why MgO Forms Despite Endothermic Ionization",
+    "Thermochemistry & Lattice Energy", "thermodynamics", "Intermediate",
+    r"""<p>Thermodynamic analysis reveals a fascinating paradox: the gas-phase formation of divalent $\text{Mg}^{2+}$ and $\text{O}^{2-}$ ions is highly endothermic, yet solid Magnesium Oxide ($\text{MgO}$) is one of the most stable refractory compounds known.</p>
+    <p>Thermochemical data:</p>
+    <ul>
+      <li>First + Second Ionization Energy of Mg: $I_1 + I_2 = 738 + 1451 = \mathbf{+2189 \text{ kJ/mol}}$</li>
+      <li>Sublimation Enthalpy of Mg: $\Delta H_{\text{sub}} = \mathbf{+148 \text{ kJ/mol}}$</li>
+      <li>Dissociation Enthalpy of $\text{O}_2$: $\frac{1}{2} \Delta H_{\text{diss}} = \mathbf{+249 \text{ kJ/mol}}$</li>
+      <li>First Electron Affinity of Oxygen: $EA_1(\text{O} \to \text{O}^-) = \mathbf{-141 \text{ kJ/mol}}$ (exothermic)</li>
+      <li>Second Electron Affinity of Oxygen: $EA_2(\text{O}^- + e^- \to \text{O}^{2-}) = \mathbf{+780 \text{ kJ/mol}}$ (strongly endothermic!)</li>
+      <li>Standard Enthalpy of Formation of MgO: $\Delta H_f^\circ = \mathbf{-601.6 \text{ kJ/mol}}$</li>
+    </ul>
+    <ol type="a">
+      <li>Explain physically why adding a second electron to form $\text{O}^{2-}$ in the gas phase is strongly endothermic ($+780 \text{ kJ/mol}$).</li>
+      <li>Calculate the net energy required to convert neutral gaseous $\text{Mg}(g)$ and $\text{O}(g)$ atoms into isolated gaseous $\text{Mg}^{2+}(g)$ and $\text{O}^{2-}(g)$ ions.</li>
+      <li>Use the Born-Haber cycle to calculate the crystal lattice energy $U_{\text{latt}}$ of MgO. Explain how the colossal lattice energy drives the spontaneous formation of $\text{Mg}^{2+}\text{O}^{2-}$ over hypothetically neutral or monovalent $\text{Mg}^+\text{O}^-$.</li>
+    </ol>""",
+    r"""<div class="solution-step">
+      <div class="solution-step-title">Part (a): Why the Second Electron Affinity of Oxygen is Endothermic</div>
+      <p>Adding the first electron to neutral oxygen ($\text{O} + e^- \to \text{O}^-$) is exothermic ($\Delta H = -141 \text{ kJ/mol}$) because the incoming electron experiences net attraction from the positive nucleus ($Z = 8$). However, adding a second electron forces an electron onto an already negatively charged ion ($\text{O}^-$). The incoming electron experiences <strong>intense Coulombic electrostatic repulsion</strong> from the 9 existing electrons. Work must be done against this repulsion to force the electron into the $2p$ subshell, making the second electron affinity strongly <strong>endothermic ($+780 \text{ kJ/mol}$)</strong>. In the gas phase, isolated $\text{O}^{2-}$ is unstable and spontaneously expels an electron!</p>
+    </div>
+    <div class="solution-step">
+      <div class="solution-step-title">Part (b): Net Gas-Phase Ionization Energy</div>
+      <p>Converting gaseous $\text{Mg}(g) + \text{O}(g) \to \text{Mg}^{2+}(g) + \text{O}^{2-}(g)$:</p>
+      $$\Delta H_{\text{gas ions}} = (I_1 + I_2) + (EA_1 + EA_2) = (+2189 \text{ kJ/mol}) + (-141 + 780 \text{ kJ/mol})$$
+      $$\Delta H_{\text{gas ions}} = 2189 + 639 = \mathbf{+2,828 \text{ kJ/mol}}$$
+      <p>Creating isolated $\text{Mg}^{2+}$ and $\text{O}^{2-}$ ions consumes an enormous $+2,828 \text{ kJ/mol}$ of energy!</p>
+    </div>
+    <div class="solution-step">
+      <div class="solution-step-title">Part (c): Born-Haber Calculation of Lattice Energy</div>
+      <p>By Hess's Law:</p>
+      $$\Delta H_f^\circ = \Delta H_{\text{sub}} + (I_1 + I_2) + \frac{1}{2}\Delta H_{\text{diss}} + (EA_1 + EA_2) + U_{\text{latt}}$$
+      $$-601.6 = 148 + 2189 + 249 + (-141) + 780 + U_{\text{latt}}$$
+      $$-601.6 = 3,225 + U_{\text{latt}} \implies U_{\text{latt}} = -601.6 - 3,225 = \mathbf{-3,826.6 \text{ kJ/mol}}$$
+      <p><strong>Thermodynamic Driving Force:</strong> The crystal lattice energy of solid MgO is an immense <strong>$-3,827 \text{ kJ/mol}$</strong>, driven by the quadrupled valence charge product ($|Z_1 Z_2| = (+2)(-2) = 4$). This colossal electrostatic release completely overwhelms the $+2,828 \text{ kJ/mol}$ gas-phase ionization penalty, driving the net enthalpy of formation to a deeply exothermic $-601.6 \text{ kJ/mol}$. For a hypothetical monovalent $\text{Mg}^+\text{O}^-$, the lattice energy would be only $\sim -900 \text{ kJ/mol}$, resulting in an overall positive (unfavorable) $\Delta H_f$.</p>
+    </div>
+    <div class="final-answer-box">
+      <strong>Final Results:</strong><br>
+      Gas Ionization Penalty: $\mathbf{+2,828 \text{ kJ/mol}}$ (Isolated $\text{O}^{2-}$ is unstable!)<br>
+      Molar Lattice Energy: $U_{\text{latt}} = \mathbf{-3,827 \text{ kJ/mol}}$<br>
+      The $4\times$ increase in electrostatic lattice energy stabilizes divalent $\text{Mg}^{2+}\text{O}^{2-}$ over monovalent ions.
+    </div>""")
+
+add(39, "Steric Hindrance and Rotational Conformations in Polymer Chains",
+    "Polymers & Soft Matter", "polymers", "Fundamental",
+    r"""<p>The conformational flexibility and elasticity of polymer chains are governed by potential energy barriers to rotation about backbone carbon-carbon ($\text{C}-\text{C}$) single $\sigma$-bonds.</p>
+    <ol type="a">
+      <li>Explain why $\text{C}-\text{C}$ single $\sigma$-bonds permit axial rotation, whereas $\text{C}=\text{C}$ double bonds are rigid and prevent rotation.</li>
+      <li>Sketch and describe the potential energy curve as a function of the dihedral torsion angle $\phi$ ($0^\circ$ to $360^\circ$) for $n$-butane or a polyethylene segment, identifying the <strong>trans ($t$) conformation</strong> ($\phi = 180^\circ$) and the two degenerate <strong>gauche ($g^+, g^-$) conformations</strong> ($\phi = 60^\circ, 300^\circ$).</li>
+      <li>Define <strong>steric hindrance</strong>. Compare the rotational energy barrier of Polyethylene ($-\text{CH}_2-\text{CH}_2-$, small hydrogen side atoms, barrier $\approx 12 \text{ kJ/mol}$) with Polystyrene ($-\text{CH}_2-\text{CH}(\text{C}_6\text{H}_5)-$, bulky phenyl benzene rings, barrier $> 70 \text{ kJ/mol}$). Explain how this governs their flexibility and glass transition temperatures ($T_g$).</li>
+    </ol>""",
+    r"""<div class="solution-step">
+      <div class="solution-step-title">Part (a): $\sigma$-Bond vs. $\pi$-Bond Rotational Freedom</div>
+      <ul>
+        <li><strong>Single $\sigma$-Bond:</strong> Formed by coaxial head-to-head overlap of $sp^3$ hybrid orbitals with cylindrical symmetry about the internuclear bonding axis. Rotating one $sp^3$ group relative to the other preserves orbital overlap completely, permitting rotational freedom.</li>
+        <li><strong>Double Bond ($\sigma + \pi$):</strong> In addition to the $\sigma$-bond, a $\pi$-bond is formed by parallel side-by-side overlap of unhybridized $p$-orbitals above and below the axis. Twisting the bond by $90^\circ$ eliminates orbital overlap, breaking the $\pi$-bond and requiring an activation energy of $\approx 260 \text{ kJ/mol}$. Hence, double bonds are locked into rigid cis/trans configurations.</li>
+      </ul>
+    </div>
+    <div class="solution-step">
+      <div class="solution-step-title">Part (b): Torsional Potential Energy Curve of Polyethylene</div>
+      <p>As the dihedral angle $\phi$ rotates around a backbone bond:</p>
+      <ul>
+        <li><strong>Trans ($t$) Conformation ($\phi = 180^\circ$):</strong> The two carbon chain segments are as far apart as possible (fully extended zigzag). This minimizes electron-electron repulsion, representing the <strong>global potential energy minimum ($E = 0$)</strong>.</li>
+        <li><strong>Gauche ($g^+, g^-$) Conformations ($\phi = 60^\circ, 300^\circ$):</strong> Chain segments are rotated closer together, experiencing slight steric crowding. They reside in local energy minima approximately <strong>$3.0 \text{ kJ/mol}$ above the trans state</strong>.</li>
+        <li><strong>Eclipsed Transitions ($\phi = 0^\circ, 120^\circ, 240^\circ$):</strong> Bulky groups or hydrogen atoms directly align and overlap, creating potential energy barrier peaks of $\mathbf{12–15 \text{ kJ/mol}}$.</li>
+      </ul>
+    </div>
+    <div class="solution-step">
+      <div class="solution-step-title">Part (c): Steric Hindrance and Glass Transition Temperature</div>
+      <p><strong>Steric Hindrance</strong> is the slowing or prevention of conformational rotation caused by spatial crowding and electrostatic overlap of bulky side groups.</p>
+      <ul>
+        <li><strong>Polyethylene:</strong> Small hydrogen atoms ($\text{H}$) offer minimal steric hindrance. The low rotational barrier ($12 \text{ kJ/mol}$) is easily overcome by thermal energy at room temperature ($k_B T \approx 2.5 \text{ kJ/mol}$), allowing chains to coil and uncoil rapidly. This imparts extreme flexibility and an ultra-low glass transition temperature: <strong>$T_g \approx -120^\circ\text{C}$</strong>.</li>
+        <li><strong>Polystyrene:</strong> Contains bulky, rigid phenyl benzene rings ($-\text{C}_6\text{H}_5$) attached to every second backbone carbon. The large rings physically collide during rotation, raising the torsional activation barrier above <strong>$70 \text{ kJ/mol}$</strong>. Backbone rotation is completely frozen at room temperature, locking the polymer into a rigid, brittle, glassy state with an elevated glass transition temperature: <strong>$T_g \approx +100^\circ\text{C}$</strong>.</li>
+      </ul>
+    </div>
+    <div class="final-answer-box">
+      <strong>Synthesis:</strong> Cylindrical $\sigma$-bonds allow rotation; the extended trans state ($\phi = 180^\circ$) is the energy minimum. Bulky side groups in Polystyrene create intense steric hindrance, elevating rotational barriers to $> 70 \text{ kJ/mol}$ and driving $T_g$ to $+100^\circ\text{C}$.
+    </div>""")
+
+add(40, "Metallic Bonding Variations: Alkali Metals vs. Refractory Metals",
+    "Metallic Bonding", "metallic", "Intermediate",
+    r"""<p>The mechanical strength and melting points of pure metallic elements vary by over two orders of magnitude depending upon valence electron density and $d$-orbital participation.</p>
+    <table class="formula-table">
+      <tr><th>Metal</th><th>Group & Period</th><th>Valence Configuration</th><th>Melting Point ($T_m$)</th><th>Vickers Hardness (HV)</th><th>Cohesive Energy ($E_0$)</th></tr>
+      <tr><td>Sodium (Na)</td><td>Group 1, Period 3</td><td>$3s^1$</td><td>98 &deg;C</td><td>0.5 MPa (knife-cut)</td><td>107 kJ/mol</td></tr>
+      <tr><td>Magnesium (Mg)</td><td>Group 2, Period 3</td><td>$3s^2$</td><td>650 &deg;C</td><td>350 MPa</td><td>147 kJ/mol</td></tr>
+      <tr><td>Aluminum (Al)</td><td>Group 13, Period 3</td><td>$3s^2 3p^1$</td><td>660 &deg;C</td><td>160 MPa</td><td>326 kJ/mol</td></tr>
+      <tr><td>Tungsten (W)</td><td>Group 6, Period 6</td><td>$5d^4 6s^2$</td><td>3422 &deg;C</td><td>3500 MPa</td><td>849 kJ/mol</td></tr>
+    </table>
+    <ol type="a">
+      <li>Across Period 3 ($\text{Na} \to \text{Mg} \to \text{Al}$), explain why cohesive energy and melting point increase with valence electron count per atom.</li>
+      <li>Explain why Tungsten possesses an extreme cohesive energy ($849 \text{ kJ/mol}$) and melting point ($3422^\circ\text{C}$) that dwarf simple $s-p$ metals.</li>
+      <li>Why can pure sodium be pressed and extruded like wax by hand at room temperature, whereas tungsten requires diamond tooling and high-temperature powder metallurgy processing?</li>
+    </ol>""",
+    r"""<div class="solution-step">
+      <div class="solution-step-title">Part (a): Period 3 Valence Trend ($\text{Na} \to \text{Mg} \to \text{Al}$)</div>
+      <p>In metallic bonding, cohesive energy scales with the <strong>electrostatic charge density of the electron sea</strong> and the charge of the positive ion cores:</p>
+      <ul>
+        <li><strong>Sodium ($\text{Na}^+$ core, 1 $e^-$):</strong> Low valence charge density ($n_e = 2.6 \times 10^{28} \text{ m}^{-3}$). Large ion cores are held weakly by a dilute electron sea, yielding low cohesive energy ($107 \text{ kJ/mol}$) and low melting point ($98^\circ\text{C}$).</li>
+        <li><strong>Magnesium ($\text{Mg}^{2+}$ core, 2 $e^-$):</strong> Doubled core charge and doubled electron density increase Coulombic attraction, raising $T_m$ to $650^\circ\text{C}$.</li>
+        <li><strong>Aluminum ($\text{Al}^{3+}$ core, 3 $e^-$):</strong> Tripled core charge and high electron density ($n_e = 1.8 \times 10^{29} \text{ m}^{-3}$) yield cohesive energy of $326 \text{ kJ/mol}$.</li>
+      </ul>
+    </div>
+    <div class="solution-step">
+      <div class="solution-step-title">Part (b): Why Tungsten Outperforms Simple $s-p$ Metals</div>
+      <p>Tungsten ($Z = 74$) has 6 valence electrons ($5d^4 6s^2$). Its bonding is not merely a simple free-electron gas; rather, it features <strong>hybrid metallic-covalent bonding</strong>:</p>
+      <ul>
+        <li>The $6s$ electrons delocalize to form a conductive metallic electron sea.</li>
+        <li>The five $5d$ orbitals overlap deeply in space with adjacent atoms along the body-diagonal $\langle 111 \rangle$ directions of its BCC lattice, forming six directional, high-energy covalent-like bonds per atom.</li>
+        <li>This combination of metallic electron screening and directional $d$-orbital covalent bond energy ($849 \text{ kJ/mol} \approx 8.8 \text{ eV/atom}$) produces extreme interatomic bond stiffness, yielding world-record melting point ($3422^\circ\text{C}$) and elastic modulus ($410 \text{ GPa}$).</li>
+      </ul>
+    </div>
+    <div class="solution-step">
+      <div class="solution-step-title">Part (c): Mechanical Deformability: Na vs. W</div>
+      <ul>
+        <li><strong>Sodium:</strong> Non-directional, dilute electron sea offers negligible Peierls-Nabarro friction to dislocation motion ($\tau_y < 1 \text{ MPa}$). Large atomic radius and low bond energy allow dislocations to glide at minimal shear stress, making sodium soft and malleable at room temperature ($T/T_m = 293/371 = 0.79$, deep in the high-temperature creep regime!).</li>
+        <li><strong>Tungsten:</strong> Highly directional $d$-orbital bonding creates an immense Peierls lattice friction barrier ($\tau_{PN} \approx 1000 \text{ MPa}$ at room temperature). Dislocation glide is frozen at room temperature ($T/T_m = 293/3695 = 0.08$), making tungsten exceptionally hard and resistant to plastic flow, requiring vacuum arc melting or powder metallurgy sintering above 2000 &deg;C.</li>
+      </ul>
+    </div>
+    <div class="final-answer-box">
+      <strong>Synthesis:</strong> Metallic bond strength scales with valence electron count: $\text{Na}^+ (1e^-) \ll \text{Al}^{3+} (3e^-) \ll \text{W}^{6+} (6e^-)$. Tungsten combines a metallic electron sea with directional $5d$ covalent overlap, yielding extreme bond energy ($849 \text{ kJ/mol}$) and melting point ($3422^\circ\text{C}$).
+    </div>""")
+
+add(41, r"Electron Work Function ($\Phi$) and Thermionic Emission in Metals",
+    "Metallic Bonding", "work_function", "Intermediate",
+    r"""<p>The energy required to liberate a conduction electron from the Fermi level of a metal into the vacuum is the <strong>electron work function ($\Phi$)</strong>.</p>
+    <ol type="a">
+      <li>Define the work function $\Phi$ in terms of the vacuum level $E_{\text{vac}}$ and Fermi energy $E_F$: $\Phi = E_{\text{vac}} - E_F$. Explain why clean polycrystalline Tungsten has a high work function ($\Phi_{\text{W}} \approx 4.55 \text{ eV}$).</li>
+      <li>State the <strong>Richardson-Dushman equation</strong> for thermionic emission current density:
+      $$J = A_R T^2 \exp\left( -\frac{\Phi}{k_B T} \right)$$
+      where $A_R = \frac{4\pi m_e e k_B^2}{h^3} \approx 1.20 \times 10^6 \text{ A/m}^2\cdot\text{K}^2$ is Richardson's constant.</li>
+      <li>Calculate the thermionic current density $J$ emitted by a pure tungsten filament operating at $T = 2500 \text{ K}$ ($\Phi = 4.55 \text{ eV}$). Compare this with a thoriated tungsten filament ($\text{W} - \text{ThO}_2$, $\Phi = 2.60 \text{ eV}$) at the same temperature. Use $k_B = 8.617 \times 10^{-5} \text{ eV/K}$.</li>
+    </ol>""",
+    r"""<div class="solution-step">
+      <div class="solution-step-title">Part (a): Work Function Definition & Tungsten Value</div>
+      <p>The <strong>electron work function ($\Phi$)</strong> is the minimum thermodynamic work required to extract an electron from the highest occupied Fermi level inside a metal to a point just outside the metal surface in vacuum (zero kinetic energy):</p>
+      $$\Phi = E_{\text{vac}} - E_F$$
+      <p>Tungsten has a high work function ($\Phi \approx 4.55 \text{ eV}$) due to its high atomic number ($Z = 74$), dense valence electron density, and strong electrostatic image-force surface dipoles created by electron spillover at the metal-vacuum boundary.</p>
+    </div>
+    <div class="solution-step">
+      <div class="solution-step-title">Part (b): The Richardson-Dushman Thermionic Emission Equation</div>
+      <p>Thermionic emission occurs when thermal kinetic energy excites electrons into the tail of the Fermi-Dirac distribution with energies exceeding $E_{\text{vac}}$:</p>
+      $$J = A_R \cdot T^2 \exp\left(-\frac{\Phi}{k_B T}\right)$$
+      <p>where $A_R \approx 1.20 \times 10^6 \text{ A/m}^2\cdot\text{K}^2$, $T$ is in Kelvin, and $k_B = 8.617 \times 10^{-5} \text{ eV/K}$.</p>
+    </div>
+    <div class="solution-step">
+      <div class="solution-step-title">Part (c): Numerical Comparison: Pure W vs. Thoriated W at $2500 \text{ K}$</div>
+      <p>Thermal energy at $2500 \text{ K}$:</p>
+      $$k_B T = (8.617 \times 10^{-5} \text{ eV/K}) \times (2500 \text{ K}) = \mathbf{0.2154 \text{ eV}}$$
+      $$A_R T^2 = (1.20 \times 10^6 \text{ A/m}^2\cdot\text{K}^2) \times (2500 \text{ K})^2 = 7.50 \times 10^{12} \text{ A/m}^2$$
+      <ul>
+        <li><strong>Pure Tungsten ($\Phi = 4.55 \text{ eV}$):</strong>
+        $$\frac{\Phi}{k_B T} = \frac{4.55 \text{ eV}}{0.2154 \text{ eV}} \approx 21.1235$$
+        $$\exp(-21.1235) \approx 6.702 \times 10^{-10}$$
+        $$J_{\text{W}} = (7.50 \times 10^{12} \text{ A/m}^2) \times (6.702 \times 10^{-10}) = \mathbf{5,026 \text{ A/m}^2 \approx 0.50 \text{ A/cm}^2}$$</li>
+        <li><strong>Thoriated Tungsten ($\Phi = 2.60 \text{ eV}$):</strong>
+        $$\frac{\Phi}{k_B T} = \frac{2.60 \text{ eV}}{0.2154 \text{ eV}} \approx 12.0706$$
+        $$\exp(-12.0706) \approx 5.725 \times 10^{-6}$$
+        $$J_{\text{Th-W}} = (7.50 \times 10^{12} \text{ A/m}^2) \times (5.725 \times 10^{-6}) = \mathbf{4.29 \times 10^7 \text{ A/m}^2 \approx 4,290 \text{ A/cm}^2}$$</li>
+      </ul>
+      <p><strong>Ratio:</strong> $\frac{J_{\text{Th-W}}}{J_{\text{W}}} = \frac{4.29 \times 10^7}{5026} \approx \mathbf{8,535\times \text{ higher current density!}}$</p>
+      <p>Doping tungsten with 1–2 wt% $\text{ThO}_2$ forms a monoatomic surface dipole layer of Thorium ($\text{Th}^{\delta+}$ outward) that lowers the surface barrier $\Phi$ from $4.55 \text{ eV}$ to $2.60 \text{ eV}$, boosting electron emission by nearly 4 orders of magnitude at the same operating temperature.</p>
+    </div>
+    <div class="final-answer-box">
+      <strong>Final Results:</strong><br>
+      Pure Tungsten: $J_{\text{W}} = \mathbf{5,026 \text{ A/m}^2 = 0.50 \text{ A/cm}^2}$<br>
+      Thoriated Tungsten: $J_{\text{Th-W}} = \mathbf{4.29 \times 10^7 \text{ A/m}^2 = 4,290 \text{ A/cm}^2}$<br>
+      Lowering work function from $4.55 \text{ eV}$ to $2.60 \text{ eV}$ amplifies thermionic emission by a factor of <strong>8,500$\times$</strong>.
+    </div>""")
+
+add(42, "Dielectric Polarization Mechanisms: Electronic, Ionic, and Dipolar",
+    "Dielectric Properties", "polarization", "Intermediate",
+    r"""<p>The relative dielectric permittivity ($\kappa_r = \varepsilon_r$) of insulating materials originates from the macroscopic displacement of electric charges under an applied electric field $\mathcal{E}$.</p>
+    <ol type="a">
+      <li>Describe the three microscopic polarization mechanisms:
+        <ul>
+          <li><strong>Electronic Polarization ($P_e$)</strong></li>
+          <li><strong>Ionic Polarization ($P_i$)</strong></li>
+          <li><strong>Orientation / Dipolar Polarization ($P_o$)</strong></li>
+        </ul>
+      </li>
+      <li>State the total polarization equation: $P_{\text{total}} = N (\alpha_e + \alpha_i + \alpha_d) \mathcal{E}$.</li>
+      <li>Explain the frequency dependence of dielectric permittivity from DC to optical frequencies ($10^0 \text{ Hz}$ to $10^{15} \text{ Hz}$). Why does water have $\kappa_r \approx 80$ at radio frequencies ($1 \text{ MHz}$), but drops to $\kappa_r = n^2 \approx 1.77$ at optical frequencies ($10^{15} \text{ Hz}$)?</li>
+    </ol>""",
+    r"""<div class="solution-step">
+      <div class="solution-step-title">Part (a): Three Microscopic Polarization Mechanisms</div>
+      <ul>
+        <li><strong>Electronic Polarization ($P_e$):</strong> An applied electric field shifts the negative valence electron cloud slightly relative to the positive nucleus by displacement $d \sim 10^{-16} \text{ m}$. Present in <em>all</em> atoms and materials.</li>
+        <li><strong>Ionic Polarization ($P_i$):</strong> In ionic crystals (e.g., NaCl, MgO), the electric field displaces positive cations in the field direction and negative anions in the reverse direction, stretching interatomic bond lengths and creating net induced dipoles.</li>
+        <li><strong>Orientation / Dipolar Polarization ($P_o$):</strong> In materials with permanent molecular dipoles (e.g., liquid $\text{H}_2\text{O}$, polar polymers), the electric field exerts a torque that rotates and aligns the pre-existing dipoles against thermal randomization.</li>
+      </ul>
+    </div>
+    <div class="solution-step">
+      <div class="solution-step-title">Part (b): Total Polarization Equation</div>
+      <p>The total macroscopic polarization $P$ is the sum of dipole moments per unit volume:</p>
+      $$P = D - \varepsilon_0 \mathcal{E} = \varepsilon_0 (\kappa_r - 1) \mathcal{E} = N \alpha_{\text{total}} \mathcal{E} = N (\alpha_e + \alpha_i + \alpha_d) \mathcal{E}$$
+      <p>where $N$ is number of dipoles per unit volume, and $\alpha_e, \alpha_i, \alpha_d$ are the electronic, ionic, and orientation polarizabilities.</p>
+    </div>
+    <div class="solution-step">
+      <div class="solution-step-title">Part (c): Frequency Response & Water Anomaly</div>
+      <p>Each polarization mechanism has an intrinsic inertial response time (relaxation frequency):</p>
+      <ol>
+        <li><strong>Dipolar Relaxation ($10^9–10^{11} \text{ Hz}$, Microwave):</strong> Bulky water molecules have high rotational inertia and hydrogen-bonded friction. At low frequencies ($< 1 \text{ GHz}$), molecules rotate freely in-phase with the field, contributing enormous orientation polarization that yields <strong>$\kappa_r \approx 80$</strong>. Above microwave frequencies, molecules cannot reorient fast enough; orientation polarization drops to zero.</li>
+        <li><strong>Ionic Resonance ($10^{12}–10^{13} \text{ Hz}$, Infrared):</strong> Heavy ions have mass inertia. Above infrared phonon frequencies, ions can no longer oscillate; ionic polarization drops to zero.</li>
+        <li><strong>Electronic Response ($10^{15}–10^{16} \text{ Hz}$, Visible/UV):</strong> Ultra-light electrons ($m_e = 9.1 \times 10^{-31} \text{ kg}$) respond instantaneously up to ultraviolet frequencies.</li>
+      </ol>
+      <p>At optical frequencies ($\nu \approx 5 \times 10^{14} \text{ Hz}$), only electronic polarization operates. By Maxwell's relation for non-magnetic media ($\kappa_r = n^2$):</p>
+      $$\kappa_{r,\text{optical}} = n^2 = (1.333)^2 \approx \mathbf{1.77}$$
+      <p>The dielectric constant drops from 80 at DC to 1.77 at visible light frequencies!</p>
+    </div>
+    <div class="final-answer-box">
+      <strong>Synthesis:</strong> Total polarization combines electronic, ionic, and orientation mechanisms. At optical frequencies ($10^{15} \text{ Hz}$), molecular rotation and ionic vibration are frozen out by inertia, causing water's dielectric constant to drop from 80 (microwave) to 1.77 ($n^2$).
+    </div>""")
+
+add(43, "Ferroelectric Dipole Displacement in Barium Titanate (BaTiO3)",
+    "Dielectric Properties", "ferroelectric", "Intermediate",
+    r"""<p>Barium Titanate ($\text{BaTiO}_3$) is the prototype <strong>ferroelectric ceramic</strong> utilized in multi-layer ceramic capacitors (MLCCs) and sonar transducers.</p>
+    <ol type="a">
+      <li>Describe the crystal structure of $\text{BaTiO}_3$ above its Curie temperature ($T_c = 120^\circ\text{C}$). Identify the atomic coordinates of $\text{Ba}^{2+}$, $\text{Ti}^{4+}$, and $\text{O}^{2-}$ in the cubic perovskite unit cell. Is the cubic phase ferroelectric?</li>
+      <li>Describe the crystallographic phase transformation that occurs upon cooling below $120^\circ\text{C}$ into the <strong>tetragonal ferroelectric phase</strong> ($c/a \approx 1.01$). State the spatial displacement of the central $\text{Ti}^{4+}$ cation and calculate the resulting spontaneous electric dipole moment.</li>
+      <li>Explain why the dielectric constant surges to an extreme peak ($\kappa_r > 10,000$) near the Curie temperature $T_c$.</li>
+    </ol>""",
+    r"""<div class="solution-step">
+      <div class="solution-step-title">Part (a): Cubic Perovskite Structure ($T > 120^\circ\text{C}$)</div>
+      <p>Above $120^\circ\text{C}$, $\text{BaTiO}_3$ adopts the ideal <strong>cubic perovskite lattice</strong> ($a = 0.400 \text{ nm}$):</p>
+      <ul>
+        <li>$\text{Ba}^{2+}$ cations sit at the 8 cube corners: $(0, 0, 0)$.</li>
+        <li>$\text{Ti}^{4+}$ cation sits at the body center: $(1/2, 1/2, 1/2)$.</li>
+        <li>$\text{O}^{2-}$ anions sit at the 6 face centers: $(1/2, 1/2, 0)$, forming an octahedron surrounding the central titanium cation.</li>
+      </ul>
+      <p>Because the cubic unit cell is perfectly centrosymmetric (possesses a center of inversion symmetry at the Ti site), positive and negative charge centroids coincide identically: spontaneous polarization is <strong>zero ($P_s = 0$)</strong>. The cubic phase is paraelectric (not ferroelectric).</p>
+    </div>
+    <div class="solution-step">
+      <div class="solution-step-title">Part (b): Tetragonal Transition & Cation Displacement ($T < 120^\circ\text{C}$)</div>
+      <p>Upon cooling below $T_c = 120^\circ\text{C}$, the unit cell distorts spontaneously into a <strong>tetragonal lattice</strong> elongated along the $c$-axis ($c = 0.4036 \text{ nm}$, $a = 0.3992 \text{ nm}$, $c/a = 1.011$):</p>
+      <ul>
+        <li>The central $\text{Ti}^{4+}$ cation shifts off-center along the $[001]$ $c$-axis by $\mathbf{\Delta z \approx +0.012 \text{ nm}}$ ($+0.12 \text{ \AA}$) relative to the barium frame.</li>
+        <li>The oxygen octahedron shifts in the opposite direction along $[001]$ by $\Delta z \approx -0.003 \text{ nm}$.</li>
+        <li>This non-centrosymmetric charge separation creates a permanent, spontaneous electric dipole moment along the $c$-axis, yielding a massive <strong>spontaneous polarization of $P_s \approx 0.26 \text{ C/m}^2$</strong> ($26\,\mu\text{C/cm}^2$).</li>
+      </ul>
+    </div>
+    <div class="solution-step">
+      <div class="solution-step-title">Part (c): Dielectric Peak at the Curie Temperature ($T_c$)</div>
+      <p>Near $T_c = 120^\circ\text{C}$, the crystal undergoes a second-order structural phase transition governed by the soft transverse optical phonon mode. The restoring force constant resisting titanium displacement softens ($k \to 0$), making the titanium ion exceptionally mobile and compliant to external electric fields. According to the <strong>Curie-Weiss Law</strong>:</p>
+      $$\kappa_r = \frac{C}{T - T_0}$$
+      <p>where $C \approx 1.5 \times 10^5 \text{ K}$. At $T \approx T_c$, $\kappa_r$ surges to a colossal peak value between <strong>$8,000 \text{ and } 15,000$</strong>, allowing MLCC capacitors to store microfarads of charge in submillimeter surface-mount chips.</p>
+    </div>
+    <div class="final-answer-box">
+      <strong>Synthesis:</strong> Above $120^\circ\text{C}$, $\text{BaTiO}_3$ is centrosymmetric cubic ($P_s = 0$). Below $120^\circ\text{C}$, the central $\text{Ti}^{4+}$ shifts off-center by $0.012 \text{ nm}$ along $[001]$, creating a permanent spontaneous polarization ($P_s = 0.26 \text{ C/m}^2$). At $T_c$, dielectric permittivity surges to $> 10,000$.
+    </div>""")
+
+add(44, "Hydrogen Bonding in Biological Macromolecules: DNA Base Pairing and Proteins",
+    "Secondary Bonding", "biology", "Intermediate",
+    r"""<p>The structural integrity and replication of genetic material rely on the precise spatial geometry of secondary hydrogen bonds.</p>
+    <ol type="a">
+      <li>Identify the complementary nitrogenous base pairs in the <strong>DNA double helix</strong>: Adenine (A), Thymine (T), Guanine (G), and Cytosine (C). State the number of hydrogen bonds stabilizing the $\text{A}-\text{T}$ pair versus the $\text{G}-\text{C}$ pair.</li>
+      <li>Explain why double-stranded DNA with a high percentage of $\text{G}-\text{C}$ base pairs exhibits a higher thermal denaturation (melting) temperature $T_m$ than DNA rich in $\text{A}-\text{T}$ pairs.</li>
+      <li>Describe the role of hydrogen bonding in stabilizing the secondary structures of structural proteins: the <strong>$\alpha$-helix</strong> and the <strong>$\beta$-pleated sheet</strong> (e.g., in natural silk fibroin and hair keratin).</li>
+    </ol>""",
+    r"""<div class="solution-step">
+      <div class="solution-step-title">Part (a): DNA Complementary Base Pairing & H-Bond Count</div>
+      <ul>
+        <li><strong>Adenine - Thymine ($\text{A}-\text{T}$):</strong> Stabilized by exactly <strong>two hydrogen bonds</strong>:
+          <ol>
+            <li>$\text{N}-\text{H}\cdots\text{O}$ (between adenine amino group and thymine carbonyl)</li>
+            <li>$\text{N}\cdots\text{H}-\text{N}$ (between ring nitrogens)</li>
+          </ol>
+        </li>
+        <li><strong>Guanine - Cytosine ($\text{G}-\text{C}$):</strong> Stabilized by exactly <strong>three hydrogen bonds</strong>:
+          <ol>
+            <li>$\text{O}\cdots\text{H}-\text{N}$</li>
+            <li>$\text{N}-\text{H}\cdots\text{N}$</li>
+            <li>$\text{N}-\text{H}\cdots\text{O}$</li>
+          </ol>
+        </li>
+      </ul>
+    </div>
+    <div class="solution-step">
+      <div class="solution-step-title">Part (b): Thermal Denaturation (Melting) Temperature $T_m$</div>
+      <p>Thermal denaturation (unzipping) of double-stranded DNA requires thermal kinetic energy to break all interstrand hydrogen bonds. Because the $\text{G}-\text{C}$ base pair has 3 hydrogen bonds ($\approx 60 \text{ kJ/mol}$) compared to only 2 for $\text{A}-\text{T}$ ($\approx 40 \text{ kJ/mol}$), $\text{G}-\text{C}$ pairs are 50% stronger. The empirical melting temperature $T_m$ scales linearly with GC content:</p>
+      $$T_m \approx 69.3^\circ\text{C} + 0.41 \times (\% \text{GC})$$
+      <p>Thermophilic bacteria living in deep-sea volcanic hydrothermal vents ($T > 85^\circ\text{C}$) feature genomes with exceptionally high GC content (> 70%) to prevent spontaneous thermal denaturation of their DNA.</p>
+    </div>
+    <div class="solution-step">
+      <div class="solution-step-title">Part (c): Protein Secondary Structures ($\alpha$-Helix & $\beta$-Sheet)</div>
+      <ul>
+        <li><strong>$\alpha$-Helix (e.g., Keratin in hair and wool):</strong> Polypeptide backbone coils into a right-handed helix. Every backbone carbonyl oxygen ($\text{C}=\text{O}$) forms a hydrogen bond with the amide hydrogen ($\text{N}-\text{H}$) of the residue located exactly 4 amino acids along the chain ($i+4$). The hydrogen bonds align parallel to the helix axis, giving hair spring-like elastic compliance.</li>
+        <li><strong>$\beta$-Pleated Sheet (e.g., Silk Fibroin):</strong> Extended polypeptide strands lie side-by-side. Dense lateral arrays of hydrogen bonds crosslink adjacent chains into flat, pleated sheets. Because backbone $\text{C}-\text{C}$ bonds are fully extended, silk has extreme tensile stiffness ($E \approx 10–15 \text{ GPa}$) and high strength, but cannot be stretched elastically like keratin.</li>
+      </ul>
+    </div>
+    <div class="final-answer-box">
+      <strong>Synthesis:</strong> $\text{A}-\text{T}$ has 2 H-bonds; $\text{G}-\text{C}$ has 3 H-bonds, raising DNA melting temperature by $0.41^\circ\text{C}$ per %GC. Intramolecular H-bonds ($i+4$) stabilize compliant $\alpha$-helices; intermolecular H-bonds crosslink stiff $\beta$-pleated sheets in silk.
+    </div>""")
+
+add(45, "Interatomic Force Constants and Molecular Vibration Frequencies",
+    "Potential Well Physics", "vibrations", "Intermediate",
+    r"""<p>The interatomic spring constant $k_0$ governs not only macroscopic elasticity but also the microscopic infrared vibrational frequencies of chemical bonds.</p>
+    <ol type="a">
+      <li>Model a diatomic molecule of two atoms of masses $m_1$ and $m_2$ connected by an interatomic spring of constant $k_0$. State the formula for the <strong>reduced mass ($\mu$)</strong> and the fundamental classical vibrational frequency $\nu_0$ in Hertz ($\text{s}^{-1}$):
+      $$\nu_0 = \frac{1}{2\pi} \sqrt{\frac{k_0}{\mu}}$$</li>
+      <li>For a carbon monoxide ($\text{C}\equiv\text{O}$) molecule, the reduced mass is $\mu = \frac{m_{\text{C}} m_{\text{O}}}{m_{\text{C}} + m_{\text{O}}}$. Calculate $\mu$ in kilograms. Use $m_{\text{C}} = \frac{12.00 \times 10^{-3} \text{ kg}}{6.022 \times 10^{23}}$ and $m_{\text{O}} = \frac{16.00 \times 10^{-3} \text{ kg}}{6.022 \times 10^{23}}$.</li>
+      <li>The fundamental infrared absorption stretching band of $\text{C}\equiv\text{O}$ occurs at wavenumber $\bar{\nu} = 2143 \text{ cm}^{-1}$ ($\nu_0 = c \bar{\nu} = 6.425 \times 10^{13} \text{ Hz}$). Calculate the interatomic spring constant $k_0$ of the triple bond in $\text{N/m}$. Compare this with a typical laboratory helical spring.</li>
+    </ol>""",
+    r"""<div class="solution-step">
+      <div class="solution-step-title">Part (a): Reduced Mass and Vibrational Frequency Formula</div>
+      <p>For two masses $m_1$ and $m_2$ oscillating about equilibrium separation $r_0$ under Hookean restoring force $F = -k_0 x$:</p>
+      $$\mu = \frac{m_1 m_2}{m_1 + m_2}$$
+      $$\nu_0 = \frac{1}{2\pi} \sqrt{\frac{k_0}{\mu}} \implies k_0 = \mu (2\pi \nu_0)^2$$
+    </div>
+    <div class="solution-step">
+      <div class="solution-step-title">Part (b): Reduced Mass Calculation for CO</div>
+      <p>Molar reduced mass:</p>
+      $$\mu_{\text{molar}} = \frac{12.00 \times 16.00}{12.00 + 16.00} = \frac{192.00}{28.00} = 6.8571 \text{ g/mol} = 6.8571 \times 10^{-3} \text{ kg/mol}$$
+      <p>Single molecule reduced mass:</p>
+      $$\mu = \frac{6.8571 \times 10^{-3} \text{ kg/mol}}{6.022 \times 10^{23} \text{ molecules/mol}} = \mathbf{1.1387 \times 10^{-26} \text{ kg}}$$
+    </div>
+    <div class="solution-step">
+      <div class="solution-step-title">Part (c): Interatomic Spring Constant $k_0$ Calculation</div>
+      <p>Given $\nu_0 = c \bar{\nu} = (2.998 \times 10^{10} \text{ cm/s}) \times (2143 \text{ cm}^{-1}) = \mathbf{6.425 \times 10^{13} \text{ s}^{-1} \text{ (Hz)}}$:</p>
+      $$\omega_0 = 2 \pi \nu_0 = 2 \pi (6.425 \times 10^{13} \text{ Hz}) = 4.037 \times 10^{14} \text{ rad/s}$$
+      $$\omega_0^2 = (4.037 \times 10^{14})^2 = 1.630 \times 10^{29} \text{ s}^{-2}$$
+      $$k_0 = \mu \omega_0^2 = (1.1387 \times 10^{-26} \text{ kg}) \times (1.630 \times 10^{29} \text{ s}^{-2}) = \mathbf{1,856 \text{ N/m}}$$
+      <p><strong>Physical Comparison:</strong> The spring constant of a single microscopic carbon monoxide triple bond is an astonishing <strong>$1,856 \text{ N/m}$</strong>—comparable to the stiff steel suspension spring of a motorcycle, acting between two single subatomic nuclei!</p>
+    </div>
+    <div class="final-answer-box">
+      <strong>Final Results:</strong><br>
+      Reduced Mass: $\mu = \mathbf{1.14 \times 10^{-26} \text{ kg}}$<br>
+      Vibrational Frequency: $\nu_0 = \mathbf{6.43 \times 10^{13} \text{ Hz}}$<br>
+      Interatomic Spring Constant: $k_0 = \mathbf{1,856 \text{ N/m}}$
+    </div>""")
+
+add(46, "The Lennard-Jones (6-12) Potential for Noble Gas Solids",
+    "Potential Well Physics", "lennard_jones", "Intermediate",
+    r"""<p>The interatomic interaction between non-polar atoms (such as Argon, Krypton, and Xenon) is universally modeled using the <strong>Lennard-Jones (6-12) potential</strong>:</p>
+    $$E_{\text{LJ}}(r) = 4 \varepsilon \left[ \left( \frac{\sigma}{r} \right)^{12} - \left( \frac{\sigma}{r} \right)^6 \right]$$
+    <ol type="a">
+      <li>State the physical meaning of the two parameters: the collision diameter $\sigma$ and the potential well depth $\varepsilon$. Show that $E_{\text{LJ}}(\sigma) = 0$.</li>
+      <li>Differentiate $E_{\text{LJ}}(r)$ to prove that the equilibrium interatomic separation is:
+      $$r_0 = 2^{1/6} \sigma \approx 1.12246 \, \sigma$$
+      and show that the minimum potential energy at equilibrium is exactly $-E_{\text{LJ}}(r_0) = \varepsilon$.</li>
+      <li>For solid Argon, $\sigma = 0.340 \text{ nm}$ and $\varepsilon = 1.65 \times 10^{-21} \text{ J}$ ($0.0103 \text{ eV}$). Calculate the equilibrium interatomic separation $r_0$ (in nm) and the interatomic spring constant $k_0 = \left. \frac{d^2E_{\text{LJ}}}{dr^2} \right|_{r_0}$ in $\text{N/m}$.</li>
+    </ol>""",
+    r"""<div class="solution-step">
+      <div class="solution-step-title">Part (a): Parameter Definitions & Zero-Crossing</div>
+      <ul>
+        <li>$\sigma$: The interatomic distance at which the potential energy is zero ($E_{\text{LJ}}(\sigma) = 0$). For $r < \sigma$, the potential is strongly repulsive; for $r > \sigma$, it is attractive. It represents the effective hard-sphere van der Waals collision diameter.</li>
+        <li>$\varepsilon$: The depth of the potential energy well, representing the maximum attractive binding energy between two atoms.</li>
+      </ul>
+      <p>At $r = \sigma$:</p>
+      $$E_{\text{LJ}}(\sigma) = 4\varepsilon [ (1)^{12} - (1)^6 ] = 4\varepsilon [ 1 - 1 ] = \mathbf{0}$$
+    </div>
+    <div class="solution-step">
+      <div class="solution-step-title">Part (b): Derivation of Equilibrium Separation $r_0$ & Well Depth</div>
+      <p>Differentiating with respect to $r$:</p>
+      $$\frac{dE_{\text{LJ}}}{dr} = 4 \varepsilon \left[ -\frac{12 \sigma^{12}}{r^{13}} + \frac{6 \sigma^6}{r^7} \right] = -\frac{24 \varepsilon}{r} \left[ 2 \left( \frac{\sigma}{r} \right)^{12} - \left( \frac{\sigma}{r} \right)^6 \right]$$
+      <p>Setting $\frac{dE_{\text{LJ}}}{dr} = 0$ at $r = r_0$:</p>
+      $$2 \left( \frac{\sigma}{r_0} \right)^{12} = \left( \frac{\sigma}{r_0} \right)^6 \implies \left( \frac{\sigma}{r_0} \right)^6 = \frac{1}{2} \implies \left( \frac{r_0}{\sigma} \right)^6 = 2$$
+      $$r_0 = 2^{1/6} \sigma \approx \mathbf{1.12246 \, \sigma}$$
+      <p>Evaluating potential energy at $r = r_0$ where $(\sigma/r_0)^6 = 1/2$ and $(\sigma/r_0)^{12} = 1/4$:</p>
+      $$E_{\text{LJ}}(r_0) = 4 \varepsilon \left[ \frac{1}{4} - \frac{1}{2} \right] = 4 \varepsilon \left( -\frac{1}{4} \right) = \mathbf{-\varepsilon}$$
+    </div>
+    <div class="solution-step">
+      <div class="solution-step-title">Part (c): Numerical Calculations for Argon</div>
+      <ul>
+        <li><strong>Equilibrium Separation:</strong>
+        $$r_0 = 1.12246 \times (0.340 \text{ nm}) = \mathbf{0.3816 \text{ nm} = 3.816 \times 10^{-10} \text{ m}}$$</li>
+        <li><strong>Second Derivative (Spring Constant $k_0$):</strong>
+        $$\frac{d^2E_{\text{LJ}}}{dr^2} = 4 \varepsilon \left[ \frac{156 \sigma^{12}}{r^{14}} - \frac{42 \sigma^6}{r^8} \right]$$
+        At $r = r_0$, substitute $(\sigma/r_0)^6 = 1/2$ and $(\sigma/r_0)^{12} = 1/4$:
+        $$k_0 = \left. \frac{d^2E_{\text{LJ}}}{dr^2} \right|_{r_0} = \frac{4 \varepsilon}{r_0^2} \left[ 156 \left( \frac{1}{4} \right) - 42 \left( \frac{1}{2} \right) \right] = \frac{4 \varepsilon}{r_0^2} [39 - 21] = \frac{4 \varepsilon}{r_0^2} (18) = \mathbf{\frac{72 \varepsilon}{r_0^2}}$$
+        Substitute $\varepsilon = 1.65 \times 10^{-21} \text{ J}$ and $r_0 = 3.816 \times 10^{-10} \text{ m}$:
+        $$r_0^2 = 1.456 \times 10^{-19} \text{ m}^2$$
+        $$k_0 = \frac{72 \times (1.65 \times 10^{-21} \text{ J})}{1.456 \times 10^{-19} \text{ m}^2} = \frac{1.188 \times 10^{-19}}{1.456 \times 10^{-19}} = \mathbf{0.816 \text{ N/m}}$$</li>
+      </ul>
+      <p>Notice that for weak van der Waals bonding in Argon, the spring constant is only $0.82 \text{ N/m}$—over 2,000 times weaker than the covalent bond in CO ($1,856 \text{ N/m}$).</p>
+    </div>
+    <div class="final-answer-box">
+      <strong>Final Results:</strong><br>
+      $r_0 = 2^{1/6} \sigma = \mathbf{0.382 \text{ nm}}$ &bull; Well Depth $E_0 = \varepsilon = \mathbf{0.0103 \text{ eV}}$<br>
+      Spring Constant: $k_0 = \frac{72\varepsilon}{r_0^2} = \mathbf{0.816 \text{ N/m}}$ (Extremely compliant van der Waals bond).
+    </div>""")
+
+add(47, "The Morse Potential for Diatomic Covalent Bonds",
+    "Potential Well Physics", "morse_potential", "Intermediate",
+    r"""<p>For covalent molecules, the <strong>Morse potential</strong> accurately reproduces spectroscopic vibrational anharmonicity and molecular bond dissociation:</p>
+    $$E_{\text{Morse}}(r) = D_e \left[ 1 - \exp\left( -a (r - r_0) \right) \right]^2 - D_e$$
+    <ol type="a">
+      <li>State the physical meaning of the parameters: equilibrium dissociation energy $D_e$, equilibrium bond length $r_0$, and width parameter $a$. Show that $E_{\text{Morse}}(r_0) = -D_e$ and $E_{\text{Morse}}(\infty) = 0$.</li>
+      <li>Differentiate $E_{\text{Morse}}(r)$ twice to prove that the harmonic force constant at the well bottom is:
+      $$k_0 = \left. \frac{d^2E_{\text{Morse}}}{dr^2} \right|_{r_0} = 2 D_e a^2$$</li>
+      <li>For the Hydrogen chloride ($\text{HCl}$) molecule, $r_0 = 0.1275 \text{ nm}$, $D_e = 445 \text{ kJ/mol} = 7.39 \times 10^{-19} \text{ J}$ ($4.61 \text{ eV}$), and the parameter is $a = 18.7 \times 10^9 \text{ m}^{-1}$. Calculate the force constant $k_0$ in $\text{N/m}$.</li>
+    </ol>""",
+    r"""<div class="solution-step">
+      <div class="solution-step-title">Part (a): Parameter Physical Meaning and Boundary Limits</div>
+      <ul>
+        <li>$D_e$: The equilibrium dissociation energy measured from the bottom of the potential well to the separated neutral atom limit.</li>
+        <li>$r_0$: The equilibrium internuclear bond distance.</li>
+        <li>$a$: Controls the width and steepness of the potential well ($a = \sqrt{k_0 / 2D_e}$).</li>
+      </ul>
+      <p>At $r = r_0$:</p>
+      $$E_{\text{Morse}}(r_0) = D_e [ 1 - \exp(0) ]^2 - D_e = D_e [ 1 - 1 ]^2 - D_e = \mathbf{-D_e}$$
+      <p>As $r \to \infty$:</p>
+      $$E_{\text{Morse}}(\infty) = D_e [ 1 - \exp(-\infty) ]^2 - D_e = D_e [ 1 - 0 ]^2 - D_e = D_e - D_e = \mathbf{0}$$
+    </div>
+    <div class="solution-step">
+      <div class="solution-step-title">Part (b): Derivation of Harmonic Force Constant $k_0$</div>
+      <p>Let $u = 1 - \exp(-a(r - r_0))$. Then $E = D_e u^2 - D_e$.</p>
+      $$\frac{du}{dr} = a \exp(-a(r - r_0))$$
+      <p>First derivative:</p>
+      $$\frac{dE}{dr} = 2 D_e u \frac{du}{dr} = 2 D_e a [1 - \exp(-a(r - r_0))] \exp(-a(r - r_0))$$
+      <p>At $r = r_0$, $u = 0 \implies \left. \frac{dE}{dr} \right|_{r_0} = 0$.</p>
+      <p>Second derivative:</p>
+      $$\frac{d^2E}{dr^2} = 2 D_e a \left[ a \exp(-2a(r - r_0)) - a [1 - \exp(-a(r - r_0))] \exp(-a(r - r_0)) \right]$$
+      <p>Evaluating at $r = r_0$ where $\exp(0) = 1$:</p>
+      $$k_0 = \left. \frac{d^2E}{dr^2} \right|_{r_0} = 2 D_e a [ a(1) - a(0) ] = \mathbf{2 D_e a^2}$$
+    </div>
+    <div class="solution-step">
+      <div class="solution-step-title">Part (c): Force Constant Calculation for HCl</div>
+      <p>Given $D_e = 7.39 \times 10^{-19} \text{ J}$, $a = 1.87 \times 10^{10} \text{ m}^{-1}$:</p>
+      $$a^2 = (1.87 \times 10^{10} \text{ m}^{-1})^2 = 3.4969 \times 10^{20} \text{ m}^{-2}$$
+      $$k_0 = 2 D_e a^2 = 2 (7.39 \times 10^{-19} \text{ J}) \times (3.4969 \times 10^{20} \text{ m}^{-2})$$
+      $$k_0 = (1.478 \times 10^{-18}) \times (3.4969 \times 10^{20}) = \mathbf{516.8 \text{ N/m}}$$
+      <p>This matches experimental infrared absorption measurements for the $\text{H}-\text{Cl}$ single bond ($k_{0,\text{exp}} \approx 516 \text{ N/m}$).</p>
+    </div>
+    <div class="final-answer-box">
+      <strong>Final Results:</strong><br>
+      $E_{\text{Morse}}(r_0) = -D_e$ &bull; $E_{\text{Morse}}(\infty) = 0$<br>
+      Harmonic Force Constant: $k_0 = 2 D_e a^2 = \mathbf{516.8 \text{ N/m}}$
+    </div>""")
+
+add(48, "The Buckingham Potential for Ionic Oxides",
+    "Potential Well Physics", "buckingham", "Intermediate",
+    r"""<p>In computational materials science and molecular dynamics simulations of ceramics (such as $\text{Al}_2\text{O}_3$, $\text{TiO}_2$, and silicates), interatomic interactions are modeled using the <strong>Buckingham Potential</strong>:</p>
+    $$E_{\text{Buck}}(r) = A \exp\left( -\frac{r}{\rho} \right) - \frac{C}{r^6}$$
+    <ol type="a">
+      <li>Identify the physical origin of each term in the Buckingham potential: the Born-Mayer exponential term vs. the attractive $-C/r^6$ dispersion term.</li>
+      <li>Plotting the Buckingham potential over the entire range $0 \le r < \infty$ reveals an unphysical mathematical defect: as $r \to 0$, $E_{\text{Buck}}(r) \to -\infty$. Explain why this unphysical "Buckingham catastrophe" occurs.</li>
+      <li>How do modern molecular dynamics codes (such as LAMMPS) prevent the Buckingham catastrophe when simulating high-energy radiation damage cascades?</li>
+    </ol>""",
+    r"""<div class="solution-step">
+      <div class="solution-step-title">Part (a): Physical Origin of Terms</div>
+      <ul>
+        <li><strong>Exponential Term ($A \exp(-r/\rho)$):</strong> Represents quantum mechanical Pauli core-electron repulsion arising from the spatial overlap of closed-shell electron clouds. $\rho$ is the softness range parameter ($\sim 0.02–0.04 \text{ nm}$), and $A$ is the repulsive energy scale.</li>
+        <li><strong>Inverse Sixth Power Term ($-C/r^6$):</strong> Represents the attractive London dispersion interaction caused by instantaneous induced dipole fluctuations in polarizable anion shells (especially large, polarizable $\text{O}^{2-}$ anions).</li>
+      </ul>
+    </div>
+    <div class="solution-step">
+      <div class="solution-step-title">Part (b): The "Buckingham Catastrophe" at Small Separations</div>
+      <p>As $r \to 0$:</p>
+      <ul>
+        <li>The exponential repulsive term approaches a finite positive constant: $\lim_{r\to 0} A \exp(-r/\rho) = A$.</li>
+        <li>However, the attractive dispersion term diverges to negative infinity: $\lim_{r\to 0} \left( -\frac{C}{r^6} \right) = -\infty$.</li>
+      </ul>
+      <p>Consequently, at very small separations (typically $r < 0.1 \text{ nm}$, far below normal equilibrium $r_0$), the attractive $-C/r^6$ term overcomes the exponential term, creating an unphysical barrier peak followed by an infinitely deep attractive sink at $r = 0$. Under ordinary thermal vibrations, atoms cannot reach this barrier. However, under high-energy shock waves or radiation bombardment, two colliding atoms can cross the peak and collapse catastrophically into each other at $r = 0$.</p>
+    </div>
+    <div class="solution-step">
+      <div class="solution-step-title">Part (c): Engineering Solutions in MD Simulations</div>
+      <p>In simulation software (e.g., LAMMPS, GULP), the Buckingham potential is modified at short ranges by:</p>
+      <ol>
+        <li><strong>Splining with the Ziegler-Biersack-Littmark (ZBL) Potential:</strong> Below a critical cutoff distance $r_{\text{crit}} \approx 0.12 \text{ nm}$, the Buckingham function is smoothly spliced via higher-order polynomials to the universal screened Coulombic ZBL potential ($V \propto \frac{Z_1 Z_2 e^2}{r} \phi(r/a)$), ensuring that repulsion correctly diverges to $+\infty$ as $r \to 0$.</li>
+        <li><strong>Hard-Sphere Repulsive Core:</strong> Adding a steep short-range repulsive term such as $B/r^{12}$ that overwhelms $-C/r^6$ as $r \to 0$.</li>
+      </ol>
+    </div>
+    <div class="final-answer-box">
+      <strong>Core Conclusion:</strong> The Buckingham potential balances Born-Mayer overlap repulsion ($A e^{-r/\rho}$) with London dispersion ($-C/r^6$). Because the exponential term is finite at $r=0$ while $-C/r^6 \to -\infty$, it suffers from the "Buckingham catastrophe," requiring short-range splining to ZBL nuclear repulsion in collision simulations.
+    </div>""")
+
+add(49, "Cubic Anharmonicity: Analytical Integration of Mean Atomic Displacement",
+    "Potential Well Physics", "anharmonicity_math", "Advanced",
+    r"""<p>Perform the rigorous statistical mechanical integration to evaluate the mean atomic displacement $\langle x \rangle$ for an anharmonic potential well.</p>
+    <p>Let the potential energy be: $V(x) = c x^2 - g x^3$, where $x = r - r_0$ is atomic displacement, $c > 0$ is the harmonic curvature, and $g > 0$ is the cubic asymmetry constant.</p>
+    <ol type="a">
+      <li>Write the classical canonical partition function ratio for the thermal expectation value $\langle x \rangle$ at temperature $T$.</li>
+      <li>Using the series expansion $\exp\left(\frac{g x^3}{k_B T}\right) \approx 1 + \frac{g x^3}{k_B T} + \dots$, evaluate the definite integrals using standard Gamma functions:
+      $$\int_{-\infty}^\infty e^{-\beta x^2} dx = \sqrt{\frac{\pi}{\beta}}, \quad \int_{-\infty}^\infty x^2 e^{-\beta x^2} dx = \frac{\sqrt{\pi}}{2 \beta^{3/2}}, \quad \int_{-\infty}^\infty x^4 e^{-\beta x^2} dx = \frac{3\sqrt{\pi}}{4 \beta^{5/2}}$$
+      where $\beta = \frac{c}{k_B T}$.</li>
+      <li>Prove analytically that the leading-order thermal expansion displacement is:
+      $$\langle x \rangle = \frac{3 g}{4 c^2} k_B T$$
+      and explain why the sign of thermal expansion ($\alpha_L$) depends strictly on the sign of $g$.</li>
+    </ol>""",
+    r"""<div class="solution-step">
+      <div class="solution-step-title">Part (a): Canonical Expectation Formulation</div>
+      <p>In classical statistical mechanics, the thermal expectation value of position $x$ is:</p>
+      $$\langle x \rangle = \frac{\int_{-\infty}^\infty x \exp\left( -\frac{V(x)}{k_B T} \right) dx}{\int_{-\infty}^\infty \exp\left( -\frac{V(x)}{k_B T} \right) dx} = \frac{\int_{-\infty}^\infty x \exp\left( -\frac{c x^2 - g x^3}{k_B T} \right) dx}{\int_{-\infty}^\infty \exp\left( -\frac{c x^2 - g x^3}{k_B T} \right) dx}$$
+    </div>
+    <div class="solution-step">
+      <div class="solution-step-title">Part (b): Perturbation Expansion and Definite Integrals</div>
+      <p>Let $\beta = \frac{c}{k_B T}$ and $\alpha = \frac{g}{k_B T}$. Expand the exponential:</p>
+      $$\exp\left( -\beta x^2 + \alpha x^3 \right) = e^{-\beta x^2} \exp(\alpha x^3) \approx e^{-\beta x^2} \left[ 1 + \alpha x^3 + \frac{1}{2} \alpha^2 x^6 + \dots \right]$$
+      <ul>
+        <li><strong>Denominator (Partition Function $Z$):</strong>
+        $$Z \approx \int_{-\infty}^\infty e^{-\beta x^2} [ 1 + \alpha x^3 ] dx = \int_{-\infty}^\infty e^{-\beta x^2} dx + \alpha \int_{-\infty}^\infty x^3 e^{-\beta x^2} dx$$
+        The second integral is zero because $x^3$ is an odd function. Thus:
+        $$Z \approx \sqrt{\frac{\pi}{\beta}} = \sqrt{\frac{\pi k_B T}{c}}$$</li>
+        <li><strong>Numerator:</strong>
+        $$\text{Num} \approx \int_{-\infty}^\infty x e^{-\beta x^2} [ 1 + \alpha x^3 ] dx = \int_{-\infty}^\infty x e^{-\beta x^2} dx + \alpha \int_{-\infty}^\infty x^4 e^{-\beta x^2} dx$$
+        The first integral is odd and vanishes. The second integral is even:
+        $$\text{Num} \approx \alpha \int_{-\infty}^\infty x^4 e^{-\beta x^2} dx = \alpha \left( \frac{3 \sqrt{\pi}}{4 \beta^{5/2}} \right)$$</li>
+      </ul>
+    </div>
+    <div class="solution-step">
+      <div class="solution-step-title">Part (c): Evaluation and Physical Significance of Sign</div>
+      <p>Taking the ratio:</p>
+      $$\langle x \rangle = \frac{\text{Num}}{Z} = \frac{\alpha \left( \frac{3 \sqrt{\pi}}{4 \beta^{5/2}} \right)}{\sqrt{\frac{\pi}{\beta}}} = \alpha \frac{3}{4} \frac{1}{\beta^2}$$
+      <p>Substitute $\alpha = \frac{g}{k_B T}$ and $\beta = \frac{c}{k_B T}$:</p>
+      $$\langle x \rangle = \left( \frac{g}{k_B T} \right) \frac{3}{4} \left( \frac{k_B T}{c} \right)^2 = \mathbf{\frac{3 g}{4 c^2} k_B T}$$
+      <p><strong>Physical Consequence of Sign:</strong></p>
+      <ul>
+        <li>In real materials, the potential well is steeper at $r < r_0$ (repulsion) and gentler at $r > r_0$ (attraction). This asymmetry dictates that $g > 0$. Because $g > 0$, $\langle x \rangle > 0$, meaning the mean separation expands with temperature: <strong>positive thermal expansion ($\alpha_L > 0$)</strong>.</li>
+        <li>In rare materials with anomalous Negative Thermal Expansion (NTE, such as Zirconium Tungstate $\text{ZrW}_2\text{O}_8$ or Invar alloys), transverse rigid-unit rotational phonon modes create geometric contraction that corresponds to an effective $g < 0$, causing the material to shrink upon heating.</li>
+      </ul>
+    </div>
+    <div class="final-answer-box">
+      <strong>Analytical Proof:</strong> $$\langle x \rangle = \frac{3 g}{4 c^2} k_B T \implies \alpha_L = \frac{1}{r_0} \frac{d\langle x \rangle}{dT} = \frac{3 g k_B}{4 c^2 r_0}$$
+      Mean thermal expansion is directly proportional to temperature and asymmetry coefficient $g$, and inversely proportional to the square of harmonic curvature $c^2$.
+    </div>""")
+
+add(50, "Comprehensive Bonding Synthesis: Predicting Material Archetypes and Properties",
+    "Comprehensive Synthesis", "synthesis", "Advanced",
+    r"""<p>You are given five unknown solid materials ($M_1, M_2, M_3, M_4, M_5$) with the following elemental constituents, electronegativities, and Room-Temperature ($25^\circ\text{C}$) properties:</p>
+    <table class="formula-table">
+      <tr><th>Unknown Solid</th><th>Constituent Elements & $\chi$</th><th>Melting Point ($T_m$)</th><th>Electrical Resistivity ($\rho_e$, $\Omega\cdot\text{m}$)</th><th>Fracture / Deformation Behavior</th></tr>
+      <tr><td>$M_1$</td><td>Pure Element $A$ ($\chi_A = 2.5$)</td><td>3550 &deg;C</td><td>$10^{13} \, \Omega\cdot\text{m}$ (Insulator)</td><td>Hardest known (Mohs 10), brittle cleavage along $\{111\}$</td></tr>
+      <tr><td>$M_2$</td><td>Element $B$ ($\chi_B = 0.8$) + Element $C$ ($\chi_C = 4.0$)</td><td>858 &deg;C</td><td>$10^{14} \, \Omega\cdot\text{m}$ (solid); $10^{-3}$ (molten)</td><td>Brittle cleavage along $\{100\}$; soluble in water</td></tr>
+      <tr><td>$M_3$</td><td>Pure Element $D$ ($\chi_D = 1.9$)</td><td>1084 &deg;C</td><td>$1.7 \times 10^{-8} \, \Omega\cdot\text{m}$ (Conductor)</td><td>High tensile ductility ($> 40\% \text{ EL}$), malleable</td></tr>
+      <tr><td>$M_4$</td><td>Element $E$ ($\chi_E = 1.8$) + Element $F$ ($\chi_F = 2.5$)</td><td>2730 &deg;C</td><td>$10^{-1} \, \Omega\cdot\text{m}$ (Semiconductor)</td><td>Extreme hardness (Mohs 9.5), brittle cleavage</td></tr>
+      <tr><td>$M_5$</td><td>Long-chain molecules: Carbon ($\chi=2.5$), Hydrogen ($\chi=2.1$)</td><td>135 &deg;C</td><td>$10^{15} \, \Omega\cdot\text{m}$ (Insulator)</td><td>Viscoelastic, ductile, density $\approx 0.95 \text{ g/cm}^3$</td></tr>
+    </table>
+    <ol type="a">
+      <li>Deduce the primary interatomic bonding archetype (Ionic, Covalent Network, Metallic, or Covalent with Secondary van der Waals) for each unknown material.</li>
+      <li>Identify the likely chemical identities of materials $M_1$ through $M_5$.</li>
+      <li>Explain the distinct mechanisms of electrical conductivity in $M_2$ (why it is an insulator as a solid but a good conductor when molten) versus $M_3$ (why conductivity decreases upon melting).</li>
+    </ol>""",
+    r"""<div class="solution-step">
+      <div class="solution-step-title">Part (a) & (b): Bonding Archetype Deductions & Material Identities</div>
+      <ul>
+        <li><strong>Material $M_1$: Covalent Network Solid (Diamond, C)</strong>
+          <ul>
+            <li>$\chi_A = 2.5$ corresponds to Carbon. The extreme melting point ($3550^\circ\text{C}$), extreme electrical resistivity ($10^{13} \Omega\cdot\text{m}$), Mohs hardness 10, and cleavage along $\{111\}$ are the unmistakable fingerprints of <strong>Diamond</strong> formed by 3D $sp^3$ covalent network bonding.</li>
+          </ul>
+        </li>
+        <li><strong>Material $M_2$: Strongly Ionic Salt (Potassium Fluoride, KF / CsF)</strong>
+          <ul>
+            <li>$\Delta\chi = 4.0 - 0.8 = 3.2 \implies \%IC \approx 92\%$. Extreme ionic character. Rigid alternating cation/anion lattice renders solid an insulator, while cleavage along $\{100\}$ and water solubility match alkali halides like <strong>KF or CsF</strong>.</li>
+          </ul>
+        </li>
+        <li><strong>Material $M_3$: Metallic Solid (Pure Copper, Cu)</strong>
+          <ul>
+            <li>$\chi_D = 1.9$ with ultra-low electrical resistivity ($1.7 \times 10^{-8} \Omega\cdot\text{m}$) and high ductility ($> 40\% \text{ EL}$) with $T_m = 1084^\circ\text{C}$ perfectly identifies <strong>Copper (Cu)</strong> held by delocalized metallic bonding.</li>
+          </ul>
+        </li>
+        <li><strong>Material $M_4$: Covalent/Semiconducting Carbide Ceramic (Silicon Carbide, SiC)</strong>
+          <ul>
+            <li>$\chi_E = 1.8$ (Silicon), $\chi_F = 2.5$ (Carbon) $\implies \Delta\chi = 0.7$ (88.5% covalent). High melting point ($2730^\circ\text{C}$), semiconductor resistivity ($10^{-1} \Omega\cdot\text{m}$), and Mohs 9.5 hardness match <strong>Silicon Carbide ($\text{SiC}$)</strong>.</li>
+          </ul>
+        </li>
+        <li><strong>Material $M_5$: Semi-Crystalline Polymer (High-Density Polyethylene, HDPE)</strong>
+          <ul>
+            <li>Hydrocarbon ($\text{C}-\text{H}$) with low melting point ($135^\circ\text{C}$), low density ($0.95 \text{ g/cm}^3$), and viscoelastic ductility represents <strong>High-Density Polyethylene (HDPE)</strong> held by strong covalent backbone bonds and weak intermolecular van der Waals forces.</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="solution-step">
+      <div class="solution-step-title">Part (c): Conduction Mechanics: Solid vs. Molten $M_2$ and $M_3$</div>
+      <ul>
+        <li><strong>Ionic Solid $M_2$ (KF):</strong> In the solid crystal, all ions are pinned tightly into periodic lattice sites. Because valence electrons are localized on fluoride ions and ions cannot migrate, electrical conductivity is virtually zero ($10^{-14} \text{ S/m}$). Upon melting into a liquid at $858^\circ\text{C}$, the rigid crystal lattice collapses into mobile, unconstrained hydrated cations ($\text{K}^+$) and anions ($\text{F}^-$). Under an applied electric field, these free liquid ions migrate rapidly via ionic conduction, increasing conductivity by over 17 orders of magnitude ($10^3 \text{ S/m}$).</li>
+        <li><strong>Metallic Solid $M_3$ (Cu):</strong> In copper, conduction is mediated by free delocalized electrons ($n_e \approx 8.5 \times 10^{28} \text{ m}^{-3}$). At room temperature, electrons have long mean free paths between phonon collisions. Upon melting at $1084^\circ\text{C}$, loss of periodic crystalline order and intense liquid thermal disorder scatter electrons heavily, <strong>doubling electrical resistivity ($\rho_{\text{liquid}} \approx 2 \times \rho_{\text{solid}}$)</strong>.</li>
+      </ul>
+    </div>
+    <div class="final-answer-box">
+      <strong>Synthesis Summary:</strong><br>
+      $M_1$: <strong>Covalent Network (Diamond, C)</strong> &bull; $M_2$: <strong>Ionic Salt (KF / CsF)</strong><br>
+      $M_3$: <strong>Metallic (Copper, Cu)</strong> &bull; $M_4$: <strong>Covalent Ceramic (SiC)</strong> &bull; $M_5$: <strong>Polymer (HDPE)</strong><br>
+      Ionic salts conduct upon melting via mobile ions ($\text{K}^+, \text{F}^-$); metals lose conductivity upon melting due to thermal electron scattering.
+    </div>""")
+
+# Save Chapter 2 dataset
+with open("generator/ch2_data.py", "w", encoding="utf-8") as f:
+    f.write("# ==============================================================================\n")
+    f.write("# CHAPTER 2: ATOMIC STRUCTURE & INTERATOMIC BONDING\n")
+    f.write("# 50 Curated Problems with Detailed Step-by-Step Solutions\n")
+    f.write("# University of Tehran | Dept. of Mechanical Engineering | Prof. Sadeghi\n")
+    f.write("# Prepared by: Sina Sharifi (TA)\n")
+    f.write("# ==============================================================================\n\n")
+    f.write("PROBLEMS = " + json.dumps(P, indent=2, ensure_ascii=False))
+
+print(f"Chapter 2 complete! Successfully generated {len(P)} problems in generator/ch2_data.py.")

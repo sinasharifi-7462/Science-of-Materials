@@ -1,0 +1,18 @@
+# PDF Source Files (Excluded due to file size limits)
+*.pdf
+source_materials/*.pdf
+
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+generator/__pycache__/
+
+# Temporary, build, and zip archives
+*.tmp
+website_for_cloudflare.zip
+summary_notes_extracted.txt
+
+# OS-specific files
+.DS_Store
+Thumbs.db
