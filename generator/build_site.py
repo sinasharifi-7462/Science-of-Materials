@@ -49,20 +49,28 @@ CHAPTER_SVGS = {
 }
 
 MATHJAX_HEADER = """
-  <!-- MathJax 3 Configuration for High-Fidelity Technical Rendering -->
+  <!-- MathJax 3 Configuration for High-Fidelity Technical Rendering (Local + CDN Fallback) -->
   <script>
     window.MathJax = {
       tex: {
         inlineMath: [['$', '$'], ['\\\\(', '\\\\)']],
         displayMath: [['$$', '$$'], ['\\\\[', '\\\\]']],
-        processEscapes: true
+        processEscapes: true,
+        processEnvironments: true
       },
       options: {
         skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      },
+      startup: {
+        pageReady: () => {
+          return MathJax.startup.defaultPageReady().then(() => {
+            console.log('MathJax initial typesetting complete');
+          });
+        }
       }
     };
   </script>
-  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script src="js/mathjax.js" onerror="this.onerror=null;this.src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js';"></script>
 """
 
 # ==============================================================================

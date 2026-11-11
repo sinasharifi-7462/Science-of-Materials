@@ -14,6 +14,23 @@ document.addEventListener('DOMContentLoaded', () => {
   updateStudyStats();
 });
 
+// Helper for typesetting math dynamically
+function renderMath(targetElement) {
+  if (window.MathJax && window.MathJax.typesetPromise) {
+    try {
+      if (window.MathJax.typesetClear && targetElement) {
+        window.MathJax.typesetClear([targetElement]);
+      }
+      const promise = targetElement ? window.MathJax.typesetPromise([targetElement]) : window.MathJax.typesetPromise();
+      if (promise && promise.catch) {
+        promise.catch(err => console.warn('MathJax typesetting warning:', err));
+      }
+    } catch (e) {
+      console.warn('MathJax error:', e);
+    }
+  }
+}
+
 // Toggle individual solution
 function initSolutionToggles() {
   document.querySelectorAll('.btn-toggle-solution').forEach(btn => {
@@ -33,10 +50,8 @@ function initSolutionToggles() {
         btn.classList.add('expanded');
         btn.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"></polyline></svg> Hide Solution`;
         
-        // Trigger MathJax re-render if present
-        if (window.MathJax && window.MathJax.typesetPromise) {
-          window.MathJax.typesetPromise([solutionBox]).catch(err => console.log('MathJax error:', err));
-        }
+        // Trigger MathJax re-render for revealed container
+        renderMath(solutionBox);
       }
     });
   });
@@ -60,9 +75,7 @@ function initExpandCollapseAll() {
           }
         }
       });
-      if (window.MathJax && window.MathJax.typesetPromise) {
-        window.MathJax.typesetPromise().catch(err => console.log(err));
-      }
+      renderMath();
     });
   }
 
@@ -214,9 +227,7 @@ function initFormulaModal() {
     openBtn.addEventListener('click', (e) => {
       e.preventDefault();
       modal.classList.add('active');
-      if (window.MathJax && window.MathJax.typesetPromise) {
-        window.MathJax.typesetPromise([modal]).catch(e => console.log(e));
-      }
+      renderMath(modal);
     });
   }
 
