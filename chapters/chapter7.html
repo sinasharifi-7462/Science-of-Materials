@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ch 7: Strengthening Mechanisms — Science of Materials | University of Tehran</title>
-  <meta name="description" content="50 comprehensive practice problems with detailed step-by-step solutions for Dislocations & Strengthening Mechanisms. Science of Materials, University of Tehran.">
-  <link rel="stylesheet" href="css/style.css">
+  <meta name="description" content="50 comprehensive practice problems with detailed step-by-step solutions for Dislocations & Strengthening Mechanisms. Science of Materials, University of Tehran. Prepared by Sina Sharifi.">
+  <link rel="stylesheet" href="../css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Playfair+Display:ital,wght@0,500;0,700;1,400&family=JetBrains+Mono:wght@400;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=JetBrains+Mono:wght@500;700&family=Inter:wght@400;500;600;700&family=Vazirmatn:wght@500;700&display=swap" rel="stylesheet">
   
-  <!-- MathJax 3 Configuration for High-Fidelity Technical Rendering (Local + CDN Fallback) -->
+  <!-- MathJax 3 Configuration for High-Fidelity Technical Rendering (100% Offline + CDN Fallback) -->
   <script>
     window.MathJax = {
       tex: {
@@ -25,35 +25,33 @@
       startup: {
         pageReady: () => {
           return MathJax.startup.defaultPageReady().then(() => {
-            console.log('MathJax initial typesetting complete');
+            console.log('MathJax initial technical typesetting ready');
           });
         }
       }
     };
   </script>
-  <script src="js/mathjax.js" onerror="this.onerror=null;this.src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js';"></script>
+  <script src="../js/mathjax.js" onerror="this.onerror=null;this.src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js';"></script>
 
 </head>
 <body data-page-id="chapter7">
   
     <header class="site-header">
       <div class="nav-container">
-        <a href="index.html" class="nav-brand">
+        <a href="../index.html" class="nav-brand">
           <div class="nav-logo-badge">
-            <svg width="28" height="28" viewBox="0 0 100 100" fill="none">
-              <circle cx="50" cy="50" r="44" stroke="#d4af37" stroke-width="3"/>
-              <path d="M50 20 L60 40 L80 40 L65 52 L70 72 L50 60 L30 72 L35 52 L20 40 L40 40 Z" fill="none" stroke="#d4af37" stroke-width="2"/>
-            </svg>
+            <img src="../assets/images/ut_mech_emblem.svg" alt="University of Tehran Mechanical Engineering Crest">
           </div>
           <div class="nav-brand-text">
+            <span class="nav-persian">دانشگاه تهران &bull; دانشکده مهندسی مکانیک</span>
             <h1>UNIVERSITY OF TEHRAN</h1>
-            <p>Faculty of Mechanical Engineering | Science of Materials</p>
+            <p>Department of Mechanical Engineering &bull; Science of Materials</p>
           </div>
         </a>
 
         <nav class="nav-links">
           
-    <a href="index.html" class="nav-link ">
+    <a href="../index.html" class="nav-link ">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
       Home
     </a>
@@ -106,11 +104,13 @@
     
 
   <main class="master-wrapper">
-    <!-- Chapter Breadcrumb -->
-    <div style="font-family: var(--font-mono); font-size: 0.8rem; color: #94a3b8; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem;">
-      <a href="index.html" style="color: var(--gold); text-decoration: none;">Home (Cover)</a>
-      <span>&rsaquo;</span>
-      <span style="color: #cbd5e1;">Chapter 7</span>
+    <!-- Chapter Breadcrumbs -->
+    <div style="font-family: var(--font-mono); font-size: 0.85rem; color: #94a3b8; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem;">
+      <a href="../index.html" style="color: var(--accent-gold-bright); text-decoration: none; font-weight: 600;">Home (Cover Portal)</a>
+      <span style="color: #64748b;">&rsaquo;</span>
+      <span style="color: #64748b;">Chapters</span>
+      <span style="color: #64748b;">&rsaquo;</span>
+      <span style="color: #ffffff; font-weight: 600;">Chapter 07</span>
     </div>
 
     <!-- Chapter Hero Section -->
@@ -118,7 +118,7 @@
       <div class="hero-header-row">
         <div>
           <span class="chapter-num-badge">CHAPTER 07 OF 08</span>
-          <h1 class="chapter-title" style="margin-top: 0.5rem;">Dislocations & Strengthening Mechanisms</h1>
+          <h1 class="chapter-title" style="margin-top: 0.65rem;">Dislocations & Strengthening Mechanisms</h1>
         </div>
       </div>
 
@@ -126,56 +126,111 @@
         Principles of plastic deformation, critical shear stresses, the four classical strengthening mechanisms (Hall-Petch grain size refinement, solid solution strengthening, strain hardening/cold work, precipitation hardening/Orowan bowing), and the three stages of annealing (recovery, recrystallization, grain growth).
       </p>
 
-      <div class="hero-tags">
+      <div class="card-tags" style="border: none; padding: 0; margin-bottom: 1.75rem;">
         <span class="hero-tag">Hall-Petch Equation</span><span class="hero-tag">Solid Solution Strengthening</span><span class="hero-tag">Cold Work & Taylor Law</span><span class="hero-tag">Orowan Precipitation</span><span class="hero-tag">Annealing Kinetics</span>
       </div>
 
-      <!-- High-Resolution Technical Vector Graphic -->
-      <div class="hero-svg-container" style="margin-top: 2rem;">
-        
-    <svg viewBox="0 0 450 320" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-      <rect width="450" height="320" fill="#080f24" rx="6"/>
-      <!-- Hall-Petch Plot -->
-      <line x1="70" y1="50" x2="70" y2="250" stroke="#64748b" stroke-width="1.5"/>
-      <line x1="70" y1="250" x2="400" y2="250" stroke="#64748b" stroke-width="1.5"/>
-      <text x="390" y="275" fill="#94a3b8" font-size="11" text-anchor="middle">d^(-1/2) (Grain Size Refinement →)</text>
-      <text x="30" y="40" fill="#94a3b8" font-size="11">Yield Strength, σ_y</text>
+      <!-- High-Resolution Technical Vector Graphic Showcase -->
+      <div class="chapter-diagram-showcase">
+        <div class="diagram-header-strip">
+          <span>Figure 7.1: Hall-Petch Grain Boundary Dislocation Pile-Up & Strengthening Law</span>
+          <span style="color: var(--accent-cyan-light);">Engineering Vector Schematic</span>
+        </div>
+        <div class="diagram-canvas">
+          <svg viewBox="0 0 750 500" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="hpBg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0f1a36"/>
+      <stop offset="100%" stop-color="#060c1d"/>
+    </radialGradient>
+  </defs>
 
-      <!-- Linear Hall-Petch Line -->
-      <line x1="70" y1="210" x2="360" y2="70" stroke="#d4af37" stroke-width="2.5"/>
-      
-      <!-- Friction Stress σ0 intercept -->
-      <circle cx="70" cy="210" r="4" fill="#f43f5e"/>
-      <text x="45" y="214" fill="#f43f5e" font-size="11" font-weight="bold">σ_0</text>
+  <rect width="750" height="500" fill="url(#hpBg)" rx="8" stroke="#253861" stroke-width="2"/>
 
-      <!-- Slope ky -->
-      <path d="M 230 135 L 290 135 L 290 106" fill="none" stroke="#38bdf8" stroke-width="1.2" stroke-dasharray="3 2"/>
-      <text x="260" y="150" fill="#38bdf8" font-size="10">Slope = k_y</text>
+  <!-- Left: Grain Boundary Dislocation Pile-Up Diagram -->
+  <g transform="translate(40, 60)">
+    <rect width="320" height="380" fill="#091329" rx="6" stroke="#d4af37" stroke-width="1.5"/>
+    <text x="160" y="30" fill="#facc15" font-family="'Inter', sans-serif" font-size="13" font-weight="bold" text-anchor="middle">
+      GRAIN BOUNDARY PILE-UP
+    </text>
 
-      <!-- Hall Petch breakdown at nanometer scale -->
-      <path d="M 360 70 Q 380 90 395 140" fill="none" stroke="#fb7185" stroke-width="2" stroke-dasharray="3 3"/>
-      <text x="360" y="55" fill="#fb7185" font-size="9">Inverse HP (d &lt; 15 nm)</text>
+    <!-- Grain Boundary Line (Thick diagonal) -->
+    <line x1="220" y1="50" x2="220" y2="350" stroke="#f43f5e" stroke-width="4"/>
+    <text x="230" y="80" fill="#fca5a5" font-family="'Inter', sans-serif" font-size="11" font-weight="bold">High-Angle Boundary</text>
 
-      <text x="225" y="295" fill="#f5d061" font-size="12" font-weight="bold" text-anchor="middle">
-        Hall-Petch Law: σ_y = σ_0 + k_y · d^(-1/2)
-      </text>
-    </svg>
-    
-        <div style="font-family: var(--font-mono); font-size: 0.78rem; color: #94a3b8; margin-top: 0.5rem; text-align: center;">
-          Figure 7.1: Hall-Petch Grain Refinement & Precipitation Strengthening
+    <!-- Grain 1 (Left, diameter d) -->
+    <text x="100" y="70" fill="#38bdf8" font-family="'Inter', sans-serif" font-size="12" font-weight="bold">Grain 1 (Size d)</text>
+    <!-- Frank-Read Dislocation Source S -->
+    <circle cx="50" cy="200" r="7" fill="#facc15"/>
+    <text x="50" y="225" fill="#fef08a" font-family="'JetBrains Mono', monospace" font-size="11" text-anchor="middle">Source</text>
+
+    <!-- Dislocation Pile-Up Line towards boundary -->
+    <line x1="50" y1="200" x2="220" y2="200" stroke="#38bdf8" stroke-width="2" stroke-dasharray="4 3"/>
+
+    <!-- Dislocation Half-Plane Symbols &perp; -->
+    <g stroke="#38bdf8" stroke-width="2.5">
+      <line x1="80" y1="190" x2="80" y2="200"/><line x1="72" y1="200" x2="88" y2="200"/>
+      <line x1="120" y1="190" x2="120" y2="200"/><line x1="112" y1="200" x2="128" y2="200"/>
+      <line x1="155" y1="190" x2="155" y2="200"/><line x1="147" y1="200" x2="163" y2="200"/>
+      <line x1="185" y1="190" x2="185" y2="200"/><line x1="177" y1="200" x2="193" y2="200"/>
+      <line x1="210" y1="190" x2="210" y2="200"/><line x1="202" y1="200" x2="218" y2="200"/>
+    </g>
+
+    <text x="135" y="175" fill="#38bdf8" font-family="'Inter', sans-serif" font-size="10.5" text-anchor="middle">n Dislocations Pile Up</text>
+    <rect x="30" y="270" width="260" height="50" rx="4" fill="#14244d" stroke="#38bdf8" stroke-width="1"/>
+    <text x="160" y="290" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="11" text-anchor="middle">&tau;_tip = n &bull; &tau;_applied</text>
+    <text x="160" y="308" fill="#bae6fd" font-family="'Inter', sans-serif" font-size="10" text-anchor="middle">Finer grains (smaller d) &rarr; smaller pile-up</text>
+  </g>
+
+  <!-- Right: Hall-Petch Plot (Yield Strength vs d^-1/2) -->
+  <g transform="translate(390, 60)">
+    <rect width="320" height="380" fill="#091329" rx="6" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="160" y="30" fill="#38bdf8" font-family="'Inter', sans-serif" font-size="13" font-weight="bold" text-anchor="middle">
+      HALL-PETCH RELATION
+    </text>
+
+    <!-- Axes -->
+    <line x1="50" y1="50" x2="50" y2="310" stroke="#64748b" stroke-width="2"/>
+    <line x1="50" y1="310" x2="290" y2="310" stroke="#64748b" stroke-width="2"/>
+    <text x="170" y="335" fill="#f8fafc" font-family="'Inter', sans-serif" font-size="11" font-weight="bold">d&minus;&frac12; (mm&minus;&frac12;) &rarr; Finer Grains</text>
+    <text x="25" y="180" fill="#f8fafc" font-family="'Inter', sans-serif" font-size="11" font-weight="bold" transform="rotate(-90 25 180)">&sigma;_y (MPa) &rarr;</text>
+
+    <!-- Straight Hall-Petch Line (Gold) -->
+    <line x1="50" y1="260" x2="250" y2="80" stroke="#facc15" stroke-width="3.5"/>
+
+    <!-- Friction Stress Intercept sigma_0 -->
+    <circle cx="50" cy="260" r="5" fill="#f43f5e"/>
+    <text x="35" y="265" fill="#f43f5e" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="bold" text-anchor="end">&sigma;_0</text>
+    <text x="80" y="280" fill="#cbd5e1" font-family="'Inter', sans-serif" font-size="9.5">Lattice friction</text>
+
+    <!-- Slope Triangle (ky) -->
+    <path d="M 140 180 L 200 180 L 200 125" fill="none" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="3 2"/>
+    <text x="180" y="195" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="bold">Slope = k_y</text>
+
+    <!-- Inverse Hall-Petch Breakdown (Nanocrystalline regime) -->
+    <path d="M 250 80 Q 270 100 280 150" fill="none" stroke="#fb7185" stroke-width="2.5" stroke-dasharray="4 3"/>
+    <text x="235" y="65" fill="#fb7185" font-family="'Inter', sans-serif" font-size="9.5">Inverse HP (d &lt; 15 nm)</text>
+  </g>
+
+  <!-- Banner Bottom -->
+  <rect x="180" y="455" width="390" height="34" rx="4" fill="#0f1b38" stroke="#d4af37" stroke-width="1.5"/>
+  <text x="375" y="477" fill="#fef08a" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="bold" text-anchor="middle">
+    &sigma;_y = &sigma;_0 + k_y &bull; d^(&minus;1/2) &bull; Simultaneous Strength &amp; Toughness
+  </text>
+</svg>
         </div>
       </div>
     </section>
 
     <!-- Interactive Study Toolbar -->
     <section class="controls-bar">
-      <div class="controls-left">
-        <div class="search-box">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-          <input type="text" id="problem-search-input" class="search-input" placeholder="Search equations, topics, terms...">
-        </div>
+      <div class="search-box-wrapper">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" id="problem-search-input" placeholder="Search equations, formulas, topics (e.g. Miller, Fick, yield)...">
+      </div>
 
-        <select id="category-filter" class="filter-select">
+      <div class="filters-group">
+        <select id="category-filter">
           <option value="all">All Categories</option>
           <option value="dislocation-basics">Dislocation Basics</option>
           <option value="crystallography-of-slip">Crystallography of Slip</option>
@@ -198,14 +253,14 @@
 
         </select>
 
-        <select id="diff-filter" class="filter-select">
+        <select id="diff-filter">
           <option value="all">All Difficulties</option>
           <option value="fundamental">Fundamental</option>
           <option value="intermediate">Intermediate</option>
           <option value="advanced">Advanced</option>
         </select>
 
-        <select id="jump-to-problem" class="filter-select">
+        <select id="jump-to-problem">
           <option value="">Jump to Problem...</option>
           <option value="p1">Problem 01: Theoretical Shear Strength vs. Actual Yield S...</option>
           <option value="p2">Problem 02: Peierls-Nabarro Lattice Friction Stress</option>
@@ -259,17 +314,15 @@
           <option value="p50">Problem 50: Comprehensive Strengthening Mechanism Superpo...</option>
 
         </select>
-      </div>
 
-      <div class="controls-right">
-        <span id="visible-problem-count" class="visible-count">50 Problems Shown</span>
-        <button id="btn-expand-all" class="btn-classic" title="Reveal all 50 solutions at once">Expand All</button>
-        <button id="btn-collapse-all" class="btn-classic" title="Hide all solutions for active self-testing">Collapse All</button>
+        <span id="visible-problem-count" class="chapter-num-badge" style="font-size: 0.8rem;">50 Problems Shown</span>
+        <button id="btn-expand-all" class="btn-classic">Expand All</button>
+        <button id="btn-collapse-all" class="btn-classic">Collapse All</button>
       </div>
     </section>
 
     <!-- Problems List Container -->
-    <section class="problems-container" id="problems-list">
+    <section class="problems-stream" id="problems-list">
       
     <article class="problem-card" id="p1" data-category="dislocation-basics" data-difficulty="medium">
       <div class="problem-header">
@@ -286,10 +339,11 @@
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Theoretical Shear Strength vs. Actual Yield Strength of Crystals
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Theoretical Shear Strength vs. Actual Yield Strength of Crystals
-        </h4>
         In 1926, J. Frenkel calculated the theoretical shear strength $\tau_{\text{theo}}$ of an ideal defect-free crystal by assuming that adjacent atomic planes slide simultaneously over one another:
 $$\tau = \tau_{\text{theo}} \sin\left(\frac{2\pi x}{b}\right) \approx \tau_{\text{theo}} \frac{2\pi x}{b}$$
 For small displacements, Hooke's law in shear gives $\tau = G \gamma = G (x / d)$, where $d$ is the interplanar spacing and $b$ is the Burgers vector.
@@ -309,7 +363,7 @@ For small displacements, Hooke's law in shear gives $\tau = G \gamma = G (x / d)
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -358,10 +412,11 @@ Actual CRSS $= 1.0\text{ MPa}$ ($\sim 4100\times$ lower) due to dislocation-medi
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Peierls-Nabarro Lattice Friction Stress
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Peierls-Nabarro Lattice Friction Stress
-        </h4>
         The intrinsic resistance of a crystal lattice to dislocation motion in the absence of thermal activation is given by the Peierls-Nabarro friction stress:
 $$\tau_{\text{PN}} = \frac{2G}{1-\nu} \exp\left(-\frac{2\pi w}{b}\right)$$
 where $w$ is the dislocation core width, given by $w = \frac{d}{1-\nu}$, $d$ is the interplanar spacing, and $b$ is the magnitude of the Burgers vector.
@@ -383,7 +438,7 @@ $$\tau_{\text{PN}} = \frac{2G}{1-\nu} \exp\left(-\frac{2\pi d}{b(1-\nu)}\right)$
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -439,10 +494,11 @@ Widely spaced, close-packed planes drastically minimize Peierls friction stress 
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Slip Systems in FCC, BCC, and HCP Crystal Structures
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Slip Systems in FCC, BCC, and HCP Crystal Structures
-        </h4>
         A slip system is defined as the combination of a slip plane and a slip direction lying within that plane.
 <br><br>
 1. For Face-Centered Cubic (FCC): identify the family of slip planes, the family of slip directions, and calculate the total number of independent slip systems.<br>
@@ -461,7 +517,7 @@ Widely spaced, close-packed planes drastically minimize Peierls friction stress 
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -516,10 +572,11 @@ FCC satisfies the 5 independent slip system Taylor criterion at all temperatures
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Schmid's Law and Resolved Shear Stress Derivation
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Schmid's Law and Resolved Shear Stress Derivation
-        </h4>
         Consider a cylindrical single-crystal tensile specimen of cross-sectional area $A_0$ loaded axially with a tensile force $F$. Let $\mathbf{n}$ be the unit normal vector to a slip plane, and $\mathbf{s}$ be the unit vector along a slip direction within that plane.
 The angle between the tensile axis and $\mathbf{n}$ is $\phi$, and the angle between the tensile axis and $\mathbf{s}$ is $\lambda$.
 <br><br>
@@ -538,7 +595,7 @@ The angle between the tensile axis and $\mathbf{n}$ is $\phi$, and the angle bet
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -592,10 +649,11 @@ $\tau_R = 0$ when $\phi = 90^\circ$ or $\lambda = 90^\circ$ (zero resolved drivi
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Critical Resolved Shear Stress (CRSS) and Single-Crystal Yielding
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Critical Resolved Shear Stress (CRSS) and Single-Crystal Yielding
-        </h4>
         A single-crystal cylinder of pure zinc (HCP structure) with cross-sectional area $A_0 = 12.0\text{ mm}^2$ is oriented such that the normal to its basal slip plane $(0001)$ makes an angle $\phi = 62.0^\circ$ with the tensile loading axis.
 The slip direction $[11\bar{2}0]$ makes an angle $\lambda = 38.0^\circ$ with the tensile axis.
 The critical resolved shear stress for basal slip in zinc at room temperature is $\tau_{\text{CRSS}} = 0.18\text{ MPa}$.
@@ -617,7 +675,7 @@ The critical resolved shear stress for basal slip in zinc at room temperature is
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -675,10 +733,11 @@ Reoriented yield stress $\sigma_y' = 2.14\text{ MPa}$ ($4.4\times$ higher).
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Identifying Active Slip System in FCC Crystal
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Identifying Active Slip System in FCC Crystal
-        </h4>
         A single crystal of copper (FCC) is loaded in tension along the crystallographic axis $\mathbf{t} = [123]$.
 The critical resolved shear stress is $\tau_{\text{CRSS}} = 0.70\text{ MPa}$.
 Recall that the slip systems in FCC are $\{111\}\langle 1\bar{1}0\rangle$.
@@ -701,7 +760,7 @@ evaluate the Schmid factors for the three slip directions in the $(111)$ slip pl
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -767,10 +826,11 @@ Yield strength $\sigma_y = 1.50\text{ MPa}$
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Dislocation Energy and Frank's Rule of Dissociation
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Dislocation Energy and Frank's Rule of Dissociation
-        </h4>
         The elastic strain energy per unit length $E_{\text{el}}$ of a dislocation line is proportional to the square of its Burgers vector magnitude:
 $$E_{\text{el}} = \alpha G b^2$$
 where $\alpha \approx 0.5\text{ to }1.0$, $G$ is shear modulus, and $b = \|\mathbf{b}\|$.
@@ -795,7 +855,7 @@ Verify vector conservation ($\mathbf{b}_1 = \mathbf{b}_2 + \mathbf{b}_3$).<br>
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -850,10 +910,11 @@ Dissociation is energetically favorable with a $33.3\%$ decrease in strain energ
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Shockley Partials and Stacking Fault Equilibrium Width
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Shockley Partials and Stacking Fault Equilibrium Width
-        </h4>
         When a full dislocation in an FCC crystal dissociates into two Shockley partials, a strip of stacking fault (with surface energy $\gamma_{\text{SF}}$) is created between them:
 The two partials repel each other with an elastic repulsive force per unit length:
 $$F_{\text{rep}} = \frac{G (\mathbf{b}_1 \cdot \mathbf{b}_2)}{2\pi d}$$
@@ -877,7 +938,7 @@ The stacking fault exerts an attractive surface tension force per unit length $F
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -935,10 +996,11 @@ Aluminum ($d = 0.35\text{ nm}$): Narrow ribbon, rapid constriction and easy cros
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Lomer-Cottrell Lock (Dislocation Junction Formation)
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Lomer-Cottrell Lock (Dislocation Junction Formation)
-        </h4>
         In FCC metals undergoing multiaxial slip, two dislocations gliding on intersecting $\{111\}$ planes can meet and react to form a sessile (immobile) dislocation junction known as a <strong>Lomer-Cottrell lock</strong>.
 Consider the reaction between dislocation $\mathbf{b}_1 = \frac{a}{2}[01\bar{1}]$ gliding on the $(111)$ plane and dislocation $\mathbf{b}_2 = \frac{a}{2}[101]$ gliding on the $(1\bar{1}1)$ plane.
 <br><br>
@@ -958,7 +1020,7 @@ Consider the reaction between dislocation $\mathbf{b}_1 = \frac{a}{2}[01\bar{1}]
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -1013,10 +1075,11 @@ The lock is sessile because its slip plane is $\{001\}$, creating a permanent ba
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Deformation Twinning vs. Slip in HCP and BCC Metals
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Deformation Twinning vs. Slip in HCP and BCC Metals
-        </h4>
         Plastic deformation occurs by slip or deformation twinning.
 <br><br>
 1. Compare mechanical slip and deformation twinning across four key criteria:
@@ -1040,7 +1103,7 @@ For magnesium, $c/a = 1.624$. Calculate the twin shear strain $\gamma_{\text{twi
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -1090,10 +1153,11 @@ Twinning is favored at cryogenic temperatures and high strain rates because its 
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Grain Boundaries as Dislocation Obstacles: Physical Mechanisms
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Grain Boundaries as Dislocation Obstacles: Physical Mechanisms
-        </h4>
         A polycrystalline metal consists of many individual grains (crystallites) separated by grain boundaries.
 <br><br>
 1. Explain the two primary crystallographic mechanisms by which a high-angle grain boundary impedes the passage of a gliding dislocation.<br>
@@ -1111,7 +1175,7 @@ Twinning is favored at cryogenic temperatures and high strain rates because its 
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -1151,10 +1215,11 @@ Polycrystals are much stronger because internal boundaries halt dislocation mean
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Hall-Petch Equation and Parameter Determination
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Hall-Petch Equation and Parameter Determination
-        </h4>
         The Hall-Petch equation describes the relationship between yield strength $\sigma_y$ and average grain diameter $d$:
 $$\sigma_y = \sigma_0 + k_y d^{-1/2}$$
 where $\sigma_0$ is the friction stress (lattice resistance to dislocation glide) and $k_y$ is the Hall-Petch strengthening coefficient (boundary barrier resistance).
@@ -1179,7 +1244,7 @@ Tensile testing of a low-carbon ferritic steel yields the following experimental
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -1239,10 +1304,11 @@ For $\sigma_y = 400\text{ MPa}$: required grain size $d = 2.61\text{ }\mu\text{m
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Dislocation Pile-Up Model Derivation of Hall-Petch Relation
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Dislocation Pile-Up Model Derivation of Hall-Petch Relation
-        </h4>
         In the classic Eshelby-Frank-Nabarro pile-up model, a Frank-Read source at the center of a grain of diameter $d$ emits dislocations that glide along a slip plane of length $L = d/2$ and pile up against the grain boundary under an effective resolved shear stress $\tau_{\text{eff}} = \tau - \tau_0$.
 The number of dislocations $n$ in the pile-up is:
 $$n = \frac{k_1 \tau_{\text{eff}} L}{G b} = \frac{k_1 (\tau - \tau_0) d}{2 G b}$$
@@ -1267,7 +1333,7 @@ $$\tau = \tau_0 + \sqrt{\frac{2 G b \tau_c}{k_1}}\,d^{-1/2}$$
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -1323,10 +1389,11 @@ Concentrated tip stress: $\tau_{\text{tip}} \approx 1.89\text{ GPa}$ ($38\times$
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        ASTM Grain Size Number and Yield Strength Prediction
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          ASTM Grain Size Number and Yield Strength Prediction
-        </h4>
         The ASTM grain size number $G$ (or $n_{\text{ASTM}}$) is defined by the standard equation:
 $$N = 2^{G - 1}$$
 where $N$ is the number of grains per square inch observed on a polished micrograph viewed at $100\times$ magnification.
@@ -1350,7 +1417,7 @@ $$\sigma_y = 125.0\text{ MPa} + (18.5\text{ MPa}\cdot\text{mm}^{1/2})\,d^{-1/2}$
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -1402,10 +1469,11 @@ Strength enhancement: $+45.6\%$ increase.
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Simultaneous Strengthening and Toughening via Grain Refinement
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Simultaneous Strengthening and Toughening via Grain Refinement
-        </h4>
         In materials engineering, almost all strengthening mechanisms (solid solution, precipitation, strain hardening) increase yield strength at the severe expense of reducing ductility and fracture toughness.
 Grain size refinement is the only strengthening mechanism that simultaneously improves both strength and toughness.
 <br><br>
@@ -1428,7 +1496,7 @@ or empirically: $T_B = T_0 - K_{\text{DBTT}} \ln(d^{-1/2}) = T_0 + K' \ln(d)$.
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -1472,10 +1540,11 @@ TMCP HSLA steels use Zener pinning to achieve ultra-fine ferrite ($d < 5\text{ }
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Low-Angle Tilt Boundaries: Read-Shockley Dislocation Model
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Low-Angle Tilt Boundaries: Read-Shockley Dislocation Model
-        </h4>
         A symmetric low-angle tilt boundary (misorientation angle $\theta < 10^\circ$) can be modeled as a vertical wall of equally spaced edge dislocations with Burgers vector $b$ and spacing $D$:
 $$\sin\left(\frac{\theta}{2}\right) = \frac{b}{2D} \implies \theta \approx \frac{b}{D} \quad (\text{for small }\theta \text{ in radians})$$
 The grain boundary energy $\gamma_{\text{gb}}$ of a low-angle boundary is given by the Read-Shockley equation:
@@ -1500,7 +1569,7 @@ For an aluminum subgrain boundary ($b = 0.286\text{ nm}$, $G = 26\text{ GPa}$, $
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -1560,10 +1629,11 @@ Read-Shockley breaks down above $15^\circ$ because dislocation cores overlap, tr
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Nanotwinned Metals: Hall-Petch Strengthening with High Electrical Conductivity
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Nanotwinned Metals: Hall-Petch Strengthening with High Electrical Conductivity
-        </h4>
         Conventional grain boundary refinement increases yield strength but severely degrades electrical conductivity because high-angle grain boundaries scatter conduction electrons strongly.
 Nanotwinned copper (synthesized by pulsed electrodeposition or magnetron sputtering) contains nanoscale coherent twin boundaries (CTBs) on $\{111\}$ planes with spacing $\lambda_{\text{twin}}$ down to a few nanometers.
 <br><br>
@@ -1591,7 +1661,7 @@ By contrast, high-angle grain boundaries have a specific resistivity $\rho_{\tex
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -1643,10 +1713,11 @@ Nanotwinning breaks the strength-conductivity trade-off by combining strong disl
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Breakdown of Hall-Petch: The Inverse Hall-Petch Effect
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Breakdown of Hall-Petch: The Inverse Hall-Petch Effect
-        </h4>
         When grain size is reduced into the deep nanometer regime ($d < 20\text{ nm}$), experimental measurements in electrodeposited nickel and copper show that yield strength ceases to increase and actually decreases with further grain refinement. This phenomenon is known as the <strong>Inverse Hall-Petch effect</strong>.
 <br><br>
 1. Explain the dislocation pile-up limit: calculate the minimum grain diameter $d_{\text{min}}$ required to sustain a dislocation pile-up containing at least 2 dislocations, given an equilibrium separation $x_0 \approx 10\text{--}15\text{ nm}$.<br>
@@ -1664,7 +1735,7 @@ Nanotwinning breaks the strength-conductivity trade-off by combining strong disl
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -1714,10 +1785,11 @@ Deformation shifts from dislocation glide to grain boundary sliding (GBS) and Co
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Severe Plastic Deformation (SPD): ECAP and Grain Refinement
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Severe Plastic Deformation (SPD): ECAP and Grain Refinement
-        </h4>
         Equal Channel Angular Pressing (ECAP) is a severe plastic deformation (SPD) technique used to produce ultrafine-grained (UFG) metals without altering the billet's cross-sectional dimensions.
 A square billet is extruded through an intersecting die with channel angle $\Phi$ and outer corner curvature angle $\Psi$.
 The equivalent plastic shear strain $\varepsilon_N$ accumulated after $N$ passes is:
@@ -1739,7 +1811,7 @@ For a standard sharp die with channel angle $\Phi = 90^\circ$ and corner angle $
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -1791,10 +1863,11 @@ Yield strength increases from $\sigma_{y0} = 40.6\text{ MPa}$ to $\sigma_{y,\tex
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Zener Pinning: Grain Growth Inhibition by Second-Phase Particles
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Zener Pinning: Grain Growth Inhibition by Second-Phase Particles
-        </h4>
         During high-temperature heat treatment, fine insoluble precipitate particles (e.g., $\text{TiN}$ or $\text{NbC}$) exert a retarding pinning force on migrating grain boundaries.
 A spherical particle of radius $r$ pinned to a boundary with surface energy $\gamma_{\text{gb}}$ exerts a maximum retarding force $F_Z = \pi r \gamma_{\text{gb}}$.
 For a volume fraction $f$ of randomly distributed particles, the Zener limiting grain diameter $d_Z$ is given by:
@@ -1816,7 +1889,7 @@ In an HSLA microalloyed steel, titanium micro-additions precipitate as titanium 
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -1859,10 +1932,11 @@ $\text{TiN}$ is superior because of its extreme thermodynamic stability, remaini
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Solid Solution Strengthening: Atomic Size Misfit Parameter
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Solid Solution Strengthening: Atomic Size Misfit Parameter
-        </h4>
         When solute atoms are dissolved substitutionally into a solvent crystal lattice, they produce localized spherical elastic strain fields.
 The atomic size misfit parameter $\varepsilon_b$ (or $\varepsilon_a$) is defined as:
 $$\varepsilon_b = \frac{1}{a} \frac{da}{dc}$$
@@ -1889,7 +1963,7 @@ Adding solute elements changes the lattice parameter according to experimental m
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -1942,10 +2016,11 @@ Tin is over $12\times$ more potent than zinc because its $18\%$ atomic size diff
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Modulus Misfit Parameter and Total Solid Solution Strengthening
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Modulus Misfit Parameter and Total Solid Solution Strengthening
-        </h4>
         In addition to atomic size misfit ($\varepsilon_b$), solute atoms also create an elastic modulus misfit ($\varepsilon_G$) because solute-solvent bonds have a different stiffness than solvent-solvent bonds:
 $$\varepsilon_G = \frac{1}{G} \frac{dG}{dc}$$
 Fleischer combined both effects into an effective interaction parameter $\varepsilon_s$:
@@ -1974,7 +2049,7 @@ Calculate $\Delta\tau$ (in MPa) and the macroscopic tensile yield increment $\De
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -2022,10 +2097,11 @@ Tensile yield increment $\Delta\sigma = 34.3\text{ MPa}$
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Interstitial vs. Substitutional Solutes: Tetragonal Distortion in BCC Iron
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Interstitial vs. Substitutional Solutes: Tetragonal Distortion in BCC Iron
-        </h4>
         In BCC $\alpha$-iron (ferrite), interstitial carbon atoms occupy octahedral interstitial sites located at face centers $(0, \frac{1}{2}, \frac{1}{2})$ and edge midpoints $(0, 0, \frac{1}{2})$.
 <br><br>
 1. Calculate the radius $r_{\text{oct}}$ of the largest sphere that can fit into an octahedral interstitial site in BCC iron without distortion, given lattice parameter $a = 0.2866\text{ nm}$ and iron atomic radius $R_{\text{Fe}} = 0.1241\text{ nm}$.<br>
@@ -2043,7 +2119,7 @@ Tensile yield increment $\Delta\sigma = 34.3\text{ MPa}$
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -2089,10 +2165,11 @@ Tetragonal distortion interacts strongly with the shear fields of screw dislocat
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Cottrell Atmospheres and Dislocation Pinning Energy
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Cottrell Atmospheres and Dislocation Pinning Energy
-        </h4>
         Cottrell and Bilby showed that interstitial solute atoms (carbon/nitrogen in iron) diffuse toward the dilated tensile side of edge dislocations to relieve elastic strain energy.
 The elastic interaction energy $U(r, \theta)$ between an edge dislocation and an interstitial solute atom located at polar coordinates $(r, \theta)$ is:
 $$U(r, \theta) = \frac{A \sin\theta}{r}$$
@@ -2114,7 +2191,7 @@ where $A = \frac{1}{3\pi}\left(\frac{1+\nu}{1-\nu}\right) G b \Delta V$, with sh
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -2164,10 +2241,11 @@ Binding energy $U_{\text{bind}} \approx -0.95\text{ eV}$ ($37\times k_B T$), cre
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Upper/Lower Yield Point Phenomenon and Lüders Band Formation
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Upper/Lower Yield Point Phenomenon and Lüders Band Formation
-        </h4>
         A tensile specimen of hot-rolled low-carbon sheet steel displays a pronounced upper yield point ($\sigma_{\text{UYP}} = 280\text{ MPa}$), drops abruptly to a lower yield point ($\sigma_{\text{LYP}} = 220\text{ MPa}$), and undergoes a yield point elongation of $\varepsilon_{\text{YPE}} = 4.5\%$ before strain hardening begins.
 <br><br>
 1. Explain the dislocation mechanism responsible for the sudden load drop from $\sigma_{\text{UYP}}$ to $\sigma_{\text{LYP}}$.<br>
@@ -2186,7 +2264,7 @@ Binding energy $U_{\text{bind}} \approx -0.95\text{ eV}$ ($37\times k_B T$), cre
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -2235,10 +2313,11 @@ Skin-pass rolling ($0.5\text{--}1.5\%$ temper strain) permanently unlocks disloc
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Static and Dynamic Strain Aging: Portevin-Le Chatelier Effect
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Static and Dynamic Strain Aging: Portevin-Le Chatelier Effect
-        </h4>
         When a mild steel specimen is pulled past its yield point to a plastic strain of $\varepsilon_p = 4\%$, unloaded, and immediately retested in tension, yielding resumes smoothly without any yield point.
 However, if the pre-strained specimen is aged at room temperature for several days (or at $100^\circ\text{C}\text{ to }150^\circ\text{C}$ for 30 minutes) before retesting:
 - The yield drop reappears with an even higher yield point ($\sigma_{\text{UYP}}' > \sigma_{\text{unloaded}}$).
@@ -2261,7 +2340,7 @@ This is <strong>static strain aging</strong>.
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -2311,10 +2390,11 @@ Blue brittleness ($200\text{--}300^\circ\text{C}$): Intense dynamic strain aging
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Suzuki Hardening: Chemical Segregation to Stacking Faults
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Suzuki Hardening: Chemical Segregation to Stacking Faults
-        </h4>
         In FCC alloys with low stacking fault energy (such as $\alpha$-brass Cu-30Zn, bronze Cu-Sn, or austenitic stainless steel), full dislocations split into widely separated Shockley partials bounding a wide strip of stacking fault ribbon.
 The crystal structure inside the stacking fault ribbon is two atomic layers of Hexagonal Close-Packed (HCP) packing ($\dots ABCABABCA \dots$).
 <br><br>
@@ -2333,7 +2413,7 @@ The crystal structure inside the stacking fault ribbon is two atomic layers of H
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -2379,10 +2459,11 @@ Absent in pure metals (no solute) and negligible in Al (extremely narrow stackin
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Cold Working and Percent Cold Work (%CW) Calculation
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Cold Working and Percent Cold Work (%CW) Calculation
-        </h4>
         Strain hardening (work hardening) is quantified by the percentage of cold work (%CW), defined by the fractional reduction in cross-sectional area:
 $$\%CW = \left(\frac{A_0 - A_d}{A_0}\right) \times 100\%$$
 where $A_0$ is the original cross-sectional area and $A_d$ is the deformed cross-sectional area.
@@ -2402,7 +2483,7 @@ where $A_0$ is the original cross-sectional area and $A_d$ is the deformed cross
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -2453,10 +2534,11 @@ Formula: $\varepsilon_{\text{true}} = -\ln(1 - \%CW/100)$
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Dislocation Multiplication: Frank-Read Source Mechanism
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Dislocation Multiplication: Frank-Read Source Mechanism
-        </h4>
         A Frank-Read source consists of a segment of dislocation line of length $L$ pinned at both ends by precipitates, solute clusters, or sessile nodes.
 Under an applied shear stress $\tau$, the dislocation bows out into a circular arc with radius of curvature $R$:
 $$\tau = \frac{G b}{2 R}$$
@@ -2478,7 +2560,7 @@ The critical condition occurs when the segment bows into a semicircle of radius 
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -2534,10 +2616,11 @@ Accumulation of emitted loops generates elastic back stress that shuts down the 
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Forest Dislocation Intersections: Jogs and Kinks
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Forest Dislocation Intersections: Jogs and Kinks
-        </h4>
         When a primary mobile dislocation glides across a crystal, it must cut through a forest of stationary dislocations intersecting its slip plane.
 Cutting creates atomic steps in the dislocation lines:
 - A <strong>kink</strong> is a step that lies within the original slip plane.
@@ -2559,7 +2642,7 @@ Cutting creates atomic steps in the dislocation lines:
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -2618,10 +2701,11 @@ Athermal drag stress required: $\tau_{\text{jog}} \approx 102.5\text{ MPa}$.
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Double Cross-Slip Multiplication: The Koehler Mechanism
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Double Cross-Slip Multiplication: The Koehler Mechanism
-        </h4>
         In crystals with high stacking fault energy, a gliding screw dislocation can bypass an obstacle by cross-slipping onto an intersecting cross-slip plane.
 In the <strong>Koehler double cross-slip mechanism</strong>, the screw segment glides on the cross-slip plane for a short distance $h$ before cross-slipping back onto a new plane parallel to the primary slip plane.
 <br><br>
@@ -2642,7 +2726,7 @@ For an aluminum alloy ($G = 26\text{ GPa}$, $b = 0.286\text{ nm}$, $\nu = 0.34$)
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -2687,10 +2771,11 @@ Critical passing distance $h_{\text{crit}} \approx 8.97\text{ nm}$.
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Taylor Dislocation Hardening: Flow Stress vs. Dislocation Density
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Taylor Dislocation Hardening: Flow Stress vs. Dislocation Density
-        </h4>
         The classical Taylor work-hardening model states that the shear flow stress $\tau$ is governed by the elastic interaction between dislocations separated by an average spacing $l \approx 1/\sqrt{\rho_d}$:
 $$\tau = \tau_0 + \alpha G b \sqrt{\rho_d}$$
 where $\tau_0$ is the friction stress, $\alpha$ is an empirical interaction constant ($\approx 0.2\text{ to }0.4$), $G$ is the shear modulus, $b$ is the Burgers vector magnitude, and $\rho_d$ is the total dislocation line density (in $\text{m}^{-2}$ or $\text{cm}^{-2}$).
@@ -2712,7 +2797,7 @@ For polycrystalline nickel ($G = 76\text{ GPa}$, $b = 0.249\text{ nm}$, $\alpha 
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -2768,10 +2853,11 @@ Strength increases by $22.3\times$ due to Taylor dislocation forest hardening.
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Dislocation Density Characterization: Williamson-Hall XRD Analysis
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Dislocation Density Characterization: Williamson-Hall XRD Analysis
-        </h4>
         X-ray diffraction peak broadening in cold-worked metals arises from two distinct physical sources: finite crystallite/domain size ($D$) and internal microstrain ($\varepsilon$) caused by dislocations.
 The Williamson-Hall equation separates these two effects:
 $$\beta \cos\theta = \frac{K \lambda}{D} + 4\varepsilon \sin\theta$$
@@ -2802,7 +2888,7 @@ where $b = 0.256\text{ nm}$.<br>
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -2853,10 +2939,11 @@ Alternatives: TEM (direct line imaging, small sample volume) and Etch Pits (limi
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Three Stages of Single-Crystal Work Hardening
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Three Stages of Single-Crystal Work Hardening
-        </h4>
         When a high-purity FCC single crystal (e.g., copper oriented for single slip) is deformed in tension, its shear stress-shear strain ($\tau\text{--}\gamma$) curve exhibits three distinct stages of work hardening.
 <br><br>
 1. Define <strong>Stage I (Easy Glide)</strong>: explain why the work hardening rate $\theta_I = d\tau/d\gamma$ is extremely low ($\theta_I \approx 10^{-4} G$), and state the condition that ends Stage I.<br>
@@ -2875,7 +2962,7 @@ Alternatives: TEM (direct line imaging, small sample volume) and Etch Pits (limi
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -2925,10 +3012,11 @@ Polycrystals bypass Stage I because multi-slip is enforced from the onset of yie
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Stacking Fault Energy and Dislocation Cell Structures vs. Planar Slip
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Stacking Fault Energy and Dislocation Cell Structures vs. Planar Slip
-        </h4>
         The stacking fault energy (SFE, $\gamma_{\text{SF}}$) profoundly dictates the deformed dislocation microstructure of FCC metals and alloys.
 Consider two alloys subjected to $20\%$ cold rolling at room temperature:
 - Alloy 1: Commercially pure aluminum ($\gamma_{\text{SF}} \approx 160\text{ mJ/m}^2$)
@@ -2949,7 +3037,7 @@ Consider two alloys subjected to $20\%$ cold rolling at room temperature:
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -2995,10 +3083,11 @@ Low SFE metals maintain exceptionally high strain hardening ($n \approx 0.45$) d
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Precipitation Hardening: The Three-Step Heat Treatment Process
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Precipitation Hardening: The Three-Step Heat Treatment Process
-        </h4>
         Precipitation hardening (age hardening) is the primary method used to strengthen aerospace aluminum, titanium, and nickel superalloys.
 The base requirement is an alloy phase diagram with a terminal solid solution exhibiting decreasing solid solubility with decreasing temperature (sloping solvus line).
 <br><br>
@@ -3022,7 +3111,7 @@ Consider an aluminum-copper alloy containing $4.0\text{ wt}\%\text{ Cu}$ (e.g., 
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -3066,10 +3155,11 @@ Soft immediately after quench (easy forming); reaches peak strength after aging 
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Precipitation Sequence in Al-Cu Alloys: From GP Zones to Equilibrium Phase
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Precipitation Sequence in Al-Cu Alloys: From GP Zones to Equilibrium Phase
-        </h4>
         During artificial aging of an Al-4wt%Cu alloy, the equilibrium precipitate phase $\theta\text{ (}\text{CuAl}_2\text{)}$ does not form directly because its complex body-centered tetragonal crystal structure has a large interfacial energy barrier with the FCC matrix.
 Instead, decomposition follows a multi-step precipitation sequence:
 $$\text{SSSS} \to \text{GP-I zones} \to \text{GP-II zones } (\theta'') \to \text{Metastable } \theta' \to \text{Equilibrium } \theta\text{ (}\text{CuAl}_2\text{)}$$
@@ -3093,7 +3183,7 @@ $$\text{SSSS} \to \text{GP-I zones} \to \text{GP-II zones } (\theta'') \to \text
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -3140,10 +3230,11 @@ Peak strength (T6 temper) is achieved by a dense dispersion of $\theta''$ and fi
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Dislocation Particle Cutting (Friedel-Fleischer Shearing Mechanism)
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Dislocation Particle Cutting (Friedel-Fleischer Shearing Mechanism)
-        </h4>
         When a dislocation encounters small, coherent precipitate particles (radius $r < r_c$), it shears (cuts) directly through the particles.
 Three physical mechanisms resist particle shearing:
 1. <strong>Coherency Strain Strengthening ($\Delta\tau_{\text{coh}}$):</strong> Interaction with lattice mismatch strain $\varepsilon_{\text{coh}}$:
@@ -3168,7 +3259,7 @@ $$\Delta\tau_{\text{order}} = \frac{\gamma_{\text{APB}}}{2b} \left[ \left(\frac{
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -3214,10 +3305,11 @@ Cutting weakens precipitates on active slip planes, triggering intense planar sl
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Orowan Dislocation Looping Bypass Mechanism
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Orowan Dislocation Looping Bypass Mechanism
-        </h4>
         When precipitates coarsen beyond a critical radius $r_c$, or when particles are incoherent (such as equilibrium $\theta$ in Al-Cu or oxide dispersoids in ODS alloys), dislocations cannot shear them.
 Instead, the dislocation bows between adjacent particles and bypasses them by the <strong>Orowan looping mechanism</strong>, leaving behind a closed dislocation loop around each particle.
 The Orowan shear stress $\tau_{\text{Orowan}}$ is:
@@ -3244,7 +3336,7 @@ The precipitate volume fraction is $f = 0.04$ ($4\%$).
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -3298,10 +3390,11 @@ Orowan stress scales inversely with precipitate radius ($\tau \propto 1/r$).
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Peak Aging and Critical Precipitate Radius $r_c$
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Peak Aging and Critical Precipitate Radius $r_c$
-        </h4>
         The overall yield strength of a precipitation-hardened alloy is governed by the competition between dislocation particle cutting (active at small radii) and Orowan dislocation looping (active at large radii):
 $$\tau_{\text{cutting}} = C_1 \sqrt{r}$$
 $$\tau_{\text{looping}} = \frac{C_2}{r}$$
@@ -3326,7 +3419,7 @@ $C_1 = 28.0\text{ MPa}\cdot\text{nm}^{-1/2}$ and $C_2 = 700.0\text{ MPa}\cdot\te
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -3383,10 +3476,11 @@ T73 overaging sacrifices $15\%$ strength to achieve immunity against stress corr
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Ostwald Ripening and LSW Precipitate Coarsening Kinetics
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Ostwald Ripening and LSW Precipitate Coarsening Kinetics
-        </h4>
         During extended service at elevated temperatures, fine precipitate particles dissolve while larger particles grow at their expense to minimize the total interfacial surface free energy. This is <strong>Ostwald ripening</strong>.
 Driven by the Gibbs-Thomson effect, the solute concentration $C_r$ in the matrix at the surface of a spherical particle of radius $r$ is:
 $$C_r = C_\infty \exp\left(\frac{2\gamma V_m}{R T r}\right) \approx C_\infty \left(1 + \frac{2\gamma V_m}{R T r}\right)$$
@@ -3412,7 +3506,7 @@ $\gamma = 0.050\text{ J/m}^2$, $V_m = 7.0 \times 10^{-6}\text{ m}^3/\text{mol}$,
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -3469,10 +3563,11 @@ Orowan yield strength drops by $50\%$ between $100\text{ h}$ and $1000\text{ h}$
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Precipitate-Free Zones (PFZs) at Grain Boundaries
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Precipitate-Free Zones (PFZs) at Grain Boundaries
-        </h4>
         In age-hardenable aluminum alloys (e.g., Al-Zn-Mg 7000-series), bright-field transmission electron micrographs often reveal narrow, precipitate-denuded channels running parallel to grain boundaries known as <strong>Precipitate-Free Zones (PFZs)</strong>.
 The grain interior contains a dense dispersion of hardening precipitates, but a channel of width $W_{\text{PFZ}} = 50\text{--}200\text{ nm}$ adjacent to the boundary is completely devoid of strengthening particles.
 <br><br>
@@ -3493,7 +3588,7 @@ The grain interior contains a dense dispersion of hardening precipitates, but a 
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -3537,10 +3632,11 @@ Triggers premature intergranular ductile tearing and severe stress corrosion cra
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Oxide Dispersion Strengthened (ODS) Alloys vs. Precipitation Hardened Alloys
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Oxide Dispersion Strengthened (ODS) Alloys vs. Precipitation Hardened Alloys
-        </h4>
         Precipitation-hardened nickel superalloys derive exceptional strength from coherent $\gamma'$ ($\text{Ni}_3(\text{Al,Ti})$) precipitates. However, above $0.75 T_m$ ($> 900^\circ\text{C}\text{--}1000^\circ\text{C}$), $\gamma'$ precipitates dissolve back into solid solution or coarsen catastrophically, destroying high-temperature strength.
 Oxide Dispersion Strengthened (ODS) alloys (e.g., MA754, PM2000) are synthesized via mechanical ball milling to uniformly disperse fine, insoluble oxide particles (such as yttria $\text{Y}_2\text{O}_3$ or $\text{Y-Ti-O}$ nanoclusters) into a metallic matrix.
 <br><br>
@@ -3562,7 +3658,7 @@ Oxide Dispersion Strengthened (ODS) alloys (e.g., MA754, PM2000) are synthesized
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -3609,10 +3705,11 @@ Threshold creep stress arises from elastic core relaxation at incoherent particl
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Annealing Stages: Recovery, Recrystallization, and Grain Growth
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Annealing Stages: Recovery, Recrystallization, and Grain Growth
-        </h4>
         A heavily cold-worked metal contains substantial stored mechanical energy ($\approx 1\text{--}5\text{ J/g}$), primarily in the form of elastic strain energy around billions of accumulated dislocations.
 Heating the deformed metal (annealing) causes it to revert to an equiaxed, strain-free state through three consecutive stages:
 $$\text{Stage 1: Recovery} \longrightarrow \text{Stage 2: Recrystallization} \longrightarrow \text{Stage 3: Grain Growth}$$
@@ -3637,7 +3734,7 @@ $$\text{Stage 1: Recovery} \longrightarrow \text{Stage 2: Recrystallization} \lo
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -3687,10 +3784,11 @@ Grain growth: Driven by grain boundary curvature reduction, coarsening grains an
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Recovery Stage: Dislocation Annihilation and Polygonization
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Recovery Stage: Dislocation Annihilation and Polygonization
-        </h4>
         During the recovery stage of annealing, thermal activation enables stored dislocations to lower their elastic energy without forming new grains.
 <br><br>
 1. Describe the two primary microscopic dislocation mechanisms operating during recovery:
@@ -3710,7 +3808,7 @@ Grain growth: Driven by grain boundary curvature reduction, coarsening grains an
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -3754,10 +3852,11 @@ Opposite edge dipoles separated by $4\text{ nm}$ climb toward each other and mut
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Recrystallization Temperature $T_R$ and Influencing Factors
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Recrystallization Temperature $T_R$ and Influencing Factors
-        </h4>
         The <strong>recrystallization temperature ($T_R$)</strong> is defined as the temperature at which a heavily cold-worked metal complete recrystallizes into strain-free grains within precisely 1 hour.
 As an empirical rule of thumb:
 $$T_R \approx (0.3\text{ to }0.5)\,T_m \quad (\text{in Kelvin})$$
@@ -3783,7 +3882,7 @@ $$T_R \approx (0.3\text{ to }0.5)\,T_m \quad (\text{in Kelvin})$$
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -3834,10 +3933,11 @@ Minimum critical deformation: $\%CW_{\text{crit}} \approx 2\text{--}5\%$.
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Recrystallization Kinetics: Johnson-Mehl-Avrami-Kolmogorov (JMAK) Equation
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Recrystallization Kinetics: Johnson-Mehl-Avrami-Kolmogorov (JMAK) Equation
-        </h4>
         The fraction of recrystallized material $X(t)$ as a function of isothermal annealing time $t$ follows the classical Johnson-Mehl-Avrami-Kolmogorov (JMAK) equation:
 $$X(t) = 1 - \exp\left(-k t^n\right)$$
 where $k$ is a temperature-dependent rate constant and $n$ is the Avrami exponent.
@@ -3862,7 +3962,7 @@ In an isothermal annealing experiment on cold-rolled brass sheet at $350^\circ\t
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -3931,10 +4031,11 @@ $99\%$ complete recrystallization time: $t_{0.99} = 54.0\text{ min}$
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Normal Grain Growth Kinetics and Temperature Dependence
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Normal Grain Growth Kinetics and Temperature Dependence
-        </h4>
         After primary recrystallization is complete, the grain boundaries continue to migrate slowly to reduce the total grain boundary surface area. This is <strong>normal grain growth</strong>.
 The average grain diameter $d$ follows the parabolic growth law:
 $$d^n - d_0^n = K t$$
@@ -3960,7 +4061,7 @@ Assuming ideal parabolic kinetics ($n = 2$):
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -4016,10 +4117,11 @@ At $700^\circ\text{C}$: $K' = 355.4\text{ }\mu\text{m}^2/\text{min} \implies d =
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Abnormal Grain Growth (Secondary Recrystallization) and Goss Texture
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Abnormal Grain Growth (Secondary Recrystallization) and Goss Texture
-        </h4>
         In normal grain growth, all grains grow uniformly with a steady-state monomodal grain size distribution.
 Under specific conditions, normal grain growth is completely pinned by fine precipitates (Zener pinning, $d_Z = 4r/3f$).
 Upon higher temperature annealing, a few select grains suddenly break free from pinning and consume the entire fine-grained matrix, growing to massive millimeter or centimeter dimensions. This is <strong>abnormal grain growth (secondary recrystallization)</strong>.
@@ -4039,7 +4141,7 @@ Upon higher temperature annealing, a few select grains suddenly break free from 
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -4085,10 +4187,11 @@ $\text{MnS}$/$\text{AlN}$ inhibitors pin normal grain growth until high-temperat
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Comprehensive Strengthening Mechanism Superposition Design
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Comprehensive Strengthening Mechanism Superposition Design
-        </h4>
         Modern engineering alloys achieve superior yield strength by simultaneously combining all four fundamental strengthening mechanisms:
 1. Lattice friction stress ($\sigma_0$)
 2. Solid solution strengthening ($\Delta\sigma_{\text{ss}}$)
@@ -4124,7 +4227,7 @@ A microalloyed HSLA engineering steel has:
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -4173,21 +4276,21 @@ Total engineered yield strength: $\sigma_y = 647.4\text{ MPa}$ ($9.25\times$ bas
     
     </section>
 
-    <!-- Chapter Navigation Footer -->
-    <nav class="chapter-pagination" style="display: flex; justify-content: space-between; align-items: center; margin: 3.5rem 0; padding-top: 1.5rem; border-top: 1px solid rgba(212, 175, 55, 0.3); flex-wrap: wrap; gap: 1rem;">
-      <a href="chapter6.html" class="btn-classic" style="padding: 0.65rem 1.25rem;">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+    <!-- Chapter Navigation Footer Strip -->
+    <nav style="display: flex; justify-content: space-between; align-items: center; margin: 4rem 0 2rem; padding-top: 1.75rem; border-top: var(--border-double); flex-wrap: wrap; gap: 1rem;">
+      <a href="chapter6.html" class="btn-classic" style="padding: 0.75rem 1.35rem;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
         <span>Previous: Ch 6: Ch 6: Mechanical Properties</span>
       </a>
 
-      <a href="index.html" class="btn-classic" style="padding: 0.65rem 1.25rem;">
+      <a href="../index.html" class="btn-classic" style="padding: 0.75rem 1.35rem;">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
-        <span>All Chapters (Home)</span>
+        <span>Main Portal (Cover)</span>
       </a>
 
-      <a href="chapter8.html" class="btn-primary" style="padding: 0.65rem 1.25rem;">
+      <a href="chapter8.html" class="btn-primary" style="padding: 0.75rem 1.35rem;">
         <span>Next: Ch 8: Ch 8: Failure (Fracture, Fatigue, Creep)</span>
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
       </a>
     </nav>
   </main>
@@ -4196,145 +4299,117 @@ Total engineered yield strength: $\sigma_y = 647.4\text{ MPa}$ ($9.25\times$ bas
     <div id="formula-modal" class="modal-overlay">
       <div class="modal-card">
         <div class="modal-header">
-          <h3>Master Formula Compendium & Physical Constants (Ch 1 – 8)</h3>
+          <h3>Master Formula Compendium &amp; Physical Constants (Chapters 1 &ndash; 8)</h3>
           <button id="btn-close-formula-modal" class="modal-close-btn">&times;</button>
         </div>
         <div class="modal-body">
-          <div style="background: rgba(30, 58, 138, 0.25); border: 1px solid rgba(56, 189, 248, 0.3); padding: 0.85rem; border-radius: 4px; margin-bottom: 1rem; font-size: 0.85rem; color: #bae6fd;">
-            <strong>Fundamental Physical Constants:</strong><br>
+          <div style="background: rgba(30, 58, 138, 0.3); border: 1.5px solid rgba(56, 189, 248, 0.5); padding: 1rem; border-radius: 4px; margin-bottom: 1.25rem; font-size: 0.92rem; color: #bae6fd;">
+            <strong style="color: #facc15; font-size: 1rem;">Fundamental Physical Constants:</strong><br>
             Avogadro's Number: \(N_A = 6.022 \times 10^{23} \text{ atoms/mol}\) &bull;
-            Boltzmann's Constant: \(k = 1.38 \times 10^{-23} \text{ J/atom}\cdot\text{K} = 8.62 \times 10^{-5} \text{ eV/atom}\cdot\text{K}\)<br>
+            Boltzmann's Constant: \(k_B = 1.381 \times 10^{-23} \text{ J/K} = 8.617 \times 10^{-5} \text{ eV/K}\)<br>
             Universal Gas Constant: \(R = 8.314 \text{ J/mol}\cdot\text{K}\) &bull;
-            Elementary Charge: \(e = 1.602 \times 10^{-19} \text{ C}\) &bull;
-            1 eV = \(1.602 \times 10^{-19} \text{ J}\)
+            Electron Charge: \(e = 1.602 \times 10^{-19} \text{ C}\) &bull;
+            \(1 \text{ eV} = 1.602 \times 10^{-19} \text{ J}\)
           </div>
 
           <table class="formula-table">
             <thead>
               <tr>
-                <th style="width: 25%;">Domain / Law</th>
-                <th style="width: 45%;">Governing Mathematical Equation</th>
-                <th style="width: 30%;">Key Variables & Units</th>
+                <th style="width: 20%;">Chapter / Topic</th>
+                <th style="width: 45%;">Governing Equation &amp; Relation</th>
+                <th style="width: 35%;">Parameter Definitions</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td><strong>Theoretical Crystal Density</strong></td>
+                <td><strong>Ch 1: Ashby Indices</strong></td>
+                <td>$$M_1 = \frac{\sigma_y}{\rho}, \quad M_2 = \frac{E^{1/2}}{\rho}, \quad M_3 = \frac{\sigma_y^{2/3}}{\rho}$$</td>
+                <td>Lightweight tension tie-rod (\(M_1\)), stiff beam (\(M_2\)), strong beam (\(M_3\))</td>
+              </tr>
+              <tr>
+                <td><strong>Ch 1: Composite Moduli</strong></td>
+                <td>$$E_{cl} = V_f E_f + V_m E_m, \quad \frac{1}{E_{ct}} = \frac{V_f}{E_f} + \frac{V_m}{E_m}$$</td>
+                <td>Voigt isostrain (longitudinal) and Reuss isostress (transverse) Rule of Mixtures</td>
+              </tr>
+              <tr>
+                <td><strong>Ch 2: Potential Energy Well</strong></td>
+                <td>$$E_N(r) = -\frac{A}{r^m} + \frac{B}{r^n}, \quad F_N(r) = \frac{dE_N}{dr}$$</td>
+                <td>Attractive vs repulsive potential; equilibrium spacing \(r_0\) at \(F_N(r_0) = 0\)</td>
+              </tr>
+              <tr>
+                <td><strong>Ch 3: Theoretical Density</strong></td>
                 <td>$$\rho = \frac{n \cdot A}{V_c \cdot N_A}$$</td>
-                <td>\(n\): atoms/cell; \(A\): g/mol; \(V_c\): cell volume (\(\text{cm}^3\)); \(\rho\): \(\text{g/cm}^3\)</td>
+                <td>\(n\): atoms/cell; \(A\): atomic weight (g/mol); \(V_c\): cell volume</td>
               </tr>
               <tr>
-                <td><strong>Lattice Constants & APF</strong></td>
-                <td>
-                  BCC: \(a = \frac{4R}{\sqrt{3}}\), \(\text{APF} = 0.68\), \(n=2\)<br>
-                  FCC: \(a = 2\sqrt{2}R\), \(\text{APF} = 0.74\), \(n=4\)
-                </td>
-                <td>\(R\): atomic radius; \(a\): lattice parameter; \(\text{APF} = \frac{n(4/3\pi R^3)}{V_c}\)</td>
+                <td><strong>Ch 3: Crystal Geometry</strong></td>
+                <td>BCC: \(a = \frac{4R}{\sqrt{3}}\), \(\text{APF} = 0.68\)<br>FCC: \(a = 2\sqrt{2}R\), \(\text{APF} = 0.74\)</td>
+                <td>\(R\): atomic radius; \(a\): cubic lattice parameter</td>
               </tr>
               <tr>
-                <td><strong>Cubic Interplanar Spacing</strong></td>
-                <td>$$d_{hkl} = \frac{a}{\sqrt{h^2 + k^2 + l^2}}$$</td>
-                <td>\((hkl)\): Miller indices; \(a\): unit cell lattice parameter</td>
+                <td><strong>Ch 3: Bragg's Law (XRD)</strong></td>
+                <td>$$n\lambda = 2 d_{hkl} \sin\theta, \quad d_{hkl} = \frac{a}{\sqrt{h^2+k^2+l^2}}$$</td>
+                <td>\(\lambda\): X-ray wavelength; \(d_{hkl}\): interplanar spacing; \(\theta\): Bragg angle</td>
               </tr>
               <tr>
-                <td><strong>Bragg's Law (XRD)</strong></td>
-                <td>$$n\lambda = 2 d_{hkl} \sin\theta$$</td>
-                <td>\(\lambda\): X-ray wavelength; \(\theta\): Bragg diffraction angle; \(n\): order (usually 1)</td>
+                <td><strong>Ch 4: Equilibrium Vacancies</strong></td>
+                <td>$$N_v = N \exp\left(-\frac{Q_v}{k_B T}\right)$$</td>
+                <td>\(N\): total atomic sites; \(Q_v\): vacancy formation energy</td>
               </tr>
               <tr>
-                <td><strong>Equilibrium Vacancies</strong></td>
-                <td>$$N_v = N \exp\left(-\frac{Q_v}{kT}\right)$$</td>
-                <td>\(N\): total atomic sites; \(Q_v\): vacancy activation energy (eV or J/mol); \(T\): Kelvin</td>
-              </tr>
-              <tr>
-                <td><strong>ASTM Grain Size Number</strong></td>
+                <td><strong>Ch 4: ASTM Grain Size</strong></td>
                 <td>$$N = 2^{n - 1}$$</td>
-                <td>\(N\): grains per square inch at 100\(\times\); \(n\): ASTM grain size number</td>
+                <td>\(N\): grains per square inch at 100\(\times\) magnification; \(n\): ASTM number</td>
               </tr>
               <tr>
-                <td><strong>Fick's First Law (Steady-State)</strong></td>
-                <td>$$J = -D \frac{dC}{dx} = \frac{M}{A \cdot t}$$</td>
-                <td>\(J\): flux (\(\text{kg/m}^2\cdot\text{s}\)); \(D\): diffusivity (\(\text{m}^2/\text{s}\)); \(dC/dx\): gradient</td>
+                <td><strong>Ch 5: Fick's 1st Law</strong></td>
+                <td>$$J = -D \frac{dC}{dx}$$</td>
+                <td>\(J\): diffusion flux (\(\text{kg/m}^2\cdot\text{s}\)); \(D\): diffusion coefficient</td>
               </tr>
               <tr>
-                <td><strong>Fick's Second Law (Semi-Infinite)</strong></td>
+                <td><strong>Ch 5: Fick's 2nd Law</strong></td>
                 <td>$$\frac{C_x - C_0}{C_s - C_0} = 1 - \text{erf}\left(\frac{x}{2\sqrt{Dt}}\right)$$</td>
-                <td>\(C_s\): surface conc; \(C_0\): initial base conc; \(C_x\): conc at depth \(x\) after time \(t\)</td>
+                <td>Semi-infinite solid constant surface concentration carburization/decarburization</td>
               </tr>
               <tr>
-                <td><strong>Arrhenius Temperature Law</strong></td>
+                <td><strong>Ch 5: Arrhenius Diffusivity</strong></td>
                 <td>$$D = D_0 \exp\left(-\frac{Q_d}{RT}\right)$$</td>
-                <td>\(D_0\): pre-exponential (\(\text{m}^2/\text{s}\)); \(Q_d\): activation energy (\(\text{J/mol}\)); \(R=8.314\)</td>
+                <td>\(D_0\): pre-exponential; \(Q_d\): activation energy for diffusion</td>
               </tr>
               <tr>
-                <td><strong>Hooke's Law & Shear Modulus</strong></td>
+                <td><strong>Ch 6: Hooke's Law &amp; Moduli</strong></td>
                 <td>$$\sigma = E\varepsilon, \quad \tau = G\gamma, \quad G = \frac{E}{2(1 + \nu)}$$</td>
-                <td>\(E\): Young's modulus; \(G\): Shear modulus; \(\nu\): Poisson's ratio (\(\sim 0.3\))</td>
+                <td>\(E\): Young's modulus; \(G\): shear modulus; \(\nu\): Poisson's ratio</td>
               </tr>
               <tr>
-                <td><strong>True Stress & True Strain</strong></td>
-                <td>$$\sigma_T = \sigma(1+\varepsilon), \quad \varepsilon_T = \ln(1+\varepsilon)$$</td>
-                <td>Valid up to necking; \(\sigma, \varepsilon\): engineering stress/strain</td>
+                <td><strong>Ch 6: Modulus of Resilience</strong></td>
+                <td>$$U_r = \frac{\sigma_y^2}{2E}$$</td>
+                <td>Elastic strain energy storage capacity per unit volume up to yielding</td>
               </tr>
               <tr>
-                <td><strong>Hollomon Power Law</strong></td>
-                <td>$$\sigma_T = K \varepsilon_T^n$$</td>
-                <td>\(K\): strength coefficient; \(n\): strain hardening exponent; Necking: \(\varepsilon_T = n\)</td>
-              </tr>
-              <tr>
-                <td><strong>Modulus of Resilience</strong></td>
-                <td>$$U_r = \int_0^{\varepsilon_y} \sigma d\varepsilon \approx \frac{\sigma_y^2}{2E}$$</td>
-                <td>\(U_r\): elastic energy stored per unit volume (\(\text{J/m}^3\) or \(\text{Pa}\))</td>
-              </tr>
-              <tr>
-                <td><strong>Schmid's Law (Single Crystals)</strong></td>
+                <td><strong>Ch 6: Schmid's Law</strong></td>
                 <td>$$\tau_R = \sigma \cos\phi \cos\lambda \le \tau_{\text{CRSS}}$$</td>
-                <td>\(\phi\): angle to slip plane normal; \(\lambda\): angle to slip direction; \(m = \cos\phi\cos\lambda\)</td>
+                <td>\(\phi\): normal to slip plane; \(\lambda\): slip direction angle</td>
               </tr>
               <tr>
-                <td><strong>Hall-Petch Strengthening</strong></td>
+                <td><strong>Ch 7: Hall-Petch Law</strong></td>
                 <td>$$\sigma_y = \sigma_0 + k_y d^{-1/2}$$</td>
-                <td>\(\sigma_0\): friction stress; \(k_y\): locking coefficient (\(\text{MPa}\cdot\text{mm}^{1/2}\)); \(d\): grain size</td>
+                <td>\(\sigma_0\): friction stress; \(k_y\): unpinning coefficient; \(d\): average grain diameter</td>
               </tr>
               <tr>
-                <td><strong>Cold Work & Dislocation Density</strong></td>
-                <td>$$\%\text{CW} = \frac{A_0 - A_d}{A_0} \times 100\%, \quad \tau = \tau_0 + \alpha G b \sqrt{\rho}$$</td>
-                <td>\(\rho\): dislocation density (\(\text{m}^{-2}\)); \(b\): Burgers vector; \(A_0, A_d\): cross-sections</td>
+                <td><strong>Ch 7: Cold Work &amp; Orowan</strong></td>
+                <td>$$\%\text{CW} = \frac{A_0 - A_d}{A_0} \times 100\%, \quad \Delta\tau = \frac{G b}{L}$$</td>
+                <td>Dislocation density multiplication &amp; precipitate bowing resistance</td>
               </tr>
               <tr>
-                <td><strong>Orowan Looping (Precipitation)</strong></td>
-                <td>$$\Delta\tau = \frac{G b}{L - 2r} \approx \frac{G b}{L}$$</td>
-                <td>\(L\): inter-particle spacing; \(r\): particle radius; \(G\): matrix shear modulus</td>
+                <td><strong>Ch 8: Fracture Toughness</strong></td>
+                <td>$$K = Y \sigma \sqrt{\pi a} \le K_{Ic}$$</td>
+                <td>\(K_{Ic}\): plane strain fracture toughness; \(Y\): dimensionless crack geometry factor</td>
               </tr>
               <tr>
-                <td><strong>Stress Concentration (Crack Tip)</strong></td>
-                <td>$$K_t = \frac{\sigma_m}{\sigma_0} = 2 \sqrt{\frac{a}{\rho_t}}$$</td>
-                <td>\(a\): crack length; \(\rho_t\): crack tip radius of curvature; \(\sigma_0\): nominal stress</td>
-              </tr>
-              <tr>
-                <td><strong>Griffith Critical Fracture Stress</strong></td>
-                <td>$$\sigma_c = \sqrt{\frac{2E\gamma_s}{\pi a}}$$</td>
-                <td>\(\gamma_s\): specific surface energy (\(\text{J/m}^2\)); \(E\): Young's modulus; \(a\): crack size</td>
-              </tr>
-              <tr>
-                <td><strong>Mode I Fracture Toughness</strong></td>
-                <td>$$K_I = Y \sigma \sqrt{\pi a} \le K_{Ic}$$</td>
-                <td>\(K_{Ic}\): plane strain fracture toughness (\(\text{MPa}\cdot\sqrt{\text{m}}\)); \(Y\): geometric factor</td>
-              </tr>
-              <tr>
-                <td><strong>Fatigue Stress Parameters</strong></td>
-                <td>$$\sigma_m = \frac{\sigma_{\max}+\sigma_{\min}}{2}, \quad \sigma_a = \frac{\sigma_{\max}-\sigma_{\min}}{2}, \quad R = \frac{\sigma_{\min}}{\sigma_{\max}}$$</td>
-                <td>\(\sigma_m\): mean stress; \(\sigma_a\): amplitude; \(R\): stress ratio</td>
-              </tr>
-              <tr>
-                <td><strong>Steady-State Creep Rate</strong></td>
-                <td>$$\dot{\varepsilon}_s = K_2 \sigma^n \exp\left(-\frac{Q_c}{RT}\right)$$</td>
-                <td>\(\dot{\varepsilon}_s\): steady creep rate (\(\text{s}^{-1}\)); \(n\): stress exponent; \(Q_c\): creep activation energy</td>
-              </tr>
-              <tr>
-                <td><strong>Larson-Miller Parameter</strong></td>
+                <td><strong>Ch 8: Larson-Miller Creep</strong></td>
                 <td>$$P = T \left(20 + \log_{10} t_r\right)$$</td>
-                <td>\(T\): absolute temperature in Kelvin; \(t_r\): rupture life in hours</td>
+                <td>\(T\): temperature in Kelvin; \(t_r\): creep rupture time in hours</td>
               </tr>
             </tbody>
           </table>
@@ -4345,31 +4420,29 @@ Total engineered yield strength: $\sigma_y = 647.4\text{ MPa}$ ($9.25\times$ bas
   
     <footer class="site-footer">
       <div class="master-wrapper" style="padding-bottom: 0;">
-        <div class="university-crest" style="margin-bottom: 1rem;">
-          
-<svg width="68" height="68" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="50" cy="50" r="47" stroke="#d4af37" stroke-width="2" stroke-dasharray="2 2" opacity="0.8"/>
-  <circle cx="50" cy="50" r="43" stroke="#d4af37" stroke-width="1.5"/>
-  <circle cx="50" cy="50" r="38" fill="#0d1b3e" stroke="rgba(212, 175, 55, 0.4)" stroke-width="1"/>
-  <!-- Central Traditional Emblem Motif -->
-  <path d="M50 16 L56 32 L72 32 L59 42 L64 58 L50 48 L36 58 L41 42 L28 32 L44 32 Z" fill="rgba(212, 175, 55, 0.15)" stroke="#d4af37" stroke-width="1"/>
-  <!-- Open Book of Knowledge / Engineering -->
-  <path d="M50 48 L38 42 C34 40 30 43 30 48 L30 68 C34 65 42 65 50 69 C58 65 66 65 70 68 L70 48 C70 43 66 40 62 42 Z" fill="#14244d" stroke="#d4af37" stroke-width="1.5"/>
-  <path d="M50 48 L50 69" stroke="#d4af37" stroke-width="1.5"/>
-  <!-- Mechanical Gear Accents -->
-  <circle cx="50" cy="50" r="4" fill="#d4af37"/>
-  <!-- Laurel Wreath Curves -->
-  <path d="M22 56 C20 40 28 26 42 20" stroke="#d4af37" stroke-width="1.2" stroke-linecap="round"/>
-  <path d="M78 56 C80 40 72 26 58 20" stroke="#d4af37" stroke-width="1.2" stroke-linecap="round"/>
-</svg>
-
+        <div style="display: flex; justify-content: center; align-items: center; gap: 1.5rem; margin-bottom: 1.5rem;">
+          <div class="footer-emblem-badge">
+            <img src="../assets/images/ut_mech_emblem.svg" alt="UT Mechanical Engineering Crest">
+          </div>
+          <div class="footer-emblem-badge" style="padding: 4px;">
+            <img src="../assets/images/ut_engineering_logo.svg" alt="College of Engineering Emblem">
+          </div>
         </div>
-        <p class="footer-gold-text">UNIVERSITY OF TEHRAN</p>
-        <p>Faculty of Mechanical Engineering &bull; Department of Materials & Manufacturing</p>
-        <p>Course: <strong>Science of Materials</strong> (Undergraduate Curriculum) &bull; Instructor: <strong>Prof. A. Sadeghi</strong></p>
-        <p style="margin-top: 0.75rem; color: #cbd5e1;">Comprehensive 400-Problem Midterm Exam Mastery Suite</p>
-        <p style="font-size: 0.8rem; color: #94a3b8;">Authored, Curated & Synthesized by Teaching Assistant <strong>Sina Sharifi</strong></p>
-        <p style="font-size: 0.75rem; color: #64748b; margin-top: 1.5rem;">Designed for academic excellence &bull; Formatted with LaTeX Math &bull; Dark Blue Classic Edition</p>
+
+        <p class="footer-persian">دانشگاه تهران &bull; پردیس دانشکده‌های فنی &bull; دانشکده مهندسی مکانیک</p>
+        <p class="footer-gold-text">UNIVERSITY OF TEHRAN &bull; DEPARTMENT OF MECHANICAL ENGINEERING</p>
+        
+        <div class="gold-hairline" style="margin: 0.85rem auto;"></div>
+
+        <p style="color: #cbd5e1; font-size: 0.95rem;">
+          Course: <strong>Science of Materials</strong> (Undergraduate Midterm Mastery Suite) &bull; Instructor: <strong>Prof. A. Sadeghi</strong>
+        </p>
+        <p style="font-size: 0.88rem; color: #facc15; margin-top: 0.35rem;">
+          Meticulously Prepared &amp; Synthesized by Teaching Assistant <strong>Sina Sharifi</strong>
+        </p>
+        <p style="font-size: 0.78rem; color: #94a3b8; margin-top: 1.25rem;">
+          Designed for academic excellence &bull; Formatted with LaTeX Math &bull; High-Contrast Classical Edition
+        </p>
       </div>
     </footer>
     <button id="btn-back-top" class="btn-back-top" title="Back to top">
@@ -4377,6 +4450,6 @@ Total engineered yield strength: $\sigma_y = 647.4\text{ MPa}$ ($9.25\times$ bas
     </button>
     
 
-  <script src="js/main.js"></script>
+  <script src="../js/main.js"></script>
 </body>
 </html>

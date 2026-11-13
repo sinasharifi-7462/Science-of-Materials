@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ch 5: Diffusion in Solids — Science of Materials | University of Tehran</title>
-  <meta name="description" content="50 comprehensive practice problems with detailed step-by-step solutions for Diffusion in Solids. Science of Materials, University of Tehran.">
-  <link rel="stylesheet" href="css/style.css">
+  <meta name="description" content="50 comprehensive practice problems with detailed step-by-step solutions for Diffusion in Solids. Science of Materials, University of Tehran. Prepared by Sina Sharifi.">
+  <link rel="stylesheet" href="../css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Playfair+Display:ital,wght@0,500;0,700;1,400&family=JetBrains+Mono:wght@400;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=JetBrains+Mono:wght@500;700&family=Inter:wght@400;500;600;700&family=Vazirmatn:wght@500;700&display=swap" rel="stylesheet">
   
-  <!-- MathJax 3 Configuration for High-Fidelity Technical Rendering (Local + CDN Fallback) -->
+  <!-- MathJax 3 Configuration for High-Fidelity Technical Rendering (100% Offline + CDN Fallback) -->
   <script>
     window.MathJax = {
       tex: {
@@ -25,35 +25,33 @@
       startup: {
         pageReady: () => {
           return MathJax.startup.defaultPageReady().then(() => {
-            console.log('MathJax initial typesetting complete');
+            console.log('MathJax initial technical typesetting ready');
           });
         }
       }
     };
   </script>
-  <script src="js/mathjax.js" onerror="this.onerror=null;this.src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js';"></script>
+  <script src="../js/mathjax.js" onerror="this.onerror=null;this.src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js';"></script>
 
 </head>
 <body data-page-id="chapter5">
   
     <header class="site-header">
       <div class="nav-container">
-        <a href="index.html" class="nav-brand">
+        <a href="../index.html" class="nav-brand">
           <div class="nav-logo-badge">
-            <svg width="28" height="28" viewBox="0 0 100 100" fill="none">
-              <circle cx="50" cy="50" r="44" stroke="#d4af37" stroke-width="3"/>
-              <path d="M50 20 L60 40 L80 40 L65 52 L70 72 L50 60 L30 72 L35 52 L20 40 L40 40 Z" fill="none" stroke="#d4af37" stroke-width="2"/>
-            </svg>
+            <img src="../assets/images/ut_mech_emblem.svg" alt="University of Tehran Mechanical Engineering Crest">
           </div>
           <div class="nav-brand-text">
+            <span class="nav-persian">دانشگاه تهران &bull; دانشکده مهندسی مکانیک</span>
             <h1>UNIVERSITY OF TEHRAN</h1>
-            <p>Faculty of Mechanical Engineering | Science of Materials</p>
+            <p>Department of Mechanical Engineering &bull; Science of Materials</p>
           </div>
         </a>
 
         <nav class="nav-links">
           
-    <a href="index.html" class="nav-link ">
+    <a href="../index.html" class="nav-link ">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
       Home
     </a>
@@ -106,11 +104,13 @@
     
 
   <main class="master-wrapper">
-    <!-- Chapter Breadcrumb -->
-    <div style="font-family: var(--font-mono); font-size: 0.8rem; color: #94a3b8; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem;">
-      <a href="index.html" style="color: var(--gold); text-decoration: none;">Home (Cover)</a>
-      <span>&rsaquo;</span>
-      <span style="color: #cbd5e1;">Chapter 5</span>
+    <!-- Chapter Breadcrumbs -->
+    <div style="font-family: var(--font-mono); font-size: 0.85rem; color: #94a3b8; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem;">
+      <a href="../index.html" style="color: var(--accent-gold-bright); text-decoration: none; font-weight: 600;">Home (Cover Portal)</a>
+      <span style="color: #64748b;">&rsaquo;</span>
+      <span style="color: #64748b;">Chapters</span>
+      <span style="color: #64748b;">&rsaquo;</span>
+      <span style="color: #ffffff; font-weight: 600;">Chapter 05</span>
     </div>
 
     <!-- Chapter Hero Section -->
@@ -118,7 +118,7 @@
       <div class="hero-header-row">
         <div>
           <span class="chapter-num-badge">CHAPTER 05 OF 08</span>
-          <h1 class="chapter-title" style="margin-top: 0.5rem;">Diffusion in Solids</h1>
+          <h1 class="chapter-title" style="margin-top: 0.65rem;">Diffusion in Solids</h1>
         </div>
       </div>
 
@@ -126,61 +126,87 @@
         Atomic migration mechanisms (vacancy vs interstitial), steady-state diffusion and Fick's first law, non-steady-state diffusion and Fick's second law error function solutions, Arrhenius temperature dependence of diffusivity, carburization depth calculations, and structural factors.
       </p>
 
-      <div class="hero-tags">
+      <div class="card-tags" style="border: none; padding: 0; margin-bottom: 1.75rem;">
         <span class="hero-tag">Fick's 1st Law</span><span class="hero-tag">Fick's 2nd Law</span><span class="hero-tag">Error Function erf(z)</span><span class="hero-tag">Arrhenius Diffusivity</span><span class="hero-tag">Industrial Carburization</span>
       </div>
 
-      <!-- High-Resolution Technical Vector Graphic -->
-      <div class="hero-svg-container" style="margin-top: 2rem;">
-        
-    <svg viewBox="0 0 450 320" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-      <rect width="450" height="320" fill="#080f24" rx="6"/>
-      <!-- Axes -->
-      <line x1="60" y1="40" x2="60" y2="260" stroke="#64748b" stroke-width="1.5"/>
-      <line x1="60" y1="260" x2="410" y2="260" stroke="#64748b" stroke-width="1.5"/>
-      <text x="415" y="264" fill="#94a3b8" font-size="11">Depth, x</text>
-      <text x="50" y="30" fill="#94a3b8" font-size="11">Conc, C(x,t)</text>
+      <!-- High-Resolution Technical Vector Graphic Showcase -->
+      <div class="chapter-diagram-showcase">
+        <div class="diagram-header-strip">
+          <span>Figure 5.1: Fick's Second Law Carburization Concentration Depth Profiles C(x,t)</span>
+          <span style="color: var(--accent-cyan-light);">Engineering Vector Schematic</span>
+        </div>
+        <div class="diagram-canvas">
+          <svg viewBox="0 0 750 500" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="diffBg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0f1938"/>
+      <stop offset="100%" stop-color="#060c1d"/>
+    </radialGradient>
+  </defs>
 
-      <!-- Cs and C0 levels -->
-      <line x1="55" y1="70" x2="400" y2="70" stroke="#475569" stroke-dasharray="2 3"/>
-      <text x="35" y="74" fill="#f5d061" font-size="11" font-weight="bold">C_s</text>
+  <rect width="750" height="500" fill="url(#diffBg)" rx="8" stroke="#253861" stroke-width="2"/>
 
-      <line x1="55" y1="240" x2="400" y2="240" stroke="#475569" stroke-dasharray="2 3"/>
-      <text x="35" y="244" fill="#94a3b8" font-size="11">C_0</text>
+  <!-- Plot Canvas -->
+  <rect x="100" y="50" width="600" height="360" fill="#091226" stroke="#334773" stroke-width="1.5"/>
 
-      <!-- Profiles at t1, t2, t3 -->
-      <!-- t1 -->
-      <path d="M 60 70 Q 110 80 140 180 T 170 240 L 400 240" fill="none" stroke="#f43f5e" stroke-width="2"/>
-      <text x="180" y="220" fill="#f43f5e" font-size="10">t_1</text>
+  <!-- Grid lines -->
+  <line x1="100" y1="120" x2="700" y2="120" stroke="#172554" stroke-dasharray="3 3"/>
+  <line x1="100" y1="200" x2="700" y2="200" stroke="#172554" stroke-dasharray="3 3"/>
+  <line x1="100" y1="280" x2="700" y2="280" stroke="#172554" stroke-dasharray="3 3"/>
+  <line x1="100" y1="360" x2="700" y2="360" stroke="#172554" stroke-dasharray="3 3"/>
 
-      <!-- t2 -->
-      <path d="M 60 70 Q 140 85 220 180 T 260 240 L 400 240" fill="none" stroke="#38bdf8" stroke-width="2"/>
-      <text x="270" y="220" fill="#38bdf8" font-size="10">t_2 ( > t_1)</text>
+  <!-- Concentration Levels Cs (Surface) and C0 (Initial) -->
+  <line x1="90" y1="90" x2="700" y2="90" stroke="#facc15" stroke-width="2" stroke-dasharray="4 2"/>
+  <text x="80" y="94" fill="#facc15" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="bold" text-anchor="end">C_s</text>
+  <text x="705" y="94" fill="#facc15" font-family="'Inter', sans-serif" font-size="11">Constant Surface Concentration</text>
 
-      <!-- t3 -->
-      <path d="M 60 70 Q 200 95 310 180 T 360 240 L 400 240" fill="none" stroke="#10b981" stroke-width="2"/>
-      <text x="370" y="220" fill="#10b981" font-size="10">t_3 ( > t_2)</text>
+  <line x1="90" y1="380" x2="700" y2="380" stroke="#64748b" stroke-width="2" stroke-dasharray="4 2"/>
+  <text x="80" y="384" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="bold" text-anchor="end">C_0</text>
+  <text x="705" y="384" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="11">Initial Core Concentration</text>
 
-      <text x="235" y="295" fill="#f5d061" font-size="11" text-anchor="middle">
-        (C_x - C_0) / (C_s - C_0) = 1 - erf[ x / (2 √(Dt)) ]
-      </text>
-    </svg>
-    
-        <div style="font-family: var(--font-mono); font-size: 0.78rem; color: #94a3b8; margin-top: 0.5rem; text-align: center;">
-          Figure 5.1: Fick's Diffusion Concentration Profiles & Error Function Solutions
+  <!-- Profiles for Diffusion Times t1 < t2 < t3 -->
+  <!-- Curve 1: t1 (Shortest time) -->
+  <path d="M 100 90 Q 150 110 200 280 T 260 380 L 700 380" fill="none" stroke="#f43f5e" stroke-width="3"/>
+  <circle cx="200" cy="280" r="5" fill="#f43f5e"/>
+  <rect x="210" y="240" width="85" height="22" rx="3" fill="#2d0612" stroke="#f43f5e" stroke-width="1"/>
+  <text x="252" y="255" fill="#fecdd3" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="bold" text-anchor="middle">Time t_1</text>
+
+  <!-- Curve 2: t2 (Intermediate time) -->
+  <path d="M 100 90 Q 200 120 320 280 T 420 380 L 700 380" fill="none" stroke="#38bdf8" stroke-width="3.5"/>
+  <circle cx="320" cy="280" r="5" fill="#38bdf8"/>
+  <rect x="330" y="240" width="115" height="22" rx="3" fill="#042033" stroke="#38bdf8" stroke-width="1"/>
+  <text x="387" y="255" fill="#bae6fd" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="bold" text-anchor="middle">Time t_2 (> t_1)</text>
+
+  <!-- Curve 3: t3 (Longest time) -->
+  <path d="M 100 90 Q 300 140 480 280 T 600 380 L 700 380" fill="none" stroke="#34d399" stroke-width="4"/>
+  <circle cx="480" cy="280" r="5" fill="#34d399"/>
+  <rect x="490" y="240" width="115" height="22" rx="3" fill="#042714" stroke="#34d399" stroke-width="1"/>
+  <text x="547" y="255" fill="#a7f3d0" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="bold" text-anchor="middle">Time t_3 (> t_2)</text>
+
+  <!-- Axes Labels -->
+  <text x="400" y="445" fill="#f8fafc" font-family="'Inter', sans-serif" font-size="13" font-weight="bold" text-anchor="middle">Distance From Surface x (Depth into Part) &rarr;</text>
+  <text x="35" y="230" fill="#f8fafc" font-family="'Inter', sans-serif" font-size="13" font-weight="bold" text-anchor="middle" transform="rotate(-90 35 230)">Solute Concentration C(x,t) &rarr;</text>
+
+  <!-- Mathematical Formula Box -->
+  <rect x="140" y="15" width="470" height="32" rx="4" fill="#0a1530" stroke="#d4af37" stroke-width="1.5"/>
+  <text x="375" y="36" fill="#fef08a" font-family="'JetBrains Mono', monospace" font-size="12.5" font-weight="bold" text-anchor="middle">
+    (C_x - C_0) / (C_s - C_0) = 1 - erf[ x / (2 &radic;(Dt)) ]
+  </text>
+</svg>
         </div>
       </div>
     </section>
 
     <!-- Interactive Study Toolbar -->
     <section class="controls-bar">
-      <div class="controls-left">
-        <div class="search-box">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-          <input type="text" id="problem-search-input" class="search-input" placeholder="Search equations, topics, terms...">
-        </div>
+      <div class="search-box-wrapper">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" id="problem-search-input" placeholder="Search equations, formulas, topics (e.g. Miller, Fick, yield)...">
+      </div>
 
-        <select id="category-filter" class="filter-select">
+      <div class="filters-group">
+        <select id="category-filter">
           <option value="all">All Categories</option>
           <option value="fundamentals">Diffusion Fundamentals</option>
           <option value="fick_first_law">Steady-State Diffusion (Fick I)</option>
@@ -190,14 +216,14 @@
 
         </select>
 
-        <select id="diff-filter" class="filter-select">
+        <select id="diff-filter">
           <option value="all">All Difficulties</option>
           <option value="fundamental">Fundamental</option>
           <option value="intermediate">Intermediate</option>
           <option value="advanced">Advanced</option>
         </select>
 
-        <select id="jump-to-problem" class="filter-select">
+        <select id="jump-to-problem">
           <option value="">Jump to Problem...</option>
           <option value="p1">Problem 01: Atomic Mechanisms of Diffusion: Vacancy Diffu...</option>
           <option value="p2">Problem 02: Interdiffusion vs. Self-Diffusion: Tracer Dif...</option>
@@ -251,17 +277,15 @@
           <option value="p50">Problem 50: Comprehensive Diffusion Synthesis: Multi-Stag...</option>
 
         </select>
-      </div>
 
-      <div class="controls-right">
-        <span id="visible-problem-count" class="visible-count">50 Problems Shown</span>
-        <button id="btn-expand-all" class="btn-classic" title="Reveal all 50 solutions at once">Expand All</button>
-        <button id="btn-collapse-all" class="btn-classic" title="Hide all solutions for active self-testing">Collapse All</button>
+        <span id="visible-problem-count" class="chapter-num-badge" style="font-size: 0.8rem;">50 Problems Shown</span>
+        <button id="btn-expand-all" class="btn-classic">Expand All</button>
+        <button id="btn-collapse-all" class="btn-classic">Collapse All</button>
       </div>
     </section>
 
     <!-- Problems List Container -->
-    <section class="problems-container" id="problems-list">
+    <section class="problems-stream" id="problems-list">
       
     <article class="problem-card" id="p1" data-category="fundamentals" data-difficulty="fundamental">
       <div class="problem-header">
@@ -278,10 +302,11 @@
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Atomic Mechanisms of Diffusion: Vacancy Diffusion vs. Interstitial Migration
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Atomic Mechanisms of Diffusion: Vacancy Diffusion vs. Interstitial Migration
-        </h4>
         <p>Diffusion is the phenomenon of material transport by atomic motion within solid crystals.</p>
     <ol type="a">
       <li>Describe the atomic mechanisms of:
@@ -305,7 +330,7 @@
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -352,10 +377,11 @@
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Interdiffusion vs. Self-Diffusion: Tracer Diffusion and Concentration Gradients
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Interdiffusion vs. Self-Diffusion: Tracer Diffusion and Concentration Gradients
-        </h4>
         <p>Diffusion processes can occur under uniform chemical composition or in the presence of chemical concentration gradients.</p>
     <ol type="a">
       <li>Differentiate between <strong>Self-Diffusion</strong> and <strong>Interdiffusion (Chemical Diffusion)</strong>.</li>
@@ -374,7 +400,7 @@
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -420,10 +446,11 @@
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        The Kirkendall Effect: Marker Shift, Asymmetric Fluxes, and Vacancy Diffusion Proof
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          The Kirkendall Effect: Marker Shift, Asymmetric Fluxes, and Vacancy Diffusion Proof
-        </h4>
         <p>In 1947, Ernest Kirkendall published a landmark experiment on brass-copper diffusion couples that decisively proved the atomic mechanism of solid-state diffusion.</p>
     <ol type="a">
       <li>Describe the experimental setup of the <strong>Kirkendall experiment</strong> (materials, inert markers, and diffusion heat treatment).</li>
@@ -448,7 +475,7 @@
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -502,10 +529,11 @@
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Darken's Phenomenological Relations: Interdiffusion Coefficient $\tilde{D}$ and Marker Velocity
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Darken's Phenomenological Relations: Interdiffusion Coefficient $\tilde{D}$ and Marker Velocity
-        </h4>
         <p>In 1948, L. S. Darken mathematically unified intrinsic diffusion coefficients with the macroscopic interdiffusion coefficient and marker shift velocity.</p>
     <ol type="a">
       <li>State <strong>Darken's First Equation</strong> for the marker drift velocity $v$:
@@ -532,7 +560,7 @@
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -588,10 +616,11 @@
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Steady-State Diffusion: Fick's First Law and Physical Meaning of Flux
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Steady-State Diffusion: Fick's First Law and Physical Meaning of Flux
-        </h4>
         <p>Steady-state diffusion occurs when the concentration profile of the diffusing species does not change with time ($\frac{\partial C}{\partial t} = 0$).</p>
     <ol type="a">
       <li>State <strong>Fick's First Law</strong> of diffusion mathematically:
@@ -612,7 +641,7 @@
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -659,10 +688,11 @@
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Steady-State Diffusion: Hydrogen Gas Purification Through a Palladium Foil
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Steady-State Diffusion: Hydrogen Gas Purification Through a Palladium Foil
-        </h4>
         <p>Palladium metal exhibits an extraordinary ability to selectively dissolve and transport hydrogen, making it the industry standard for producing ultra-pure hydrogen gas for semiconductor manufacturing.</p>
     <ol type="a">
       <li>A palladium membrane of thickness $L = 0.20 \text{ mm}$ and cross-sectional area $A = 0.15 \text{ m}^2$ operates at $500^\circ\text{C}$. The diffusion coefficient of hydrogen in palladium at this temperature is $D = 1.6 \times 10^{-9} \text{ m}^2/\text{s}$. The dissolved hydrogen concentrations at the high-pressure and low-pressure surfaces are maintained constant at:
@@ -684,7 +714,7 @@
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -736,10 +766,11 @@
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Steady-State Nitrogen Gas Permeation Through an Industrial Iron Plate
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Steady-State Nitrogen Gas Permeation Through an Industrial Iron Plate
-        </h4>
         <p>A chemical synthesis reactor contains ammonia gas at $700^\circ\text{C}$ separated from the atmosphere by an $\alpha$-iron plate of thickness $L = 5.0 \text{ mm}$.</p>
     <div style="text-align:center; margin: 10px 0;">
       Diffusion coefficient of Nitrogen in $\alpha$-iron at $700^\circ\text{C}$: $D = 4.2 \times 10^{-11} \text{ m}^2/\text{s}$<br>
@@ -762,7 +793,7 @@
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -806,10 +837,11 @@
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Steady-State Carbon Flux in a Thin Austenitic Steel Sheet
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Steady-State Carbon Flux in a Thin Austenitic Steel Sheet
-        </h4>
         <p>A thin sheet of low-carbon steel of thickness $1.5 \text{ mm}$ is exposed to a carburizing atmosphere on one side and a decarburizing atmosphere on the other side at $1000^\circ\text{C}$ until steady-state diffusion is achieved.</p>
     <div style="text-align:center; margin: 10px 0;">
       At $x = 0$ (carburizing face): $C_1 = 1.15 \text{ wt}\%$ Carbon<br>
@@ -834,7 +866,7 @@
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -879,10 +911,11 @@
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Radial Steady-State Diffusion: Mathematical Derivation for Cylindrical Pipe Walls
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Radial Steady-State Diffusion: Mathematical Derivation for Cylindrical Pipe Walls
-        </h4>
         <p>For cylindrical geometries (such as coolant pipes, fuel cladding tubes, or gas pipelines), diffusion occurs radially through an area that expands with radius $r$.</p>
     <ol type="a">
       <li>Starting from Fick's first law and the condition that total mass flow rate $Q = J(r) \cdot A(r)$ must be independent of radius $r$ in steady state, derive the differential equation for radial concentration $C(r)$.</li>
@@ -903,7 +936,7 @@
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -960,10 +993,11 @@
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Radial Steady-State Permeation: Hydrogen Leakage in Zirconium Cladding Tubes
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Radial Steady-State Permeation: Hydrogen Leakage in Zirconium Cladding Tubes
-        </h4>
         <p>In a nuclear pressurized water reactor, fuel pellets are encased in Zircaloy-4 cladding tubes ($D_{\text{H}} = 5.0 \times 10^{-10} \text{ m}^2/\text{s}$ at $350^\circ\text{C}$). The tube dimensions and hydrogen concentrations are:</p>
     <div style="text-align:center; margin: 10px 0;">
       Inner radius $r_1 = 4.0 \text{ mm}$, Outer radius $r_2 = 4.6 \text{ mm}$<br>
@@ -986,7 +1020,7 @@
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -1038,10 +1072,11 @@
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Non-Steady-State Diffusion: Derivation of Fick's Second Law from Mass Continuity
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Non-Steady-State Diffusion: Derivation of Fick's Second Law from Mass Continuity
-        </h4>
         <p>In most real-world engineering processes (carburizing, oxidation, heat treatment), concentration varies with both position and time: $C = C(x, t)$.</p>
     <ol type="a">
       <li>Consider a thin planar volume element of thickness $\Delta x$ and cross-sectional area $A$ oriented perpendicular to the diffusion direction $x$. Using the principle of conservation of mass (Rate of Accumulation = Influx - Outflux), derive the 1D <strong>continuity equation</strong>:
@@ -1064,7 +1099,7 @@
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -1119,10 +1154,11 @@
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Non-Steady-State Error Function Solution for a Semi-Infinite Solid
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Non-Steady-State Error Function Solution for a Semi-Infinite Solid
-        </h4>
         <p>The standard analytical solution to Fick's second law models diffusion into a thick workpiece treated as a semi-infinite solid.</p>
     <ol type="a">
       <li>State the three <strong>initial and boundary conditions</strong> defining the semi-infinite diffusion model:
@@ -1150,7 +1186,7 @@
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -1207,10 +1243,11 @@
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        The Gaussian Error Function: Mathematical Properties, Table Values, and Linear Interpolation
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          The Gaussian Error Function: Mathematical Properties, Table Values, and Linear Interpolation
-        </h4>
         <p>The Gauss error function $\text{erf}(z)$ is the standard mathematical function used in non-steady-state diffusion calculations.</p>
     <ol type="a">
       <li>State the integral definition of the <strong>Gaussian error function</strong>:
@@ -1247,7 +1284,7 @@
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -1300,10 +1337,11 @@
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        The Scaling Law of Diffusion: Characteristic Penetration Depth and the $x^2/t$ Rule
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          The Scaling Law of Diffusion: Characteristic Penetration Depth and the $x^2/t$ Rule
-        </h4>
         <p>The fundamental parabolic nature of Fick's second law dictates that diffusion distance scales with the square root of time.</p>
     <ol type="a">
       <li>Define the <strong>characteristic diffusion distance (diffusion length)</strong>:
@@ -1330,7 +1368,7 @@
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -1382,10 +1420,11 @@
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Industrial Gas Carburizing: Calculating Carburizing Time at Fixed Temperature
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Industrial Gas Carburizing: Calculating Carburizing Time at Fixed Temperature
-        </h4>
         <p>An automotive transmission gear fabricated from AISI 1020 steel ($0.20 \text{ wt}\%$ Carbon) is gas carburized at $950^\circ\text{C}$ in an atmosphere maintaining a constant surface carbon content of $1.20 \text{ wt}\%$. The diffusion coefficient of carbon in austenite at $950^\circ\text{C}$ is $D = 1.28 \times 10^{-11} \text{ m}^2/\text{s}$.</p>
     <ol type="a">
       <li>Calculate the carburizing time $t$ (in hours and minutes) required to achieve a carbon content of $0.60 \text{ wt}\%$ at a depth of $0.75 \text{ mm}$ below the surface.</li>
@@ -1404,7 +1443,7 @@
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -1460,10 +1499,11 @@
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Gas Carburizing: Predicting Case Depth as a Function of Diffusion Time
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Gas Carburizing: Predicting Case Depth as a Function of Diffusion Time
-        </h4>
         <p>In quality control specifications, the effective case depth is defined as the perpendicular distance from the surface to the point where the carbon content reaches a specified hardness threshold (e.g., $0.45 \text{ wt}\%$ Carbon for 50 HRC hardness).</p>
     <div style="text-align:center; margin: 10px 0;">
       Alloy: AISI 8620 steel ($C_0 = 0.20 \text{ wt}\%$)<br>
@@ -1487,7 +1527,7 @@
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -1538,10 +1578,11 @@
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Thermally Activated Carburizing: Accelerating Case Depth via Temperature Increase
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Thermally Activated Carburizing: Accelerating Case Depth via Temperature Increase
-        </h4>
         <p>To reduce energy consumption and cycle times in heat treatment facilities, metallurgists often increase furnace temperature.</p>
     <div style="text-align:center; margin: 10px 0;">
       Diffusion of Carbon in Austenite: $D_0 = 2.3 \times 10^{-5} \text{ m}^2/\text{s}$, $Q_d = 148.0 \text{ kJ/mol}$ ($R = 8.314 \text{ J/(mol}\cdot\text{K)}$)<br>
@@ -1567,7 +1608,7 @@
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -1624,10 +1665,11 @@
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Decarburization of Steel: Error Function Depletion Modeling during Open-Air Annealing
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Decarburization of Steel: Error Function Depletion Modeling during Open-Air Annealing
-        </h4>
         <p>During hot rolling or forging of high-carbon spring steel in air, oxygen and water vapor in the furnace react with carbon at the surface, creating an unwanted decarburized surface layer.</p>
     <div style="text-align:center; margin: 10px 0;">
       Spring Steel (AISI 1080): Initial uniform carbon content $C_0 = 0.80 \text{ wt}\%$<br>
@@ -1652,7 +1694,7 @@
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -1701,10 +1743,11 @@
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Semiconductor Doping: Constant Surface Source (Pre-Deposition Diffusion)
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Semiconductor Doping: Constant Surface Source (Pre-Deposition Diffusion)
-        </h4>
         <p>In planar silicon device fabrication, thermal diffusion introduces dopant atoms (such as boron or phosphorus) to form $p\text{-}n$ junctions.</p>
     <div style="text-align:center; margin: 10px 0;">
       Substrate: $n$-type Silicon wafer with uniform background donor doping $C_0 = 1.0 \times 10^{15} \text{ atoms/cm}^3$<br>
@@ -1729,7 +1772,7 @@
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -1781,10 +1824,11 @@
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Semiconductor Doping: Finite Source Drive-In Diffusion and Gaussian Concentration Profile
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Semiconductor Doping: Finite Source Drive-In Diffusion and Gaussian Concentration Profile
-        </h4>
         <p>Following pre-deposition, the external dopant source is removed, and a high-temperature "drive-in" step drives the fixed dose of dopant atoms deeper into the silicon substrate.</p>
     <ol type="a">
       <li>State the total dopant dose per unit area $Q$ introduced during a pre-deposition step:
@@ -1810,7 +1854,7 @@
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -1860,10 +1904,11 @@
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        The Infinite Diffusion Couple: Composition Profile and Matano Interface
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          The Infinite Diffusion Couple: Composition Profile and Matano Interface
-        </h4>
         <p>Consider an infinite diffusion couple fabricated by joining semi-infinite block $A$ (pure metal $A$, $C_A = 100\%$, $x < 0$) to semi-infinite block $B$ (pure metal $B$, $C_A = 0\%$, $x > 0$) at $t = 0$.</p>
     <ol type="a">
       <li>Assuming concentration-independent diffusivity $D$, state the analytical solution for the concentration profile $C(x,t)$ across the diffusion couple:
@@ -1891,7 +1936,7 @@
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -1946,10 +1991,11 @@
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Determining Diffusion Coefficient $D$ from an Experimental Composition Profile
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Determining Diffusion Coefficient $D$ from an Experimental Composition Profile
-        </h4>
         <p>An experimental diffusion study measures the concentration profile of zinc diffusing into copper from a constant surface source.</p>
     <div style="text-align:center; margin: 10px 0;">
       Initial zinc concentration: $C_0 = 0.0 \text{ wt}\%$<br>
@@ -1973,7 +2019,7 @@
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -2024,10 +2070,11 @@
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Gas Nitriding of Steel: Nitrogen Penetration Depth and Hardness Layer Modeling
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Gas Nitriding of Steel: Nitrogen Penetration Depth and Hardness Layer Modeling
-        </h4>
         <p>Nitriding is a surface-hardening thermochemical treatment conducted in the ferrite phase ($\alpha$-Fe) at $525^\circ\text{C}$ to produce hard surface cases without requiring a subsequent quench.</p>
     <div style="text-align:center; margin: 10px 0;">
       Base alloy: Low-alloy steel ($C_0 = 0.005 \text{ wt}\%$ Nitrogen)<br>
@@ -2051,7 +2098,7 @@
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -2096,10 +2143,11 @@
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Microelectronic Dopant Comparison: Phosphorus ($n$-type) vs. Boron ($p$-type) Junctions
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Microelectronic Dopant Comparison: Phosphorus ($n$-type) vs. Boron ($p$-type) Junctions
-        </h4>
         <p>Silicon integrated circuits utilize group III elements (Boron, $p$-type) and group V elements (Phosphorus, Arsenic, $n$-type) for localized doping.</p>
     <div style="text-align:center; margin: 10px 0;">
       At $1000^\circ\text{C}$ ($1273 \text{ K}$):<br>
@@ -2124,7 +2172,7 @@
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -2166,10 +2214,11 @@
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Time-Dependent Surface Flux and Total Solute Mass Uptake ($M_t = 2(C_s - C_0)\sqrt{Dt/\pi}$)
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Time-Dependent Surface Flux and Total Solute Mass Uptake ($M_t = 2(C_s - C_0)\sqrt{Dt/\pi}$)
-        </h4>
         <p>To determine the total quantity of gas or solute absorbed by a workpiece during a non-steady-state process, the instantaneous surface flux must be integrated over time.</p>
     <ol type="a">
       <li>Differentiating the error function solution with respect to $x$, derive the expression for the <strong>instantaneous surface diffusion flux</strong> $J_0(t) = -D \left.\frac{\partial C}{\partial x}\right|_{x=0}$:
@@ -2196,7 +2245,7 @@
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -2255,10 +2304,11 @@
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Temperature Dependence of Diffusion: The Arrhenius Equation and Activation Energy
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Temperature Dependence of Diffusion: The Arrhenius Equation and Activation Energy
-        </h4>
         <p>The rate of atomic diffusion increases exponentially with temperature following an Arrhenius relationship.</p>
     <ol type="a">
       <li>State the <strong>Arrhenius equation</strong> for the diffusion coefficient:
@@ -2284,7 +2334,7 @@
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -2346,10 +2396,11 @@
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Two-Point Arrhenius Analysis: Determining $Q_d$ and $D_0$ from Experimental Data
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Two-Point Arrhenius Analysis: Determining $Q_d$ and $D_0$ from Experimental Data
-        </h4>
         <p>The diffusion coefficient of nickel in copper is measured at two different temperatures:</p>
     <div style="text-align:center; margin: 10px 0;">
       At $T_1 = 1000 \text{ K}$ ($727^\circ\text{C}$): $D_1 = 5.40 \times 10^{-16} \text{ m}^2/\text{s}$<br>
@@ -2374,7 +2425,7 @@
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -2426,10 +2477,11 @@
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Least-Squares Linear Regression on Arrhenius Data for Iron Self-Diffusion
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Least-Squares Linear Regression on Arrhenius Data for Iron Self-Diffusion
-        </h4>
         <p>Experimental tracer self-diffusion coefficients for pure FCC $\gamma$-iron are measured at four temperatures:</p>
     <table class="table-styled">
       <thead><tr><th>Temperature $T$ ($^\circ\text{C}$)</th><th>Temperature $T$ (K)</th><th>$1/T$ ($10^{-4} \text{ K}^{-1}$)</th><th>Diffusivity $D$ ($\text{m}^2/\text{s}$)</th><th>$\ln D$</th></tr></thead>
@@ -2458,7 +2510,7 @@
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -2512,10 +2564,11 @@
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Microscopic Diffusion Kinetics: Mean Atomic Jump Frequency and Residence Time
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Microscopic Diffusion Kinetics: Mean Atomic Jump Frequency and Residence Time
-        </h4>
         <p>Diffusion coefficients directly reflect the microscopic rate at which individual atoms jump between lattice positions.</p>
     <ol type="a">
       <li>From Einstein's random walk theory in a 3D isotropic crystal:
@@ -2542,7 +2595,7 @@
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -2591,10 +2644,11 @@
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Interstitial Jump Frequency: Carbon Atom Mobility in Austenite at $1000^\circ	ext{C}$
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Interstitial Jump Frequency: Carbon Atom Mobility in Austenite at $1000^\circ	ext{C}$
-        </h4>
         <p>Because interstitial solutes do not require a vacancy to jump, their jump frequencies are vastly higher than substitutional atoms.</p>
     <div style="text-align:center; margin: 10px 0;">
       Lattice parameter of FCC $\gamma$-Fe at $1000^\circ\text{C}$: $a = 0.364 \text{ nm}$<br>
@@ -2617,7 +2671,7 @@
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -2660,10 +2714,11 @@
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Activation Energy Disparity: Interstitial Carbon vs. Substitutional Iron in Austenite
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Activation Energy Disparity: Interstitial Carbon vs. Substitutional Iron in Austenite
-        </h4>
         <p>The thermodynamic and kinetic contrast between interstitial and substitutional diffusion is illustrated dramatically by the behavior of iron and carbon in austenite.</p>
     <div style="text-align:center; margin: 10px 0;">
       Carbon in $\gamma$-Fe: $D_0 = 2.3 \times 10^{-5} \text{ m}^2/\text{s}, \quad Q_d = 148 \text{ kJ/mol}$ ($1.53 \text{ eV}$)<br>
@@ -2686,7 +2741,7 @@
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -2738,10 +2793,11 @@
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Crystal Structure Effects: Self-Diffusion Disparity Across Iron's Allotropic Phase Change
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Crystal Structure Effects: Self-Diffusion Disparity Across Iron's Allotropic Phase Change
-        </h4>
         <p>Pure iron undergoes an allotropic phase transformation at $912^\circ\text{C}$ ($1185 \text{ K}$), transforming from BCC $\alpha$-ferrite below $912^\circ\text{C}$ to FCC $\gamma$-austenite above $912^\circ\text{C}$.</p>
     <div style="text-align:center; margin: 10px 0;">
       Self-diffusion in BCC $\alpha$-Fe: $D_0 = 2.0 \times 10^{-4} \text{ m}^2/\text{s}, \quad Q_d = 251.0 \text{ kJ/mol}$<br>
@@ -2765,7 +2821,7 @@
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -2816,10 +2872,11 @@
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Interstitial Mobility Across Allotropic Transformation: Carbon in Ferrite vs. Austenite
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Interstitial Mobility Across Allotropic Transformation: Carbon in Ferrite vs. Austenite
-        </h4>
         <p>The open crystal structure of BCC iron also dramatically accelerates the interstitial diffusion of carbon compared to FCC austenite.</p>
     <div style="text-align:center; margin: 10px 0;">
       Carbon in BCC $\alpha$-Fe: $D_0 = 6.2 \times 10^{-7} \text{ m}^2/\text{s}, \quad Q_d = 80.0 \text{ kJ/mol}$<br>
@@ -2843,7 +2900,7 @@
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -2892,10 +2949,11 @@
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        High-Diffusivity Paths: The Short-Circuit Diffusion Hierarchy
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          High-Diffusivity Paths: The Short-Circuit Diffusion Hierarchy
-        </h4>
         <p>Real crystalline materials contain structural defects that provide "short-circuit" pathways for accelerated atomic migration.</p>
     <ol type="a">
       <li>Rank the four primary diffusion pathways in order of increasing diffusion coefficient (fastest to slowest):
@@ -2917,7 +2975,7 @@
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -2972,10 +3030,11 @@
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Grain Boundary Diffusion: The Fisher Model and Accelerated Boundary Penetration
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Grain Boundary Diffusion: The Fisher Model and Accelerated Boundary Penetration
-        </h4>
         <p>In 1951, J. C. Fisher developed the mathematical foundation for diffusion along an isolated grain boundary embedded in a crystalline matrix.</p>
     <ol type="a">
       <li>Describe the physical assumptions of the <strong>Fisher model</strong>:
@@ -3002,7 +3061,7 @@
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -3042,10 +3101,11 @@
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Dislocation Pipe Diffusion: Hart's Equation and Cold-Work Enhanced Diffusivity
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Dislocation Pipe Diffusion: Hart's Equation and Cold-Work Enhanced Diffusivity
-        </h4>
         <p>In heavily deformed metals, the high density of dislocation lines provides interconnected linear conduits for accelerated diffusion.</p>
     <ol type="a">
       <li>State <strong>Hart's Equation</strong> for the effective apparent diffusion coefficient $D_{\text{eff}}$ in a crystal containing dislocation lines:
@@ -3067,7 +3127,7 @@
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -3120,10 +3180,11 @@
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Harrison's Kinetic Regimes: Regimes A, B, and C in Polycrystalline Diffusion
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Harrison's Kinetic Regimes: Regimes A, B, and C in Polycrystalline Diffusion
-        </h4>
         <p>In 1961, L. G. Harrison classified diffusion in polycrystalline solids into three distinct kinetic regimes based on the relative magnitudes of bulk diffusion length $\sqrt{D_L t}$, grain size $d$, and boundary width $\delta$.</p>
     <ol type="a">
       <li>Describe the physical characteristics, conditions, and penetration profile of:
@@ -3154,7 +3215,7 @@
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -3212,10 +3273,11 @@
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Nanocrystalline Metals: Massive Effective Diffusivity Acceleration from High Boundary Fraction
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Nanocrystalline Metals: Massive Effective Diffusivity Acceleration from High Boundary Fraction
-        </h4>
         <p>Nanocrystalline materials (grain size $d < 50 \text{ nm}$) contain an enormous volume fraction of grain boundaries and triple junctions.</p>
     <ol type="a">
       <li>Derive the formula for the volume fraction of grain boundaries $f_{\text{gb}}$ in an equiaxed polycrystalline metal with grain diameter $d$ and grain boundary thickness $\delta = 1.0 \text{ nm}$:
@@ -3241,7 +3303,7 @@
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -3299,10 +3361,11 @@
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Diffusion in Ionic Solids: Electroneutrality Constraint and Ambipolar Coupled Diffusivity
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Diffusion in Ionic Solids: Electroneutrality Constraint and Ambipolar Coupled Diffusivity
-        </h4>
         <p>In ionic ceramics, cations and anions carry electrical charges, meaning that diffusion of either species in a concentration gradient generates an internal electrical field that couples their motions.</p>
     <ol type="a">
       <li>Explain the origin of the <strong>internal diffusion potential (Nernst field)</strong> when cations and anions diffuse at different rates.</li>
@@ -3325,7 +3388,7 @@
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -3375,10 +3438,11 @@
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Diffusion in Polymers: Free Volume Theory, Gas Permeability, and PET Bottle Barriers
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Diffusion in Polymers: Free Volume Theory, Gas Permeability, and PET Bottle Barriers
-        </h4>
         <p>Diffusion in solid polymers proceeds through dynamically fluctuating interstitial free volume pockets between entangled macromolecular chains.</p>
     <ol type="a">
       <li>Define the <strong>Permeability Coefficient $P$</strong> of a gas through a polymer membrane in terms of the diffusion coefficient $D$ and the solubility coefficient $S$:
@@ -3399,7 +3463,7 @@
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -3458,10 +3522,11 @@
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Powder Sintering Kinetics: Initial Neck Growth, Driving Force, and Volume vs. Surface Diffusion
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Powder Sintering Kinetics: Initial Neck Growth, Driving Force, and Volume vs. Surface Diffusion
-        </h4>
         <p>Sintering is the solid-state bonding of compacted powder particles at elevated temperatures below their melting point ($T \approx 0.7\text{--}0.9 T_m$).</p>
     <ol type="a">
       <li>State the fundamental thermodynamic driving force for powder sintering.</li>
@@ -3488,7 +3553,7 @@
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -3535,10 +3600,11 @@
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Casting Homogenization: Fourier Decay of Microsegregation Concentration Gradients
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Casting Homogenization: Fourier Decay of Microsegregation Concentration Gradients
-        </h4>
         <p>During the solidification of cast alloy ingots, non-equilibrium dendritic segregation produces sinusoidal solute variations across the secondary dendrite arm spacing (SDAS, $\lambda$).</p>
     <ol type="a">
       <li>Model the initial segregated solute profile as a 1D spatial sine wave:
@@ -3563,7 +3629,7 @@
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -3619,10 +3685,11 @@
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Internal Oxidation of Dilute Alloys: Wagner's Sub-Surface Oxidation Depth
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Internal Oxidation of Dilute Alloys: Wagner's Sub-Surface Oxidation Depth
-        </h4>
         <p>When a dilute solid solution of a reactive solute $B$ in a noble solvent $A$ (e.g., dilute Ag-In or Cu-Al) is exposed to oxygen at high temperature, oxygen dissolves and diffuses inward to precipitate sub-surface oxide particles $BO_v$.</p>
     <ol type="a">
       <li>State the physical conditions required for <strong>internal oxidation</strong> to occur rather than continuous external scale formation.</li>
@@ -3643,7 +3710,7 @@
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -3685,10 +3752,11 @@
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Hydrogen Diffusion and Trapping: Degassing Bake-Out in High-Strength Steels
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Hydrogen Diffusion and Trapping: Degassing Bake-Out in High-Strength Steels
-        </h4>
         <p>Hydrogen embrittlement is a catastrophic failure mode in ultra-high-strength fasteners and landing gears caused by interstitial hydrogen absorbed during electroplating or pickling.</p>
     <ol type="a">
       <li>Explain why hydrogen diffuses extraordinarily fast in BCC ferrite ($D_{\text{H}} \approx 10^{-8} \text{ m}^2/\text{s}$ at $25^\circ\text{C}$), but becomes immobilized by <strong>hydrogen trap sites</strong> (dislocation cores, inclusions, grain boundaries).</li>
@@ -3707,7 +3775,7 @@
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -3749,10 +3817,11 @@
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Diffusion Barriers in Microelectronics: Preventing Copper Poisoning in Silicon Chips
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Diffusion Barriers in Microelectronics: Preventing Copper Poisoning in Silicon Chips
-        </h4>
         <p>In modern computer microprocessors, copper interconnect wires are separated from the underlying silicon dielectric by an ultra-thin diffusion barrier (such as Tantalum Nitride, $\text{TaN}$, or Titanium Nitride, $\text{TiN}$).</p>
     <ol type="a">
       <li>Why is a diffusion barrier strictly mandatory between copper metallization and silicon? Explain the catastrophic consequences of copper diffusion into silicon (copper silicide formation and deep-level traps).</li>
@@ -3771,7 +3840,7 @@
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -3825,10 +3894,11 @@
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Solid-State Intermetallic Growth: Parabolic Layer Growth in Solder Joints
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Solid-State Intermetallic Growth: Parabolic Layer Growth in Solder Joints
-        </h4>
         <p>In electronic circuit boards, lead-free solder (e.g., Sn-Ag-Cu) reacts with copper pads to form intermetallic compound (IMC) layers ($\text{Cu}_6\text{Sn}_5$ and $\text{Cu}_3\text{Sn}$).</p>
     <ol type="a">
       <li>State the <strong>parabolic growth law</strong> governing diffusion-controlled planar intermetallic layer thickness $x(t)$:
@@ -3854,7 +3924,7 @@
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -3898,10 +3968,11 @@
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Transient Liquid Phase (TLP) Bonding: Diffusion-Controlled Isothermal Solidification
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Transient Liquid Phase (TLP) Bonding: Diffusion-Controlled Isothermal Solidification
-        </h4>
         <p>Transient Liquid Phase (TLP) bonding is an advanced joining technique utilized to repair single-crystal nickel superalloy turbine blades without melting the parent metal.</p>
     <ol type="a">
       <li>Describe the four sequential stages of the <strong>TLP bonding process</strong>:
@@ -3929,7 +4000,7 @@
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -3978,10 +4049,11 @@
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Electromigration in Microelectronic Interconnects: Electron Wind Force and Black's Law
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Electromigration in Microelectronic Interconnects: Electron Wind Force and Black's Law
-        </h4>
         <p>Electromigration is directional atomic diffusion in metallic conductors driven by the intense momentum transfer from conducting electrons under high current densities.</p>
     <ol type="a">
       <li>Explain the two competing electrostatic forces acting on a metal ion during current flow:
@@ -4009,7 +4081,7 @@
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -4067,10 +4139,11 @@
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Thermomigration (Soret Effect): Thermal Gradient Driven Atomic Transport
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Thermomigration (Soret Effect): Thermal Gradient Driven Atomic Transport
-        </h4>
         <p>Thermomigration (the Soret effect) is directional atomic mass transport driven by steep temperature gradients ($\nabla T$).</p>
     <ol type="a">
       <li>State the atomic flux equation for <strong>thermomigration</strong> in a temperature gradient $\frac{dT}{dx}$:
@@ -4091,7 +4164,7 @@
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -4134,10 +4207,11 @@
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Comprehensive Diffusion Synthesis: Multi-Stage Industrial Carburizing and Microstructure Control
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Comprehensive Diffusion Synthesis: Multi-Stage Industrial Carburizing and Microstructure Control
-        </h4>
         <p>An automotive powertrain manufacturer produces heavy-duty truck drive pinions from AISI 8620 steel ($C_0 = 0.20 \text{ wt}\%$). The specifications require a surface carbon content of $0.85 \text{ wt}\%$ (to prevent brittle retained austenite) and an effective case depth of $1.00 \text{ mm}$ (where $C = 0.40 \text{ wt}\%$).</p>
     <div class="highlight-box">
       <strong>Two-Stage "Boost-Diffuse" Industrial Carburizing Cycle:</strong>
@@ -4164,7 +4238,7 @@
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -4208,21 +4282,21 @@
     
     </section>
 
-    <!-- Chapter Navigation Footer -->
-    <nav class="chapter-pagination" style="display: flex; justify-content: space-between; align-items: center; margin: 3.5rem 0; padding-top: 1.5rem; border-top: 1px solid rgba(212, 175, 55, 0.3); flex-wrap: wrap; gap: 1rem;">
-      <a href="chapter4.html" class="btn-classic" style="padding: 0.65rem 1.25rem;">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+    <!-- Chapter Navigation Footer Strip -->
+    <nav style="display: flex; justify-content: space-between; align-items: center; margin: 4rem 0 2rem; padding-top: 1.75rem; border-top: var(--border-double); flex-wrap: wrap; gap: 1rem;">
+      <a href="chapter4.html" class="btn-classic" style="padding: 0.75rem 1.35rem;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
         <span>Previous: Ch 4: Ch 4: Imperfections in Solids</span>
       </a>
 
-      <a href="index.html" class="btn-classic" style="padding: 0.65rem 1.25rem;">
+      <a href="../index.html" class="btn-classic" style="padding: 0.75rem 1.35rem;">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
-        <span>All Chapters (Home)</span>
+        <span>Main Portal (Cover)</span>
       </a>
 
-      <a href="chapter6.html" class="btn-primary" style="padding: 0.65rem 1.25rem;">
+      <a href="chapter6.html" class="btn-primary" style="padding: 0.75rem 1.35rem;">
         <span>Next: Ch 6: Ch 6: Mechanical Properties</span>
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
       </a>
     </nav>
   </main>
@@ -4231,145 +4305,117 @@
     <div id="formula-modal" class="modal-overlay">
       <div class="modal-card">
         <div class="modal-header">
-          <h3>Master Formula Compendium & Physical Constants (Ch 1 – 8)</h3>
+          <h3>Master Formula Compendium &amp; Physical Constants (Chapters 1 &ndash; 8)</h3>
           <button id="btn-close-formula-modal" class="modal-close-btn">&times;</button>
         </div>
         <div class="modal-body">
-          <div style="background: rgba(30, 58, 138, 0.25); border: 1px solid rgba(56, 189, 248, 0.3); padding: 0.85rem; border-radius: 4px; margin-bottom: 1rem; font-size: 0.85rem; color: #bae6fd;">
-            <strong>Fundamental Physical Constants:</strong><br>
+          <div style="background: rgba(30, 58, 138, 0.3); border: 1.5px solid rgba(56, 189, 248, 0.5); padding: 1rem; border-radius: 4px; margin-bottom: 1.25rem; font-size: 0.92rem; color: #bae6fd;">
+            <strong style="color: #facc15; font-size: 1rem;">Fundamental Physical Constants:</strong><br>
             Avogadro's Number: \(N_A = 6.022 \times 10^{23} \text{ atoms/mol}\) &bull;
-            Boltzmann's Constant: \(k = 1.38 \times 10^{-23} \text{ J/atom}\cdot\text{K} = 8.62 \times 10^{-5} \text{ eV/atom}\cdot\text{K}\)<br>
+            Boltzmann's Constant: \(k_B = 1.381 \times 10^{-23} \text{ J/K} = 8.617 \times 10^{-5} \text{ eV/K}\)<br>
             Universal Gas Constant: \(R = 8.314 \text{ J/mol}\cdot\text{K}\) &bull;
-            Elementary Charge: \(e = 1.602 \times 10^{-19} \text{ C}\) &bull;
-            1 eV = \(1.602 \times 10^{-19} \text{ J}\)
+            Electron Charge: \(e = 1.602 \times 10^{-19} \text{ C}\) &bull;
+            \(1 \text{ eV} = 1.602 \times 10^{-19} \text{ J}\)
           </div>
 
           <table class="formula-table">
             <thead>
               <tr>
-                <th style="width: 25%;">Domain / Law</th>
-                <th style="width: 45%;">Governing Mathematical Equation</th>
-                <th style="width: 30%;">Key Variables & Units</th>
+                <th style="width: 20%;">Chapter / Topic</th>
+                <th style="width: 45%;">Governing Equation &amp; Relation</th>
+                <th style="width: 35%;">Parameter Definitions</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td><strong>Theoretical Crystal Density</strong></td>
+                <td><strong>Ch 1: Ashby Indices</strong></td>
+                <td>$$M_1 = \frac{\sigma_y}{\rho}, \quad M_2 = \frac{E^{1/2}}{\rho}, \quad M_3 = \frac{\sigma_y^{2/3}}{\rho}$$</td>
+                <td>Lightweight tension tie-rod (\(M_1\)), stiff beam (\(M_2\)), strong beam (\(M_3\))</td>
+              </tr>
+              <tr>
+                <td><strong>Ch 1: Composite Moduli</strong></td>
+                <td>$$E_{cl} = V_f E_f + V_m E_m, \quad \frac{1}{E_{ct}} = \frac{V_f}{E_f} + \frac{V_m}{E_m}$$</td>
+                <td>Voigt isostrain (longitudinal) and Reuss isostress (transverse) Rule of Mixtures</td>
+              </tr>
+              <tr>
+                <td><strong>Ch 2: Potential Energy Well</strong></td>
+                <td>$$E_N(r) = -\frac{A}{r^m} + \frac{B}{r^n}, \quad F_N(r) = \frac{dE_N}{dr}$$</td>
+                <td>Attractive vs repulsive potential; equilibrium spacing \(r_0\) at \(F_N(r_0) = 0\)</td>
+              </tr>
+              <tr>
+                <td><strong>Ch 3: Theoretical Density</strong></td>
                 <td>$$\rho = \frac{n \cdot A}{V_c \cdot N_A}$$</td>
-                <td>\(n\): atoms/cell; \(A\): g/mol; \(V_c\): cell volume (\(\text{cm}^3\)); \(\rho\): \(\text{g/cm}^3\)</td>
+                <td>\(n\): atoms/cell; \(A\): atomic weight (g/mol); \(V_c\): cell volume</td>
               </tr>
               <tr>
-                <td><strong>Lattice Constants & APF</strong></td>
-                <td>
-                  BCC: \(a = \frac{4R}{\sqrt{3}}\), \(\text{APF} = 0.68\), \(n=2\)<br>
-                  FCC: \(a = 2\sqrt{2}R\), \(\text{APF} = 0.74\), \(n=4\)
-                </td>
-                <td>\(R\): atomic radius; \(a\): lattice parameter; \(\text{APF} = \frac{n(4/3\pi R^3)}{V_c}\)</td>
+                <td><strong>Ch 3: Crystal Geometry</strong></td>
+                <td>BCC: \(a = \frac{4R}{\sqrt{3}}\), \(\text{APF} = 0.68\)<br>FCC: \(a = 2\sqrt{2}R\), \(\text{APF} = 0.74\)</td>
+                <td>\(R\): atomic radius; \(a\): cubic lattice parameter</td>
               </tr>
               <tr>
-                <td><strong>Cubic Interplanar Spacing</strong></td>
-                <td>$$d_{hkl} = \frac{a}{\sqrt{h^2 + k^2 + l^2}}$$</td>
-                <td>\((hkl)\): Miller indices; \(a\): unit cell lattice parameter</td>
+                <td><strong>Ch 3: Bragg's Law (XRD)</strong></td>
+                <td>$$n\lambda = 2 d_{hkl} \sin\theta, \quad d_{hkl} = \frac{a}{\sqrt{h^2+k^2+l^2}}$$</td>
+                <td>\(\lambda\): X-ray wavelength; \(d_{hkl}\): interplanar spacing; \(\theta\): Bragg angle</td>
               </tr>
               <tr>
-                <td><strong>Bragg's Law (XRD)</strong></td>
-                <td>$$n\lambda = 2 d_{hkl} \sin\theta$$</td>
-                <td>\(\lambda\): X-ray wavelength; \(\theta\): Bragg diffraction angle; \(n\): order (usually 1)</td>
+                <td><strong>Ch 4: Equilibrium Vacancies</strong></td>
+                <td>$$N_v = N \exp\left(-\frac{Q_v}{k_B T}\right)$$</td>
+                <td>\(N\): total atomic sites; \(Q_v\): vacancy formation energy</td>
               </tr>
               <tr>
-                <td><strong>Equilibrium Vacancies</strong></td>
-                <td>$$N_v = N \exp\left(-\frac{Q_v}{kT}\right)$$</td>
-                <td>\(N\): total atomic sites; \(Q_v\): vacancy activation energy (eV or J/mol); \(T\): Kelvin</td>
-              </tr>
-              <tr>
-                <td><strong>ASTM Grain Size Number</strong></td>
+                <td><strong>Ch 4: ASTM Grain Size</strong></td>
                 <td>$$N = 2^{n - 1}$$</td>
-                <td>\(N\): grains per square inch at 100\(\times\); \(n\): ASTM grain size number</td>
+                <td>\(N\): grains per square inch at 100\(\times\) magnification; \(n\): ASTM number</td>
               </tr>
               <tr>
-                <td><strong>Fick's First Law (Steady-State)</strong></td>
-                <td>$$J = -D \frac{dC}{dx} = \frac{M}{A \cdot t}$$</td>
-                <td>\(J\): flux (\(\text{kg/m}^2\cdot\text{s}\)); \(D\): diffusivity (\(\text{m}^2/\text{s}\)); \(dC/dx\): gradient</td>
+                <td><strong>Ch 5: Fick's 1st Law</strong></td>
+                <td>$$J = -D \frac{dC}{dx}$$</td>
+                <td>\(J\): diffusion flux (\(\text{kg/m}^2\cdot\text{s}\)); \(D\): diffusion coefficient</td>
               </tr>
               <tr>
-                <td><strong>Fick's Second Law (Semi-Infinite)</strong></td>
+                <td><strong>Ch 5: Fick's 2nd Law</strong></td>
                 <td>$$\frac{C_x - C_0}{C_s - C_0} = 1 - \text{erf}\left(\frac{x}{2\sqrt{Dt}}\right)$$</td>
-                <td>\(C_s\): surface conc; \(C_0\): initial base conc; \(C_x\): conc at depth \(x\) after time \(t\)</td>
+                <td>Semi-infinite solid constant surface concentration carburization/decarburization</td>
               </tr>
               <tr>
-                <td><strong>Arrhenius Temperature Law</strong></td>
+                <td><strong>Ch 5: Arrhenius Diffusivity</strong></td>
                 <td>$$D = D_0 \exp\left(-\frac{Q_d}{RT}\right)$$</td>
-                <td>\(D_0\): pre-exponential (\(\text{m}^2/\text{s}\)); \(Q_d\): activation energy (\(\text{J/mol}\)); \(R=8.314\)</td>
+                <td>\(D_0\): pre-exponential; \(Q_d\): activation energy for diffusion</td>
               </tr>
               <tr>
-                <td><strong>Hooke's Law & Shear Modulus</strong></td>
+                <td><strong>Ch 6: Hooke's Law &amp; Moduli</strong></td>
                 <td>$$\sigma = E\varepsilon, \quad \tau = G\gamma, \quad G = \frac{E}{2(1 + \nu)}$$</td>
-                <td>\(E\): Young's modulus; \(G\): Shear modulus; \(\nu\): Poisson's ratio (\(\sim 0.3\))</td>
+                <td>\(E\): Young's modulus; \(G\): shear modulus; \(\nu\): Poisson's ratio</td>
               </tr>
               <tr>
-                <td><strong>True Stress & True Strain</strong></td>
-                <td>$$\sigma_T = \sigma(1+\varepsilon), \quad \varepsilon_T = \ln(1+\varepsilon)$$</td>
-                <td>Valid up to necking; \(\sigma, \varepsilon\): engineering stress/strain</td>
+                <td><strong>Ch 6: Modulus of Resilience</strong></td>
+                <td>$$U_r = \frac{\sigma_y^2}{2E}$$</td>
+                <td>Elastic strain energy storage capacity per unit volume up to yielding</td>
               </tr>
               <tr>
-                <td><strong>Hollomon Power Law</strong></td>
-                <td>$$\sigma_T = K \varepsilon_T^n$$</td>
-                <td>\(K\): strength coefficient; \(n\): strain hardening exponent; Necking: \(\varepsilon_T = n\)</td>
-              </tr>
-              <tr>
-                <td><strong>Modulus of Resilience</strong></td>
-                <td>$$U_r = \int_0^{\varepsilon_y} \sigma d\varepsilon \approx \frac{\sigma_y^2}{2E}$$</td>
-                <td>\(U_r\): elastic energy stored per unit volume (\(\text{J/m}^3\) or \(\text{Pa}\))</td>
-              </tr>
-              <tr>
-                <td><strong>Schmid's Law (Single Crystals)</strong></td>
+                <td><strong>Ch 6: Schmid's Law</strong></td>
                 <td>$$\tau_R = \sigma \cos\phi \cos\lambda \le \tau_{\text{CRSS}}$$</td>
-                <td>\(\phi\): angle to slip plane normal; \(\lambda\): angle to slip direction; \(m = \cos\phi\cos\lambda\)</td>
+                <td>\(\phi\): normal to slip plane; \(\lambda\): slip direction angle</td>
               </tr>
               <tr>
-                <td><strong>Hall-Petch Strengthening</strong></td>
+                <td><strong>Ch 7: Hall-Petch Law</strong></td>
                 <td>$$\sigma_y = \sigma_0 + k_y d^{-1/2}$$</td>
-                <td>\(\sigma_0\): friction stress; \(k_y\): locking coefficient (\(\text{MPa}\cdot\text{mm}^{1/2}\)); \(d\): grain size</td>
+                <td>\(\sigma_0\): friction stress; \(k_y\): unpinning coefficient; \(d\): average grain diameter</td>
               </tr>
               <tr>
-                <td><strong>Cold Work & Dislocation Density</strong></td>
-                <td>$$\%\text{CW} = \frac{A_0 - A_d}{A_0} \times 100\%, \quad \tau = \tau_0 + \alpha G b \sqrt{\rho}$$</td>
-                <td>\(\rho\): dislocation density (\(\text{m}^{-2}\)); \(b\): Burgers vector; \(A_0, A_d\): cross-sections</td>
+                <td><strong>Ch 7: Cold Work &amp; Orowan</strong></td>
+                <td>$$\%\text{CW} = \frac{A_0 - A_d}{A_0} \times 100\%, \quad \Delta\tau = \frac{G b}{L}$$</td>
+                <td>Dislocation density multiplication &amp; precipitate bowing resistance</td>
               </tr>
               <tr>
-                <td><strong>Orowan Looping (Precipitation)</strong></td>
-                <td>$$\Delta\tau = \frac{G b}{L - 2r} \approx \frac{G b}{L}$$</td>
-                <td>\(L\): inter-particle spacing; \(r\): particle radius; \(G\): matrix shear modulus</td>
+                <td><strong>Ch 8: Fracture Toughness</strong></td>
+                <td>$$K = Y \sigma \sqrt{\pi a} \le K_{Ic}$$</td>
+                <td>\(K_{Ic}\): plane strain fracture toughness; \(Y\): dimensionless crack geometry factor</td>
               </tr>
               <tr>
-                <td><strong>Stress Concentration (Crack Tip)</strong></td>
-                <td>$$K_t = \frac{\sigma_m}{\sigma_0} = 2 \sqrt{\frac{a}{\rho_t}}$$</td>
-                <td>\(a\): crack length; \(\rho_t\): crack tip radius of curvature; \(\sigma_0\): nominal stress</td>
-              </tr>
-              <tr>
-                <td><strong>Griffith Critical Fracture Stress</strong></td>
-                <td>$$\sigma_c = \sqrt{\frac{2E\gamma_s}{\pi a}}$$</td>
-                <td>\(\gamma_s\): specific surface energy (\(\text{J/m}^2\)); \(E\): Young's modulus; \(a\): crack size</td>
-              </tr>
-              <tr>
-                <td><strong>Mode I Fracture Toughness</strong></td>
-                <td>$$K_I = Y \sigma \sqrt{\pi a} \le K_{Ic}$$</td>
-                <td>\(K_{Ic}\): plane strain fracture toughness (\(\text{MPa}\cdot\sqrt{\text{m}}\)); \(Y\): geometric factor</td>
-              </tr>
-              <tr>
-                <td><strong>Fatigue Stress Parameters</strong></td>
-                <td>$$\sigma_m = \frac{\sigma_{\max}+\sigma_{\min}}{2}, \quad \sigma_a = \frac{\sigma_{\max}-\sigma_{\min}}{2}, \quad R = \frac{\sigma_{\min}}{\sigma_{\max}}$$</td>
-                <td>\(\sigma_m\): mean stress; \(\sigma_a\): amplitude; \(R\): stress ratio</td>
-              </tr>
-              <tr>
-                <td><strong>Steady-State Creep Rate</strong></td>
-                <td>$$\dot{\varepsilon}_s = K_2 \sigma^n \exp\left(-\frac{Q_c}{RT}\right)$$</td>
-                <td>\(\dot{\varepsilon}_s\): steady creep rate (\(\text{s}^{-1}\)); \(n\): stress exponent; \(Q_c\): creep activation energy</td>
-              </tr>
-              <tr>
-                <td><strong>Larson-Miller Parameter</strong></td>
+                <td><strong>Ch 8: Larson-Miller Creep</strong></td>
                 <td>$$P = T \left(20 + \log_{10} t_r\right)$$</td>
-                <td>\(T\): absolute temperature in Kelvin; \(t_r\): rupture life in hours</td>
+                <td>\(T\): temperature in Kelvin; \(t_r\): creep rupture time in hours</td>
               </tr>
             </tbody>
           </table>
@@ -4380,31 +4426,29 @@
   
     <footer class="site-footer">
       <div class="master-wrapper" style="padding-bottom: 0;">
-        <div class="university-crest" style="margin-bottom: 1rem;">
-          
-<svg width="68" height="68" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="50" cy="50" r="47" stroke="#d4af37" stroke-width="2" stroke-dasharray="2 2" opacity="0.8"/>
-  <circle cx="50" cy="50" r="43" stroke="#d4af37" stroke-width="1.5"/>
-  <circle cx="50" cy="50" r="38" fill="#0d1b3e" stroke="rgba(212, 175, 55, 0.4)" stroke-width="1"/>
-  <!-- Central Traditional Emblem Motif -->
-  <path d="M50 16 L56 32 L72 32 L59 42 L64 58 L50 48 L36 58 L41 42 L28 32 L44 32 Z" fill="rgba(212, 175, 55, 0.15)" stroke="#d4af37" stroke-width="1"/>
-  <!-- Open Book of Knowledge / Engineering -->
-  <path d="M50 48 L38 42 C34 40 30 43 30 48 L30 68 C34 65 42 65 50 69 C58 65 66 65 70 68 L70 48 C70 43 66 40 62 42 Z" fill="#14244d" stroke="#d4af37" stroke-width="1.5"/>
-  <path d="M50 48 L50 69" stroke="#d4af37" stroke-width="1.5"/>
-  <!-- Mechanical Gear Accents -->
-  <circle cx="50" cy="50" r="4" fill="#d4af37"/>
-  <!-- Laurel Wreath Curves -->
-  <path d="M22 56 C20 40 28 26 42 20" stroke="#d4af37" stroke-width="1.2" stroke-linecap="round"/>
-  <path d="M78 56 C80 40 72 26 58 20" stroke="#d4af37" stroke-width="1.2" stroke-linecap="round"/>
-</svg>
-
+        <div style="display: flex; justify-content: center; align-items: center; gap: 1.5rem; margin-bottom: 1.5rem;">
+          <div class="footer-emblem-badge">
+            <img src="../assets/images/ut_mech_emblem.svg" alt="UT Mechanical Engineering Crest">
+          </div>
+          <div class="footer-emblem-badge" style="padding: 4px;">
+            <img src="../assets/images/ut_engineering_logo.svg" alt="College of Engineering Emblem">
+          </div>
         </div>
-        <p class="footer-gold-text">UNIVERSITY OF TEHRAN</p>
-        <p>Faculty of Mechanical Engineering &bull; Department of Materials & Manufacturing</p>
-        <p>Course: <strong>Science of Materials</strong> (Undergraduate Curriculum) &bull; Instructor: <strong>Prof. A. Sadeghi</strong></p>
-        <p style="margin-top: 0.75rem; color: #cbd5e1;">Comprehensive 400-Problem Midterm Exam Mastery Suite</p>
-        <p style="font-size: 0.8rem; color: #94a3b8;">Authored, Curated & Synthesized by Teaching Assistant <strong>Sina Sharifi</strong></p>
-        <p style="font-size: 0.75rem; color: #64748b; margin-top: 1.5rem;">Designed for academic excellence &bull; Formatted with LaTeX Math &bull; Dark Blue Classic Edition</p>
+
+        <p class="footer-persian">دانشگاه تهران &bull; پردیس دانشکده‌های فنی &bull; دانشکده مهندسی مکانیک</p>
+        <p class="footer-gold-text">UNIVERSITY OF TEHRAN &bull; DEPARTMENT OF MECHANICAL ENGINEERING</p>
+        
+        <div class="gold-hairline" style="margin: 0.85rem auto;"></div>
+
+        <p style="color: #cbd5e1; font-size: 0.95rem;">
+          Course: <strong>Science of Materials</strong> (Undergraduate Midterm Mastery Suite) &bull; Instructor: <strong>Prof. A. Sadeghi</strong>
+        </p>
+        <p style="font-size: 0.88rem; color: #facc15; margin-top: 0.35rem;">
+          Meticulously Prepared &amp; Synthesized by Teaching Assistant <strong>Sina Sharifi</strong>
+        </p>
+        <p style="font-size: 0.78rem; color: #94a3b8; margin-top: 1.25rem;">
+          Designed for academic excellence &bull; Formatted with LaTeX Math &bull; High-Contrast Classical Edition
+        </p>
       </div>
     </footer>
     <button id="btn-back-top" class="btn-back-top" title="Back to top">
@@ -4412,6 +4456,6 @@
     </button>
     
 
-  <script src="js/main.js"></script>
+  <script src="../js/main.js"></script>
 </body>
 </html>

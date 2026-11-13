@@ -1,0 +1,103 @@
+<svg viewBox="0 0 750 500" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="hostAtom" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#e0f2fe"/>
+      <stop offset="35%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0369a1"/>
+    </radialGradient>
+    <radialGradient id="soluteAtom" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#fef08a"/>
+      <stop offset="35%" stop-color="#facc15"/>
+      <stop offset="100%" stop-color="#a16207"/>
+    </radialGradient>
+    <radialGradient id="interAtom" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#dcfce7"/>
+      <stop offset="35%" stop-color="#22c55e"/>
+      <stop offset="100%" stop-color="#14532d"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="750" height="500" fill="#070f24" rx="8" stroke="#253861" stroke-width="2"/>
+
+  <!-- Header -->
+  <rect x="180" y="15" width="390" height="34" rx="4" fill="#0f1c3f" stroke="#d4af37" stroke-width="1.5"/>
+  <text x="375" y="37" fill="#fef08a" font-family="'Cinzel', Georgia, serif" font-size="13.5" font-weight="bold" text-anchor="middle">
+    ATLAS OF POINT DEFECTS IN CRYSTALLINE SOLIDS
+  </text>
+
+  <!-- Atomic Crystal Grid (7x5 Grid) -->
+  <g transform="translate(60, 70)">
+    <!-- Grid Lines (Lattice Planes) -->
+    <g stroke="#1e3a8a" stroke-width="1.5" stroke-dasharray="3 3">
+      <line x1="40" y1="50" x2="580" y2="50"/>
+      <line x1="40" y1="120" x2="580" y2="120"/>
+      <line x1="40" y1="190" x2="580" y2="190"/>
+      <line x1="40" y1="260" x2="580" y2="260"/>
+      <line x1="40" y1="330" x2="580" y2="330"/>
+    </g>
+
+    <!-- Row 1 -->
+    <circle cx="50" cy="50" r="18" fill="url(#hostAtom)"/><circle cx="140" cy="50" r="18" fill="url(#hostAtom)"/>
+    <circle cx="230" cy="50" r="18" fill="url(#hostAtom)"/><circle cx="320" cy="50" r="18" fill="url(#hostAtom)"/>
+    <circle cx="410" cy="50" r="18" fill="url(#hostAtom)"/><circle cx="500" cy="50" r="18" fill="url(#hostAtom)"/>
+    <circle cx="590" cy="50" r="18" fill="url(#hostAtom)"/>
+
+    <!-- Row 2 (Contains Vacancy & Self-Interstitial) -->
+    <circle cx="50" cy="120" r="18" fill="url(#hostAtom)"/>
+    <!-- VACANCY (Missing host atom) -->
+    <circle cx="140" cy="120" r="18" fill="none" stroke="#ef4444" stroke-width="2.5" stroke-dasharray="5 3"/>
+    <line x1="128" y1="108" x2="152" y2="132" stroke="#ef4444" stroke-width="2"/>
+    <line x1="152" y1="108" x2="128" y2="132" stroke="#ef4444" stroke-width="2"/>
+    <!-- Self-Interstitial nearby -->
+    <circle cx="185" cy="155" r="16" fill="url(#hostAtom)" stroke="#ffffff" stroke-width="1.5"/>
+
+    <circle cx="230" cy="120" r="18" fill="url(#hostAtom)"/><circle cx="320" cy="120" r="18" fill="url(#hostAtom)"/>
+    <circle cx="410" cy="120" r="18" fill="url(#hostAtom)"/><circle cx="500" cy="120" r="18" fill="url(#hostAtom)"/>
+    <circle cx="590" cy="120" r="18" fill="url(#hostAtom)"/>
+
+    <!-- Row 3 (Contains Substitutional Impurity) -->
+    <circle cx="50" cy="190" r="18" fill="url(#hostAtom)"/><circle cx="140" cy="190" r="18" fill="url(#hostAtom)"/>
+    <circle cx="230" cy="190" r="18" fill="url(#hostAtom)"/>
+    <!-- Large Substitutional Solute -->
+    <circle cx="320" cy="190" r="26" fill="url(#soluteAtom)" stroke="#ffffff" stroke-width="2"/>
+    <circle cx="410" cy="190" r="18" fill="url(#hostAtom)"/><circle cx="500" cy="190" r="18" fill="url(#hostAtom)"/>
+    <circle cx="590" cy="190" r="18" fill="url(#hostAtom)"/>
+
+    <!-- Row 4 (Contains Small Interstitial Solute) -->
+    <circle cx="50" cy="260" r="18" fill="url(#hostAtom)"/><circle cx="140" cy="260" r="18" fill="url(#hostAtom)"/>
+    <circle cx="230" cy="260" r="18" fill="url(#hostAtom)"/><circle cx="320" cy="260" r="18" fill="url(#hostAtom)"/>
+    <!-- Small Interstitial (Carbon/Nitrogen in Fe) -->
+    <circle cx="455" cy="225" r="10" fill="url(#interAtom)" stroke="#ffffff" stroke-width="1.5"/>
+    <circle cx="410" cy="260" r="18" fill="url(#hostAtom)"/><circle cx="500" cy="260" r="18" fill="url(#hostAtom)"/>
+    <circle cx="590" cy="260" r="18" fill="url(#hostAtom)"/>
+
+    <!-- Row 5 -->
+    <circle cx="50" cy="330" r="18" fill="url(#hostAtom)"/><circle cx="140" cy="330" r="18" fill="url(#hostAtom)"/>
+    <circle cx="230" cy="330" r="18" fill="url(#hostAtom)"/><circle cx="320" cy="330" r="18" fill="url(#hostAtom)"/>
+    <circle cx="410" cy="330" r="18" fill="url(#hostAtom)"/><circle cx="500" cy="330" r="18" fill="url(#hostAtom)"/>
+    <circle cx="590" cy="330" r="18" fill="url(#hostAtom)"/>
+  </g>
+
+  <!-- Defect Labels & Callout Boxes -->
+  <!-- Vacancy Callout -->
+  <rect x="50" y="80" width="130" height="26" rx="4" fill="#3b070c" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="115" y="97" fill="#fca5a5" font-family="'Inter', sans-serif" font-size="11" font-weight="bold" text-anchor="middle">VACANCY</text>
+
+  <!-- Self-interstitial -->
+  <rect x="180" y="245" width="135" height="26" rx="4" fill="#0c2d48" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="247" y="262" fill="#bae6fd" font-family="'Inter', sans-serif" font-size="10.5" font-weight="bold" text-anchor="middle">Self-Interstitial</text>
+
+  <!-- Substitutional -->
+  <rect x="330" y="300" width="170" height="26" rx="4" fill="#2d1d03" stroke="#facc15" stroke-width="1.5"/>
+  <text x="415" y="317" fill="#fef08a" font-family="'Inter', sans-serif" font-size="11" font-weight="bold" text-anchor="middle">Substitutional Solute</text>
+
+  <!-- Interstitial -->
+  <rect x="515" y="280" width="165" height="26" rx="4" fill="#042714" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="597" y="297" fill="#bbf7d0" font-family="'Inter', sans-serif" font-size="11" font-weight="bold" text-anchor="middle">Interstitial Solute (C)</text>
+
+  <!-- Mathematical Law Bottom Banner -->
+  <rect x="120" y="445" width="510" height="36" rx="4" fill="#0a1530" stroke="#d4af37" stroke-width="1.5"/>
+  <text x="375" y="468" fill="#fef08a" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="bold" text-anchor="middle">
+    N_v / N = exp(-Q_v / k_B T) &bull; Hume-Rothery Rules (&Delta;r &le; 15%)
+  </text>
+</svg>

@@ -1,0 +1,57 @@
+<svg viewBox="0 0 750 500" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="diffBg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0f1938"/>
+      <stop offset="100%" stop-color="#060c1d"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="750" height="500" fill="url(#diffBg)" rx="8" stroke="#253861" stroke-width="2"/>
+
+  <!-- Plot Canvas -->
+  <rect x="100" y="50" width="600" height="360" fill="#091226" stroke="#334773" stroke-width="1.5"/>
+
+  <!-- Grid lines -->
+  <line x1="100" y1="120" x2="700" y2="120" stroke="#172554" stroke-dasharray="3 3"/>
+  <line x1="100" y1="200" x2="700" y2="200" stroke="#172554" stroke-dasharray="3 3"/>
+  <line x1="100" y1="280" x2="700" y2="280" stroke="#172554" stroke-dasharray="3 3"/>
+  <line x1="100" y1="360" x2="700" y2="360" stroke="#172554" stroke-dasharray="3 3"/>
+
+  <!-- Concentration Levels Cs (Surface) and C0 (Initial) -->
+  <line x1="90" y1="90" x2="700" y2="90" stroke="#facc15" stroke-width="2" stroke-dasharray="4 2"/>
+  <text x="80" y="94" fill="#facc15" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="bold" text-anchor="end">C_s</text>
+  <text x="705" y="94" fill="#facc15" font-family="'Inter', sans-serif" font-size="11">Constant Surface Concentration</text>
+
+  <line x1="90" y1="380" x2="700" y2="380" stroke="#64748b" stroke-width="2" stroke-dasharray="4 2"/>
+  <text x="80" y="384" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="bold" text-anchor="end">C_0</text>
+  <text x="705" y="384" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="11">Initial Core Concentration</text>
+
+  <!-- Profiles for Diffusion Times t1 < t2 < t3 -->
+  <!-- Curve 1: t1 (Shortest time) -->
+  <path d="M 100 90 Q 150 110 200 280 T 260 380 L 700 380" fill="none" stroke="#f43f5e" stroke-width="3"/>
+  <circle cx="200" cy="280" r="5" fill="#f43f5e"/>
+  <rect x="210" y="240" width="85" height="22" rx="3" fill="#2d0612" stroke="#f43f5e" stroke-width="1"/>
+  <text x="252" y="255" fill="#fecdd3" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="bold" text-anchor="middle">Time t_1</text>
+
+  <!-- Curve 2: t2 (Intermediate time) -->
+  <path d="M 100 90 Q 200 120 320 280 T 420 380 L 700 380" fill="none" stroke="#38bdf8" stroke-width="3.5"/>
+  <circle cx="320" cy="280" r="5" fill="#38bdf8"/>
+  <rect x="330" y="240" width="115" height="22" rx="3" fill="#042033" stroke="#38bdf8" stroke-width="1"/>
+  <text x="387" y="255" fill="#bae6fd" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="bold" text-anchor="middle">Time t_2 (> t_1)</text>
+
+  <!-- Curve 3: t3 (Longest time) -->
+  <path d="M 100 90 Q 300 140 480 280 T 600 380 L 700 380" fill="none" stroke="#34d399" stroke-width="4"/>
+  <circle cx="480" cy="280" r="5" fill="#34d399"/>
+  <rect x="490" y="240" width="115" height="22" rx="3" fill="#042714" stroke="#34d399" stroke-width="1"/>
+  <text x="547" y="255" fill="#a7f3d0" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="bold" text-anchor="middle">Time t_3 (> t_2)</text>
+
+  <!-- Axes Labels -->
+  <text x="400" y="445" fill="#f8fafc" font-family="'Inter', sans-serif" font-size="13" font-weight="bold" text-anchor="middle">Distance From Surface x (Depth into Part) &rarr;</text>
+  <text x="35" y="230" fill="#f8fafc" font-family="'Inter', sans-serif" font-size="13" font-weight="bold" text-anchor="middle" transform="rotate(-90 35 230)">Solute Concentration C(x,t) &rarr;</text>
+
+  <!-- Mathematical Formula Box -->
+  <rect x="140" y="15" width="470" height="32" rx="4" fill="#0a1530" stroke="#d4af37" stroke-width="1.5"/>
+  <text x="375" y="36" fill="#fef08a" font-family="'JetBrains Mono', monospace" font-size="12.5" font-weight="bold" text-anchor="middle">
+    (C_x - C_0) / (C_s - C_0) = 1 - erf[ x / (2 &radic;(Dt)) ]
+  </text>
+</svg>

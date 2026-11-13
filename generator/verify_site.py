@@ -4,8 +4,9 @@ import re
 import os
 
 base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-files = sorted(glob.glob(os.path.join(base_dir, 'chapter*.html')))
-print(f"Found {len(files)} chapter files in {base_dir}:")
+chapters_dir = os.path.join(base_dir, 'chapters')
+files = sorted(glob.glob(os.path.join(chapters_dir, 'chapter*.html')))
+print(f"Found {len(files)} chapter files in {chapters_dir}:")
 
 total_cards = 0
 total_buttons = 0
@@ -38,4 +39,4 @@ print(f"  Professor 'Prof. A. Sadeghi': {'Prof. A. Sadeghi' in idx}")
 print(f"  University 'University of Tehran': {'University of Tehran' in idx}")
 print(f"  Department 'Department of Mechanical Engineering': {'Department of Mechanical Engineering' in idx}")
 print(f"  Course 'Science of Materials': {'Science of Materials' in idx}")
-print(f"  Links to all 8 chapters present: {all(f'chapter{i}.html' in idx for i in range(1, 9))}")
+print(f"  Links to all 8 chapters in chapters/ folder: {all(f'chapters/chapter{i}.html' in idx for i in range(1, 9))}")

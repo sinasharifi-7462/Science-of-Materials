@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ch 6: Mechanical Properties — Science of Materials | University of Tehran</title>
-  <meta name="description" content="50 comprehensive practice problems with detailed step-by-step solutions for Mechanical Properties of Metals. Science of Materials, University of Tehran.">
-  <link rel="stylesheet" href="css/style.css">
+  <meta name="description" content="50 comprehensive practice problems with detailed step-by-step solutions for Mechanical Properties of Metals. Science of Materials, University of Tehran. Prepared by Sina Sharifi.">
+  <link rel="stylesheet" href="../css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Playfair+Display:ital,wght@0,500;0,700;1,400&family=JetBrains+Mono:wght@400;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=JetBrains+Mono:wght@500;700&family=Inter:wght@400;500;600;700&family=Vazirmatn:wght@500;700&display=swap" rel="stylesheet">
   
-  <!-- MathJax 3 Configuration for High-Fidelity Technical Rendering (Local + CDN Fallback) -->
+  <!-- MathJax 3 Configuration for High-Fidelity Technical Rendering (100% Offline + CDN Fallback) -->
   <script>
     window.MathJax = {
       tex: {
@@ -25,35 +25,33 @@
       startup: {
         pageReady: () => {
           return MathJax.startup.defaultPageReady().then(() => {
-            console.log('MathJax initial typesetting complete');
+            console.log('MathJax initial technical typesetting ready');
           });
         }
       }
     };
   </script>
-  <script src="js/mathjax.js" onerror="this.onerror=null;this.src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js';"></script>
+  <script src="../js/mathjax.js" onerror="this.onerror=null;this.src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js';"></script>
 
 </head>
 <body data-page-id="chapter6">
   
     <header class="site-header">
       <div class="nav-container">
-        <a href="index.html" class="nav-brand">
+        <a href="../index.html" class="nav-brand">
           <div class="nav-logo-badge">
-            <svg width="28" height="28" viewBox="0 0 100 100" fill="none">
-              <circle cx="50" cy="50" r="44" stroke="#d4af37" stroke-width="3"/>
-              <path d="M50 20 L60 40 L80 40 L65 52 L70 72 L50 60 L30 72 L35 52 L20 40 L40 40 Z" fill="none" stroke="#d4af37" stroke-width="2"/>
-            </svg>
+            <img src="../assets/images/ut_mech_emblem.svg" alt="University of Tehran Mechanical Engineering Crest">
           </div>
           <div class="nav-brand-text">
+            <span class="nav-persian">دانشگاه تهران &bull; دانشکده مهندسی مکانیک</span>
             <h1>UNIVERSITY OF TEHRAN</h1>
-            <p>Faculty of Mechanical Engineering | Science of Materials</p>
+            <p>Department of Mechanical Engineering &bull; Science of Materials</p>
           </div>
         </a>
 
         <nav class="nav-links">
           
-    <a href="index.html" class="nav-link ">
+    <a href="../index.html" class="nav-link ">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
       Home
     </a>
@@ -106,11 +104,13 @@
     
 
   <main class="master-wrapper">
-    <!-- Chapter Breadcrumb -->
-    <div style="font-family: var(--font-mono); font-size: 0.8rem; color: #94a3b8; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem;">
-      <a href="index.html" style="color: var(--gold); text-decoration: none;">Home (Cover)</a>
-      <span>&rsaquo;</span>
-      <span style="color: #cbd5e1;">Chapter 6</span>
+    <!-- Chapter Breadcrumbs -->
+    <div style="font-family: var(--font-mono); font-size: 0.85rem; color: #94a3b8; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem;">
+      <a href="../index.html" style="color: var(--accent-gold-bright); text-decoration: none; font-weight: 600;">Home (Cover Portal)</a>
+      <span style="color: #64748b;">&rsaquo;</span>
+      <span style="color: #64748b;">Chapters</span>
+      <span style="color: #64748b;">&rsaquo;</span>
+      <span style="color: #ffffff; font-weight: 600;">Chapter 06</span>
     </div>
 
     <!-- Chapter Hero Section -->
@@ -118,7 +118,7 @@
       <div class="hero-header-row">
         <div>
           <span class="chapter-num-badge">CHAPTER 06 OF 08</span>
-          <h1 class="chapter-title" style="margin-top: 0.5rem;">Mechanical Properties of Metals</h1>
+          <h1 class="chapter-title" style="margin-top: 0.65rem;">Mechanical Properties of Metals</h1>
         </div>
       </div>
 
@@ -126,62 +126,84 @@
         Engineering stress and strain, Hooke's law, elastic moduli and Poisson's ratio, yielding and the 0.2% offset method, tensile strength, ductility, resilience, toughness, true stress and true strain, Hollomon strain hardening law, Schmid's law for single crystals, and hardness testing.
       </p>
 
-      <div class="hero-tags">
+      <div class="card-tags" style="border: none; padding: 0; margin-bottom: 1.75rem;">
         <span class="hero-tag">Hooke's Law & Moduli</span><span class="hero-tag">0.2% Offset Yielding</span><span class="hero-tag">True Stress-Strain</span><span class="hero-tag">Hollomon Relation</span><span class="hero-tag">Schmid's Law</span><span class="hero-tag">Hardness</span>
       </div>
 
-      <!-- High-Resolution Technical Vector Graphic -->
-      <div class="hero-svg-container" style="margin-top: 2rem;">
-        
-    <svg viewBox="0 0 450 320" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-      <rect width="450" height="320" fill="#080f24" rx="6"/>
-      <!-- Axes -->
-      <line x1="60" y1="40" x2="60" y2="260" stroke="#64748b" stroke-width="1.5"/>
-      <line x1="60" y1="260" x2="420" y2="260" stroke="#64748b" stroke-width="1.5"/>
-      <text x="425" y="264" fill="#94a3b8" font-size="11">Strain, ε</text>
-      <text x="45" y="30" fill="#94a3b8" font-size="11">Stress, σ</text>
+      <!-- High-Resolution Technical Vector Graphic Showcase -->
+      <div class="chapter-diagram-showcase">
+        <div class="diagram-header-strip">
+          <span>Figure 6.1: Engineering vs True Stress-Strain Curve, Yield Offset & Toughness</span>
+          <span style="color: var(--accent-cyan-light);">Engineering Vector Schematic</span>
+        </div>
+        <div class="diagram-canvas">
+          <svg viewBox="0 0 750 500" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="stressBg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0e1836"/>
+      <stop offset="100%" stop-color="#060c1d"/>
+    </radialGradient>
+  </defs>
 
-      <!-- Engineering Curve -->
-      <path d="M 60 260 L 120 140 Q 170 80 250 80 Q 320 80 370 140" fill="none" stroke="#38bdf8" stroke-width="2.5"/>
+  <rect width="750" height="500" fill="url(#stressBg)" rx="8" stroke="#253861" stroke-width="2"/>
 
-      <!-- True Stress Curve diverging after necking -->
-      <path d="M 250 80 Q 310 70 370 45" fill="none" stroke="#f5d061" stroke-width="2" stroke-dasharray="3 3"/>
-      <text x="375" y="45" fill="#f5d061" font-size="10">True Stress σ_T</text>
+  <!-- Plot Canvas -->
+  <rect x="90" y="50" width="620" height="370" fill="#081024" stroke="#334773" stroke-width="1.5"/>
 
-      <!-- 0.2% Offset line -->
-      <line x1="85" y1="260" x2="140" y2="150" stroke="#f43f5e" stroke-width="1.2" stroke-dasharray="3 2"/>
-      <circle cx="135" cy="160" r="4" fill="#f43f5e"/>
-      <text x="145" y="165" fill="#f43f5e" font-size="10">σ_y (0.2% yield)</text>
-      <text x="85" y="275" fill="#f43f5e" font-size="9" text-anchor="middle">0.002</text>
+  <!-- Shaded Modulus of Resilience Area -->
+  <polygon points="90,420 180,240 180,420" fill="rgba(56, 189, 248, 0.22)"/>
+  <text x="140" y="380" fill="#7dd3fc" font-family="'Inter', sans-serif" font-size="11" font-weight="bold" text-anchor="middle">U_r (Resilience)</text>
 
-      <!-- UTS Point -->
-      <circle cx="250" cy="80" r="4" fill="#d4af37"/>
-      <text x="250" y="65" fill="#d4af37" font-size="10" font-weight="bold" text-anchor="middle">UTS (Necking onset: dσ/dε = σ)</text>
+  <!-- Shaded Plastic Toughness Area (Rest of curve) -->
+  <path d="M 180 240 Q 260 120 400 120 Q 520 120 620 220 L 620 420 L 180 420 Z" fill="rgba(212, 175, 55, 0.1)"/>
+  <text x="380" y="320" fill="#fef08a" font-family="'Inter', sans-serif" font-size="13" font-weight="bold" text-anchor="middle">Total Toughness (Energy to Fracture)</text>
 
-      <!-- Fracture Point -->
-      <circle cx="370" cy="140" r="4" fill="#fb7185"/>
-      <text x="375" y="155" fill="#fb7185" font-size="10">Fracture</text>
+  <!-- Engineering Stress-Strain Curve (Cyan Solid) -->
+  <path d="M 90 420 L 180 240 Q 260 120 400 120 Q 520 120 620 220" fill="none" stroke="#38bdf8" stroke-width="3.5"/>
 
-      <!-- Shaded Resilience Area -->
-      <polygon points="60,260 120,140 120,260" fill="rgba(56, 189, 248, 0.15)"/>
-      <text x="90" y="235" fill="#38bdf8" font-size="9">Resilience U_r</text>
-    </svg>
-    
-        <div style="font-family: var(--font-mono); font-size: 0.78rem; color: #94a3b8; margin-top: 0.5rem; text-align: center;">
-          Figure 6.1: Engineering vs True Stress-Strain & Plastic Work Hardening
+  <!-- True Stress-Strain Curve (Gold Dashed - diverges at UTS necking) -->
+  <path d="M 400 120 Q 510 100 620 60" fill="none" stroke="#facc15" stroke-width="3" stroke-dasharray="6 4"/>
+  <rect x="520" y="40" width="170" height="24" rx="3" fill="#2d1d03" stroke="#facc15" stroke-width="1"/>
+  <text x="605" y="56" fill="#fef08a" font-family="'Inter', sans-serif" font-size="11" font-weight="bold" text-anchor="middle">True Stress &sigma;_T = K &epsilon;_T^n</text>
+
+  <!-- 0.2% Offset Construction Line (Ruby) -->
+  <line x1="125" y1="420" x2="205" y2="260" stroke="#f43f5e" stroke-width="2" stroke-dasharray="4 3"/>
+  <circle cx="198" cy="275" r="5" fill="#f43f5e"/>
+  <text x="125" y="440" fill="#f43f5e" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="bold" text-anchor="middle">&epsilon; = 0.002</text>
+  
+  <rect x="210" y="270" width="130" height="24" rx="3" fill="#3b070c" stroke="#f43f5e" stroke-width="1"/>
+  <text x="275" y="286" fill="#fecdd3" font-family="'Inter', sans-serif" font-size="11" font-weight="bold" text-anchor="middle">&sigma;_y (0.2% Yield)</text>
+
+  <!-- UTS Point (Ultimate Tensile Strength / Necking Onset) -->
+  <circle cx="400" cy="120" r="6" fill="#facc15" stroke="#ffffff" stroke-width="2"/>
+  <rect x="300" y="80" width="200" height="26" rx="4" fill="#0f1c3f" stroke="#d4af37" stroke-width="1.5"/>
+  <text x="400" y="97" fill="#fef08a" font-family="'Inter', sans-serif" font-size="11" font-weight="bold" text-anchor="middle">UTS (Necking: d&sigma;/d&epsilon; = &sigma;)</text>
+
+  <!-- Fracture Point -->
+  <circle cx="620" cy="220" r="6" fill="#fb7185" stroke="#ffffff" stroke-width="2"/>
+  <text x="635" y="235" fill="#fb7185" font-family="'Inter', sans-serif" font-size="12" font-weight="bold">Fracture (&sigma;_f, &epsilon;_f)</text>
+
+  <!-- Hooke's Law Elastic Slope E -->
+  <line x1="90" y1="420" x2="180" y2="240" stroke="#ffffff" stroke-width="2"/>
+  <text x="110" y="310" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="bold">Slope = E</text>
+
+  <!-- Axis Titles -->
+  <text x="400" y="475" fill="#f8fafc" font-family="'Inter', sans-serif" font-size="13" font-weight="bold" text-anchor="middle">Engineering Strain &epsilon; &rarr;</text>
+  <text x="35" y="235" fill="#f8fafc" font-family="'Inter', sans-serif" font-size="13" font-weight="bold" text-anchor="middle" transform="rotate(-90 35 235)">Engineering Stress &sigma; (MPa) &rarr;</text>
+</svg>
         </div>
       </div>
     </section>
 
     <!-- Interactive Study Toolbar -->
     <section class="controls-bar">
-      <div class="controls-left">
-        <div class="search-box">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-          <input type="text" id="problem-search-input" class="search-input" placeholder="Search equations, topics, terms...">
-        </div>
+      <div class="search-box-wrapper">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" id="problem-search-input" placeholder="Search equations, formulas, topics (e.g. Miller, Fick, yield)...">
+      </div>
 
-        <select id="category-filter" class="filter-select">
+      <div class="filters-group">
+        <select id="category-filter">
           <option value="all">All Categories</option>
           <option value="elastic_moduli">Elastic Deformation & Moduli</option>
           <option value="tensile_parameters">Yielding & Tensile Parameters</option>
@@ -208,14 +230,14 @@
 
         </select>
 
-        <select id="diff-filter" class="filter-select">
+        <select id="diff-filter">
           <option value="all">All Difficulties</option>
           <option value="fundamental">Fundamental</option>
           <option value="intermediate">Intermediate</option>
           <option value="advanced">Advanced</option>
         </select>
 
-        <select id="jump-to-problem" class="filter-select">
+        <select id="jump-to-problem">
           <option value="">Jump to Problem...</option>
           <option value="p1">Problem 01: Engineering Stress and Strain: Uniaxial Tensi...</option>
           <option value="p2">Problem 02: Hooke's Law in Tension: Young's Modulus of El...</option>
@@ -269,17 +291,15 @@
           <option value="p50">Problem 50: Comprehensive Material Selection: Aerospace P...</option>
 
         </select>
-      </div>
 
-      <div class="controls-right">
-        <span id="visible-problem-count" class="visible-count">50 Problems Shown</span>
-        <button id="btn-expand-all" class="btn-classic" title="Reveal all 50 solutions at once">Expand All</button>
-        <button id="btn-collapse-all" class="btn-classic" title="Hide all solutions for active self-testing">Collapse All</button>
+        <span id="visible-problem-count" class="chapter-num-badge" style="font-size: 0.8rem;">50 Problems Shown</span>
+        <button id="btn-expand-all" class="btn-classic">Expand All</button>
+        <button id="btn-collapse-all" class="btn-classic">Collapse All</button>
       </div>
     </section>
 
     <!-- Problems List Container -->
-    <section class="problems-container" id="problems-list">
+    <section class="problems-stream" id="problems-list">
       
     <article class="problem-card" id="p1" data-category="elastic_moduli" data-difficulty="fundamental">
       <div class="problem-header">
@@ -296,10 +316,11 @@
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Engineering Stress and Strain: Uniaxial Tension Definitions and Units
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Engineering Stress and Strain: Uniaxial Tension Definitions and Units
-        </h4>
         <p>The standard uniaxial tensile test is the primary mechanical characterization method utilized to assess the structural load-bearing capacity of engineering materials.</p>
     <ol type="a">
       <li>State the definitions and mathematical formulas for:
@@ -322,7 +343,7 @@
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -366,10 +387,11 @@
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Hooke's Law in Tension: Young's Modulus of Elasticity and Atomic Bonding
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Hooke's Law in Tension: Young's Modulus of Elasticity and Atomic Bonding
-        </h4>
         <p>For most engineering metals subjected to low stresses, deformation is linear and completely reversible (elastic).</p>
     <ol type="a">
       <li>State <strong>Hooke's Law</strong> in 1D tension:
@@ -391,7 +413,7 @@
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -448,10 +470,11 @@
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Lateral Elastic Contraction and Poisson's Ratio: Theoretical Bounds and Values
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Lateral Elastic Contraction and Poisson's Ratio: Theoretical Bounds and Values
-        </h4>
         <p>When a solid rod is pulled in tension, its longitudinal elongation is accompanied by a simultaneous lateral contraction.</p>
     <ol type="a">
       <li>Define <strong>Poisson's Ratio ($\nu$)</strong> mathematically for uniaxial loading along the $z$-axis:
@@ -473,7 +496,7 @@
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -530,10 +553,11 @@
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Elastic Constants: Shear Modulus $G$, Bulk Modulus $K$, and Volumetric Strain
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Elastic Constants: Shear Modulus $G$, Bulk Modulus $K$, and Volumetric Strain
-        </h4>
         <p>For an isotropic linear elastic solid, all elastic behaviors are completely defined by any two independent elastic constants.</p>
     <ol type="a">
       <li>State the mathematical definitions of:
@@ -561,7 +585,7 @@
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -619,10 +643,11 @@
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Plastic Yielding: The 0.2% Strain Offset Yield Strength Construction
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Plastic Yielding: The 0.2% Strain Offset Yield Strength Construction
-        </h4>
         <p>Because most engineering metals exhibit a gradual transition from elastic to plastic deformation without an abrupt kink, yield strength is standardized using the 0.2% offset method.</p>
     <ol type="a">
       <li>Explain the detailed geometric procedure for determining the <strong>0.2% Offset Yield Strength ($\sigma_y$ or $\sigma_{0.2}$)</strong> from an engineering stress-strain curve according to ASTM E8.</li>
@@ -641,7 +666,7 @@
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -690,10 +715,11 @@
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        The Yield Point Phenomenon: Upper/Lower Yield Points, Lüders Bands, and Cottrell Pinning
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          The Yield Point Phenomenon: Upper/Lower Yield Points, Lüders Bands, and Cottrell Pinning
-        </h4>
         <p>Certain structural alloys, most notably low-carbon mild steels, exhibit an anomalous yield point phenomenon with distinct upper and lower yield points.</p>
     <ol type="a">
       <li>Differentiate between:
@@ -719,7 +745,7 @@
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -765,10 +791,11 @@
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Elimination of Stretcher Strains: Skin-Pass Temper Rolling and Dynamic Strain Aging
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Elimination of Stretcher Strains: Skin-Pass Temper Rolling and Dynamic Strain Aging
-        </h4>
         <p>In the automotive stamping of outer body panels (hoods, fenders, doors), the formation of visible Lüders bands during deep drawing results in unacceptable surface roughness (orange-peel effect).</p>
     <ol type="a">
       <li>Explain how <strong>skin-pass (temper) rolling</strong> (a light cold rolling pass of $0.5\text{--}1.5\%$ reduction) eliminates the yield point phenomenon and suppresses stretcher strains in deep-drawing steels.</li>
@@ -787,7 +814,7 @@
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -825,10 +852,11 @@
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Ultimate Tensile Strength (UTS): Maximum Load Capacity and the Onset of Necking
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Ultimate Tensile Strength (UTS): Maximum Load Capacity and the Onset of Necking
-        </h4>
         <p>The Ultimate Tensile Strength (UTS) represents the peak engineering stress sustained by a material during a uniaxial tensile test.</p>
     <ol type="a">
       <li>Define <strong>Tensile Strength (UTS / $\sigma_u$)</strong> mathematically in terms of maximum applied load $F_{\max}$ and original area $A_0$.</li>
@@ -850,7 +878,7 @@
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -903,10 +931,11 @@
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Ductility Quantification: Percentage Elongation, Reduction in Area, and Gauge Length Sensitivity
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Ductility Quantification: Percentage Elongation, Reduction in Area, and Gauge Length Sensitivity
-        </h4>
         <p>Ductility is a measure of the degree of plastic deformation that a material can sustain prior to fracture.</p>
     <ol type="a">
       <li>State the mathematical definitions and formulas for:
@@ -932,7 +961,7 @@
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -987,10 +1016,11 @@
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Modulus of Resilience: Elastic Energy Absorption and Mechanical Spring Design
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Modulus of Resilience: Elastic Energy Absorption and Mechanical Spring Design
-        </h4>
         <p>The modulus of resilience $U_r$ quantifies the capacity of a material to absorb mechanical energy during elastic loading and release it completely upon unloading.</p>
     <ol type="a">
       <li>Derive the mathematical formula for the <strong>Modulus of Resilience ($U_r$)</strong> by integrating the linear elastic stress-strain curve from $\varepsilon = 0$ to the yield strain $\varepsilon_y$:
@@ -1017,7 +1047,7 @@
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -1071,10 +1101,11 @@
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Modulus of Toughness: Total Energy Absorbed Prior to Fracture
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Modulus of Toughness: Total Energy Absorbed Prior to Fracture
-        </h4>
         <p>The modulus of toughness $U_t$ represents the total mechanical energy per unit volume that a material absorbs before complete fracture occurs.</p>
     <ol type="a">
       <li>State the mathematical definition of the <strong>Modulus of Toughness ($U_t$)</strong> as the total area under the complete engineering stress-strain curve from $\varepsilon = 0$ to fracture strain $\varepsilon_f$:
@@ -1099,7 +1130,7 @@
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -1152,10 +1183,11 @@
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Comprehensive Tensile Test Data Reduction: Complete Property Evaluation
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Comprehensive Tensile Test Data Reduction: Complete Property Evaluation
-        </h4>
         <p>A standard cylindrical tensile specimen of an experimental titanium-aluminum alloy is tested to destruction according to ASTM E8.</p>
     <div class="highlight-box">
       <strong>Experimental Specimen & Test Data:</strong>
@@ -1187,7 +1219,7 @@
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -1244,10 +1276,11 @@
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        True Stress and True Strain: Physical Distinction from Engineering Parameters
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          True Stress and True Strain: Physical Distinction from Engineering Parameters
-        </h4>
         <p>Engineering stress and strain are based on initial undeformed dimensions, obscuring the true physical state of the metal during large plastic deformation.</p>
     <ol type="a">
       <li>State the mathematical definitions of:
@@ -1272,7 +1305,7 @@
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -1319,10 +1352,11 @@
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Derivation of True vs. Engineering Conversion Equations Under Constant Volume
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Derivation of True vs. Engineering Conversion Equations Under Constant Volume
-        </h4>
         <p>Prior to the onset of necking, true stress and true strain can be directly converted from engineering stress and engineering strain.</p>
     <ol type="a">
       <li>Assuming constant volume during plastic deformation ($V = A_i l_i = A_0 l_0$), derive the standard conversion relationships:
@@ -1344,7 +1378,7 @@
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -1397,10 +1431,11 @@
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Post-Necking Plasticity: Triaxial Stress States and the Bridgman Correction Factor
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Post-Necking Plasticity: Triaxial Stress States and the Bridgman Correction Factor
-        </h4>
         <p>Once localized necking forms in a cylindrical tensile bar, the geometry of the neck alters the internal stress field from simple uniaxial tension to a complex triaxial state.</p>
     <ol type="a">
       <li>Explain why the geometric curvature of the neck profile induces radial ($\sigma_r$) and circumferential ($\sigma_\theta$) tensile stresses in the interior of the neck, creating a <strong>hydrostatic tensile stress state</strong> ($\sigma_h > 0$) along the specimen centerline.</li>
@@ -1422,7 +1457,7 @@
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -1472,10 +1507,11 @@
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        The Hollomon Power-Law Equation: Strength Coefficient $K$ and Strain-Hardening Exponent $n$
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          The Hollomon Power-Law Equation: Strength Coefficient $K$ and Strain-Hardening Exponent $n$
-        </h4>
         <p>For most engineering metals subjected to plastic deformation, the true stress-strain curve in the uniform plastic region is described by the Hollomon equation.</p>
     <ol type="a">
       <li>State the <strong>Hollomon equation</strong>:
@@ -1503,7 +1539,7 @@
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -1560,10 +1596,11 @@
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Determination of Hollomon Parameters ($n$ and $K$) from Experimental Tensile Data
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Determination of Hollomon Parameters ($n$ and $K$) from Experimental Tensile Data
-        </h4>
         <p>The strain-hardening exponent $n$ and strength coefficient $K$ are extracted from true stress-strain data using logarithmic linearization.</p>
     <div style="text-align:center; margin: 10px 0;">
       A low-alloy structural steel yields the following true stress-strain data points during uniform plastic deformation:<br>
@@ -1588,7 +1625,7 @@
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -1642,10 +1679,11 @@
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Considère's Construction: Mathematical Proof that $\varepsilon_{T, u} = n$ at Maximum Load
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Considère's Construction: Mathematical Proof that $\varepsilon_{T, u} = n$ at Maximum Load
-        </h4>
         <p>In 1885, Armand Considère derived the rigorous mathematical condition governing the onset of plastic instability (necking) in uniaxial tension.</p>
     <ol type="a">
       <li>Starting from the condition of maximum tensile load ($dF = 0$), derive <strong>Considère's Criterion</strong> in terms of true stress $\sigma_T$ and true strain $\varepsilon_T$:
@@ -1668,7 +1706,7 @@
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -1721,10 +1759,11 @@
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Plastic Work of Deformation: Energy per Unit Volume in Bulk Metal Forming
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Plastic Work of Deformation: Energy per Unit Volume in Bulk Metal Forming
-        </h4>
         <p>In industrial bulk metalworking processes (cold rolling, wire drawing, forging), engineers must calculate the total mechanical work required to plastically deform a workpiece.</p>
     <ol type="a">
       <li>Derive the formula for the plastic work done per unit volume $w_p$ (in $\text{J/m}^3$) by integrating the Hollomon true stress-strain curve from $\varepsilon_T = 0$ to final plastic strain $\varepsilon_T$:
@@ -1750,7 +1789,7 @@
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -1800,10 +1839,11 @@
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Schmid's Law: Geometric Derivation of Resolved Shear Stress $\tau_R$
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Schmid's Law: Geometric Derivation of Resolved Shear Stress $\tau_R$
-        </h4>
         <p>Plastic deformation in crystalline solids occurs via shear slip along close-packed planes in close-packed directions.</p>
     <ol type="a">
       <li>Consider a cylindrical single-crystal tensile specimen of cross-sectional area $A_0$ loaded by uniaxial tensile force $F$. Let the slip plane normal vector $\mathbf{n}$ make angle $\phi$ with the tensile axis, and let the slip direction $\mathbf{s}$ make angle $\lambda$ with the tensile axis. Derive <strong>Schmid's Law</strong> for the resolved shear stress $\tau_R$:
@@ -1824,7 +1864,7 @@
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -1882,10 +1922,11 @@
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Critical Resolved Shear Stress (CRSS): Single Crystal Yield Criterion
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Critical Resolved Shear Stress (CRSS): Single Crystal Yield Criterion
-        </h4>
         <p>Plastic yielding in a single crystal initiates when the resolved shear stress on the most favorably oriented slip system reaches a critical threshold value.</p>
     <ol type="a">
       <li>State the <strong>Critical Resolved Shear Stress ($\tau_{\text{CRSS}}$)</strong> yield criterion. Explain why $\tau_{\text{CRSS}}$ is an intrinsic material property independent of crystal orientation, whereas the macroscopic tensile yield strength $\sigma_y$ varies wildly with orientation:
@@ -1906,7 +1947,7 @@
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -1962,10 +2003,11 @@
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Schmid Factor Evaluation in FCC Single Crystals: Identifying the Primary Slip System
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Schmid Factor Evaluation in FCC Single Crystals: Identifying the Primary Slip System
-        </h4>
         <p>FCC metals possess 12 equivalent slip systems consisting of $\{111\}$ octahedral planes and $\langle 110\rangle$ close-packed directions.</p>
     <ol type="a">
       <li>State the vector formula for computing the cosine of the angle $\theta$ between tensile direction $[u_1 v_1 w_1]$ and plane normal $[h k l]$ or slip direction $[u_2 v_2 w_2]$ in a cubic crystal:
@@ -1991,7 +2033,7 @@
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -2047,10 +2089,11 @@
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Crystallographic Anisotropy: Yield Strength Variation Across the Standard Stereographic Triangle
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Crystallographic Anisotropy: Yield Strength Variation Across the Standard Stereographic Triangle
-        </h4>
         <p>Due to Schmid factor variations across crystallographic directions, the macroscopic yield strength of a single crystal exhibits severe spatial anisotropy.</p>
     <ol type="a">
       <li>Consider an FCC metal single crystal with $\tau_{\text{CRSS}} = 1.20 \text{ MPa}$. Calculate the macroscopic tensile yield strength $\sigma_y$ when the tensile axis is aligned with:
@@ -2075,7 +2118,7 @@
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -2141,10 +2184,11 @@
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Macrohardness Testing: Indentation Mechanics of Brinell (HB) and Rockwell (HRC/HRB)
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Macrohardness Testing: Indentation Mechanics of Brinell (HB) and Rockwell (HRC/HRB)
-        </h4>
         <p>Hardness testing is the most widely utilized non-destructive mechanical inspection technique in industrial manufacturing.</p>
     <ol type="a">
       <li>Define <strong>Hardness</strong> and state three reasons why hardness testing is performed far more frequently than tensile testing.</li>
@@ -2174,7 +2218,7 @@
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -2231,10 +2275,11 @@
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Microhardness Testing and Empirical Hardness-Tensile Strength Correlations
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Microhardness Testing and Empirical Hardness-Tensile Strength Correlations
-        </h4>
         <p>Microhardness testing allows localized hardness measurement of individual microstructural phases, thin films, and carburized case depth gradients.</p>
     <ol type="a">
       <li>Describe the <strong>Vickers Microhardness Test (HV)</strong>:
@@ -2268,7 +2313,7 @@
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -2319,10 +2364,11 @@
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Plane Stress Transformation and Principal Planes
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Plane Stress Transformation and Principal Planes
-        </h4>
         A critical element on the surface of a titanium alloy bracket in an aircraft wing spar is subjected to plane stress conditions with $\sigma_x = 180\text{ MPa}$, $\sigma_y = -60\text{ MPa}$, and $\tau_{xy} = 80\text{ MPa}$.
 <br><br>
 1. Calculate the orientations of the principal stress planes $\theta_{p1}$ and $\theta_{p2}$.<br>
@@ -2340,7 +2386,7 @@
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -2391,10 +2437,11 @@ $\tau_{\text{max, in-plane}} = 144.2\text{ MPa}$ at $\theta_s = 61.85^\circ, -28
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Mohr's Circle and Absolute Maximum Shear Stress
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Mohr's Circle and Absolute Maximum Shear Stress
-        </h4>
         A machine component made of ductile structural steel is subjected to biaxial tensile stresses in plane stress ($\sigma_z = 0$): $\sigma_x = 240\text{ MPa}$, $\sigma_y = 100\text{ MPa}$, and $\tau_{xy} = 0\text{ MPa}$.
 <br><br>
 1. Identify the three principal stresses $\sigma_1, \sigma_2, \sigma_3$.<br>
@@ -2412,7 +2459,7 @@ $\tau_{\text{max, in-plane}} = 144.2\text{ MPa}$ at $\theta_s = 61.85^\circ, -28
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -2455,10 +2502,11 @@ $\tau_{\text{abs, max}} = 120\text{ MPa}$ (acts on planes rotated $45^\circ$ out
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Tresca Yield Criterion (Maximum Shear Stress Theory)
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Tresca Yield Criterion (Maximum Shear Stress Theory)
-        </h4>
         A pressure hull made of high-strength alloy steel with a uniaxial yield strength of $\sigma_y = 650\text{ MPa}$ is subjected to a triaxial stress state: $\sigma_1 = 450\text{ MPa}$, $\sigma_2 = 200\text{ MPa}$, and $\sigma_3 = -280\text{ MPa}$.
 <br><br>
 1. State the Tresca yield criterion mathematically in terms of principal stresses and uniaxial yield strength $\sigma_y$.<br>
@@ -2476,7 +2524,7 @@ $\tau_{\text{abs, max}} = 120\text{ MPa}$ (acts on planes rotated $45^\circ$ out
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -2524,10 +2572,11 @@ $\sigma_{\text{Tresca}} > \sigma_y$ ($730\text{ MPa} > 650\text{ MPa}$) $\implie
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        von Mises Yield Criterion (Distortion Energy Theory)
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          von Mises Yield Criterion (Distortion Energy Theory)
-        </h4>
         For the same stress state as in the previous problem ($\sigma_1 = 450\text{ MPa}$, $\sigma_2 = 200\text{ MPa}$, $\sigma_3 = -280\text{ MPa}$, and $\sigma_y = 650\text{ MPa}$):
 <br><br>
 1. Calculate the von Mises equivalent stress $\sigma_{\text{vM}}$ (effective stress).<br>
@@ -2545,7 +2594,7 @@ $\sigma_{\text{Tresca}} > \sigma_y$ ($730\text{ MPa} > 650\text{ MPa}$) $\implie
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -2595,10 +2644,11 @@ Tresca predicts yielding ($N = 0.89$) while von Mises predicts safety ($N = 1.01
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Pure Shear Yielding: Tresca vs. von Mises
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Pure Shear Yielding: Tresca vs. von Mises
-        </h4>
         A solid torsion bar is subjected to pure torsional shear stress $\tau$. The material has a tensile yield strength of $\sigma_y = 300\text{ MPa}$.
 <br><br>
 1. Express the principal stresses $(\sigma_1, \sigma_2, \sigma_3)$ in terms of the applied shear stress $\tau$.<br>
@@ -2617,7 +2667,7 @@ Tresca predicts yielding ($N = 0.89$) while von Mises predicts safety ($N = 1.01
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -2672,10 +2722,11 @@ Difference: von Mises is $15.5\%$ less conservative than Tresca in pure shear.
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Yielding of Thin-Walled Cylindrical Pressure Vessel
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Yielding of Thin-Walled Cylindrical Pressure Vessel
-        </h4>
         A thin-walled cylindrical gas storage cylinder has an internal diameter $d = 500\text{ mm}$ (radius $r = 250\text{ mm}$) and wall thickness $t = 5.0\text{ mm}$. It is fabricated from an aluminum alloy with yield strength $\sigma_y = 280\text{ MPa}$.
 <br><br>
 1. Express the circumferential (hoop) stress $\sigma_\theta$, axial (longitudinal) stress $\sigma_z$, and radial stress $\sigma_r$ as functions of internal gauge pressure $p$.<br>
@@ -2694,7 +2745,7 @@ Difference: von Mises is $15.5\%$ less conservative than Tresca in pure shear.
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -2749,10 +2800,11 @@ Ratio $= 2/\sqrt{3} = 1.155$ ($15.5\%$ higher load capacity predicted by von Mis
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Yielding of Spherical Pressure Vessel and Equi-Biaxial Tension
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Yielding of Spherical Pressure Vessel and Equi-Biaxial Tension
-        </h4>
         A spherical titanium alloy pressure vessel has an internal radius $r = 200\text{ mm}$ and wall thickness $t = 4.0\text{ mm}$. The tensile yield strength is $\sigma_y = 900\text{ MPa}$.
 <br><br>
 1. Determine the membrane stresses $\sigma_1, \sigma_2, \sigma_3$ in terms of internal pressure $p$.<br>
@@ -2771,7 +2823,7 @@ Ratio $= 2/\sqrt{3} = 1.155$ ($15.5\%$ higher load capacity predicted by von Mis
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -2820,10 +2872,11 @@ Both criteria predict identical yield pressures because the equi-biaxial stress 
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Combined Bending and Torsion in a Drive Shaft
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Combined Bending and Torsion in a Drive Shaft
-        </h4>
         A solid circular power transmission shaft with diameter $d = 60\text{ mm}$ (radius $c = 30\text{ mm}$) transmits a torque $T = 3.5\text{ kN}\cdot\text{m}$ while simultaneously supporting a transverse bending moment $M = 2.4\text{ kN}\cdot\text{m}$. The shaft is forged from 4340 steel with yield strength $\sigma_y = 850\text{ MPa}$.
 <br><br>
 1. Calculate the maximum bending stress $\sigma_b$ and torsional shear stress $\tau_t$ on the outer surface.<br>
@@ -2842,7 +2895,7 @@ Both criteria predict identical yield pressures because the equi-biaxial stress 
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -2898,10 +2951,11 @@ $\sigma_{\text{Tresca}} = 200.1\text{ MPa} \implies N_{\text{Tresca}} = 4.25$
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Hydrostatic vs. Deviatoric Stress Decomposition
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Hydrostatic vs. Deviatoric Stress Decomposition
-        </h4>
         A cubic element in a deep underground drilling collar is subjected to the stress tensor (in MPa):
 $$[\boldsymbol{\sigma}] = \begin{bmatrix} 500 & 50 & 0 \\ 50 & 400 & 0 \\ 0 & 0 & 300 \end{bmatrix}$$
 <br>
@@ -2921,7 +2975,7 @@ $$[\boldsymbol{\sigma}] = \begin{bmatrix} 500 & 50 & 0 \\ 50 & 400 & 0 \\ 0 & 0 
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -2973,10 +3027,11 @@ Hydrostatic stress produces zero shear stress, hence cannot activate dislocation
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Stress Triaxiality and Ductile Fracture Suppression
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Stress Triaxiality and Ductile Fracture Suppression
-        </h4>
         Stress triaxiality is defined as $\eta = \frac{\sigma_m}{\sigma_{\text{eq}}}$, where $\sigma_m$ is the mean (hydrostatic) stress and $\sigma_{\text{eq}}$ is the equivalent von Mises stress.
 <br><br>
 1. Calculate $\eta$ for: (a) uniaxial tension, (b) pure torsion, (c) equi-biaxial plane tension, and (d) a notched round tensile bar where $\sigma_m = 320\text{ MPa}$ and $\sigma_{\text{eq}} = 400\text{ MPa}$.<br>
@@ -2994,7 +3049,7 @@ Hydrostatic stress produces zero shear stress, hence cannot activate dislocation
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -3045,10 +3100,11 @@ Hydrostatic compression prevents void nucleation/growth, suppressing fracture an
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Strain Rate Sensitivity Exponent and High-Rate Yielding
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Strain Rate Sensitivity Exponent and High-Rate Yielding
-        </h4>
         A low-carbon structural steel is tested in tension at room temperature across several decades of strain rate. The flow stress at $5\%$ plastic strain is measured as:
 $$\sigma_1 = 340\text{ MPa at } \dot{\varepsilon}_1 = 10^{-4}\text{ s}^{-1}$$
 $$\sigma_2 = 415\text{ MPa at } \dot{\varepsilon}_2 = 10^{2}\text{ s}^{-1}$$
@@ -3068,7 +3124,7 @@ $$\sigma_2 = 415\text{ MPa at } \dot{\varepsilon}_2 = 10^{2}\text{ s}^{-1}$$
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -3112,10 +3168,11 @@ Strength enhancement $= +29.2\%$ above quasi-static strength.
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Cowper-Symonds Constitutive Model for Crashworthiness
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Cowper-Symonds Constitutive Model for Crashworthiness
-        </h4>
         In automotive crash simulations, the dynamic yield strength $\sigma_{yd}$ of high-strength low-alloy (HSLA) steel side-impact beams is modeled using the Cowper-Symonds equation:
 $$\sigma_{yd} = \sigma_y \left[1 + \left(\frac{\dot{\varepsilon}}{D}\right)^{1/p}\right]$$
 The steel has a quasi-static yield strength $\sigma_y = 350\text{ MPa}$ and Cowper-Symonds parameters $D = 40\text{ s}^{-1}$ and $p = 5$.
@@ -3135,7 +3192,7 @@ The steel has a quasi-static yield strength $\sigma_y = 350\text{ MPa}$ and Cowp
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -3183,10 +3240,11 @@ Dynamic energy absorbed $= 24.69\text{ kJ}$ (over $2.3\times$ higher than static
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Johnson-Cook Constitutive Model Decomposition
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Johnson-Cook Constitutive Model Decomposition
-        </h4>
         The Johnson-Cook constitutive equation describes the flow stress of metals subjected to large strains, high strain rates, and elevated temperatures:
 $$\sigma = \left(A + B \varepsilon_p^n\right)\left(1 + C \ln \dot{\varepsilon}^*\right)\left(1 - T^{*m}\right)$$
 where $\dot{\varepsilon}^* = \dot{\varepsilon} / \dot{\varepsilon}_0$ and homologous temperature $T^* = \frac{T - T_{\text{room}}}{T_m - T_{\text{room}}}$.
@@ -3209,7 +3267,7 @@ $A = 862\text{ MPa}$, $B = 331\text{ MPa}$, $n = 0.34$, $C = 0.012$, $m = 0.80$,
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -3263,10 +3321,11 @@ Net flow stress $\sigma = 793.5\text{ MPa}$
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Temperature Dependence of Yield Stress: Thermal vs. Athermal Components
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Temperature Dependence of Yield Stress: Thermal vs. Athermal Components
-        </h4>
         The flow stress of crystalline metals is decomposed into thermal and athermal components:
 $$\sigma_y(T) = \sigma^* + \sigma_\mu$$
 where $\sigma^*$ is the short-range thermal component (sensitive to temperature and strain rate) and $\sigma_\mu$ is the long-range athermal component (governed by elastic modulus $\mu$).
@@ -3291,7 +3350,7 @@ with $\sigma_0^* = 680\text{ MPa}$ and $T_0 = 360\text{ K}$ (above $T_0$, $\sigm
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -3338,10 +3397,11 @@ BCC metals exhibit steep temperature dependence due to high Peierls barriers ass
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Adiabatic Shear Banding and Thermomechanical Instability
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Adiabatic Shear Banding and Thermomechanical Instability
-        </h4>
         In high-speed deformation (e.g., ballistic penetration or high-speed machining), almost all plastic work is converted into heat adiabatically. An instability known as an <strong>adiabatic shear band (ASB)</strong> initiates when thermal softening overtakes work hardening:
 $$\frac{d\sigma}{d\varepsilon} = \left(\frac{\partial \sigma}{\partial \varepsilon}\right)_T + \left(\frac{\partial \sigma}{\partial T}\right)_\varepsilon \frac{dT}{d\varepsilon} \le 0$$
 Assuming the adiabatic temperature rise is given by $\frac{dT}{d\varepsilon} = \frac{\beta \sigma}{\rho c_p}$, where Taylor-Quinney factor $\beta = 0.90$, density $\rho = 7800\text{ kg/m}^3$, and specific heat capacity $c_p = 460\text{ J}/(\text{kg}\cdot\text{K})$.
@@ -3363,7 +3423,7 @@ For a steel alloy, the constitutive law is $\sigma = K \varepsilon^n [1 - \gamma
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -3413,10 +3473,11 @@ ASBs cause intense thermal softening concentrated in $10\text{--}50\text{ }\mu\t
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Taylor Impact Test: Estimating Dynamic Yield Stress
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Taylor Impact Test: Estimating Dynamic Yield Stress
-        </h4>
         In a Taylor impact test, a flat-ended cylindrical projectile made of copper with initial length $L_0 = 50.0\text{ mm}$ and initial diameter $D_0 = 10.0\text{ mm}$ is fired at velocity $V_0 = 180\text{ m/s}$ against an essentially rigid, unyielding armor plate.
 <br>
 After impact, the projectile recovers with a deformed mushroomed front, an overall final length $L_f = 41.5\text{ mm}$, and an undeformed rear section of length $X = 26.0\text{ mm}$.
@@ -3437,7 +3498,7 @@ Copper density is $\rho = 8960\text{ kg/m}^3$.
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -3496,10 +3557,11 @@ Dynamic enhancement factor $= 4.48\times$ quasi-static strength.
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Bauschinger Effect and Kinematic vs. Isotropic Hardening
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Bauschinger Effect and Kinematic vs. Isotropic Hardening
-        </h4>
         A cylindrical bar of austenitic stainless steel is loaded in forward tension beyond its initial yield point ($\sigma_{y0} = 240\text{ MPa}$) up to a maximum forward stress of $\sigma_{\text{fwd}} = 480\text{ MPa}$.
 Upon unloading to zero stress and immediately reloading in reverse compression:
 <br><br>
@@ -3520,7 +3582,7 @@ Upon unloading to zero stress and immediately reloading in reverse compression:
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -3571,10 +3633,11 @@ Measured: $|\sigma_{y,\text{rev}}| = 160\text{ MPa}$ $\implies$ $\beta_B = 0.333
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Sheet Metal Bending: Elastic Recovery and Springback Ratio
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Sheet Metal Bending: Elastic Recovery and Springback Ratio
-        </h4>
         During sheet metal forming, elastic recovery occurs upon releasing the tooling, causing the bent part to open up (springback). The springback ratio $K_s$ relates the initial loaded bend radius $r_i$ to the final unloaded radius $r_f$:
 $$K_s = \frac{r_i + t/2}{r_f + t/2} \approx 4\left(\frac{r_i \sigma_y}{E t}\right)^3 - 3\left(\frac{r_i \sigma_y}{E t}\right) + 1$$
 where $t$ is sheet thickness, $\sigma_y$ is yield strength, and $E$ is Young's modulus.
@@ -3597,7 +3660,7 @@ A sheet of high-strength steel ($E = 205\text{ GPa}$, $\sigma_y = 600\text{ MPa}
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -3646,10 +3709,11 @@ Aluminum undergoes $77\%$ more springback due to its higher $\sigma_y / E$ ratio
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Springback Angle in V-Die Bending: Analytical Formulation
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Springback Angle in V-Die Bending: Analytical Formulation
-        </h4>
         A flat metal strip of width $w = 50\text{ mm}$ and thickness $t = 1.5\text{ mm}$ is bent in a $90^\circ$ V-die. The bend radius of the punch is $R_p = 4.5\text{ mm}$ ($R_p / t = 3.0$).
 <br><br>
 The springback angle $\Delta \theta = \theta_i - \theta_f$ can be approximated by:
@@ -3672,7 +3736,7 @@ where $\theta_i = 90^\circ$ is the loaded bend angle.
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -3720,10 +3784,11 @@ Mitigation methods: Coining/bottoming, overbending punch angle, and stretch bend
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Residual Stress Distribution Induced by Inelastic Bending
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Residual Stress Distribution Induced by Inelastic Bending
-        </h4>
         A rectangular beam of width $b = 20\text{ mm}$ and height $h = 40\text{ mm}$ (half-height $c = 20\text{ mm}$) made of an elastic-perfectly plastic steel with yield strength $\sigma_y = 300\text{ MPa}$ and Young's modulus $E = 200\text{ GPa}$ is bent by an applied bending moment $M$ to produce a plastic penetration depth such that the elastic core has half-height $y_0 = 10\text{ mm}$ ($c/2$).
 <br><br>
 1. Calculate the applied bending moment $M$ required to maintain this elastoplastic state.<br>
@@ -3742,7 +3807,7 @@ Mitigation methods: Coining/bottoming, overbending punch angle, and stretch bend
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -3803,10 +3868,11 @@ Interface residual stress $\sigma_{\text{res}}(y_0) = +93.8\text{ MPa}$ (tensile
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Shot Peening: Residual Stress Induction and Fatigue Enhancement
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Shot Peening: Residual Stress Induction and Fatigue Enhancement
-        </h4>
         Shot peening is used to improve the fatigue life of landing gear components made of 300M ultra-high-strength steel ($\sigma_y = 1650\text{ MPa}$, $\sigma_{\text{UTS}} = 1950\text{ MPa}$).
 <br><br>
 1. Describe the mechanical mechanism by which cast steel shot impacts create a near-surface compressive residual stress layer.<br>
@@ -3824,7 +3890,7 @@ Interface residual stress $\sigma_{\text{res}}(y_0) = +93.8\text{ MPa}$ (tensile
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -3870,10 +3936,11 @@ Compressive residual stress enforces crack closure and eliminates tensile slip b
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Residual Stress Measurement: X-Ray Diffraction $\sin^2\psi$ Technique
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Residual Stress Measurement: X-Ray Diffraction $\sin^2\psi$ Technique
-        </h4>
         The non-destructive $\sin^2\psi$ X-ray diffraction technique measures surface residual stresses by measuring the shift in Bragg peak position as the sample is tilted by angle $\psi$ relative to the incident beam.
 The lattice strain $\varepsilon_\psi$ is related to the tilt angle $\psi$ by:
 $$\varepsilon_\psi = \frac{d_\psi - d_0}{d_0} = \left(\frac{1+\nu}{E}\right) \sigma_{\phi} \sin^2\psi - \frac{\nu}{E}(\sigma_1 + \sigma_2)$$
@@ -3898,7 +3965,7 @@ For an untextured nickel alloy component ($E = 210\text{ GPa}$, $\nu = 0.30$), t
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -3946,10 +4013,11 @@ Destructive alternative: Blind hole-drilling strain gage method (ASTM E837) or c
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Plastic Strain Ratio (Lankford R-Value) and Normal Anisotropy
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Plastic Strain Ratio (Lankford R-Value) and Normal Anisotropy
-        </h4>
         The plastic strain ratio (Lankford $R$-value) characterizes the resistance of sheet metal to thinning during plastic forming:
 $$R = \frac{\varepsilon_w}{\varepsilon_t} = \frac{\ln(w / w_0)}{\ln(t / t_0)}$$
 Assuming constancy of volume during plastic deformation ($\varepsilon_l + \varepsilon_w + \varepsilon_t = 0$).
@@ -3975,7 +4043,7 @@ The width strains measured at angles to the rolling direction are:
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -4026,10 +4094,11 @@ High $\bar{R}$ prevents wall thinning and premature tearing during deep drawing.
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Planar Anisotropy and Earing Behavior in Deep Drawing
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Planar Anisotropy and Earing Behavior in Deep Drawing
-        </h4>
         Planar anisotropy $\Delta R$ quantifies the variation of plastic properties within the sheet plane:
 $$\Delta R = \frac{R_0 - 2R_{45} + R_{90}}{2}$$
 During deep drawing of a circular blank into a cylindrical cup, non-zero planar anisotropy causes non-uniform cup rim heights, forming wave-like projections called <strong>ears</strong>.
@@ -4052,7 +4121,7 @@ Using the data from Problem 48 ($R_0 = 2.000$, $R_{45} = 1.571$, $R_{90} = 2.462
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -4099,10 +4168,11 @@ Earing is caused by crystallographic deformation texture aligning slip systems a
         </div>
       </div>
 
+      <h4 class="problem-card-title">
+        Comprehensive Material Selection: Aerospace Pressure Cylinder
+      </h4>
+
       <div class="problem-statement">
-        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: #ffffff; margin-bottom: 0.65rem;">
-          Comprehensive Material Selection: Aerospace Pressure Cylinder
-        </h4>
         A cylindrical aerospace cabin pressure vessel with diameter $D = 2.0\text{ m}$ (radius $R = 1.0\text{ m}$) and length $L = 6.0\text{ m}$ must withstand an internal operating gauge pressure $p = 120\text{ kPa}$ ($1.2\text{ bar}$) with a design factor of safety $N = 2.0$.
 To minimize launch mass, the structural engineer must evaluate three competing candidate alloys:
 <br><br>
@@ -4133,7 +4203,7 @@ To minimize launch mass, the structural engineer must evaluate three competing c
       <div class="solution-container">
         <div class="solution-heading">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          Step-by-Step Technical Solution & Analysis
+          Step-by-Step Technical Solution &amp; Analysis
         </div>
         
         <div class="solution-step">
@@ -4192,21 +4262,21 @@ Maraging Steel saves $42.3\%$ mass over aluminum and $8.3\%$ mass over titanium 
     
     </section>
 
-    <!-- Chapter Navigation Footer -->
-    <nav class="chapter-pagination" style="display: flex; justify-content: space-between; align-items: center; margin: 3.5rem 0; padding-top: 1.5rem; border-top: 1px solid rgba(212, 175, 55, 0.3); flex-wrap: wrap; gap: 1rem;">
-      <a href="chapter5.html" class="btn-classic" style="padding: 0.65rem 1.25rem;">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+    <!-- Chapter Navigation Footer Strip -->
+    <nav style="display: flex; justify-content: space-between; align-items: center; margin: 4rem 0 2rem; padding-top: 1.75rem; border-top: var(--border-double); flex-wrap: wrap; gap: 1rem;">
+      <a href="chapter5.html" class="btn-classic" style="padding: 0.75rem 1.35rem;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
         <span>Previous: Ch 5: Ch 5: Diffusion in Solids</span>
       </a>
 
-      <a href="index.html" class="btn-classic" style="padding: 0.65rem 1.25rem;">
+      <a href="../index.html" class="btn-classic" style="padding: 0.75rem 1.35rem;">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
-        <span>All Chapters (Home)</span>
+        <span>Main Portal (Cover)</span>
       </a>
 
-      <a href="chapter7.html" class="btn-primary" style="padding: 0.65rem 1.25rem;">
+      <a href="chapter7.html" class="btn-primary" style="padding: 0.75rem 1.35rem;">
         <span>Next: Ch 7: Ch 7: Strengthening Mechanisms</span>
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
       </a>
     </nav>
   </main>
@@ -4215,145 +4285,117 @@ Maraging Steel saves $42.3\%$ mass over aluminum and $8.3\%$ mass over titanium 
     <div id="formula-modal" class="modal-overlay">
       <div class="modal-card">
         <div class="modal-header">
-          <h3>Master Formula Compendium & Physical Constants (Ch 1 – 8)</h3>
+          <h3>Master Formula Compendium &amp; Physical Constants (Chapters 1 &ndash; 8)</h3>
           <button id="btn-close-formula-modal" class="modal-close-btn">&times;</button>
         </div>
         <div class="modal-body">
-          <div style="background: rgba(30, 58, 138, 0.25); border: 1px solid rgba(56, 189, 248, 0.3); padding: 0.85rem; border-radius: 4px; margin-bottom: 1rem; font-size: 0.85rem; color: #bae6fd;">
-            <strong>Fundamental Physical Constants:</strong><br>
+          <div style="background: rgba(30, 58, 138, 0.3); border: 1.5px solid rgba(56, 189, 248, 0.5); padding: 1rem; border-radius: 4px; margin-bottom: 1.25rem; font-size: 0.92rem; color: #bae6fd;">
+            <strong style="color: #facc15; font-size: 1rem;">Fundamental Physical Constants:</strong><br>
             Avogadro's Number: \(N_A = 6.022 \times 10^{23} \text{ atoms/mol}\) &bull;
-            Boltzmann's Constant: \(k = 1.38 \times 10^{-23} \text{ J/atom}\cdot\text{K} = 8.62 \times 10^{-5} \text{ eV/atom}\cdot\text{K}\)<br>
+            Boltzmann's Constant: \(k_B = 1.381 \times 10^{-23} \text{ J/K} = 8.617 \times 10^{-5} \text{ eV/K}\)<br>
             Universal Gas Constant: \(R = 8.314 \text{ J/mol}\cdot\text{K}\) &bull;
-            Elementary Charge: \(e = 1.602 \times 10^{-19} \text{ C}\) &bull;
-            1 eV = \(1.602 \times 10^{-19} \text{ J}\)
+            Electron Charge: \(e = 1.602 \times 10^{-19} \text{ C}\) &bull;
+            \(1 \text{ eV} = 1.602 \times 10^{-19} \text{ J}\)
           </div>
 
           <table class="formula-table">
             <thead>
               <tr>
-                <th style="width: 25%;">Domain / Law</th>
-                <th style="width: 45%;">Governing Mathematical Equation</th>
-                <th style="width: 30%;">Key Variables & Units</th>
+                <th style="width: 20%;">Chapter / Topic</th>
+                <th style="width: 45%;">Governing Equation &amp; Relation</th>
+                <th style="width: 35%;">Parameter Definitions</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td><strong>Theoretical Crystal Density</strong></td>
+                <td><strong>Ch 1: Ashby Indices</strong></td>
+                <td>$$M_1 = \frac{\sigma_y}{\rho}, \quad M_2 = \frac{E^{1/2}}{\rho}, \quad M_3 = \frac{\sigma_y^{2/3}}{\rho}$$</td>
+                <td>Lightweight tension tie-rod (\(M_1\)), stiff beam (\(M_2\)), strong beam (\(M_3\))</td>
+              </tr>
+              <tr>
+                <td><strong>Ch 1: Composite Moduli</strong></td>
+                <td>$$E_{cl} = V_f E_f + V_m E_m, \quad \frac{1}{E_{ct}} = \frac{V_f}{E_f} + \frac{V_m}{E_m}$$</td>
+                <td>Voigt isostrain (longitudinal) and Reuss isostress (transverse) Rule of Mixtures</td>
+              </tr>
+              <tr>
+                <td><strong>Ch 2: Potential Energy Well</strong></td>
+                <td>$$E_N(r) = -\frac{A}{r^m} + \frac{B}{r^n}, \quad F_N(r) = \frac{dE_N}{dr}$$</td>
+                <td>Attractive vs repulsive potential; equilibrium spacing \(r_0\) at \(F_N(r_0) = 0\)</td>
+              </tr>
+              <tr>
+                <td><strong>Ch 3: Theoretical Density</strong></td>
                 <td>$$\rho = \frac{n \cdot A}{V_c \cdot N_A}$$</td>
-                <td>\(n\): atoms/cell; \(A\): g/mol; \(V_c\): cell volume (\(\text{cm}^3\)); \(\rho\): \(\text{g/cm}^3\)</td>
+                <td>\(n\): atoms/cell; \(A\): atomic weight (g/mol); \(V_c\): cell volume</td>
               </tr>
               <tr>
-                <td><strong>Lattice Constants & APF</strong></td>
-                <td>
-                  BCC: \(a = \frac{4R}{\sqrt{3}}\), \(\text{APF} = 0.68\), \(n=2\)<br>
-                  FCC: \(a = 2\sqrt{2}R\), \(\text{APF} = 0.74\), \(n=4\)
-                </td>
-                <td>\(R\): atomic radius; \(a\): lattice parameter; \(\text{APF} = \frac{n(4/3\pi R^3)}{V_c}\)</td>
+                <td><strong>Ch 3: Crystal Geometry</strong></td>
+                <td>BCC: \(a = \frac{4R}{\sqrt{3}}\), \(\text{APF} = 0.68\)<br>FCC: \(a = 2\sqrt{2}R\), \(\text{APF} = 0.74\)</td>
+                <td>\(R\): atomic radius; \(a\): cubic lattice parameter</td>
               </tr>
               <tr>
-                <td><strong>Cubic Interplanar Spacing</strong></td>
-                <td>$$d_{hkl} = \frac{a}{\sqrt{h^2 + k^2 + l^2}}$$</td>
-                <td>\((hkl)\): Miller indices; \(a\): unit cell lattice parameter</td>
+                <td><strong>Ch 3: Bragg's Law (XRD)</strong></td>
+                <td>$$n\lambda = 2 d_{hkl} \sin\theta, \quad d_{hkl} = \frac{a}{\sqrt{h^2+k^2+l^2}}$$</td>
+                <td>\(\lambda\): X-ray wavelength; \(d_{hkl}\): interplanar spacing; \(\theta\): Bragg angle</td>
               </tr>
               <tr>
-                <td><strong>Bragg's Law (XRD)</strong></td>
-                <td>$$n\lambda = 2 d_{hkl} \sin\theta$$</td>
-                <td>\(\lambda\): X-ray wavelength; \(\theta\): Bragg diffraction angle; \(n\): order (usually 1)</td>
+                <td><strong>Ch 4: Equilibrium Vacancies</strong></td>
+                <td>$$N_v = N \exp\left(-\frac{Q_v}{k_B T}\right)$$</td>
+                <td>\(N\): total atomic sites; \(Q_v\): vacancy formation energy</td>
               </tr>
               <tr>
-                <td><strong>Equilibrium Vacancies</strong></td>
-                <td>$$N_v = N \exp\left(-\frac{Q_v}{kT}\right)$$</td>
-                <td>\(N\): total atomic sites; \(Q_v\): vacancy activation energy (eV or J/mol); \(T\): Kelvin</td>
-              </tr>
-              <tr>
-                <td><strong>ASTM Grain Size Number</strong></td>
+                <td><strong>Ch 4: ASTM Grain Size</strong></td>
                 <td>$$N = 2^{n - 1}$$</td>
-                <td>\(N\): grains per square inch at 100\(\times\); \(n\): ASTM grain size number</td>
+                <td>\(N\): grains per square inch at 100\(\times\) magnification; \(n\): ASTM number</td>
               </tr>
               <tr>
-                <td><strong>Fick's First Law (Steady-State)</strong></td>
-                <td>$$J = -D \frac{dC}{dx} = \frac{M}{A \cdot t}$$</td>
-                <td>\(J\): flux (\(\text{kg/m}^2\cdot\text{s}\)); \(D\): diffusivity (\(\text{m}^2/\text{s}\)); \(dC/dx\): gradient</td>
+                <td><strong>Ch 5: Fick's 1st Law</strong></td>
+                <td>$$J = -D \frac{dC}{dx}$$</td>
+                <td>\(J\): diffusion flux (\(\text{kg/m}^2\cdot\text{s}\)); \(D\): diffusion coefficient</td>
               </tr>
               <tr>
-                <td><strong>Fick's Second Law (Semi-Infinite)</strong></td>
+                <td><strong>Ch 5: Fick's 2nd Law</strong></td>
                 <td>$$\frac{C_x - C_0}{C_s - C_0} = 1 - \text{erf}\left(\frac{x}{2\sqrt{Dt}}\right)$$</td>
-                <td>\(C_s\): surface conc; \(C_0\): initial base conc; \(C_x\): conc at depth \(x\) after time \(t\)</td>
+                <td>Semi-infinite solid constant surface concentration carburization/decarburization</td>
               </tr>
               <tr>
-                <td><strong>Arrhenius Temperature Law</strong></td>
+                <td><strong>Ch 5: Arrhenius Diffusivity</strong></td>
                 <td>$$D = D_0 \exp\left(-\frac{Q_d}{RT}\right)$$</td>
-                <td>\(D_0\): pre-exponential (\(\text{m}^2/\text{s}\)); \(Q_d\): activation energy (\(\text{J/mol}\)); \(R=8.314\)</td>
+                <td>\(D_0\): pre-exponential; \(Q_d\): activation energy for diffusion</td>
               </tr>
               <tr>
-                <td><strong>Hooke's Law & Shear Modulus</strong></td>
+                <td><strong>Ch 6: Hooke's Law &amp; Moduli</strong></td>
                 <td>$$\sigma = E\varepsilon, \quad \tau = G\gamma, \quad G = \frac{E}{2(1 + \nu)}$$</td>
-                <td>\(E\): Young's modulus; \(G\): Shear modulus; \(\nu\): Poisson's ratio (\(\sim 0.3\))</td>
+                <td>\(E\): Young's modulus; \(G\): shear modulus; \(\nu\): Poisson's ratio</td>
               </tr>
               <tr>
-                <td><strong>True Stress & True Strain</strong></td>
-                <td>$$\sigma_T = \sigma(1+\varepsilon), \quad \varepsilon_T = \ln(1+\varepsilon)$$</td>
-                <td>Valid up to necking; \(\sigma, \varepsilon\): engineering stress/strain</td>
+                <td><strong>Ch 6: Modulus of Resilience</strong></td>
+                <td>$$U_r = \frac{\sigma_y^2}{2E}$$</td>
+                <td>Elastic strain energy storage capacity per unit volume up to yielding</td>
               </tr>
               <tr>
-                <td><strong>Hollomon Power Law</strong></td>
-                <td>$$\sigma_T = K \varepsilon_T^n$$</td>
-                <td>\(K\): strength coefficient; \(n\): strain hardening exponent; Necking: \(\varepsilon_T = n\)</td>
-              </tr>
-              <tr>
-                <td><strong>Modulus of Resilience</strong></td>
-                <td>$$U_r = \int_0^{\varepsilon_y} \sigma d\varepsilon \approx \frac{\sigma_y^2}{2E}$$</td>
-                <td>\(U_r\): elastic energy stored per unit volume (\(\text{J/m}^3\) or \(\text{Pa}\))</td>
-              </tr>
-              <tr>
-                <td><strong>Schmid's Law (Single Crystals)</strong></td>
+                <td><strong>Ch 6: Schmid's Law</strong></td>
                 <td>$$\tau_R = \sigma \cos\phi \cos\lambda \le \tau_{\text{CRSS}}$$</td>
-                <td>\(\phi\): angle to slip plane normal; \(\lambda\): angle to slip direction; \(m = \cos\phi\cos\lambda\)</td>
+                <td>\(\phi\): normal to slip plane; \(\lambda\): slip direction angle</td>
               </tr>
               <tr>
-                <td><strong>Hall-Petch Strengthening</strong></td>
+                <td><strong>Ch 7: Hall-Petch Law</strong></td>
                 <td>$$\sigma_y = \sigma_0 + k_y d^{-1/2}$$</td>
-                <td>\(\sigma_0\): friction stress; \(k_y\): locking coefficient (\(\text{MPa}\cdot\text{mm}^{1/2}\)); \(d\): grain size</td>
+                <td>\(\sigma_0\): friction stress; \(k_y\): unpinning coefficient; \(d\): average grain diameter</td>
               </tr>
               <tr>
-                <td><strong>Cold Work & Dislocation Density</strong></td>
-                <td>$$\%\text{CW} = \frac{A_0 - A_d}{A_0} \times 100\%, \quad \tau = \tau_0 + \alpha G b \sqrt{\rho}$$</td>
-                <td>\(\rho\): dislocation density (\(\text{m}^{-2}\)); \(b\): Burgers vector; \(A_0, A_d\): cross-sections</td>
+                <td><strong>Ch 7: Cold Work &amp; Orowan</strong></td>
+                <td>$$\%\text{CW} = \frac{A_0 - A_d}{A_0} \times 100\%, \quad \Delta\tau = \frac{G b}{L}$$</td>
+                <td>Dislocation density multiplication &amp; precipitate bowing resistance</td>
               </tr>
               <tr>
-                <td><strong>Orowan Looping (Precipitation)</strong></td>
-                <td>$$\Delta\tau = \frac{G b}{L - 2r} \approx \frac{G b}{L}$$</td>
-                <td>\(L\): inter-particle spacing; \(r\): particle radius; \(G\): matrix shear modulus</td>
+                <td><strong>Ch 8: Fracture Toughness</strong></td>
+                <td>$$K = Y \sigma \sqrt{\pi a} \le K_{Ic}$$</td>
+                <td>\(K_{Ic}\): plane strain fracture toughness; \(Y\): dimensionless crack geometry factor</td>
               </tr>
               <tr>
-                <td><strong>Stress Concentration (Crack Tip)</strong></td>
-                <td>$$K_t = \frac{\sigma_m}{\sigma_0} = 2 \sqrt{\frac{a}{\rho_t}}$$</td>
-                <td>\(a\): crack length; \(\rho_t\): crack tip radius of curvature; \(\sigma_0\): nominal stress</td>
-              </tr>
-              <tr>
-                <td><strong>Griffith Critical Fracture Stress</strong></td>
-                <td>$$\sigma_c = \sqrt{\frac{2E\gamma_s}{\pi a}}$$</td>
-                <td>\(\gamma_s\): specific surface energy (\(\text{J/m}^2\)); \(E\): Young's modulus; \(a\): crack size</td>
-              </tr>
-              <tr>
-                <td><strong>Mode I Fracture Toughness</strong></td>
-                <td>$$K_I = Y \sigma \sqrt{\pi a} \le K_{Ic}$$</td>
-                <td>\(K_{Ic}\): plane strain fracture toughness (\(\text{MPa}\cdot\sqrt{\text{m}}\)); \(Y\): geometric factor</td>
-              </tr>
-              <tr>
-                <td><strong>Fatigue Stress Parameters</strong></td>
-                <td>$$\sigma_m = \frac{\sigma_{\max}+\sigma_{\min}}{2}, \quad \sigma_a = \frac{\sigma_{\max}-\sigma_{\min}}{2}, \quad R = \frac{\sigma_{\min}}{\sigma_{\max}}$$</td>
-                <td>\(\sigma_m\): mean stress; \(\sigma_a\): amplitude; \(R\): stress ratio</td>
-              </tr>
-              <tr>
-                <td><strong>Steady-State Creep Rate</strong></td>
-                <td>$$\dot{\varepsilon}_s = K_2 \sigma^n \exp\left(-\frac{Q_c}{RT}\right)$$</td>
-                <td>\(\dot{\varepsilon}_s\): steady creep rate (\(\text{s}^{-1}\)); \(n\): stress exponent; \(Q_c\): creep activation energy</td>
-              </tr>
-              <tr>
-                <td><strong>Larson-Miller Parameter</strong></td>
+                <td><strong>Ch 8: Larson-Miller Creep</strong></td>
                 <td>$$P = T \left(20 + \log_{10} t_r\right)$$</td>
-                <td>\(T\): absolute temperature in Kelvin; \(t_r\): rupture life in hours</td>
+                <td>\(T\): temperature in Kelvin; \(t_r\): creep rupture time in hours</td>
               </tr>
             </tbody>
           </table>
@@ -4364,31 +4406,29 @@ Maraging Steel saves $42.3\%$ mass over aluminum and $8.3\%$ mass over titanium 
   
     <footer class="site-footer">
       <div class="master-wrapper" style="padding-bottom: 0;">
-        <div class="university-crest" style="margin-bottom: 1rem;">
-          
-<svg width="68" height="68" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="50" cy="50" r="47" stroke="#d4af37" stroke-width="2" stroke-dasharray="2 2" opacity="0.8"/>
-  <circle cx="50" cy="50" r="43" stroke="#d4af37" stroke-width="1.5"/>
-  <circle cx="50" cy="50" r="38" fill="#0d1b3e" stroke="rgba(212, 175, 55, 0.4)" stroke-width="1"/>
-  <!-- Central Traditional Emblem Motif -->
-  <path d="M50 16 L56 32 L72 32 L59 42 L64 58 L50 48 L36 58 L41 42 L28 32 L44 32 Z" fill="rgba(212, 175, 55, 0.15)" stroke="#d4af37" stroke-width="1"/>
-  <!-- Open Book of Knowledge / Engineering -->
-  <path d="M50 48 L38 42 C34 40 30 43 30 48 L30 68 C34 65 42 65 50 69 C58 65 66 65 70 68 L70 48 C70 43 66 40 62 42 Z" fill="#14244d" stroke="#d4af37" stroke-width="1.5"/>
-  <path d="M50 48 L50 69" stroke="#d4af37" stroke-width="1.5"/>
-  <!-- Mechanical Gear Accents -->
-  <circle cx="50" cy="50" r="4" fill="#d4af37"/>
-  <!-- Laurel Wreath Curves -->
-  <path d="M22 56 C20 40 28 26 42 20" stroke="#d4af37" stroke-width="1.2" stroke-linecap="round"/>
-  <path d="M78 56 C80 40 72 26 58 20" stroke="#d4af37" stroke-width="1.2" stroke-linecap="round"/>
-</svg>
-
+        <div style="display: flex; justify-content: center; align-items: center; gap: 1.5rem; margin-bottom: 1.5rem;">
+          <div class="footer-emblem-badge">
+            <img src="../assets/images/ut_mech_emblem.svg" alt="UT Mechanical Engineering Crest">
+          </div>
+          <div class="footer-emblem-badge" style="padding: 4px;">
+            <img src="../assets/images/ut_engineering_logo.svg" alt="College of Engineering Emblem">
+          </div>
         </div>
-        <p class="footer-gold-text">UNIVERSITY OF TEHRAN</p>
-        <p>Faculty of Mechanical Engineering &bull; Department of Materials & Manufacturing</p>
-        <p>Course: <strong>Science of Materials</strong> (Undergraduate Curriculum) &bull; Instructor: <strong>Prof. A. Sadeghi</strong></p>
-        <p style="margin-top: 0.75rem; color: #cbd5e1;">Comprehensive 400-Problem Midterm Exam Mastery Suite</p>
-        <p style="font-size: 0.8rem; color: #94a3b8;">Authored, Curated & Synthesized by Teaching Assistant <strong>Sina Sharifi</strong></p>
-        <p style="font-size: 0.75rem; color: #64748b; margin-top: 1.5rem;">Designed for academic excellence &bull; Formatted with LaTeX Math &bull; Dark Blue Classic Edition</p>
+
+        <p class="footer-persian">دانشگاه تهران &bull; پردیس دانشکده‌های فنی &bull; دانشکده مهندسی مکانیک</p>
+        <p class="footer-gold-text">UNIVERSITY OF TEHRAN &bull; DEPARTMENT OF MECHANICAL ENGINEERING</p>
+        
+        <div class="gold-hairline" style="margin: 0.85rem auto;"></div>
+
+        <p style="color: #cbd5e1; font-size: 0.95rem;">
+          Course: <strong>Science of Materials</strong> (Undergraduate Midterm Mastery Suite) &bull; Instructor: <strong>Prof. A. Sadeghi</strong>
+        </p>
+        <p style="font-size: 0.88rem; color: #facc15; margin-top: 0.35rem;">
+          Meticulously Prepared &amp; Synthesized by Teaching Assistant <strong>Sina Sharifi</strong>
+        </p>
+        <p style="font-size: 0.78rem; color: #94a3b8; margin-top: 1.25rem;">
+          Designed for academic excellence &bull; Formatted with LaTeX Math &bull; High-Contrast Classical Edition
+        </p>
       </div>
     </footer>
     <button id="btn-back-top" class="btn-back-top" title="Back to top">
@@ -4396,6 +4436,6 @@ Maraging Steel saves $42.3\%$ mass over aluminum and $8.3\%$ mass over titanium 
     </button>
     
 
-  <script src="js/main.js"></script>
+  <script src="../js/main.js"></script>
 </body>
 </html>

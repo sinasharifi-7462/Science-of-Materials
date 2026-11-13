@@ -1,0 +1,56 @@
+<svg viewBox="0 0 750 500" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="wellBg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0e1836"/>
+      <stop offset="100%" stop-color="#060c1d"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="750" height="500" fill="url(#wellBg)" rx="8" stroke="#253861" stroke-width="2"/>
+
+  <!-- Center Axis: Energy E = 0 -->
+  <line x1="80" y1="180" x2="710" y2="180" stroke="#64748b" stroke-width="2"/>
+  <text x="705" y="170" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="12" font-weight="bold">Interatomic Distance r &rarr;</text>
+  
+  <!-- Vertical Axis: r = 0 -->
+  <line x1="90" y1="40" x2="90" y2="460" stroke="#64748b" stroke-width="2"/>
+  <text x="65" y="55" fill="#facc15" font-family="'Inter', sans-serif" font-size="13" font-weight="bold">+E</text>
+  <text x="65" y="445" fill="#facc15" font-family="'Inter', sans-serif" font-size="13" font-weight="bold">-E</text>
+  <text x="65" y="185" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="bold">0</text>
+
+  <!-- Curve 1: Repulsive Potential E_R(r) = B / r^n (Steep positive) -->
+  <path d="M 105 45 Q 125 125 180 172 T 400 180" fill="none" stroke="#f43f5e" stroke-width="2.5" stroke-dasharray="5 4"/>
+  <rect x="180" y="65" width="220" height="26" rx="4" fill="#2d0612" stroke="#f43f5e" stroke-width="1"/>
+  <text x="290" y="82" fill="#fecdd3" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="bold" text-anchor="middle">
+    Repulsion E_R(r) = +B / r^n (Pauli)
+  </text>
+
+  <!-- Curve 2: Attractive Potential E_A(r) = -A / r^m (Gradual negative) -->
+  <path d="M 100 220 Q 200 230 420 200 T 700 184" fill="none" stroke="#38bdf8" stroke-width="2.5" stroke-dasharray="5 4"/>
+  <rect x="420" y="225" width="230" height="26" rx="4" fill="#042033" stroke="#38bdf8" stroke-width="1"/>
+  <text x="535" y="242" fill="#bae6fd" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="bold" text-anchor="middle">
+    Attraction E_A(r) = -A / r^m (Coulomb)
+  </text>
+
+  <!-- Curve 3: Net Potential Energy Well E_N(r) = E_A + E_R (Thick Gold) -->
+  <path d="M 108 50 C 120 280 180 390 260 390 C 350 390 480 220 700 186" fill="none" stroke="#ffd700" stroke-width="4"/>
+
+  <!-- Equilibrium Minimum Well: r0 and E0 -->
+  <line x1="260" y1="180" x2="260" y2="390" stroke="#facc15" stroke-width="2" stroke-dasharray="4 3"/>
+  <circle cx="260" cy="390" r="7" fill="#f59e0b" stroke="#ffffff" stroke-width="2"/>
+  <text x="260" y="165" fill="#fef08a" font-family="'Inter', sans-serif" font-size="13" font-weight="bold" text-anchor="middle">r&sub0; (Equilibrium Spacing)</text>
+
+  <!-- Well Depth -E0 (Bonding Energy) -->
+  <line x1="90" y1="390" x2="260" y2="390" stroke="#facc15" stroke-width="2" stroke-dasharray="4 3"/>
+  <text x="50" y="394" fill="#fef08a" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="bold">-E&sub0;</text>
+
+  <!-- Asymmetry & Thermal Expansion Annotation -->
+  <g transform="translate(360, 290)">
+    <rect x="0" y="0" width="350" height="95" rx="6" fill="#0a1530" stroke="#d4af37" stroke-width="1.5"/>
+    <text x="175" y="22" fill="#facc15" font-family="'Inter', sans-serif" font-size="12" font-weight="bold" text-anchor="middle">PHYSICAL CORRELATES OF THE WELL</text>
+    <line x1="15" y1="30" x2="335" y2="30" stroke="#253861" stroke-width="1"/>
+    <text x="15" y="48" fill="#f8fafc" font-family="'Inter', sans-serif" font-size="10.5">&bull; Well Depth E&sub0; &prop; Melting Point T_m &amp; Cohesive Energy</text>
+    <text x="15" y="66" fill="#f8fafc" font-family="'Inter', sans-serif" font-size="10.5">&bull; Well Curvature (d&sup2;E/dr&sup2;) &prop; Young's Modulus E</text>
+    <text x="15" y="84" fill="#34d399" font-family="'Inter', sans-serif" font-size="10.5">&bull; Asymmetric Anharmonicity &rarr; Thermal Expansion (&alpha;_L)</text>
+  </g>
+</svg>

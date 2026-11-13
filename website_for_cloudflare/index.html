@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Science of Materials — Midterm Exam Problem Suite | University of Tehran</title>
-  <meta name="description" content="Comprehensive 400-problem midterm examination mastery suite for the Science of Materials course at the University of Tehran, Department of Mechanical Engineering.">
+  <meta name="description" content="Comprehensive 400-problem midterm examination mastery suite for the Science of Materials course at the University of Tehran, Department of Mechanical Engineering. Prepared by Sina Sharifi under Prof. A. Sadeghi.">
   <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Playfair+Display:ital,wght@0,500;0,700;1,400&family=JetBrains+Mono:wght@400;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=JetBrains+Mono:wght@500;700&family=Inter:wght@400;500;600;700&family=Vazirmatn:wght@500;700&display=swap" rel="stylesheet">
   
-  <!-- MathJax 3 Configuration for High-Fidelity Technical Rendering (Local + CDN Fallback) -->
+  <!-- MathJax 3 Configuration for High-Fidelity Technical Rendering (100% Offline + CDN Fallback) -->
   <script>
     window.MathJax = {
       tex: {
@@ -25,7 +25,7 @@
       startup: {
         pageReady: () => {
           return MathJax.startup.defaultPageReady().then(() => {
-            console.log('MathJax initial typesetting complete');
+            console.log('MathJax initial technical typesetting ready');
           });
         }
       }
@@ -40,14 +40,12 @@
       <div class="nav-container">
         <a href="index.html" class="nav-brand">
           <div class="nav-logo-badge">
-            <svg width="28" height="28" viewBox="0 0 100 100" fill="none">
-              <circle cx="50" cy="50" r="44" stroke="#d4af37" stroke-width="3"/>
-              <path d="M50 20 L60 40 L80 40 L65 52 L70 72 L50 60 L30 72 L35 52 L20 40 L40 40 Z" fill="none" stroke="#d4af37" stroke-width="2"/>
-            </svg>
+            <img src="assets/images/ut_mech_emblem.svg" alt="University of Tehran Mechanical Engineering Crest">
           </div>
           <div class="nav-brand-text">
+            <span class="nav-persian">دانشگاه تهران &bull; دانشکده مهندسی مکانیک</span>
             <h1>UNIVERSITY OF TEHRAN</h1>
-            <p>Faculty of Mechanical Engineering | Science of Materials</p>
+            <p>Department of Mechanical Engineering &bull; Science of Materials</p>
           </div>
         </a>
 
@@ -58,35 +56,35 @@
       Home
     </a>
     
-        <a href="chapter1.html" class="nav-link " title="Introduction to Materials Science & Engineering">
+        <a href="chapters/chapter1.html" class="nav-link " title="Introduction to Materials Science & Engineering">
           Ch 1
         </a>
         
-        <a href="chapter2.html" class="nav-link " title="Atomic Structure & Interatomic Bonding">
+        <a href="chapters/chapter2.html" class="nav-link " title="Atomic Structure & Interatomic Bonding">
           Ch 2
         </a>
         
-        <a href="chapter3.html" class="nav-link " title="The Structure of Crystalline Solids">
+        <a href="chapters/chapter3.html" class="nav-link " title="The Structure of Crystalline Solids">
           Ch 3
         </a>
         
-        <a href="chapter4.html" class="nav-link " title="Imperfections in Solids">
+        <a href="chapters/chapter4.html" class="nav-link " title="Imperfections in Solids">
           Ch 4
         </a>
         
-        <a href="chapter5.html" class="nav-link " title="Diffusion in Solids">
+        <a href="chapters/chapter5.html" class="nav-link " title="Diffusion in Solids">
           Ch 5
         </a>
         
-        <a href="chapter6.html" class="nav-link " title="Mechanical Properties of Metals">
+        <a href="chapters/chapter6.html" class="nav-link " title="Mechanical Properties of Metals">
           Ch 6
         </a>
         
-        <a href="chapter7.html" class="nav-link " title="Dislocations & Strengthening Mechanisms">
+        <a href="chapters/chapter7.html" class="nav-link " title="Dislocations & Strengthening Mechanisms">
           Ch 7
         </a>
         
-        <a href="chapter8.html" class="nav-link " title="Failure: Fracture, Fatigue & Creep">
+        <a href="chapters/chapter8.html" class="nav-link " title="Failure: Fracture, Fatigue & Creep">
           Ch 8
         </a>
         
@@ -106,49 +104,54 @@
     
 
   <main class="master-wrapper">
-    <!-- Academic Formal Cover Banner -->
-    <section class="cover-hero">
-      <div class="university-crest">
-        
-<svg width="68" height="68" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="50" cy="50" r="47" stroke="#d4af37" stroke-width="2" stroke-dasharray="2 2" opacity="0.8"/>
-  <circle cx="50" cy="50" r="43" stroke="#d4af37" stroke-width="1.5"/>
-  <circle cx="50" cy="50" r="38" fill="#0d1b3e" stroke="rgba(212, 175, 55, 0.4)" stroke-width="1"/>
-  <!-- Central Traditional Emblem Motif -->
-  <path d="M50 16 L56 32 L72 32 L59 42 L64 58 L50 48 L36 58 L41 42 L28 32 L44 32 Z" fill="rgba(212, 175, 55, 0.15)" stroke="#d4af37" stroke-width="1"/>
-  <!-- Open Book of Knowledge / Engineering -->
-  <path d="M50 48 L38 42 C34 40 30 43 30 48 L30 68 C34 65 42 65 50 69 C58 65 66 65 70 68 L70 48 C70 43 66 40 62 42 Z" fill="#14244d" stroke="#d4af37" stroke-width="1.5"/>
-  <path d="M50 48 L50 69" stroke="#d4af37" stroke-width="1.5"/>
-  <!-- Mechanical Gear Accents -->
-  <circle cx="50" cy="50" r="4" fill="#d4af37"/>
-  <!-- Laurel Wreath Curves -->
-  <path d="M22 56 C20 40 28 26 42 20" stroke="#d4af37" stroke-width="1.2" stroke-linecap="round"/>
-  <path d="M78 56 C80 40 72 26 58 20" stroke="#d4af37" stroke-width="1.2" stroke-linecap="round"/>
-</svg>
+    <!-- Grand Academic Cover Masthead with Ruled Frames -->
+    <section class="cover-hero-frame">
+      <!-- Classical Corner Flourishes -->
+      <div class="corner-flourish corner-tl"></div>
+      <div class="corner-flourish corner-tr"></div>
+      <div class="corner-flourish corner-bl"></div>
+      <div class="corner-flourish corner-br"></div>
 
+      <!-- Institutional Crest & Logo Row -->
+      <div class="emblem-row">
+        <div class="hero-emblem-badge" title="Department of Mechanical Engineering Emblem">
+          <img src="assets/images/ut_mech_emblem.svg" alt="Department of Mechanical Engineering Emblem">
+        </div>
+        <div class="hero-emblem-badge" title="College of Engineering Official Emblem">
+          <img src="assets/images/ut_engineering_logo.svg" alt="College of Engineering Official Emblem">
+        </div>
       </div>
 
+      <p class="institution-header-persian">دانشگاه تهران &bull; پردیس دانشکده‌های فنی &bull; دانشکده مهندسی مکانیک</p>
       <p class="cover-pretitle">UNIVERSITY OF TEHRAN &bull; DEPARTMENT OF MECHANICAL ENGINEERING</p>
-      
+
       <h1 class="cover-main-title">SCIENCE OF MATERIALS</h1>
-      
+      <p class="cover-persian-subtitle">مبانی علم و مهندسی مواد — دوره کارشناسی مهندسی مکانیک</p>
+
       <div class="gold-hairline"></div>
 
       <p class="cover-subtitle">
-        Comprehensive 400-Problem Midterm Examination Study & Mastery Suite
+        Comprehensive 400-Problem Midterm Examination Study &amp; Mastery Suite
       </p>
 
-      <p class="cover-attribution" style="max-width: 780px; margin: 0 auto 2rem auto; font-size: 1.05rem; line-height: 1.7; color: #cbd5e1;">
-        Prepared with meticulous analytical rigor by Teaching Assistant <strong>Sina Sharifi</strong><br>
-        Under the Academic Supervision of <strong>Prof. A. Sadeghi</strong><br>
-        <span style="font-size: 0.9rem; color: #94a3b8;">Covering the Complete Undergraduate Curriculum from Chapter 1 through Chapter 8 (up to Phase Diagrams)</span>
-      </p>
+      <!-- Formal Academic Attribution Plaque -->
+      <div class="attribution-box-formal">
+        <div class="attribution-item">
+          Prepared &amp; Formulated with Meticulous Technical Rigor by Teaching Assistant <strong>Sina Sharifi</strong>
+        </div>
+        <div class="attribution-item">
+          Under the Academic Supervision of <strong>Prof. A. Sadeghi</strong>
+        </div>
+        <div class="attribution-scope">
+          Complete Curricular Coverage: Chapters 1 through 8 (Up to Phase Diagrams) &bull; 100% Fully Worked Solutions &bull; Technical Vector Compendium
+        </div>
+      </div>
 
       <!-- Quick Action Buttons -->
-      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2.5rem;">
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2rem;">
         <a href="#chapters-directory" class="btn-primary" style="padding: 0.85rem 1.75rem; font-size: 1rem;">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
-          Explore All 8 Chapters (400 Problems)
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          Explore All 8 Chapters (400 Solved Problems)
         </a>
         <button id="btn-hero-formula" class="btn-classic" style="padding: 0.85rem 1.75rem; font-size: 1rem;" onclick="document.getElementById('formula-modal').classList.add('active')">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
@@ -164,7 +167,7 @@
         </div>
         <div class="stat-card">
           <div class="stat-num">400</div>
-          <div class="stat-lbl">Sample Problems</div>
+          <div class="stat-lbl">Solved Practice Problems</div>
         </div>
         <div class="stat-card">
           <div class="stat-num">50</div>
@@ -174,526 +177,879 @@
           <div class="stat-num">100%</div>
           <div class="stat-lbl">Step-by-Step Solutions</div>
         </div>
-        <div class="stat-card">
-          <div class="stat-num">16+</div>
-          <div class="stat-lbl">Technical SVG Diagrams</div>
-        </div>
       </div>
     </section>
 
-    <!-- Study Guide & Pedagogical Notice -->
-    <section class="instructions-card" style="background: rgba(16, 28, 61, 0.7); border: 1px solid rgba(212, 175, 55, 0.35); border-radius: 6px; padding: 2rem; margin-bottom: 3.5rem;">
-      <h2 style="font-family: var(--font-serif); color: var(--gold-light); font-size: 1.45rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.75rem;">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
-        How to Use This Problem Suite for Maximum Midterm Exam Success
+    <!-- Study Guide & Examination Protocol -->
+    <section class="instructions-card">
+      <h2>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#facc15" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+        Examination Preparation Protocol &bull; How to Maximize Midterm Performance
       </h2>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; color: #cbd5e1; font-size: 0.95rem; line-height: 1.65;">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; color: #cbd5e1; font-size: 0.98rem; line-height: 1.7;">
         <div>
-          <strong style="color: #ffffff; display: block; margin-bottom: 0.35rem;">1. Self-Testing Active Recall:</strong>
-          Every problem has its full derivation and boxed answer hidden by default. Always attempt to solve the question independently on paper before clicking <em>"Show Detailed Solution"</em>.
+          <strong style="color: #ffffff; display: block; margin-bottom: 0.35rem;">1. Active Recall Self-Testing:</strong>
+          Every problem has its full derivation and boxed final answer hidden by default. Always attempt the derivation independently on paper before revealing the solution.
         </div>
         <div>
-          <strong style="color: #ffffff; display: block; margin-bottom: 0.35rem;">2. Categorized Learning:</strong>
-          Each chapter is organized into distinct categories (Atomic Structure, Miller Indices, Fick's Laws, Schmid's Law, Hall-Petch, LEFM, Creep). Use the category filters to target specific weak areas.
+          <strong style="color: #ffffff; display: block; margin-bottom: 0.35rem;">2. Categorized Topic Targeting:</strong>
+          Filter problems by category (e.g. Miller Indices, Fick's Laws, Schmid's Law, Hall-Petch, LEFM) to target specific areas of the Callister textbook.
         </div>
         <div>
-          <strong style="color: #ffffff; display: block; margin-bottom: 0.35rem;">3. Progress Tracking & Bookmarking:</strong>
-          Click <em>"Mark Mastered"</em> on any problem you have conquered. Your browser will locally save your mastery tally in the header badge.
+          <strong style="color: #ffffff; display: block; margin-bottom: 0.35rem;">3. Local Progress Tracking:</strong>
+          Click <em>"Mark Mastered"</em> on any problem you conquer. Your progress is saved in your browser and tallies in the navigation header.
         </div>
         <div>
           <strong style="color: #ffffff; display: block; margin-bottom: 0.35rem;">4. Formula Sheet Modal:</strong>
-          Click the <em>"Formula Sheet"</em> button in the header at any time to consult the master compendium of governing equations, unit definitions, and physical constants.
+          Click <em>"Formula Sheet"</em> at any time to consult the master compendium of governing equations, physical constants, and unit definitions.
         </div>
       </div>
     </section>
 
+    <div class="double-academic-line"></div>
+
     <!-- Master Chapters Directory -->
     <section id="chapters-directory">
-      <div class="directory-header" style="text-align: center; margin-bottom: 2.5rem;">
-        <p style="font-family: var(--font-mono); color: var(--gold); font-size: 0.85rem; letter-spacing: 0.15em; text-transform: uppercase;">Midterm Syllabus Directory</p>
-        <h2 style="font-family: var(--font-serif); font-size: 2rem; color: #ffffff;">The Eight Curricular Chapters</h2>
-        <div class="gold-hairline" style="margin: 0.75rem auto 0 auto;"></div>
+      <div style="text-align: center; margin-bottom: 2.75rem;">
+        <p style="font-family: var(--font-mono); color: var(--accent-gold-bright); font-size: 0.88rem; letter-spacing: 0.15em; text-transform: uppercase;">Midterm Examination Syllabus</p>
+        <h2 style="font-family: var(--font-serif); font-size: 2.25rem; color: #ffffff; margin-top: 0.25rem;">The Eight Curricular Chapters</h2>
+        <div class="gold-hairline"></div>
       </div>
 
       <div class="chapters-grid">
         
         <article class="chapter-card">
-          <div class="card-hero-preview" style="height: 180px; overflow: hidden; background: #060b1a; display: flex; align-items: center; justify-content: center; border-bottom: 1px solid rgba(212, 175, 55, 0.2);">
-            
-    <svg viewBox="0 0 450 320" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <radialGradient id="nodeGlow" cx="50%" cy="50%" r="50%">
-          <stop offset="0%" stop-color="#f5d061" stop-opacity="0.8"/>
-          <stop offset="100%" stop-color="#1e3a8a" stop-opacity="0"/>
-        </radialGradient>
-        <linearGradient id="edgeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stop-color="#d4af37"/>
-          <stop offset="100%" stop-color="#38bdf8"/>
-        </linearGradient>
-      </defs>
-      <!-- Background subtle grid -->
-      <rect width="450" height="320" fill="#080f24" rx="6"/>
-      <!-- Outer Tetrahedron Edges -->
-      <line x1="225" y1="40" x2="80" y2="240" stroke="url(#edgeGrad)" stroke-width="2.5"/>
-      <line x1="225" y1="40" x2="370" y2="240" stroke="url(#edgeGrad)" stroke-width="2.5"/>
-      <line x1="80" y1="240" x2="370" y2="240" stroke="url(#edgeGrad)" stroke-width="2.5"/>
-      <!-- Internal Centroid Edges -->
-      <line x1="225" y1="40" x2="225" y2="165" stroke="#d4af37" stroke-width="2" stroke-dasharray="4 3"/>
-      <line x1="80" y1="240" x2="225" y2="165" stroke="#d4af37" stroke-width="2" stroke-dasharray="4 3"/>
-      <line x1="370" y1="240" x2="225" y2="165" stroke="#d4af37" stroke-width="2" stroke-dasharray="4 3"/>
-      
-      <!-- Central Core Pulse -->
-      <circle cx="225" cy="165" r="28" fill="#172554" stroke="#d4af37" stroke-width="1.5"/>
-      <text x="225" y="162" fill="#d4af37" font-family="'Cinzel', Georgia, serif" font-size="11" font-weight="bold" text-anchor="middle">MSE</text>
-      <text x="225" y="176" fill="#94a3b8" font-family="sans-serif" font-size="9" text-anchor="middle">PARADIGM</text>
+          <div class="card-hero-preview">
+            <svg viewBox="0 0 750 500" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="tetBg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#101d3f"/>
+      <stop offset="100%" stop-color="#060c1d"/>
+    </radialGradient>
+    <linearGradient id="goldEdge" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fde047"/>
+      <stop offset="50%" stop-color="#d4af37"/>
+      <stop offset="100%" stop-color="#b48318"/>
+    </linearGradient>
+    <linearGradient id="cyanEdge" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+    <linearGradient id="faceGrad1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="rgba(212, 175, 55, 0.12)"/>
+      <stop offset="100%" stop-color="rgba(56, 189, 248, 0.04)"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
 
-      <!-- Vertex 1: Processing / Synthesis -->
-      <circle cx="225" cy="40" r="22" fill="#101c3d" stroke="#d4af37" stroke-width="2"/>
-      <text x="225" y="44" fill="#f8fafc" font-family="sans-serif" font-size="10" font-weight="bold" text-anchor="middle">Processing</text>
-      <text x="225" y="16" fill="#d4af37" font-family="sans-serif" font-size="9" text-anchor="middle">Synthesis & Heat Treat</text>
+  <!-- Canvas Frame with Technical Grid -->
+  <rect width="750" height="500" fill="url(#tetBg)" rx="8" stroke="#253861" stroke-width="2"/>
+  <g stroke="#1a294d" stroke-width="1" stroke-dasharray="4 6">
+    <line x1="50" y1="100" x2="700" y2="100"/>
+    <line x1="50" y1="200" x2="700" y2="200"/>
+    <line x1="50" y1="300" x2="700" y2="300"/>
+    <line x1="50" y1="400" x2="700" y2="400"/>
+    <line x1="150" y1="50" x2="150" y2="450"/>
+    <line x1="375" y1="50" x2="375" y2="450"/>
+    <line x1="600" y1="50" x2="600" y2="450"/>
+  </g>
 
-      <!-- Vertex 2: Structure -->
-      <circle cx="80" cy="240" r="22" fill="#101c3d" stroke="#38bdf8" stroke-width="2"/>
-      <text x="80" y="244" fill="#f8fafc" font-family="sans-serif" font-size="10" font-weight="bold" text-anchor="middle">Structure</text>
-      <text x="80" y="275" fill="#38bdf8" font-family="sans-serif" font-size="9" text-anchor="middle">Atomic to Micro</text>
+  <!-- Shaded Triangular Faces -->
+  <polygon points="375,80 150,380 375,270" fill="url(#faceGrad1)"/>
+  <polygon points="375,80 600,380 375,270" fill="rgba(56, 189, 248, 0.08)"/>
+  <polygon points="150,380 600,380 375,270" fill="rgba(16, 185, 129, 0.08)"/>
 
-      <!-- Vertex 3: Properties -->
-      <circle cx="370" cy="240" r="22" fill="#101c3d" stroke="#34d399" stroke-width="2"/>
-      <text x="370" y="244" fill="#f8fafc" font-family="sans-serif" font-size="10" font-weight="bold" text-anchor="middle">Properties</text>
-      <text x="370" y="275" fill="#34d399" font-family="sans-serif" font-size="9" text-anchor="middle">Mech / Elec / Therm</text>
+  <!-- Outer Solid Edges -->
+  <line x1="375" y1="80" x2="150" y2="380" stroke="url(#goldEdge)" stroke-width="3"/>
+  <line x1="375" y1="80" x2="600" y2="380" stroke="url(#goldEdge)" stroke-width="3"/>
+  <line x1="150" y1="380" x2="600" y2="380" stroke="url(#goldEdge)" stroke-width="3"/>
 
-      <!-- Top Title -->
-      <text x="225" y="302" fill="#cbd5e1" font-family="sans-serif" font-size="11" font-weight="500" text-anchor="middle">Interconnected Materials Science & Engineering Tetrahedron</text>
-    </svg>
-    
+  <!-- Interior Centroid Connections -->
+  <line x1="375" y1="80" x2="375" y2="270" stroke="#38bdf8" stroke-width="2.5" stroke-dasharray="6 4"/>
+  <line x1="150" y1="380" x2="375" y2="270" stroke="#38bdf8" stroke-width="2.5" stroke-dasharray="6 4"/>
+  <line x1="600" y1="380" x2="375" y2="270" stroke="#38bdf8" stroke-width="2.5" stroke-dasharray="6 4"/>
+
+  <!-- Modern Extension Vertices (Economics & Environment) -->
+  <line x1="375" y1="80" x2="90" y2="180" stroke="#f43f5e" stroke-width="2" stroke-dasharray="3 3"/>
+  <line x1="150" y1="380" x2="90" y2="180" stroke="#f43f5e" stroke-width="2" stroke-dasharray="3 3"/>
+  <circle cx="90" cy="180" r="28" fill="#1e1b4b" stroke="#f43f5e" stroke-width="2"/>
+  <text x="90" y="176" fill="#fecdd3" font-family="'Inter', sans-serif" font-size="11" font-weight="bold" text-anchor="middle">COST</text>
+  <text x="90" y="192" fill="#fda4af" font-family="'Inter', sans-serif" font-size="9" text-anchor="middle">Economics</text>
+
+  <line x1="375" y1="80" x2="660" y2="180" stroke="#10b981" stroke-width="2" stroke-dasharray="3 3"/>
+  <line x1="600" y1="380" x2="660" y2="180" stroke="#10b981" stroke-width="2" stroke-dasharray="3 3"/>
+  <circle cx="660" cy="180" r="28" fill="#064e3b" stroke="#34d399" stroke-width="2"/>
+  <text x="660" y="176" fill="#a7f3d0" font-family="'Inter', sans-serif" font-size="11" font-weight="bold" text-anchor="middle">LCA</text>
+  <text x="660" y="192" fill="#6ee7b7" font-family="'Inter', sans-serif" font-size="9" text-anchor="middle">Environment</text>
+
+  <!-- Central Centroid Core -->
+  <circle cx="375" cy="270" r="38" fill="#0b1736" stroke="url(#goldEdge)" stroke-width="2.5" filter="url(#glow)"/>
+  <text x="375" y="266" fill="#fef08a" font-family="'Cinzel', Georgia, serif" font-size="14" font-weight="bold" text-anchor="middle">MSE</text>
+  <text x="375" y="282" fill="#cbd5e1" font-family="'Inter', sans-serif" font-size="10" font-weight="600" text-anchor="middle">PARADIGM</text>
+
+  <!-- VERTEX 1: PROCESSING (Top) -->
+  <g transform="translate(375, 80)">
+    <circle cx="0" cy="0" r="34" fill="#14244d" stroke="#facc15" stroke-width="3"/>
+    <text x="0" y="-5" fill="#ffffff" font-family="'Inter', sans-serif" font-size="12" font-weight="bold" text-anchor="middle">PROCESSING</text>
+    <text x="0" y="12" fill="#facc15" font-family="'Inter', sans-serif" font-size="10" text-anchor="middle">Synthesis</text>
+    <!-- Label Card -->
+    <rect x="-110" y="-62" width="220" height="24" rx="4" fill="#091329" stroke="#d4af37" stroke-width="1"/>
+    <text x="0" y="-46" fill="#fef08a" font-family="'Inter', sans-serif" font-size="10.5" font-weight="600" text-anchor="middle">Casting &bull; Sintering &bull; 3D Print &bull; Heat Treat</text>
+  </g>
+
+  <!-- VERTEX 2: STRUCTURE (Bottom Left) -->
+  <g transform="translate(150, 380)">
+    <circle cx="0" cy="0" r="34" fill="#0c4a6e" stroke="#38bdf8" stroke-width="3"/>
+    <text x="0" y="-5" fill="#ffffff" font-family="'Inter', sans-serif" font-size="12" font-weight="bold" text-anchor="middle">STRUCTURE</text>
+    <text x="0" y="12" fill="#7dd3fc" font-family="'Inter', sans-serif" font-size="10" text-anchor="middle">Multi-Scale</text>
+    <!-- Label Card -->
+    <rect x="-105" y="44" width="210" height="24" rx="4" fill="#091329" stroke="#38bdf8" stroke-width="1"/>
+    <text x="0" y="60" fill="#bae6fd" font-family="'Inter', sans-serif" font-size="10.5" font-weight="600" text-anchor="middle">Atomic Lattice &bull; Defects &bull; Grains</text>
+  </g>
+
+  <!-- VERTEX 3: PROPERTIES (Bottom Right) -->
+  <g transform="translate(600, 380)">
+    <circle cx="0" cy="0" r="34" fill="#064e3b" stroke="#34d399" stroke-width="3"/>
+    <text x="0" y="-5" fill="#ffffff" font-family="'Inter', sans-serif" font-size="12" font-weight="bold" text-anchor="middle">PROPERTIES</text>
+    <text x="0" y="12" fill="#6ee7b7" font-family="'Inter', sans-serif" font-size="10" text-anchor="middle">Intrinsic</text>
+    <!-- Label Card -->
+    <rect x="-105" y="44" width="210" height="24" rx="4" fill="#091329" stroke="#34d399" stroke-width="1"/>
+    <text x="0" y="60" fill="#a7f3d0" font-family="'Inter', sans-serif" font-size="10.5" font-weight="600" text-anchor="middle">Mechanical &bull; Electrical &bull; Thermal</text>
+  </g>
+
+  <!-- Banner Bottom -->
+  <rect x="180" y="455" width="390" height="32" rx="4" fill="#0f1b38" stroke="#d4af37" stroke-width="1.5"/>
+  <text x="375" y="476" fill="#fef08a" font-family="'Cinzel', Georgia, serif" font-size="12" font-weight="bold" text-anchor="middle">
+    PERFORMANCE: Service Reliability &bull; Durability &bull; Lifetime
+  </text>
+</svg>
           </div>
           <div class="card-content">
             <div class="card-meta">
-              <span class="chapter-num-badge">Chapter 01</span>
+              <span class="chapter-num-badge">CHAPTER 01</span>
               <span class="problem-count-badge">50 Problems &bull; 100% Solutions</span>
             </div>
             <h3 class="card-title">
-              <a href="chapter1.html">Introduction to Materials Science & Engineering</a>
+              <a href="chapters/chapter1.html">Introduction to Materials Science & Engineering</a>
             </h3>
             <p class="card-desc">
               The Materials Science and Engineering paradigm, the central Processing-Structure-Properties-Performance tetrahedron, broad classification of materials (metals, ceramics, polymers, composites, advanced materials), and Ashby property charts for engineering design.
             </p>
-            <div class="card-tags" style="margin-bottom: 1.25rem;">
+            <div class="card-tags">
               <span class="hero-tag">Materials Paradigm</span><span class="hero-tag">MSE Tetrahedron</span><span class="hero-tag">Material Classes</span><span class="hero-tag">Ashby Charts</span><span class="hero-tag">Advanced Materials</span>
             </div>
-            <a href="chapter1.html" class="btn-primary" style="width: 100%; justify-content: center;">
-              <span>Study Chapter 1 Problems</span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            <a href="chapters/chapter1.html" class="btn-primary" style="width: 100%; justify-content: center;">
+              <span>Study Chapter 1 (50 Problems)</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
             </a>
           </div>
         </article>
         
         <article class="chapter-card">
-          <div class="card-hero-preview" style="height: 180px; overflow: hidden; background: #060b1a; display: flex; align-items: center; justify-content: center; border-bottom: 1px solid rgba(212, 175, 55, 0.2);">
-            
-    <svg viewBox="0 0 450 320" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-      <rect width="450" height="320" fill="#080f24" rx="6"/>
-      <!-- Axes -->
-      <line x1="60" y1="120" x2="420" y2="120" stroke="#64748b" stroke-width="1.5"/>
-      <line x1="60" y1="30" x2="60" y2="290" stroke="#64748b" stroke-width="1.5"/>
-      <text x="415" y="112" fill="#94a3b8" font-family="sans-serif" font-size="11">r</text>
-      <text x="40" y="45" fill="#94a3b8" font-family="sans-serif" font-size="11">E</text>
-      <text x="45" y="124" fill="#94a3b8" font-family="sans-serif" font-size="10">0</text>
+          <div class="card-hero-preview">
+            <svg viewBox="0 0 750 500" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="wellBg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0e1836"/>
+      <stop offset="100%" stop-color="#060c1d"/>
+    </radialGradient>
+  </defs>
 
-      <!-- Curves: Attraction, Repulsion, Net Energy -->
-      <!-- Repulsion ER(r) > 0 -->
-      <path d="M 68 35 Q 85 80 120 115 T 280 120" fill="none" stroke="#f43f5e" stroke-width="1.5" stroke-dasharray="3 3"/>
-      <text x="140" y="70" fill="#f43f5e" font-family="sans-serif" font-size="9">Repulsive E_R = B/r^n</text>
+  <rect width="750" height="500" fill="url(#wellBg)" rx="8" stroke="#253861" stroke-width="2"/>
 
-      <!-- Attraction EA(r) < 0 -->
-      <path d="M 65 140 Q 140 145 280 130 T 420 122" fill="none" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="3 3"/>
-      <text x="290" y="150" fill="#38bdf8" font-family="sans-serif" font-size="9">Attractive E_A = -A/r^m</text>
+  <!-- Center Axis: Energy E = 0 -->
+  <line x1="80" y1="180" x2="710" y2="180" stroke="#64748b" stroke-width="2"/>
+  <text x="705" y="170" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="12" font-weight="bold">Interatomic Distance r &rarr;</text>
+  
+  <!-- Vertical Axis: r = 0 -->
+  <line x1="90" y1="40" x2="90" y2="460" stroke="#64748b" stroke-width="2"/>
+  <text x="65" y="55" fill="#facc15" font-family="'Inter', sans-serif" font-size="13" font-weight="bold">+E</text>
+  <text x="65" y="445" fill="#facc15" font-family="'Inter', sans-serif" font-size="13" font-weight="bold">-E</text>
+  <text x="65" y="185" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="bold">0</text>
 
-      <!-- Net Curve EN(r) -->
-      <path d="M 72 38 C 82 170 120 250 170 250 C 230 250 310 145 420 124" fill="none" stroke="#d4af37" stroke-width="2.5"/>
-      <text x="320" y="195" fill="#f5d061" font-family="sans-serif" font-size="11" font-weight="bold">Net Energy E_N(r)</text>
+  <!-- Curve 1: Repulsive Potential E_R(r) = B / r^n (Steep positive) -->
+  <path d="M 105 45 Q 125 125 180 172 T 400 180" fill="none" stroke="#f43f5e" stroke-width="2.5" stroke-dasharray="5 4"/>
+  <rect x="180" y="65" width="220" height="26" rx="4" fill="#2d0612" stroke="#f43f5e" stroke-width="1"/>
+  <text x="290" y="82" fill="#fecdd3" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="bold" text-anchor="middle">
+    Repulsion E_R(r) = +B / r^n (Pauli)
+  </text>
 
-      <!-- Minimum Well Indicators -->
-      <line x1="170" y1="120" x2="170" y2="250" stroke="#f5d061" stroke-width="1.2" stroke-dasharray="3 3"/>
-      <circle cx="170" cy="250" r="4" fill="#d4af37"/>
-      <text x="170" y="112" fill="#f5d061" font-family="sans-serif" font-size="10" text-anchor="middle">r_0 (Equilibrium)</text>
+  <!-- Curve 2: Attractive Potential E_A(r) = -A / r^m (Gradual negative) -->
+  <path d="M 100 220 Q 200 230 420 200 T 700 184" fill="none" stroke="#38bdf8" stroke-width="2.5" stroke-dasharray="5 4"/>
+  <rect x="420" y="225" width="230" height="26" rx="4" fill="#042033" stroke="#38bdf8" stroke-width="1"/>
+  <text x="535" y="242" fill="#bae6fd" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="bold" text-anchor="middle">
+    Attraction E_A(r) = -A / r^m (Coulomb)
+  </text>
 
-      <!-- Bonding Energy E0 -->
-      <line x1="60" y1="250" x2="170" y2="250" stroke="#f5d061" stroke-width="1.2" stroke-dasharray="3 3"/>
-      <text x="35" y="254" fill="#f5d061" font-family="sans-serif" font-size="10">-E_0</text>
-      <text x="180" y="270" fill="#34d399" font-family="sans-serif" font-size="9">Deep well = High Tm & E, Low α</text>
-    </svg>
-    
+  <!-- Curve 3: Net Potential Energy Well E_N(r) = E_A + E_R (Thick Gold) -->
+  <path d="M 108 50 C 120 280 180 390 260 390 C 350 390 480 220 700 186" fill="none" stroke="#ffd700" stroke-width="4"/>
+
+  <!-- Equilibrium Minimum Well: r0 and E0 -->
+  <line x1="260" y1="180" x2="260" y2="390" stroke="#facc15" stroke-width="2" stroke-dasharray="4 3"/>
+  <circle cx="260" cy="390" r="7" fill="#f59e0b" stroke="#ffffff" stroke-width="2"/>
+  <text x="260" y="165" fill="#fef08a" font-family="'Inter', sans-serif" font-size="13" font-weight="bold" text-anchor="middle">r&sub0; (Equilibrium Spacing)</text>
+
+  <!-- Well Depth -E0 (Bonding Energy) -->
+  <line x1="90" y1="390" x2="260" y2="390" stroke="#facc15" stroke-width="2" stroke-dasharray="4 3"/>
+  <text x="50" y="394" fill="#fef08a" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="bold">-E&sub0;</text>
+
+  <!-- Asymmetry & Thermal Expansion Annotation -->
+  <g transform="translate(360, 290)">
+    <rect x="0" y="0" width="350" height="95" rx="6" fill="#0a1530" stroke="#d4af37" stroke-width="1.5"/>
+    <text x="175" y="22" fill="#facc15" font-family="'Inter', sans-serif" font-size="12" font-weight="bold" text-anchor="middle">PHYSICAL CORRELATES OF THE WELL</text>
+    <line x1="15" y1="30" x2="335" y2="30" stroke="#253861" stroke-width="1"/>
+    <text x="15" y="48" fill="#f8fafc" font-family="'Inter', sans-serif" font-size="10.5">&bull; Well Depth E&sub0; &prop; Melting Point T_m &amp; Cohesive Energy</text>
+    <text x="15" y="66" fill="#f8fafc" font-family="'Inter', sans-serif" font-size="10.5">&bull; Well Curvature (d&sup2;E/dr&sup2;) &prop; Young's Modulus E</text>
+    <text x="15" y="84" fill="#34d399" font-family="'Inter', sans-serif" font-size="10.5">&bull; Asymmetric Anharmonicity &rarr; Thermal Expansion (&alpha;_L)</text>
+  </g>
+</svg>
           </div>
           <div class="card-content">
             <div class="card-meta">
-              <span class="chapter-num-badge">Chapter 02</span>
+              <span class="chapter-num-badge">CHAPTER 02</span>
               <span class="problem-count-badge">50 Problems &bull; 100% Solutions</span>
             </div>
             <h3 class="card-title">
-              <a href="chapter2.html">Atomic Structure & Interatomic Bonding</a>
+              <a href="chapters/chapter2.html">Atomic Structure & Interatomic Bonding</a>
             </h3>
             <p class="card-desc">
               Fundamental atomic physics, electronic configurations, quantum numbers, primary bonding (ionic, covalent, metallic), secondary bonding (van der Waals, hydrogen), and physical correlates of the net interatomic potential energy well.
             </p>
-            <div class="card-tags" style="margin-bottom: 1.25rem;">
+            <div class="card-tags">
               <span class="hero-tag">Electronic Configuration</span><span class="hero-tag">Potential Energy Well</span><span class="hero-tag">Ionic & Covalent Bonding</span><span class="hero-tag">Metallic Bond</span><span class="hero-tag">Thermal Expansion</span>
             </div>
-            <a href="chapter2.html" class="btn-primary" style="width: 100%; justify-content: center;">
-              <span>Study Chapter 2 Problems</span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            <a href="chapters/chapter2.html" class="btn-primary" style="width: 100%; justify-content: center;">
+              <span>Study Chapter 2 (50 Problems)</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
             </a>
           </div>
         </article>
         
         <article class="chapter-card">
-          <div class="card-hero-preview" style="height: 180px; overflow: hidden; background: #060b1a; display: flex; align-items: center; justify-content: center; border-bottom: 1px solid rgba(212, 175, 55, 0.2);">
-            
-    <svg viewBox="0 0 450 320" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-      <rect width="450" height="320" fill="#080f24" rx="6"/>
-      <!-- Left: BCC -->
-      <g transform="translate(40, 50)">
-        <text x="75" y="-10" fill="#f5d061" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">BCC (n = 2)</text>
-        <!-- Back face -->
-        <rect x="25" y="25" width="80" height="80" fill="none" stroke="#475569" stroke-width="1.2" stroke-dasharray="3 3"/>
-        <!-- Connecting edges -->
-        <line x1="0" y1="60" x2="25" y2="25" stroke="#475569" stroke-width="1.2"/>
-        <line x1="80" y1="60" x2="105" y2="25" stroke="#475569" stroke-width="1.2"/>
-        <line x1="0" y1="140" x2="25" y2="105" stroke="#475569" stroke-width="1.2"/>
-        <line x1="80" y1="140" x2="105" y2="105" stroke="#475569" stroke-width="1.2"/>
-        <!-- Front face -->
-        <rect x="0" y="60" width="80" height="80" fill="none" stroke="#38bdf8" stroke-width="1.5"/>
-        <!-- Center atom -->
-        <circle cx="52" cy="82" r="14" fill="#d4af37" stroke="#ffffff" stroke-width="1"/>
-        <text x="52" y="86" fill="#070d1e" font-size="9" font-weight="bold" text-anchor="middle">C</text>
-        <!-- Corner atoms -->
-        <circle cx="0" cy="60" r="9" fill="#1e3a8a" stroke="#38bdf8"/>
-        <circle cx="80" cy="60" r="9" fill="#1e3a8a" stroke="#38bdf8"/>
-        <circle cx="0" cy="140" r="9" fill="#1e3a8a" stroke="#38bdf8"/>
-        <circle cx="80" cy="140" r="9" fill="#1e3a8a" stroke="#38bdf8"/>
-        <!-- Text details -->
-        <text x="50" y="165" fill="#94a3b8" font-size="9" text-anchor="middle">a = 4R / √3</text>
-        <text x="50" y="180" fill="#a7f3d0" font-size="9" text-anchor="middle">APF = 0.68 | CN = 8</text>
-      </g>
+          <div class="card-hero-preview">
+            <svg viewBox="0 0 750 500" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="atomGold" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#fffbeb"/>
+      <stop offset="35%" stop-color="#facc15"/>
+      <stop offset="80%" stop-color="#ca8a04"/>
+      <stop offset="100%" stop-color="#713f12"/>
+    </radialGradient>
+    <radialGradient id="atomBlue" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#f0f9ff"/>
+      <stop offset="35%" stop-color="#38bdf8"/>
+      <stop offset="80%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#0c4a6e"/>
+    </radialGradient>
+    <radialGradient id="atomGreen" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#f0fdf4"/>
+      <stop offset="35%" stop-color="#34d399"/>
+      <stop offset="80%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#064e3b"/>
+    </radialGradient>
+  </defs>
 
-      <!-- Right: FCC -->
-      <g transform="translate(250, 50)">
-        <text x="75" y="-10" fill="#38bdf8" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">FCC (n = 4)</text>
-        <!-- Back face -->
-        <rect x="25" y="25" width="80" height="80" fill="none" stroke="#475569" stroke-width="1.2" stroke-dasharray="3 3"/>
-        <!-- Connecting edges -->
-        <line x1="0" y1="60" x2="25" y2="25" stroke="#475569" stroke-width="1.2"/>
-        <line x1="80" y1="60" x2="105" y2="25" stroke="#475569" stroke-width="1.2"/>
-        <line x1="0" y1="140" x2="25" y2="105" stroke="#475569" stroke-width="1.2"/>
-        <line x1="80" y1="140" x2="105" y2="105" stroke="#475569" stroke-width="1.2"/>
-        <!-- Front face -->
-        <rect x="0" y="60" width="80" height="80" fill="none" stroke="#d4af37" stroke-width="1.5"/>
-        <!-- Face center atom -->
-        <circle cx="40" cy="100" r="12" fill="#10b981" stroke="#ffffff" stroke-width="1"/>
-        <!-- Corner atoms -->
-        <circle cx="0" cy="60" r="9" fill="#1e3a8a" stroke="#38bdf8"/>
-        <circle cx="80" cy="60" r="9" fill="#1e3a8a" stroke="#38bdf8"/>
-        <circle cx="0" cy="140" r="9" fill="#1e3a8a" stroke="#38bdf8"/>
-        <circle cx="80" cy="140" r="9" fill="#1e3a8a" stroke="#38bdf8"/>
-        <!-- Text details -->
-        <text x="50" y="165" fill="#94a3b8" font-size="9" text-anchor="middle">a = 2√2 R</text>
-        <text x="50" y="180" fill="#a7f3d0" font-size="9" text-anchor="middle">APF = 0.74 | CN = 12</text>
-      </g>
-    </svg>
+  <rect width="750" height="500" fill="#070f24" rx="8" stroke="#253861" stroke-width="2"/>
+
+  <!-- Title Top Banner -->
+  <rect x="160" y="15" width="430" height="36" rx="6" fill="#0d1b3e" stroke="#d4af37" stroke-width="1.5"/>
+  <text x="375" y="38" fill="#fef08a" font-family="'Cinzel', Georgia, serif" font-size="14" font-weight="bold" text-anchor="middle">
+    METALLIC CRYSTAL UNIT CELLS (FCC, BCC, HCP)
+  </text>
+
+  <!-- PANEL 1: BODY-CENTERED CUBIC (BCC) -->
+  <g transform="translate(40, 80)">
+    <rect width="210" height="370" fill="#0a1329" rx="6" stroke="#d4af37" stroke-width="1.5"/>
+    <text x="105" y="30" fill="#facc15" font-family="'Inter', sans-serif" font-size="14" font-weight="bold" text-anchor="middle">BCC LATTICE</text>
+    <text x="105" y="48" fill="#cbd5e1" font-family="'Inter', sans-serif" font-size="10.5" text-anchor="middle">&alpha;-Fe, Cr, W, Mo, V</text>
     
+    <!-- 3D Cube Perspective -->
+    <g transform="translate(30, 80)">
+      <!-- Back face -->
+      <rect x="35" y="35" width="110" height="110" fill="none" stroke="#334773" stroke-width="1.5" stroke-dasharray="4 3"/>
+      <!-- Connecting edges -->
+      <line x1="0" y1="85" x2="35" y2="35" stroke="#334773" stroke-width="1.5"/>
+      <line x1="110" y1="85" x2="145" y2="35" stroke="#334773" stroke-width="1.5"/>
+      <line x1="0" y1="195" x2="35" y2="145" stroke="#334773" stroke-width="1.5"/>
+      <line x1="110" y1="195" x2="145" y2="145" stroke="#334773" stroke-width="1.5"/>
+      <!-- Front face -->
+      <rect x="0" y="85" width="110" height="110" fill="none" stroke="#facc15" stroke-width="2"/>
+
+      <!-- Center Body Atom (Gold) -->
+      <circle cx="72" cy="115" r="22" fill="url(#atomGold)" stroke="#ffffff" stroke-width="1.5"/>
+      <text x="72" y="120" fill="#000" font-family="'Inter', sans-serif" font-size="10" font-weight="bold" text-anchor="middle">1 Body</text>
+
+      <!-- 8 Corner Atoms (Blue) -->
+      <circle cx="0" cy="85" r="14" fill="url(#atomBlue)"/>
+      <circle cx="110" cy="85" r="14" fill="url(#atomBlue)"/>
+      <circle cx="0" cy="195" r="14" fill="url(#atomBlue)"/>
+      <circle cx="110" cy="195" r="14" fill="url(#atomBlue)"/>
+      <circle cx="35" cy="35" r="12" fill="url(#atomBlue)" opacity="0.8"/>
+      <circle cx="145" cy="35" r="12" fill="url(#atomBlue)" opacity="0.8"/>
+    </g>
+
+    <!-- Stats Plaque -->
+    <rect x="15" y="295" width="180" height="60" rx="4" fill="#060c1d" stroke="#253861" stroke-width="1"/>
+    <text x="105" y="313" fill="#f8fafc" font-family="'JetBrains Mono', monospace" font-size="11" text-anchor="middle">n = 2 atoms/cell</text>
+    <text x="105" y="330" fill="#facc15" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="bold" text-anchor="middle">a = 4R / &radic;3</text>
+    <text x="105" y="347" fill="#34d399" font-family="'JetBrains Mono', monospace" font-size="11" text-anchor="middle">APF = 0.68 | CN = 8</text>
+  </g>
+
+  <!-- PANEL 2: FACE-CENTERED CUBIC (FCC) -->
+  <g transform="translate(270, 80)">
+    <rect width="210" height="370" fill="#0a1329" rx="6" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="105" y="30" fill="#38bdf8" font-family="'Inter', sans-serif" font-size="14" font-weight="bold" text-anchor="middle">FCC LATTICE</text>
+    <text x="105" y="48" fill="#cbd5e1" font-family="'Inter', sans-serif" font-size="10.5" text-anchor="middle">&gamma;-Fe, Al, Cu, Ni, Au</text>
+    
+    <g transform="translate(30, 80)">
+      <rect x="35" y="35" width="110" height="110" fill="none" stroke="#334773" stroke-width="1.5" stroke-dasharray="4 3"/>
+      <line x1="0" y1="85" x2="35" y2="35" stroke="#334773" stroke-width="1.5"/>
+      <line x1="110" y1="85" x2="145" y2="35" stroke="#334773" stroke-width="1.5"/>
+      <line x1="0" y1="195" x2="35" y2="145" stroke="#334773" stroke-width="1.5"/>
+      <line x1="110" y1="195" x2="145" y2="145" stroke="#334773" stroke-width="1.5"/>
+      <rect x="0" y="85" width="110" height="110" fill="none" stroke="#38bdf8" stroke-width="2"/>
+
+      <!-- 6 Face Center Atoms (Green) -->
+      <circle cx="55" cy="140" r="18" fill="url(#atomGreen)" stroke="#ffffff" stroke-width="1.5"/>
+      <circle cx="90" cy="90" r="14" fill="url(#atomGreen)" opacity="0.9"/>
+      <circle cx="20" cy="140" r="14" fill="url(#atomGreen)" opacity="0.9"/>
+
+      <!-- Corner Atoms -->
+      <circle cx="0" cy="85" r="14" fill="url(#atomBlue)"/>
+      <circle cx="110" cy="85" r="14" fill="url(#atomBlue)"/>
+      <circle cx="0" cy="195" r="14" fill="url(#atomBlue)"/>
+      <circle cx="110" cy="195" r="14" fill="url(#atomBlue)"/>
+    </g>
+
+    <rect x="15" y="295" width="180" height="60" rx="4" fill="#060c1d" stroke="#253861" stroke-width="1"/>
+    <text x="105" y="313" fill="#f8fafc" font-family="'JetBrains Mono', monospace" font-size="11" text-anchor="middle">n = 4 atoms/cell</text>
+    <text x="105" y="330" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="bold" text-anchor="middle">a = 2&radic;2 R</text>
+    <text x="105" y="347" fill="#34d399" font-family="'JetBrains Mono', monospace" font-size="11" text-anchor="middle">APF = 0.74 | CN = 12</text>
+  </g>
+
+  <!-- PANEL 3: HEXAGONAL CLOSE-PACKED (HCP) -->
+  <g transform="translate(500, 80)">
+    <rect width="210" height="370" fill="#0a1329" rx="6" stroke="#34d399" stroke-width="1.5"/>
+    <text x="105" y="30" fill="#34d399" font-family="'Inter', sans-serif" font-size="14" font-weight="bold" text-anchor="middle">HCP LATTICE</text>
+    <text x="105" y="48" fill="#cbd5e1" font-family="'Inter', sans-serif" font-size="10.5" text-anchor="middle">Ti, Mg, Zn, Zr, Co</text>
+    
+    <!-- HCP Hexagonal Prism Projection -->
+    <g transform="translate(25, 80)">
+      <!-- Top Hexagon -->
+      <polygon points="80,25 130,45 130,85 80,105 30,85 30,45" fill="none" stroke="#34d399" stroke-width="2"/>
+      <!-- Bottom Hexagon -->
+      <polygon points="80,125 130,145 130,185 80,205 30,185 30,145" fill="none" stroke="#164e63" stroke-width="1.5" stroke-dasharray="4 3"/>
+      <!-- Vertical Pillars -->
+      <line x1="80" y1="25" x2="80" y2="125" stroke="#34d399" stroke-width="1.5"/>
+      <line x1="130" y1="45" x2="130" y2="145" stroke="#34d399" stroke-width="1.5"/>
+      <line x1="30" y1="45" x2="30" y2="145" stroke="#34d399" stroke-width="1.5"/>
+      
+      <!-- Mid-plane Triangle of 3 Atoms -->
+      <circle cx="65" cy="115" r="14" fill="url(#atomGold)"/>
+      <circle cx="95" cy="115" r="14" fill="url(#atomGold)"/>
+      <circle cx="80" cy="135" r="14" fill="url(#atomGold)"/>
+
+      <!-- Basal Center Atoms -->
+      <circle cx="80" cy="65" r="14" fill="url(#atomBlue)"/>
+    </g>
+
+    <rect x="15" y="295" width="180" height="60" rx="4" fill="#060c1d" stroke="#253861" stroke-width="1"/>
+    <text x="105" y="313" fill="#f8fafc" font-family="'JetBrains Mono', monospace" font-size="11" text-anchor="middle">n = 6 atoms/cell</text>
+    <text x="105" y="330" fill="#34d399" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="bold" text-anchor="middle">c/a = 1.633 (Ideal)</text>
+    <text x="105" y="347" fill="#facc15" font-family="'JetBrains Mono', monospace" font-size="11" text-anchor="middle">APF = 0.74 | CN = 12</text>
+  </g>
+</svg>
           </div>
           <div class="card-content">
             <div class="card-meta">
-              <span class="chapter-num-badge">Chapter 03</span>
+              <span class="chapter-num-badge">CHAPTER 03</span>
               <span class="problem-count-badge">50 Problems &bull; 100% Solutions</span>
             </div>
             <h3 class="card-title">
-              <a href="chapter3.html">The Structure of Crystalline Solids</a>
+              <a href="chapters/chapter3.html">The Structure of Crystalline Solids</a>
             </h3>
             <p class="card-desc">
               Lattice geometry, 7 crystal systems, 14 Bravais lattices, metallic crystal structures (FCC, BCC, HCP), APF and theoretical density, Miller indices for directions and planes, linear and planar densities, and X-ray diffraction (XRD / Bragg's Law).
             </p>
-            <div class="card-tags" style="margin-bottom: 1.25rem;">
+            <div class="card-tags">
               <span class="hero-tag">FCC & BCC & HCP</span><span class="hero-tag">Theoretical Density</span><span class="hero-tag">Miller Indices</span><span class="hero-tag">Planar & Linear Density</span><span class="hero-tag">XRD & Bragg's Law</span>
             </div>
-            <a href="chapter3.html" class="btn-primary" style="width: 100%; justify-content: center;">
-              <span>Study Chapter 3 Problems</span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            <a href="chapters/chapter3.html" class="btn-primary" style="width: 100%; justify-content: center;">
+              <span>Study Chapter 3 (50 Problems)</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
             </a>
           </div>
         </article>
         
         <article class="chapter-card">
-          <div class="card-hero-preview" style="height: 180px; overflow: hidden; background: #060b1a; display: flex; align-items: center; justify-content: center; border-bottom: 1px solid rgba(212, 175, 55, 0.2);">
-            
-    <svg viewBox="0 0 450 320" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-      <rect width="450" height="320" fill="#080f24" rx="6"/>
-      <!-- Regular atoms grid -->
-      <g fill="#1e3a8a" stroke="#38bdf8" stroke-width="1.5">
-        <!-- Row 1 -->
-        <circle cx="80" cy="60" r="12"/><circle cx="150" cy="60" r="12"/><circle cx="220" cy="60" r="12"/><circle cx="290" cy="60" r="12"/><circle cx="360" cy="60" r="12"/>
-        <!-- Row 2 -->
-        <circle cx="80" cy="130" r="12"/>
-        <!-- Vacancy at (150, 130) -->
-        <circle cx="150" cy="130" r="12" fill="none" stroke="#f43f5e" stroke-dasharray="3 3"/>
-        <circle cx="220" cy="130" r="12"/><circle cx="290" cy="130" r="12"/><circle cx="360" cy="130" r="12"/>
-        <!-- Row 3 -->
-        <circle cx="80" cy="200" r="12"/><circle cx="150" cy="200" r="12"/>
-        <!-- Substitutional impurity at (220, 200) -->
-        <circle cx="220" cy="200" r="16" fill="#d4af37" stroke="#ffffff"/>
-        <circle cx="290" cy="200" r="12"/><circle cx="360" cy="200" r="12"/>
-      </g>
-      <!-- Interstitial defect -->
-      <circle cx="325" cy="165" r="7" fill="#10b981" stroke="#ffffff" stroke-width="1.2"/>
+          <div class="card-hero-preview">
+            <svg viewBox="0 0 750 500" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="hostAtom" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#e0f2fe"/>
+      <stop offset="35%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0369a1"/>
+    </radialGradient>
+    <radialGradient id="soluteAtom" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#fef08a"/>
+      <stop offset="35%" stop-color="#facc15"/>
+      <stop offset="100%" stop-color="#a16207"/>
+    </radialGradient>
+    <radialGradient id="interAtom" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#dcfce7"/>
+      <stop offset="35%" stop-color="#22c55e"/>
+      <stop offset="100%" stop-color="#14532d"/>
+    </radialGradient>
+  </defs>
 
-      <!-- Annotations -->
-      <text x="150" y="105" fill="#f43f5e" font-size="10" font-weight="bold" text-anchor="middle">Vacancy</text>
-      <text x="220" y="240" fill="#f5d061" font-size="10" font-weight="bold" text-anchor="middle">Substitutional Solute</text>
-      <text x="365" y="170" fill="#10b981" font-size="10" font-weight="bold">Interstitial</text>
+  <rect width="750" height="500" fill="#070f24" rx="8" stroke="#253861" stroke-width="2"/>
 
-      <text x="225" y="285" fill="#94a3b8" font-size="10" text-anchor="middle">
-        Point Defects: Equilibrium vacancy fraction N_v/N = exp(-Q_v / kT)
-      </text>
-    </svg>
-    
+  <!-- Header -->
+  <rect x="180" y="15" width="390" height="34" rx="4" fill="#0f1c3f" stroke="#d4af37" stroke-width="1.5"/>
+  <text x="375" y="37" fill="#fef08a" font-family="'Cinzel', Georgia, serif" font-size="13.5" font-weight="bold" text-anchor="middle">
+    ATLAS OF POINT DEFECTS IN CRYSTALLINE SOLIDS
+  </text>
+
+  <!-- Atomic Crystal Grid (7x5 Grid) -->
+  <g transform="translate(60, 70)">
+    <!-- Grid Lines (Lattice Planes) -->
+    <g stroke="#1e3a8a" stroke-width="1.5" stroke-dasharray="3 3">
+      <line x1="40" y1="50" x2="580" y2="50"/>
+      <line x1="40" y1="120" x2="580" y2="120"/>
+      <line x1="40" y1="190" x2="580" y2="190"/>
+      <line x1="40" y1="260" x2="580" y2="260"/>
+      <line x1="40" y1="330" x2="580" y2="330"/>
+    </g>
+
+    <!-- Row 1 -->
+    <circle cx="50" cy="50" r="18" fill="url(#hostAtom)"/><circle cx="140" cy="50" r="18" fill="url(#hostAtom)"/>
+    <circle cx="230" cy="50" r="18" fill="url(#hostAtom)"/><circle cx="320" cy="50" r="18" fill="url(#hostAtom)"/>
+    <circle cx="410" cy="50" r="18" fill="url(#hostAtom)"/><circle cx="500" cy="50" r="18" fill="url(#hostAtom)"/>
+    <circle cx="590" cy="50" r="18" fill="url(#hostAtom)"/>
+
+    <!-- Row 2 (Contains Vacancy & Self-Interstitial) -->
+    <circle cx="50" cy="120" r="18" fill="url(#hostAtom)"/>
+    <!-- VACANCY (Missing host atom) -->
+    <circle cx="140" cy="120" r="18" fill="none" stroke="#ef4444" stroke-width="2.5" stroke-dasharray="5 3"/>
+    <line x1="128" y1="108" x2="152" y2="132" stroke="#ef4444" stroke-width="2"/>
+    <line x1="152" y1="108" x2="128" y2="132" stroke="#ef4444" stroke-width="2"/>
+    <!-- Self-Interstitial nearby -->
+    <circle cx="185" cy="155" r="16" fill="url(#hostAtom)" stroke="#ffffff" stroke-width="1.5"/>
+
+    <circle cx="230" cy="120" r="18" fill="url(#hostAtom)"/><circle cx="320" cy="120" r="18" fill="url(#hostAtom)"/>
+    <circle cx="410" cy="120" r="18" fill="url(#hostAtom)"/><circle cx="500" cy="120" r="18" fill="url(#hostAtom)"/>
+    <circle cx="590" cy="120" r="18" fill="url(#hostAtom)"/>
+
+    <!-- Row 3 (Contains Substitutional Impurity) -->
+    <circle cx="50" cy="190" r="18" fill="url(#hostAtom)"/><circle cx="140" cy="190" r="18" fill="url(#hostAtom)"/>
+    <circle cx="230" cy="190" r="18" fill="url(#hostAtom)"/>
+    <!-- Large Substitutional Solute -->
+    <circle cx="320" cy="190" r="26" fill="url(#soluteAtom)" stroke="#ffffff" stroke-width="2"/>
+    <circle cx="410" cy="190" r="18" fill="url(#hostAtom)"/><circle cx="500" cy="190" r="18" fill="url(#hostAtom)"/>
+    <circle cx="590" cy="190" r="18" fill="url(#hostAtom)"/>
+
+    <!-- Row 4 (Contains Small Interstitial Solute) -->
+    <circle cx="50" cy="260" r="18" fill="url(#hostAtom)"/><circle cx="140" cy="260" r="18" fill="url(#hostAtom)"/>
+    <circle cx="230" cy="260" r="18" fill="url(#hostAtom)"/><circle cx="320" cy="260" r="18" fill="url(#hostAtom)"/>
+    <!-- Small Interstitial (Carbon/Nitrogen in Fe) -->
+    <circle cx="455" cy="225" r="10" fill="url(#interAtom)" stroke="#ffffff" stroke-width="1.5"/>
+    <circle cx="410" cy="260" r="18" fill="url(#hostAtom)"/><circle cx="500" cy="260" r="18" fill="url(#hostAtom)"/>
+    <circle cx="590" cy="260" r="18" fill="url(#hostAtom)"/>
+
+    <!-- Row 5 -->
+    <circle cx="50" cy="330" r="18" fill="url(#hostAtom)"/><circle cx="140" cy="330" r="18" fill="url(#hostAtom)"/>
+    <circle cx="230" cy="330" r="18" fill="url(#hostAtom)"/><circle cx="320" cy="330" r="18" fill="url(#hostAtom)"/>
+    <circle cx="410" cy="330" r="18" fill="url(#hostAtom)"/><circle cx="500" cy="330" r="18" fill="url(#hostAtom)"/>
+    <circle cx="590" cy="330" r="18" fill="url(#hostAtom)"/>
+  </g>
+
+  <!-- Defect Labels & Callout Boxes -->
+  <!-- Vacancy Callout -->
+  <rect x="50" y="80" width="130" height="26" rx="4" fill="#3b070c" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="115" y="97" fill="#fca5a5" font-family="'Inter', sans-serif" font-size="11" font-weight="bold" text-anchor="middle">VACANCY</text>
+
+  <!-- Self-interstitial -->
+  <rect x="180" y="245" width="135" height="26" rx="4" fill="#0c2d48" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="247" y="262" fill="#bae6fd" font-family="'Inter', sans-serif" font-size="10.5" font-weight="bold" text-anchor="middle">Self-Interstitial</text>
+
+  <!-- Substitutional -->
+  <rect x="330" y="300" width="170" height="26" rx="4" fill="#2d1d03" stroke="#facc15" stroke-width="1.5"/>
+  <text x="415" y="317" fill="#fef08a" font-family="'Inter', sans-serif" font-size="11" font-weight="bold" text-anchor="middle">Substitutional Solute</text>
+
+  <!-- Interstitial -->
+  <rect x="515" y="280" width="165" height="26" rx="4" fill="#042714" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="597" y="297" fill="#bbf7d0" font-family="'Inter', sans-serif" font-size="11" font-weight="bold" text-anchor="middle">Interstitial Solute (C)</text>
+
+  <!-- Mathematical Law Bottom Banner -->
+  <rect x="120" y="445" width="510" height="36" rx="4" fill="#0a1530" stroke="#d4af37" stroke-width="1.5"/>
+  <text x="375" y="468" fill="#fef08a" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="bold" text-anchor="middle">
+    N_v / N = exp(-Q_v / k_B T) &bull; Hume-Rothery Rules (&Delta;r &le; 15%)
+  </text>
+</svg>
           </div>
           <div class="card-content">
             <div class="card-meta">
-              <span class="chapter-num-badge">Chapter 04</span>
+              <span class="chapter-num-badge">CHAPTER 04</span>
               <span class="problem-count-badge">50 Problems &bull; 100% Solutions</span>
             </div>
             <h3 class="card-title">
-              <a href="chapter4.html">Imperfections in Solids</a>
+              <a href="chapters/chapter4.html">Imperfections in Solids</a>
             </h3>
             <p class="card-desc">
               Point defects (vacancies, self-interstitials, impurities), Hume-Rothery solubility rules, composition conversions (wt% vs at%), ceramic defect chemistry (Schottky and Frenkel pairs), line defects (edge and screw dislocations, Burgers vectors), interfacial defects, and ASTM grain size.
             </p>
-            <div class="card-tags" style="margin-bottom: 1.25rem;">
+            <div class="card-tags">
               <span class="hero-tag">Vacancies & Arrhenius</span><span class="hero-tag">Hume-Rothery Rules</span><span class="hero-tag">Composition Conversions</span><span class="hero-tag">Dislocations & Burgers Vector</span><span class="hero-tag">ASTM Grain Size</span>
             </div>
-            <a href="chapter4.html" class="btn-primary" style="width: 100%; justify-content: center;">
-              <span>Study Chapter 4 Problems</span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            <a href="chapters/chapter4.html" class="btn-primary" style="width: 100%; justify-content: center;">
+              <span>Study Chapter 4 (50 Problems)</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
             </a>
           </div>
         </article>
         
         <article class="chapter-card">
-          <div class="card-hero-preview" style="height: 180px; overflow: hidden; background: #060b1a; display: flex; align-items: center; justify-content: center; border-bottom: 1px solid rgba(212, 175, 55, 0.2);">
-            
-    <svg viewBox="0 0 450 320" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-      <rect width="450" height="320" fill="#080f24" rx="6"/>
-      <!-- Axes -->
-      <line x1="60" y1="40" x2="60" y2="260" stroke="#64748b" stroke-width="1.5"/>
-      <line x1="60" y1="260" x2="410" y2="260" stroke="#64748b" stroke-width="1.5"/>
-      <text x="415" y="264" fill="#94a3b8" font-size="11">Depth, x</text>
-      <text x="50" y="30" fill="#94a3b8" font-size="11">Conc, C(x,t)</text>
+          <div class="card-hero-preview">
+            <svg viewBox="0 0 750 500" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="diffBg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0f1938"/>
+      <stop offset="100%" stop-color="#060c1d"/>
+    </radialGradient>
+  </defs>
 
-      <!-- Cs and C0 levels -->
-      <line x1="55" y1="70" x2="400" y2="70" stroke="#475569" stroke-dasharray="2 3"/>
-      <text x="35" y="74" fill="#f5d061" font-size="11" font-weight="bold">C_s</text>
+  <rect width="750" height="500" fill="url(#diffBg)" rx="8" stroke="#253861" stroke-width="2"/>
 
-      <line x1="55" y1="240" x2="400" y2="240" stroke="#475569" stroke-dasharray="2 3"/>
-      <text x="35" y="244" fill="#94a3b8" font-size="11">C_0</text>
+  <!-- Plot Canvas -->
+  <rect x="100" y="50" width="600" height="360" fill="#091226" stroke="#334773" stroke-width="1.5"/>
 
-      <!-- Profiles at t1, t2, t3 -->
-      <!-- t1 -->
-      <path d="M 60 70 Q 110 80 140 180 T 170 240 L 400 240" fill="none" stroke="#f43f5e" stroke-width="2"/>
-      <text x="180" y="220" fill="#f43f5e" font-size="10">t_1</text>
+  <!-- Grid lines -->
+  <line x1="100" y1="120" x2="700" y2="120" stroke="#172554" stroke-dasharray="3 3"/>
+  <line x1="100" y1="200" x2="700" y2="200" stroke="#172554" stroke-dasharray="3 3"/>
+  <line x1="100" y1="280" x2="700" y2="280" stroke="#172554" stroke-dasharray="3 3"/>
+  <line x1="100" y1="360" x2="700" y2="360" stroke="#172554" stroke-dasharray="3 3"/>
 
-      <!-- t2 -->
-      <path d="M 60 70 Q 140 85 220 180 T 260 240 L 400 240" fill="none" stroke="#38bdf8" stroke-width="2"/>
-      <text x="270" y="220" fill="#38bdf8" font-size="10">t_2 ( > t_1)</text>
+  <!-- Concentration Levels Cs (Surface) and C0 (Initial) -->
+  <line x1="90" y1="90" x2="700" y2="90" stroke="#facc15" stroke-width="2" stroke-dasharray="4 2"/>
+  <text x="80" y="94" fill="#facc15" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="bold" text-anchor="end">C_s</text>
+  <text x="705" y="94" fill="#facc15" font-family="'Inter', sans-serif" font-size="11">Constant Surface Concentration</text>
 
-      <!-- t3 -->
-      <path d="M 60 70 Q 200 95 310 180 T 360 240 L 400 240" fill="none" stroke="#10b981" stroke-width="2"/>
-      <text x="370" y="220" fill="#10b981" font-size="10">t_3 ( > t_2)</text>
+  <line x1="90" y1="380" x2="700" y2="380" stroke="#64748b" stroke-width="2" stroke-dasharray="4 2"/>
+  <text x="80" y="384" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="bold" text-anchor="end">C_0</text>
+  <text x="705" y="384" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="11">Initial Core Concentration</text>
 
-      <text x="235" y="295" fill="#f5d061" font-size="11" text-anchor="middle">
-        (C_x - C_0) / (C_s - C_0) = 1 - erf[ x / (2 √(Dt)) ]
-      </text>
-    </svg>
-    
+  <!-- Profiles for Diffusion Times t1 < t2 < t3 -->
+  <!-- Curve 1: t1 (Shortest time) -->
+  <path d="M 100 90 Q 150 110 200 280 T 260 380 L 700 380" fill="none" stroke="#f43f5e" stroke-width="3"/>
+  <circle cx="200" cy="280" r="5" fill="#f43f5e"/>
+  <rect x="210" y="240" width="85" height="22" rx="3" fill="#2d0612" stroke="#f43f5e" stroke-width="1"/>
+  <text x="252" y="255" fill="#fecdd3" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="bold" text-anchor="middle">Time t_1</text>
+
+  <!-- Curve 2: t2 (Intermediate time) -->
+  <path d="M 100 90 Q 200 120 320 280 T 420 380 L 700 380" fill="none" stroke="#38bdf8" stroke-width="3.5"/>
+  <circle cx="320" cy="280" r="5" fill="#38bdf8"/>
+  <rect x="330" y="240" width="115" height="22" rx="3" fill="#042033" stroke="#38bdf8" stroke-width="1"/>
+  <text x="387" y="255" fill="#bae6fd" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="bold" text-anchor="middle">Time t_2 (> t_1)</text>
+
+  <!-- Curve 3: t3 (Longest time) -->
+  <path d="M 100 90 Q 300 140 480 280 T 600 380 L 700 380" fill="none" stroke="#34d399" stroke-width="4"/>
+  <circle cx="480" cy="280" r="5" fill="#34d399"/>
+  <rect x="490" y="240" width="115" height="22" rx="3" fill="#042714" stroke="#34d399" stroke-width="1"/>
+  <text x="547" y="255" fill="#a7f3d0" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="bold" text-anchor="middle">Time t_3 (> t_2)</text>
+
+  <!-- Axes Labels -->
+  <text x="400" y="445" fill="#f8fafc" font-family="'Inter', sans-serif" font-size="13" font-weight="bold" text-anchor="middle">Distance From Surface x (Depth into Part) &rarr;</text>
+  <text x="35" y="230" fill="#f8fafc" font-family="'Inter', sans-serif" font-size="13" font-weight="bold" text-anchor="middle" transform="rotate(-90 35 230)">Solute Concentration C(x,t) &rarr;</text>
+
+  <!-- Mathematical Formula Box -->
+  <rect x="140" y="15" width="470" height="32" rx="4" fill="#0a1530" stroke="#d4af37" stroke-width="1.5"/>
+  <text x="375" y="36" fill="#fef08a" font-family="'JetBrains Mono', monospace" font-size="12.5" font-weight="bold" text-anchor="middle">
+    (C_x - C_0) / (C_s - C_0) = 1 - erf[ x / (2 &radic;(Dt)) ]
+  </text>
+</svg>
           </div>
           <div class="card-content">
             <div class="card-meta">
-              <span class="chapter-num-badge">Chapter 05</span>
+              <span class="chapter-num-badge">CHAPTER 05</span>
               <span class="problem-count-badge">50 Problems &bull; 100% Solutions</span>
             </div>
             <h3 class="card-title">
-              <a href="chapter5.html">Diffusion in Solids</a>
+              <a href="chapters/chapter5.html">Diffusion in Solids</a>
             </h3>
             <p class="card-desc">
               Atomic migration mechanisms (vacancy vs interstitial), steady-state diffusion and Fick's first law, non-steady-state diffusion and Fick's second law error function solutions, Arrhenius temperature dependence of diffusivity, carburization depth calculations, and structural factors.
             </p>
-            <div class="card-tags" style="margin-bottom: 1.25rem;">
+            <div class="card-tags">
               <span class="hero-tag">Fick's 1st Law</span><span class="hero-tag">Fick's 2nd Law</span><span class="hero-tag">Error Function erf(z)</span><span class="hero-tag">Arrhenius Diffusivity</span><span class="hero-tag">Industrial Carburization</span>
             </div>
-            <a href="chapter5.html" class="btn-primary" style="width: 100%; justify-content: center;">
-              <span>Study Chapter 5 Problems</span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            <a href="chapters/chapter5.html" class="btn-primary" style="width: 100%; justify-content: center;">
+              <span>Study Chapter 5 (50 Problems)</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
             </a>
           </div>
         </article>
         
         <article class="chapter-card">
-          <div class="card-hero-preview" style="height: 180px; overflow: hidden; background: #060b1a; display: flex; align-items: center; justify-content: center; border-bottom: 1px solid rgba(212, 175, 55, 0.2);">
-            
-    <svg viewBox="0 0 450 320" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-      <rect width="450" height="320" fill="#080f24" rx="6"/>
-      <!-- Axes -->
-      <line x1="60" y1="40" x2="60" y2="260" stroke="#64748b" stroke-width="1.5"/>
-      <line x1="60" y1="260" x2="420" y2="260" stroke="#64748b" stroke-width="1.5"/>
-      <text x="425" y="264" fill="#94a3b8" font-size="11">Strain, ε</text>
-      <text x="45" y="30" fill="#94a3b8" font-size="11">Stress, σ</text>
+          <div class="card-hero-preview">
+            <svg viewBox="0 0 750 500" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="stressBg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0e1836"/>
+      <stop offset="100%" stop-color="#060c1d"/>
+    </radialGradient>
+  </defs>
 
-      <!-- Engineering Curve -->
-      <path d="M 60 260 L 120 140 Q 170 80 250 80 Q 320 80 370 140" fill="none" stroke="#38bdf8" stroke-width="2.5"/>
+  <rect width="750" height="500" fill="url(#stressBg)" rx="8" stroke="#253861" stroke-width="2"/>
 
-      <!-- True Stress Curve diverging after necking -->
-      <path d="M 250 80 Q 310 70 370 45" fill="none" stroke="#f5d061" stroke-width="2" stroke-dasharray="3 3"/>
-      <text x="375" y="45" fill="#f5d061" font-size="10">True Stress σ_T</text>
+  <!-- Plot Canvas -->
+  <rect x="90" y="50" width="620" height="370" fill="#081024" stroke="#334773" stroke-width="1.5"/>
 
-      <!-- 0.2% Offset line -->
-      <line x1="85" y1="260" x2="140" y2="150" stroke="#f43f5e" stroke-width="1.2" stroke-dasharray="3 2"/>
-      <circle cx="135" cy="160" r="4" fill="#f43f5e"/>
-      <text x="145" y="165" fill="#f43f5e" font-size="10">σ_y (0.2% yield)</text>
-      <text x="85" y="275" fill="#f43f5e" font-size="9" text-anchor="middle">0.002</text>
+  <!-- Shaded Modulus of Resilience Area -->
+  <polygon points="90,420 180,240 180,420" fill="rgba(56, 189, 248, 0.22)"/>
+  <text x="140" y="380" fill="#7dd3fc" font-family="'Inter', sans-serif" font-size="11" font-weight="bold" text-anchor="middle">U_r (Resilience)</text>
 
-      <!-- UTS Point -->
-      <circle cx="250" cy="80" r="4" fill="#d4af37"/>
-      <text x="250" y="65" fill="#d4af37" font-size="10" font-weight="bold" text-anchor="middle">UTS (Necking onset: dσ/dε = σ)</text>
+  <!-- Shaded Plastic Toughness Area (Rest of curve) -->
+  <path d="M 180 240 Q 260 120 400 120 Q 520 120 620 220 L 620 420 L 180 420 Z" fill="rgba(212, 175, 55, 0.1)"/>
+  <text x="380" y="320" fill="#fef08a" font-family="'Inter', sans-serif" font-size="13" font-weight="bold" text-anchor="middle">Total Toughness (Energy to Fracture)</text>
 
-      <!-- Fracture Point -->
-      <circle cx="370" cy="140" r="4" fill="#fb7185"/>
-      <text x="375" y="155" fill="#fb7185" font-size="10">Fracture</text>
+  <!-- Engineering Stress-Strain Curve (Cyan Solid) -->
+  <path d="M 90 420 L 180 240 Q 260 120 400 120 Q 520 120 620 220" fill="none" stroke="#38bdf8" stroke-width="3.5"/>
 
-      <!-- Shaded Resilience Area -->
-      <polygon points="60,260 120,140 120,260" fill="rgba(56, 189, 248, 0.15)"/>
-      <text x="90" y="235" fill="#38bdf8" font-size="9">Resilience U_r</text>
-    </svg>
-    
+  <!-- True Stress-Strain Curve (Gold Dashed - diverges at UTS necking) -->
+  <path d="M 400 120 Q 510 100 620 60" fill="none" stroke="#facc15" stroke-width="3" stroke-dasharray="6 4"/>
+  <rect x="520" y="40" width="170" height="24" rx="3" fill="#2d1d03" stroke="#facc15" stroke-width="1"/>
+  <text x="605" y="56" fill="#fef08a" font-family="'Inter', sans-serif" font-size="11" font-weight="bold" text-anchor="middle">True Stress &sigma;_T = K &epsilon;_T^n</text>
+
+  <!-- 0.2% Offset Construction Line (Ruby) -->
+  <line x1="125" y1="420" x2="205" y2="260" stroke="#f43f5e" stroke-width="2" stroke-dasharray="4 3"/>
+  <circle cx="198" cy="275" r="5" fill="#f43f5e"/>
+  <text x="125" y="440" fill="#f43f5e" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="bold" text-anchor="middle">&epsilon; = 0.002</text>
+  
+  <rect x="210" y="270" width="130" height="24" rx="3" fill="#3b070c" stroke="#f43f5e" stroke-width="1"/>
+  <text x="275" y="286" fill="#fecdd3" font-family="'Inter', sans-serif" font-size="11" font-weight="bold" text-anchor="middle">&sigma;_y (0.2% Yield)</text>
+
+  <!-- UTS Point (Ultimate Tensile Strength / Necking Onset) -->
+  <circle cx="400" cy="120" r="6" fill="#facc15" stroke="#ffffff" stroke-width="2"/>
+  <rect x="300" y="80" width="200" height="26" rx="4" fill="#0f1c3f" stroke="#d4af37" stroke-width="1.5"/>
+  <text x="400" y="97" fill="#fef08a" font-family="'Inter', sans-serif" font-size="11" font-weight="bold" text-anchor="middle">UTS (Necking: d&sigma;/d&epsilon; = &sigma;)</text>
+
+  <!-- Fracture Point -->
+  <circle cx="620" cy="220" r="6" fill="#fb7185" stroke="#ffffff" stroke-width="2"/>
+  <text x="635" y="235" fill="#fb7185" font-family="'Inter', sans-serif" font-size="12" font-weight="bold">Fracture (&sigma;_f, &epsilon;_f)</text>
+
+  <!-- Hooke's Law Elastic Slope E -->
+  <line x1="90" y1="420" x2="180" y2="240" stroke="#ffffff" stroke-width="2"/>
+  <text x="110" y="310" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="bold">Slope = E</text>
+
+  <!-- Axis Titles -->
+  <text x="400" y="475" fill="#f8fafc" font-family="'Inter', sans-serif" font-size="13" font-weight="bold" text-anchor="middle">Engineering Strain &epsilon; &rarr;</text>
+  <text x="35" y="235" fill="#f8fafc" font-family="'Inter', sans-serif" font-size="13" font-weight="bold" text-anchor="middle" transform="rotate(-90 35 235)">Engineering Stress &sigma; (MPa) &rarr;</text>
+</svg>
           </div>
           <div class="card-content">
             <div class="card-meta">
-              <span class="chapter-num-badge">Chapter 06</span>
+              <span class="chapter-num-badge">CHAPTER 06</span>
               <span class="problem-count-badge">50 Problems &bull; 100% Solutions</span>
             </div>
             <h3 class="card-title">
-              <a href="chapter6.html">Mechanical Properties of Metals</a>
+              <a href="chapters/chapter6.html">Mechanical Properties of Metals</a>
             </h3>
             <p class="card-desc">
               Engineering stress and strain, Hooke's law, elastic moduli and Poisson's ratio, yielding and the 0.2% offset method, tensile strength, ductility, resilience, toughness, true stress and true strain, Hollomon strain hardening law, Schmid's law for single crystals, and hardness testing.
             </p>
-            <div class="card-tags" style="margin-bottom: 1.25rem;">
+            <div class="card-tags">
               <span class="hero-tag">Hooke's Law & Moduli</span><span class="hero-tag">0.2% Offset Yielding</span><span class="hero-tag">True Stress-Strain</span><span class="hero-tag">Hollomon Relation</span><span class="hero-tag">Schmid's Law</span><span class="hero-tag">Hardness</span>
             </div>
-            <a href="chapter6.html" class="btn-primary" style="width: 100%; justify-content: center;">
-              <span>Study Chapter 6 Problems</span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            <a href="chapters/chapter6.html" class="btn-primary" style="width: 100%; justify-content: center;">
+              <span>Study Chapter 6 (50 Problems)</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
             </a>
           </div>
         </article>
         
         <article class="chapter-card">
-          <div class="card-hero-preview" style="height: 180px; overflow: hidden; background: #060b1a; display: flex; align-items: center; justify-content: center; border-bottom: 1px solid rgba(212, 175, 55, 0.2);">
-            
-    <svg viewBox="0 0 450 320" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-      <rect width="450" height="320" fill="#080f24" rx="6"/>
-      <!-- Hall-Petch Plot -->
-      <line x1="70" y1="50" x2="70" y2="250" stroke="#64748b" stroke-width="1.5"/>
-      <line x1="70" y1="250" x2="400" y2="250" stroke="#64748b" stroke-width="1.5"/>
-      <text x="390" y="275" fill="#94a3b8" font-size="11" text-anchor="middle">d^(-1/2) (Grain Size Refinement →)</text>
-      <text x="30" y="40" fill="#94a3b8" font-size="11">Yield Strength, σ_y</text>
+          <div class="card-hero-preview">
+            <svg viewBox="0 0 750 500" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="hpBg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0f1a36"/>
+      <stop offset="100%" stop-color="#060c1d"/>
+    </radialGradient>
+  </defs>
 
-      <!-- Linear Hall-Petch Line -->
-      <line x1="70" y1="210" x2="360" y2="70" stroke="#d4af37" stroke-width="2.5"/>
-      
-      <!-- Friction Stress σ0 intercept -->
-      <circle cx="70" cy="210" r="4" fill="#f43f5e"/>
-      <text x="45" y="214" fill="#f43f5e" font-size="11" font-weight="bold">σ_0</text>
+  <rect width="750" height="500" fill="url(#hpBg)" rx="8" stroke="#253861" stroke-width="2"/>
 
-      <!-- Slope ky -->
-      <path d="M 230 135 L 290 135 L 290 106" fill="none" stroke="#38bdf8" stroke-width="1.2" stroke-dasharray="3 2"/>
-      <text x="260" y="150" fill="#38bdf8" font-size="10">Slope = k_y</text>
+  <!-- Left: Grain Boundary Dislocation Pile-Up Diagram -->
+  <g transform="translate(40, 60)">
+    <rect width="320" height="380" fill="#091329" rx="6" stroke="#d4af37" stroke-width="1.5"/>
+    <text x="160" y="30" fill="#facc15" font-family="'Inter', sans-serif" font-size="13" font-weight="bold" text-anchor="middle">
+      GRAIN BOUNDARY PILE-UP
+    </text>
 
-      <!-- Hall Petch breakdown at nanometer scale -->
-      <path d="M 360 70 Q 380 90 395 140" fill="none" stroke="#fb7185" stroke-width="2" stroke-dasharray="3 3"/>
-      <text x="360" y="55" fill="#fb7185" font-size="9">Inverse HP (d &lt; 15 nm)</text>
+    <!-- Grain Boundary Line (Thick diagonal) -->
+    <line x1="220" y1="50" x2="220" y2="350" stroke="#f43f5e" stroke-width="4"/>
+    <text x="230" y="80" fill="#fca5a5" font-family="'Inter', sans-serif" font-size="11" font-weight="bold">High-Angle Boundary</text>
 
-      <text x="225" y="295" fill="#f5d061" font-size="12" font-weight="bold" text-anchor="middle">
-        Hall-Petch Law: σ_y = σ_0 + k_y · d^(-1/2)
-      </text>
-    </svg>
-    
+    <!-- Grain 1 (Left, diameter d) -->
+    <text x="100" y="70" fill="#38bdf8" font-family="'Inter', sans-serif" font-size="12" font-weight="bold">Grain 1 (Size d)</text>
+    <!-- Frank-Read Dislocation Source S -->
+    <circle cx="50" cy="200" r="7" fill="#facc15"/>
+    <text x="50" y="225" fill="#fef08a" font-family="'JetBrains Mono', monospace" font-size="11" text-anchor="middle">Source</text>
+
+    <!-- Dislocation Pile-Up Line towards boundary -->
+    <line x1="50" y1="200" x2="220" y2="200" stroke="#38bdf8" stroke-width="2" stroke-dasharray="4 3"/>
+
+    <!-- Dislocation Half-Plane Symbols &perp; -->
+    <g stroke="#38bdf8" stroke-width="2.5">
+      <line x1="80" y1="190" x2="80" y2="200"/><line x1="72" y1="200" x2="88" y2="200"/>
+      <line x1="120" y1="190" x2="120" y2="200"/><line x1="112" y1="200" x2="128" y2="200"/>
+      <line x1="155" y1="190" x2="155" y2="200"/><line x1="147" y1="200" x2="163" y2="200"/>
+      <line x1="185" y1="190" x2="185" y2="200"/><line x1="177" y1="200" x2="193" y2="200"/>
+      <line x1="210" y1="190" x2="210" y2="200"/><line x1="202" y1="200" x2="218" y2="200"/>
+    </g>
+
+    <text x="135" y="175" fill="#38bdf8" font-family="'Inter', sans-serif" font-size="10.5" text-anchor="middle">n Dislocations Pile Up</text>
+    <rect x="30" y="270" width="260" height="50" rx="4" fill="#14244d" stroke="#38bdf8" stroke-width="1"/>
+    <text x="160" y="290" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="11" text-anchor="middle">&tau;_tip = n &bull; &tau;_applied</text>
+    <text x="160" y="308" fill="#bae6fd" font-family="'Inter', sans-serif" font-size="10" text-anchor="middle">Finer grains (smaller d) &rarr; smaller pile-up</text>
+  </g>
+
+  <!-- Right: Hall-Petch Plot (Yield Strength vs d^-1/2) -->
+  <g transform="translate(390, 60)">
+    <rect width="320" height="380" fill="#091329" rx="6" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="160" y="30" fill="#38bdf8" font-family="'Inter', sans-serif" font-size="13" font-weight="bold" text-anchor="middle">
+      HALL-PETCH RELATION
+    </text>
+
+    <!-- Axes -->
+    <line x1="50" y1="50" x2="50" y2="310" stroke="#64748b" stroke-width="2"/>
+    <line x1="50" y1="310" x2="290" y2="310" stroke="#64748b" stroke-width="2"/>
+    <text x="170" y="335" fill="#f8fafc" font-family="'Inter', sans-serif" font-size="11" font-weight="bold">d&minus;&frac12; (mm&minus;&frac12;) &rarr; Finer Grains</text>
+    <text x="25" y="180" fill="#f8fafc" font-family="'Inter', sans-serif" font-size="11" font-weight="bold" transform="rotate(-90 25 180)">&sigma;_y (MPa) &rarr;</text>
+
+    <!-- Straight Hall-Petch Line (Gold) -->
+    <line x1="50" y1="260" x2="250" y2="80" stroke="#facc15" stroke-width="3.5"/>
+
+    <!-- Friction Stress Intercept sigma_0 -->
+    <circle cx="50" cy="260" r="5" fill="#f43f5e"/>
+    <text x="35" y="265" fill="#f43f5e" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="bold" text-anchor="end">&sigma;_0</text>
+    <text x="80" y="280" fill="#cbd5e1" font-family="'Inter', sans-serif" font-size="9.5">Lattice friction</text>
+
+    <!-- Slope Triangle (ky) -->
+    <path d="M 140 180 L 200 180 L 200 125" fill="none" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="3 2"/>
+    <text x="180" y="195" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="bold">Slope = k_y</text>
+
+    <!-- Inverse Hall-Petch Breakdown (Nanocrystalline regime) -->
+    <path d="M 250 80 Q 270 100 280 150" fill="none" stroke="#fb7185" stroke-width="2.5" stroke-dasharray="4 3"/>
+    <text x="235" y="65" fill="#fb7185" font-family="'Inter', sans-serif" font-size="9.5">Inverse HP (d &lt; 15 nm)</text>
+  </g>
+
+  <!-- Banner Bottom -->
+  <rect x="180" y="455" width="390" height="34" rx="4" fill="#0f1b38" stroke="#d4af37" stroke-width="1.5"/>
+  <text x="375" y="477" fill="#fef08a" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="bold" text-anchor="middle">
+    &sigma;_y = &sigma;_0 + k_y &bull; d^(&minus;1/2) &bull; Simultaneous Strength &amp; Toughness
+  </text>
+</svg>
           </div>
           <div class="card-content">
             <div class="card-meta">
-              <span class="chapter-num-badge">Chapter 07</span>
+              <span class="chapter-num-badge">CHAPTER 07</span>
               <span class="problem-count-badge">50 Problems &bull; 100% Solutions</span>
             </div>
             <h3 class="card-title">
-              <a href="chapter7.html">Dislocations & Strengthening Mechanisms</a>
+              <a href="chapters/chapter7.html">Dislocations & Strengthening Mechanisms</a>
             </h3>
             <p class="card-desc">
               Principles of plastic deformation, critical shear stresses, the four classical strengthening mechanisms (Hall-Petch grain size refinement, solid solution strengthening, strain hardening/cold work, precipitation hardening/Orowan bowing), and the three stages of annealing (recovery, recrystallization, grain growth).
             </p>
-            <div class="card-tags" style="margin-bottom: 1.25rem;">
+            <div class="card-tags">
               <span class="hero-tag">Hall-Petch Equation</span><span class="hero-tag">Solid Solution Strengthening</span><span class="hero-tag">Cold Work & Taylor Law</span><span class="hero-tag">Orowan Precipitation</span><span class="hero-tag">Annealing Kinetics</span>
             </div>
-            <a href="chapter7.html" class="btn-primary" style="width: 100%; justify-content: center;">
-              <span>Study Chapter 7 Problems</span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            <a href="chapters/chapter7.html" class="btn-primary" style="width: 100%; justify-content: center;">
+              <span>Study Chapter 7 (50 Problems)</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
             </a>
           </div>
         </article>
         
         <article class="chapter-card">
-          <div class="card-hero-preview" style="height: 180px; overflow: hidden; background: #060b1a; display: flex; align-items: center; justify-content: center; border-bottom: 1px solid rgba(212, 175, 55, 0.2);">
-            
-    <svg viewBox="0 0 450 320" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-      <rect width="450" height="320" fill="#080f24" rx="6"/>
-      <!-- Axes -->
-      <line x1="60" y1="50" x2="60" y2="250" stroke="#64748b" stroke-width="1.5"/>
-      <line x1="60" y1="250" x2="420" y2="250" stroke="#64748b" stroke-width="1.5"/>
-      <text x="240" y="280" fill="#94a3b8" font-size="11" text-anchor="middle">Testing Temperature, T (°C) →</text>
-      <text x="30" y="40" fill="#94a3b8" font-size="11">Impact Energy (J)</text>
+          <div class="card-hero-preview">
+            <svg viewBox="0 0 750 500" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="charpyBg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0e1736"/>
+      <stop offset="100%" stop-color="#060c1d"/>
+    </radialGradient>
+  </defs>
 
-      <!-- FCC Curve: High toughness at all temps -->
-      <path d="M 60 90 Q 240 85 410 80" fill="none" stroke="#34d399" stroke-width="2.5"/>
-      <text x="300" y="70" fill="#34d399" font-size="10" font-weight="bold">FCC Metals (Al, Cu, γ-Fe)</text>
-      <text x="300" y="95" fill="#a7f3d0" font-size="9">No DBTT; ductile at 0 K</text>
+  <rect width="750" height="500" fill="url(#charpyBg)" rx="8" stroke="#253861" stroke-width="2"/>
 
-      <!-- BCC Curve: Sharp S-curve DBTT -->
-      <path d="M 60 230 L 160 225 Q 210 220 230 160 Q 250 100 300 95 L 410 95" fill="none" stroke="#f43f5e" stroke-width="2.5"/>
-      <text x="140" y="210" fill="#f43f5e" font-size="10" font-weight="bold">BCC Steels</text>
+  <!-- Plot Canvas Frame -->
+  <rect x="90" y="40" width="620" height="380" fill="#081024" stroke="#334773" stroke-width="1.5"/>
 
-      <!-- DBTT Indicator -->
-      <line x1="235" y1="50" x2="235" y2="250" stroke="#f5d061" stroke-width="1.2" stroke-dasharray="3 3"/>
-      <circle cx="235" cy="160" r="4" fill="#f5d061"/>
-      <text x="235" y="295" fill="#f5d061" font-size="11" font-weight="bold" text-anchor="middle">DBTT</text>
-      <text x="120" y="245" fill="#94a3b8" font-size="9">Brittle Cleavage</text>
-      <text x="350" y="115" fill="#94a3b8" font-size="9">Ductile Shear Lips</text>
-    </svg>
-    
+  <!-- Axes -->
+  <line x1="90" y1="380" x2="710" y2="380" stroke="#64748b" stroke-width="2"/>
+  <line x1="90" y1="40" x2="90" y2="380" stroke="#64748b" stroke-width="2"/>
+  <text x="400" y="445" fill="#f8fafc" font-family="'Inter', sans-serif" font-size="13" font-weight="bold" text-anchor="middle">Test Temperature T (&deg;C) &rarr;</text>
+  <text x="35" y="230" fill="#f8fafc" font-family="'Inter', sans-serif" font-size="13" font-weight="bold" text-anchor="middle" transform="rotate(-90 35 230)">Charpy V-Notch Impact Energy (Joules) &rarr;</text>
+
+  <!-- Curve 1: FCC Metals (Al, Cu, Austenitic Stainless Steel) - NO DBTT -->
+  <path d="M 100 100 Q 380 90 690 80" fill="none" stroke="#34d399" stroke-width="4"/>
+  <rect x="420" y="60" width="260" height="26" rx="4" fill="#042714" stroke="#34d399" stroke-width="1.5"/>
+  <text x="550" y="77" fill="#a7f3d0" font-family="'Inter', sans-serif" font-size="11.5" font-weight="bold" text-anchor="middle">
+    FCC Alloys (Al, Cu, Austenitic 304 SS)
+  </text>
+  <text x="550" y="105" fill="#6ee7b7" font-family="'Inter', sans-serif" font-size="10">No DBTT &bull; Ductile at Cryogenic Temps</text>
+
+  <!-- Curve 2: High-Strength Steels (Moderate toughness, low transition) -->
+  <path d="M 100 280 Q 400 240 690 200" fill="none" stroke="#f59e0b" stroke-width="3" stroke-dasharray="6 3"/>
+  <text x="560" y="215" fill="#fde68a" font-family="'Inter', sans-serif" font-size="11" font-weight="bold">High-Strength Steels / Ti Alloys</text>
+
+  <!-- Curve 3: Low-Carbon BCC Structural Steels (Pronounced S-shaped DBTT) -->
+  <path d="M 100 350 L 250 340 Q 340 330 380 230 Q 420 130 500 120 L 690 120" fill="none" stroke="#f43f5e" stroke-width="4"/>
+  <rect x="140" y="325" width="130" height="24" rx="4" fill="#3b070c" stroke="#f43f5e" stroke-width="1"/>
+  <text x="205" y="341" fill="#fca5a5" font-family="'Inter', sans-serif" font-size="11" font-weight="bold" text-anchor="middle">Low-Carbon Steel</text>
+
+  <!-- Upper Shelf & Lower Shelf Annotations -->
+  <rect x="520" y="135" width="160" height="40" rx="4" fill="#14244d" stroke="#38bdf8" stroke-width="1"/>
+  <text x="600" y="152" fill="#bae6fd" font-family="'Inter', sans-serif" font-size="10.5" font-weight="bold" text-anchor="middle">UPPER SHELF</text>
+  <text x="600" y="167" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="9.5" text-anchor="middle">100% Fibrous Shear Rupture</text>
+
+  <rect x="120" y="270" width="160" height="40" rx="4" fill="#14244d" stroke="#38bdf8" stroke-width="1"/>
+  <text x="200" y="287" fill="#bae6fd" font-family="'Inter', sans-serif" font-size="10.5" font-weight="bold" text-anchor="middle">LOWER SHELF</text>
+  <text x="200" y="302" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="9.5" text-anchor="middle">100% Brittle Cleavage</text>
+
+  <!-- DBTT Vertical Divider Line -->
+  <line x1="390" y1="40" x2="390" y2="380" stroke="#ffd700" stroke-width="2.5" stroke-dasharray="6 4"/>
+  <circle cx="390" cy="230" r="7" fill="#facc15" stroke="#ffffff" stroke-width="2"/>
+  
+  <rect x="310" y="390" width="160" height="28" rx="4" fill="#0b1736" stroke="#ffd700" stroke-width="1.5"/>
+  <text x="390" y="409" fill="#fef08a" font-family="'Inter', sans-serif" font-size="11.5" font-weight="bold" text-anchor="middle">DBTT Transition Temp</text>
+</svg>
           </div>
           <div class="card-content">
             <div class="card-meta">
-              <span class="chapter-num-badge">Chapter 08</span>
+              <span class="chapter-num-badge">CHAPTER 08</span>
               <span class="problem-count-badge">50 Problems &bull; 100% Solutions</span>
             </div>
             <h3 class="card-title">
-              <a href="chapter8.html">Failure: Fracture, Fatigue & Creep</a>
+              <a href="chapters/chapter8.html">Failure: Fracture, Fatigue & Creep</a>
             </h3>
             <p class="card-desc">
               Mechanisms of ductile vs brittle fracture, Griffith criterion, stress concentration factor, Mode I stress intensity and fracture toughness (K_Ic), Charpy impact testing and the ductile-to-brittle transition (DBTT), cyclic fatigue (S-N curves, fatigue limits, mean stress effects), and high-temperature creep power laws.
             </p>
-            <div class="card-tags" style="margin-bottom: 1.25rem;">
+            <div class="card-tags">
               <span class="hero-tag">Fracture Toughness K_Ic</span><span class="hero-tag">Griffith Criterion</span><span class="hero-tag">Charpy Impact & DBTT</span><span class="hero-tag">Fatigue S-N & Limits</span><span class="hero-tag">Larson-Miller Creep</span>
             </div>
-            <a href="chapter8.html" class="btn-primary" style="width: 100%; justify-content: center;">
-              <span>Study Chapter 8 Problems</span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            <a href="chapters/chapter8.html" class="btn-primary" style="width: 100%; justify-content: center;">
+              <span>Study Chapter 8 (50 Problems)</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
             </a>
           </div>
         </article>
@@ -706,145 +1062,117 @@
     <div id="formula-modal" class="modal-overlay">
       <div class="modal-card">
         <div class="modal-header">
-          <h3>Master Formula Compendium & Physical Constants (Ch 1 – 8)</h3>
+          <h3>Master Formula Compendium &amp; Physical Constants (Chapters 1 &ndash; 8)</h3>
           <button id="btn-close-formula-modal" class="modal-close-btn">&times;</button>
         </div>
         <div class="modal-body">
-          <div style="background: rgba(30, 58, 138, 0.25); border: 1px solid rgba(56, 189, 248, 0.3); padding: 0.85rem; border-radius: 4px; margin-bottom: 1rem; font-size: 0.85rem; color: #bae6fd;">
-            <strong>Fundamental Physical Constants:</strong><br>
+          <div style="background: rgba(30, 58, 138, 0.3); border: 1.5px solid rgba(56, 189, 248, 0.5); padding: 1rem; border-radius: 4px; margin-bottom: 1.25rem; font-size: 0.92rem; color: #bae6fd;">
+            <strong style="color: #facc15; font-size: 1rem;">Fundamental Physical Constants:</strong><br>
             Avogadro's Number: \(N_A = 6.022 \times 10^{23} \text{ atoms/mol}\) &bull;
-            Boltzmann's Constant: \(k = 1.38 \times 10^{-23} \text{ J/atom}\cdot\text{K} = 8.62 \times 10^{-5} \text{ eV/atom}\cdot\text{K}\)<br>
+            Boltzmann's Constant: \(k_B = 1.381 \times 10^{-23} \text{ J/K} = 8.617 \times 10^{-5} \text{ eV/K}\)<br>
             Universal Gas Constant: \(R = 8.314 \text{ J/mol}\cdot\text{K}\) &bull;
-            Elementary Charge: \(e = 1.602 \times 10^{-19} \text{ C}\) &bull;
-            1 eV = \(1.602 \times 10^{-19} \text{ J}\)
+            Electron Charge: \(e = 1.602 \times 10^{-19} \text{ C}\) &bull;
+            \(1 \text{ eV} = 1.602 \times 10^{-19} \text{ J}\)
           </div>
 
           <table class="formula-table">
             <thead>
               <tr>
-                <th style="width: 25%;">Domain / Law</th>
-                <th style="width: 45%;">Governing Mathematical Equation</th>
-                <th style="width: 30%;">Key Variables & Units</th>
+                <th style="width: 20%;">Chapter / Topic</th>
+                <th style="width: 45%;">Governing Equation &amp; Relation</th>
+                <th style="width: 35%;">Parameter Definitions</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td><strong>Theoretical Crystal Density</strong></td>
+                <td><strong>Ch 1: Ashby Indices</strong></td>
+                <td>$$M_1 = \frac{\sigma_y}{\rho}, \quad M_2 = \frac{E^{1/2}}{\rho}, \quad M_3 = \frac{\sigma_y^{2/3}}{\rho}$$</td>
+                <td>Lightweight tension tie-rod (\(M_1\)), stiff beam (\(M_2\)), strong beam (\(M_3\))</td>
+              </tr>
+              <tr>
+                <td><strong>Ch 1: Composite Moduli</strong></td>
+                <td>$$E_{cl} = V_f E_f + V_m E_m, \quad \frac{1}{E_{ct}} = \frac{V_f}{E_f} + \frac{V_m}{E_m}$$</td>
+                <td>Voigt isostrain (longitudinal) and Reuss isostress (transverse) Rule of Mixtures</td>
+              </tr>
+              <tr>
+                <td><strong>Ch 2: Potential Energy Well</strong></td>
+                <td>$$E_N(r) = -\frac{A}{r^m} + \frac{B}{r^n}, \quad F_N(r) = \frac{dE_N}{dr}$$</td>
+                <td>Attractive vs repulsive potential; equilibrium spacing \(r_0\) at \(F_N(r_0) = 0\)</td>
+              </tr>
+              <tr>
+                <td><strong>Ch 3: Theoretical Density</strong></td>
                 <td>$$\rho = \frac{n \cdot A}{V_c \cdot N_A}$$</td>
-                <td>\(n\): atoms/cell; \(A\): g/mol; \(V_c\): cell volume (\(\text{cm}^3\)); \(\rho\): \(\text{g/cm}^3\)</td>
+                <td>\(n\): atoms/cell; \(A\): atomic weight (g/mol); \(V_c\): cell volume</td>
               </tr>
               <tr>
-                <td><strong>Lattice Constants & APF</strong></td>
-                <td>
-                  BCC: \(a = \frac{4R}{\sqrt{3}}\), \(\text{APF} = 0.68\), \(n=2\)<br>
-                  FCC: \(a = 2\sqrt{2}R\), \(\text{APF} = 0.74\), \(n=4\)
-                </td>
-                <td>\(R\): atomic radius; \(a\): lattice parameter; \(\text{APF} = \frac{n(4/3\pi R^3)}{V_c}\)</td>
+                <td><strong>Ch 3: Crystal Geometry</strong></td>
+                <td>BCC: \(a = \frac{4R}{\sqrt{3}}\), \(\text{APF} = 0.68\)<br>FCC: \(a = 2\sqrt{2}R\), \(\text{APF} = 0.74\)</td>
+                <td>\(R\): atomic radius; \(a\): cubic lattice parameter</td>
               </tr>
               <tr>
-                <td><strong>Cubic Interplanar Spacing</strong></td>
-                <td>$$d_{hkl} = \frac{a}{\sqrt{h^2 + k^2 + l^2}}$$</td>
-                <td>\((hkl)\): Miller indices; \(a\): unit cell lattice parameter</td>
+                <td><strong>Ch 3: Bragg's Law (XRD)</strong></td>
+                <td>$$n\lambda = 2 d_{hkl} \sin\theta, \quad d_{hkl} = \frac{a}{\sqrt{h^2+k^2+l^2}}$$</td>
+                <td>\(\lambda\): X-ray wavelength; \(d_{hkl}\): interplanar spacing; \(\theta\): Bragg angle</td>
               </tr>
               <tr>
-                <td><strong>Bragg's Law (XRD)</strong></td>
-                <td>$$n\lambda = 2 d_{hkl} \sin\theta$$</td>
-                <td>\(\lambda\): X-ray wavelength; \(\theta\): Bragg diffraction angle; \(n\): order (usually 1)</td>
+                <td><strong>Ch 4: Equilibrium Vacancies</strong></td>
+                <td>$$N_v = N \exp\left(-\frac{Q_v}{k_B T}\right)$$</td>
+                <td>\(N\): total atomic sites; \(Q_v\): vacancy formation energy</td>
               </tr>
               <tr>
-                <td><strong>Equilibrium Vacancies</strong></td>
-                <td>$$N_v = N \exp\left(-\frac{Q_v}{kT}\right)$$</td>
-                <td>\(N\): total atomic sites; \(Q_v\): vacancy activation energy (eV or J/mol); \(T\): Kelvin</td>
-              </tr>
-              <tr>
-                <td><strong>ASTM Grain Size Number</strong></td>
+                <td><strong>Ch 4: ASTM Grain Size</strong></td>
                 <td>$$N = 2^{n - 1}$$</td>
-                <td>\(N\): grains per square inch at 100\(\times\); \(n\): ASTM grain size number</td>
+                <td>\(N\): grains per square inch at 100\(\times\) magnification; \(n\): ASTM number</td>
               </tr>
               <tr>
-                <td><strong>Fick's First Law (Steady-State)</strong></td>
-                <td>$$J = -D \frac{dC}{dx} = \frac{M}{A \cdot t}$$</td>
-                <td>\(J\): flux (\(\text{kg/m}^2\cdot\text{s}\)); \(D\): diffusivity (\(\text{m}^2/\text{s}\)); \(dC/dx\): gradient</td>
+                <td><strong>Ch 5: Fick's 1st Law</strong></td>
+                <td>$$J = -D \frac{dC}{dx}$$</td>
+                <td>\(J\): diffusion flux (\(\text{kg/m}^2\cdot\text{s}\)); \(D\): diffusion coefficient</td>
               </tr>
               <tr>
-                <td><strong>Fick's Second Law (Semi-Infinite)</strong></td>
+                <td><strong>Ch 5: Fick's 2nd Law</strong></td>
                 <td>$$\frac{C_x - C_0}{C_s - C_0} = 1 - \text{erf}\left(\frac{x}{2\sqrt{Dt}}\right)$$</td>
-                <td>\(C_s\): surface conc; \(C_0\): initial base conc; \(C_x\): conc at depth \(x\) after time \(t\)</td>
+                <td>Semi-infinite solid constant surface concentration carburization/decarburization</td>
               </tr>
               <tr>
-                <td><strong>Arrhenius Temperature Law</strong></td>
+                <td><strong>Ch 5: Arrhenius Diffusivity</strong></td>
                 <td>$$D = D_0 \exp\left(-\frac{Q_d}{RT}\right)$$</td>
-                <td>\(D_0\): pre-exponential (\(\text{m}^2/\text{s}\)); \(Q_d\): activation energy (\(\text{J/mol}\)); \(R=8.314\)</td>
+                <td>\(D_0\): pre-exponential; \(Q_d\): activation energy for diffusion</td>
               </tr>
               <tr>
-                <td><strong>Hooke's Law & Shear Modulus</strong></td>
+                <td><strong>Ch 6: Hooke's Law &amp; Moduli</strong></td>
                 <td>$$\sigma = E\varepsilon, \quad \tau = G\gamma, \quad G = \frac{E}{2(1 + \nu)}$$</td>
-                <td>\(E\): Young's modulus; \(G\): Shear modulus; \(\nu\): Poisson's ratio (\(\sim 0.3\))</td>
+                <td>\(E\): Young's modulus; \(G\): shear modulus; \(\nu\): Poisson's ratio</td>
               </tr>
               <tr>
-                <td><strong>True Stress & True Strain</strong></td>
-                <td>$$\sigma_T = \sigma(1+\varepsilon), \quad \varepsilon_T = \ln(1+\varepsilon)$$</td>
-                <td>Valid up to necking; \(\sigma, \varepsilon\): engineering stress/strain</td>
+                <td><strong>Ch 6: Modulus of Resilience</strong></td>
+                <td>$$U_r = \frac{\sigma_y^2}{2E}$$</td>
+                <td>Elastic strain energy storage capacity per unit volume up to yielding</td>
               </tr>
               <tr>
-                <td><strong>Hollomon Power Law</strong></td>
-                <td>$$\sigma_T = K \varepsilon_T^n$$</td>
-                <td>\(K\): strength coefficient; \(n\): strain hardening exponent; Necking: \(\varepsilon_T = n\)</td>
-              </tr>
-              <tr>
-                <td><strong>Modulus of Resilience</strong></td>
-                <td>$$U_r = \int_0^{\varepsilon_y} \sigma d\varepsilon \approx \frac{\sigma_y^2}{2E}$$</td>
-                <td>\(U_r\): elastic energy stored per unit volume (\(\text{J/m}^3\) or \(\text{Pa}\))</td>
-              </tr>
-              <tr>
-                <td><strong>Schmid's Law (Single Crystals)</strong></td>
+                <td><strong>Ch 6: Schmid's Law</strong></td>
                 <td>$$\tau_R = \sigma \cos\phi \cos\lambda \le \tau_{\text{CRSS}}$$</td>
-                <td>\(\phi\): angle to slip plane normal; \(\lambda\): angle to slip direction; \(m = \cos\phi\cos\lambda\)</td>
+                <td>\(\phi\): normal to slip plane; \(\lambda\): slip direction angle</td>
               </tr>
               <tr>
-                <td><strong>Hall-Petch Strengthening</strong></td>
+                <td><strong>Ch 7: Hall-Petch Law</strong></td>
                 <td>$$\sigma_y = \sigma_0 + k_y d^{-1/2}$$</td>
-                <td>\(\sigma_0\): friction stress; \(k_y\): locking coefficient (\(\text{MPa}\cdot\text{mm}^{1/2}\)); \(d\): grain size</td>
+                <td>\(\sigma_0\): friction stress; \(k_y\): unpinning coefficient; \(d\): average grain diameter</td>
               </tr>
               <tr>
-                <td><strong>Cold Work & Dislocation Density</strong></td>
-                <td>$$\%\text{CW} = \frac{A_0 - A_d}{A_0} \times 100\%, \quad \tau = \tau_0 + \alpha G b \sqrt{\rho}$$</td>
-                <td>\(\rho\): dislocation density (\(\text{m}^{-2}\)); \(b\): Burgers vector; \(A_0, A_d\): cross-sections</td>
+                <td><strong>Ch 7: Cold Work &amp; Orowan</strong></td>
+                <td>$$\%\text{CW} = \frac{A_0 - A_d}{A_0} \times 100\%, \quad \Delta\tau = \frac{G b}{L}$$</td>
+                <td>Dislocation density multiplication &amp; precipitate bowing resistance</td>
               </tr>
               <tr>
-                <td><strong>Orowan Looping (Precipitation)</strong></td>
-                <td>$$\Delta\tau = \frac{G b}{L - 2r} \approx \frac{G b}{L}$$</td>
-                <td>\(L\): inter-particle spacing; \(r\): particle radius; \(G\): matrix shear modulus</td>
+                <td><strong>Ch 8: Fracture Toughness</strong></td>
+                <td>$$K = Y \sigma \sqrt{\pi a} \le K_{Ic}$$</td>
+                <td>\(K_{Ic}\): plane strain fracture toughness; \(Y\): dimensionless crack geometry factor</td>
               </tr>
               <tr>
-                <td><strong>Stress Concentration (Crack Tip)</strong></td>
-                <td>$$K_t = \frac{\sigma_m}{\sigma_0} = 2 \sqrt{\frac{a}{\rho_t}}$$</td>
-                <td>\(a\): crack length; \(\rho_t\): crack tip radius of curvature; \(\sigma_0\): nominal stress</td>
-              </tr>
-              <tr>
-                <td><strong>Griffith Critical Fracture Stress</strong></td>
-                <td>$$\sigma_c = \sqrt{\frac{2E\gamma_s}{\pi a}}$$</td>
-                <td>\(\gamma_s\): specific surface energy (\(\text{J/m}^2\)); \(E\): Young's modulus; \(a\): crack size</td>
-              </tr>
-              <tr>
-                <td><strong>Mode I Fracture Toughness</strong></td>
-                <td>$$K_I = Y \sigma \sqrt{\pi a} \le K_{Ic}$$</td>
-                <td>\(K_{Ic}\): plane strain fracture toughness (\(\text{MPa}\cdot\sqrt{\text{m}}\)); \(Y\): geometric factor</td>
-              </tr>
-              <tr>
-                <td><strong>Fatigue Stress Parameters</strong></td>
-                <td>$$\sigma_m = \frac{\sigma_{\max}+\sigma_{\min}}{2}, \quad \sigma_a = \frac{\sigma_{\max}-\sigma_{\min}}{2}, \quad R = \frac{\sigma_{\min}}{\sigma_{\max}}$$</td>
-                <td>\(\sigma_m\): mean stress; \(\sigma_a\): amplitude; \(R\): stress ratio</td>
-              </tr>
-              <tr>
-                <td><strong>Steady-State Creep Rate</strong></td>
-                <td>$$\dot{\varepsilon}_s = K_2 \sigma^n \exp\left(-\frac{Q_c}{RT}\right)$$</td>
-                <td>\(\dot{\varepsilon}_s\): steady creep rate (\(\text{s}^{-1}\)); \(n\): stress exponent; \(Q_c\): creep activation energy</td>
-              </tr>
-              <tr>
-                <td><strong>Larson-Miller Parameter</strong></td>
+                <td><strong>Ch 8: Larson-Miller Creep</strong></td>
                 <td>$$P = T \left(20 + \log_{10} t_r\right)$$</td>
-                <td>\(T\): absolute temperature in Kelvin; \(t_r\): rupture life in hours</td>
+                <td>\(T\): temperature in Kelvin; \(t_r\): creep rupture time in hours</td>
               </tr>
             </tbody>
           </table>
@@ -855,31 +1183,29 @@
   
     <footer class="site-footer">
       <div class="master-wrapper" style="padding-bottom: 0;">
-        <div class="university-crest" style="margin-bottom: 1rem;">
-          
-<svg width="68" height="68" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="50" cy="50" r="47" stroke="#d4af37" stroke-width="2" stroke-dasharray="2 2" opacity="0.8"/>
-  <circle cx="50" cy="50" r="43" stroke="#d4af37" stroke-width="1.5"/>
-  <circle cx="50" cy="50" r="38" fill="#0d1b3e" stroke="rgba(212, 175, 55, 0.4)" stroke-width="1"/>
-  <!-- Central Traditional Emblem Motif -->
-  <path d="M50 16 L56 32 L72 32 L59 42 L64 58 L50 48 L36 58 L41 42 L28 32 L44 32 Z" fill="rgba(212, 175, 55, 0.15)" stroke="#d4af37" stroke-width="1"/>
-  <!-- Open Book of Knowledge / Engineering -->
-  <path d="M50 48 L38 42 C34 40 30 43 30 48 L30 68 C34 65 42 65 50 69 C58 65 66 65 70 68 L70 48 C70 43 66 40 62 42 Z" fill="#14244d" stroke="#d4af37" stroke-width="1.5"/>
-  <path d="M50 48 L50 69" stroke="#d4af37" stroke-width="1.5"/>
-  <!-- Mechanical Gear Accents -->
-  <circle cx="50" cy="50" r="4" fill="#d4af37"/>
-  <!-- Laurel Wreath Curves -->
-  <path d="M22 56 C20 40 28 26 42 20" stroke="#d4af37" stroke-width="1.2" stroke-linecap="round"/>
-  <path d="M78 56 C80 40 72 26 58 20" stroke="#d4af37" stroke-width="1.2" stroke-linecap="round"/>
-</svg>
-
+        <div style="display: flex; justify-content: center; align-items: center; gap: 1.5rem; margin-bottom: 1.5rem;">
+          <div class="footer-emblem-badge">
+            <img src="assets/images/ut_mech_emblem.svg" alt="UT Mechanical Engineering Crest">
+          </div>
+          <div class="footer-emblem-badge" style="padding: 4px;">
+            <img src="assets/images/ut_engineering_logo.svg" alt="College of Engineering Emblem">
+          </div>
         </div>
-        <p class="footer-gold-text">UNIVERSITY OF TEHRAN</p>
-        <p>Faculty of Mechanical Engineering &bull; Department of Materials & Manufacturing</p>
-        <p>Course: <strong>Science of Materials</strong> (Undergraduate Curriculum) &bull; Instructor: <strong>Prof. A. Sadeghi</strong></p>
-        <p style="margin-top: 0.75rem; color: #cbd5e1;">Comprehensive 400-Problem Midterm Exam Mastery Suite</p>
-        <p style="font-size: 0.8rem; color: #94a3b8;">Authored, Curated & Synthesized by Teaching Assistant <strong>Sina Sharifi</strong></p>
-        <p style="font-size: 0.75rem; color: #64748b; margin-top: 1.5rem;">Designed for academic excellence &bull; Formatted with LaTeX Math &bull; Dark Blue Classic Edition</p>
+
+        <p class="footer-persian">دانشگاه تهران &bull; پردیس دانشکده‌های فنی &bull; دانشکده مهندسی مکانیک</p>
+        <p class="footer-gold-text">UNIVERSITY OF TEHRAN &bull; DEPARTMENT OF MECHANICAL ENGINEERING</p>
+        
+        <div class="gold-hairline" style="margin: 0.85rem auto;"></div>
+
+        <p style="color: #cbd5e1; font-size: 0.95rem;">
+          Course: <strong>Science of Materials</strong> (Undergraduate Midterm Mastery Suite) &bull; Instructor: <strong>Prof. A. Sadeghi</strong>
+        </p>
+        <p style="font-size: 0.88rem; color: #facc15; margin-top: 0.35rem;">
+          Meticulously Prepared &amp; Synthesized by Teaching Assistant <strong>Sina Sharifi</strong>
+        </p>
+        <p style="font-size: 0.78rem; color: #94a3b8; margin-top: 1.25rem;">
+          Designed for academic excellence &bull; Formatted with LaTeX Math &bull; High-Contrast Classical Edition
+        </p>
       </div>
     </footer>
     <button id="btn-back-top" class="btn-back-top" title="Back to top">

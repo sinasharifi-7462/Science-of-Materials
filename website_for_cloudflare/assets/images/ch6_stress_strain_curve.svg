@@ -1,0 +1,54 @@
+<svg viewBox="0 0 750 500" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="stressBg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0e1836"/>
+      <stop offset="100%" stop-color="#060c1d"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="750" height="500" fill="url(#stressBg)" rx="8" stroke="#253861" stroke-width="2"/>
+
+  <!-- Plot Canvas -->
+  <rect x="90" y="50" width="620" height="370" fill="#081024" stroke="#334773" stroke-width="1.5"/>
+
+  <!-- Shaded Modulus of Resilience Area -->
+  <polygon points="90,420 180,240 180,420" fill="rgba(56, 189, 248, 0.22)"/>
+  <text x="140" y="380" fill="#7dd3fc" font-family="'Inter', sans-serif" font-size="11" font-weight="bold" text-anchor="middle">U_r (Resilience)</text>
+
+  <!-- Shaded Plastic Toughness Area (Rest of curve) -->
+  <path d="M 180 240 Q 260 120 400 120 Q 520 120 620 220 L 620 420 L 180 420 Z" fill="rgba(212, 175, 55, 0.1)"/>
+  <text x="380" y="320" fill="#fef08a" font-family="'Inter', sans-serif" font-size="13" font-weight="bold" text-anchor="middle">Total Toughness (Energy to Fracture)</text>
+
+  <!-- Engineering Stress-Strain Curve (Cyan Solid) -->
+  <path d="M 90 420 L 180 240 Q 260 120 400 120 Q 520 120 620 220" fill="none" stroke="#38bdf8" stroke-width="3.5"/>
+
+  <!-- True Stress-Strain Curve (Gold Dashed - diverges at UTS necking) -->
+  <path d="M 400 120 Q 510 100 620 60" fill="none" stroke="#facc15" stroke-width="3" stroke-dasharray="6 4"/>
+  <rect x="520" y="40" width="170" height="24" rx="3" fill="#2d1d03" stroke="#facc15" stroke-width="1"/>
+  <text x="605" y="56" fill="#fef08a" font-family="'Inter', sans-serif" font-size="11" font-weight="bold" text-anchor="middle">True Stress &sigma;_T = K &epsilon;_T^n</text>
+
+  <!-- 0.2% Offset Construction Line (Ruby) -->
+  <line x1="125" y1="420" x2="205" y2="260" stroke="#f43f5e" stroke-width="2" stroke-dasharray="4 3"/>
+  <circle cx="198" cy="275" r="5" fill="#f43f5e"/>
+  <text x="125" y="440" fill="#f43f5e" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="bold" text-anchor="middle">&epsilon; = 0.002</text>
+  
+  <rect x="210" y="270" width="130" height="24" rx="3" fill="#3b070c" stroke="#f43f5e" stroke-width="1"/>
+  <text x="275" y="286" fill="#fecdd3" font-family="'Inter', sans-serif" font-size="11" font-weight="bold" text-anchor="middle">&sigma;_y (0.2% Yield)</text>
+
+  <!-- UTS Point (Ultimate Tensile Strength / Necking Onset) -->
+  <circle cx="400" cy="120" r="6" fill="#facc15" stroke="#ffffff" stroke-width="2"/>
+  <rect x="300" y="80" width="200" height="26" rx="4" fill="#0f1c3f" stroke="#d4af37" stroke-width="1.5"/>
+  <text x="400" y="97" fill="#fef08a" font-family="'Inter', sans-serif" font-size="11" font-weight="bold" text-anchor="middle">UTS (Necking: d&sigma;/d&epsilon; = &sigma;)</text>
+
+  <!-- Fracture Point -->
+  <circle cx="620" cy="220" r="6" fill="#fb7185" stroke="#ffffff" stroke-width="2"/>
+  <text x="635" y="235" fill="#fb7185" font-family="'Inter', sans-serif" font-size="12" font-weight="bold">Fracture (&sigma;_f, &epsilon;_f)</text>
+
+  <!-- Hooke's Law Elastic Slope E -->
+  <line x1="90" y1="420" x2="180" y2="240" stroke="#ffffff" stroke-width="2"/>
+  <text x="110" y="310" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="bold">Slope = E</text>
+
+  <!-- Axis Titles -->
+  <text x="400" y="475" fill="#f8fafc" font-family="'Inter', sans-serif" font-size="13" font-weight="bold" text-anchor="middle">Engineering Strain &epsilon; &rarr;</text>
+  <text x="35" y="235" fill="#f8fafc" font-family="'Inter', sans-serif" font-size="13" font-weight="bold" text-anchor="middle" transform="rotate(-90 35 235)">Engineering Stress &sigma; (MPa) &rarr;</text>
+</svg>

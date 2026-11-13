@@ -1,0 +1,109 @@
+<svg viewBox="0 0 750 500" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="tetBg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#101d3f"/>
+      <stop offset="100%" stop-color="#060c1d"/>
+    </radialGradient>
+    <linearGradient id="goldEdge" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fde047"/>
+      <stop offset="50%" stop-color="#d4af37"/>
+      <stop offset="100%" stop-color="#b48318"/>
+    </linearGradient>
+    <linearGradient id="cyanEdge" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+    <linearGradient id="faceGrad1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="rgba(212, 175, 55, 0.12)"/>
+      <stop offset="100%" stop-color="rgba(56, 189, 248, 0.04)"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Canvas Frame with Technical Grid -->
+  <rect width="750" height="500" fill="url(#tetBg)" rx="8" stroke="#253861" stroke-width="2"/>
+  <g stroke="#1a294d" stroke-width="1" stroke-dasharray="4 6">
+    <line x1="50" y1="100" x2="700" y2="100"/>
+    <line x1="50" y1="200" x2="700" y2="200"/>
+    <line x1="50" y1="300" x2="700" y2="300"/>
+    <line x1="50" y1="400" x2="700" y2="400"/>
+    <line x1="150" y1="50" x2="150" y2="450"/>
+    <line x1="375" y1="50" x2="375" y2="450"/>
+    <line x1="600" y1="50" x2="600" y2="450"/>
+  </g>
+
+  <!-- Shaded Triangular Faces -->
+  <polygon points="375,80 150,380 375,270" fill="url(#faceGrad1)"/>
+  <polygon points="375,80 600,380 375,270" fill="rgba(56, 189, 248, 0.08)"/>
+  <polygon points="150,380 600,380 375,270" fill="rgba(16, 185, 129, 0.08)"/>
+
+  <!-- Outer Solid Edges -->
+  <line x1="375" y1="80" x2="150" y2="380" stroke="url(#goldEdge)" stroke-width="3"/>
+  <line x1="375" y1="80" x2="600" y2="380" stroke="url(#goldEdge)" stroke-width="3"/>
+  <line x1="150" y1="380" x2="600" y2="380" stroke="url(#goldEdge)" stroke-width="3"/>
+
+  <!-- Interior Centroid Connections -->
+  <line x1="375" y1="80" x2="375" y2="270" stroke="#38bdf8" stroke-width="2.5" stroke-dasharray="6 4"/>
+  <line x1="150" y1="380" x2="375" y2="270" stroke="#38bdf8" stroke-width="2.5" stroke-dasharray="6 4"/>
+  <line x1="600" y1="380" x2="375" y2="270" stroke="#38bdf8" stroke-width="2.5" stroke-dasharray="6 4"/>
+
+  <!-- Modern Extension Vertices (Economics & Environment) -->
+  <line x1="375" y1="80" x2="90" y2="180" stroke="#f43f5e" stroke-width="2" stroke-dasharray="3 3"/>
+  <line x1="150" y1="380" x2="90" y2="180" stroke="#f43f5e" stroke-width="2" stroke-dasharray="3 3"/>
+  <circle cx="90" cy="180" r="28" fill="#1e1b4b" stroke="#f43f5e" stroke-width="2"/>
+  <text x="90" y="176" fill="#fecdd3" font-family="'Inter', sans-serif" font-size="11" font-weight="bold" text-anchor="middle">COST</text>
+  <text x="90" y="192" fill="#fda4af" font-family="'Inter', sans-serif" font-size="9" text-anchor="middle">Economics</text>
+
+  <line x1="375" y1="80" x2="660" y2="180" stroke="#10b981" stroke-width="2" stroke-dasharray="3 3"/>
+  <line x1="600" y1="380" x2="660" y2="180" stroke="#10b981" stroke-width="2" stroke-dasharray="3 3"/>
+  <circle cx="660" cy="180" r="28" fill="#064e3b" stroke="#34d399" stroke-width="2"/>
+  <text x="660" y="176" fill="#a7f3d0" font-family="'Inter', sans-serif" font-size="11" font-weight="bold" text-anchor="middle">LCA</text>
+  <text x="660" y="192" fill="#6ee7b7" font-family="'Inter', sans-serif" font-size="9" text-anchor="middle">Environment</text>
+
+  <!-- Central Centroid Core -->
+  <circle cx="375" cy="270" r="38" fill="#0b1736" stroke="url(#goldEdge)" stroke-width="2.5" filter="url(#glow)"/>
+  <text x="375" y="266" fill="#fef08a" font-family="'Cinzel', Georgia, serif" font-size="14" font-weight="bold" text-anchor="middle">MSE</text>
+  <text x="375" y="282" fill="#cbd5e1" font-family="'Inter', sans-serif" font-size="10" font-weight="600" text-anchor="middle">PARADIGM</text>
+
+  <!-- VERTEX 1: PROCESSING (Top) -->
+  <g transform="translate(375, 80)">
+    <circle cx="0" cy="0" r="34" fill="#14244d" stroke="#facc15" stroke-width="3"/>
+    <text x="0" y="-5" fill="#ffffff" font-family="'Inter', sans-serif" font-size="12" font-weight="bold" text-anchor="middle">PROCESSING</text>
+    <text x="0" y="12" fill="#facc15" font-family="'Inter', sans-serif" font-size="10" text-anchor="middle">Synthesis</text>
+    <!-- Label Card -->
+    <rect x="-110" y="-62" width="220" height="24" rx="4" fill="#091329" stroke="#d4af37" stroke-width="1"/>
+    <text x="0" y="-46" fill="#fef08a" font-family="'Inter', sans-serif" font-size="10.5" font-weight="600" text-anchor="middle">Casting &bull; Sintering &bull; 3D Print &bull; Heat Treat</text>
+  </g>
+
+  <!-- VERTEX 2: STRUCTURE (Bottom Left) -->
+  <g transform="translate(150, 380)">
+    <circle cx="0" cy="0" r="34" fill="#0c4a6e" stroke="#38bdf8" stroke-width="3"/>
+    <text x="0" y="-5" fill="#ffffff" font-family="'Inter', sans-serif" font-size="12" font-weight="bold" text-anchor="middle">STRUCTURE</text>
+    <text x="0" y="12" fill="#7dd3fc" font-family="'Inter', sans-serif" font-size="10" text-anchor="middle">Multi-Scale</text>
+    <!-- Label Card -->
+    <rect x="-105" y="44" width="210" height="24" rx="4" fill="#091329" stroke="#38bdf8" stroke-width="1"/>
+    <text x="0" y="60" fill="#bae6fd" font-family="'Inter', sans-serif" font-size="10.5" font-weight="600" text-anchor="middle">Atomic Lattice &bull; Defects &bull; Grains</text>
+  </g>
+
+  <!-- VERTEX 3: PROPERTIES (Bottom Right) -->
+  <g transform="translate(600, 380)">
+    <circle cx="0" cy="0" r="34" fill="#064e3b" stroke="#34d399" stroke-width="3"/>
+    <text x="0" y="-5" fill="#ffffff" font-family="'Inter', sans-serif" font-size="12" font-weight="bold" text-anchor="middle">PROPERTIES</text>
+    <text x="0" y="12" fill="#6ee7b7" font-family="'Inter', sans-serif" font-size="10" text-anchor="middle">Intrinsic</text>
+    <!-- Label Card -->
+    <rect x="-105" y="44" width="210" height="24" rx="4" fill="#091329" stroke="#34d399" stroke-width="1"/>
+    <text x="0" y="60" fill="#a7f3d0" font-family="'Inter', sans-serif" font-size="10.5" font-weight="600" text-anchor="middle">Mechanical &bull; Electrical &bull; Thermal</text>
+  </g>
+
+  <!-- Banner Bottom -->
+  <rect x="180" y="455" width="390" height="32" rx="4" fill="#0f1b38" stroke="#d4af37" stroke-width="1.5"/>
+  <text x="375" y="476" fill="#fef08a" font-family="'Cinzel', Georgia, serif" font-size="12" font-weight="bold" text-anchor="middle">
+    PERFORMANCE: Service Reliability &bull; Durability &bull; Lifetime
+  </text>
+</svg>
